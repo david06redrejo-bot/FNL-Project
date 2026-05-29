@@ -5,3 +5,5 @@ jupyterlab
 matplotlib
 seaborn
 nltk
+torch
+transformers
