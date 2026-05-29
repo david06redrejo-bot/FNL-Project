@@ -1331,7 +1331,7 @@ id,Literal,y_category
 1330,VULVECTOMÍA PARCIAL,0
 1331,Fractura peroné distal izquierdo,S
 1332,Carcinoma epidermoide de cérvix,8
-1333,déficit de proteína C,D
+1333,déficit de proteína C,O
 1334,TUMORACIÓN,8
 1335,Infección del tracto urinario,N
 1336,Deshidratación hipernatrémica,E
@@ -1849,7 +1849,7 @@ id,Literal,y_category
 1848,S. agalactiae,B
 1849,absceso vulvar,N
 1850,itu posparto,O
-1851,Epilepsia focal parto,O
+1851,Epilepsia focal parto,G
 1852,0 Positivo,Z
 1853,HTA. ERC icc,I
 1854,HTA iRC 5 icc,I
@@ -3390,7 +3390,7 @@ id,Literal,y_category
 3389,mordedura de perro,Z
 3390,35 sem,Z
 3391,hernioplastia umbilical con colocación de malla,0
-3392,c61,O
+3392,c61,M
 3393,bulimia nerviosa parto,F
 3394,Ca endometri,C
 3395,PTR izqda,Z
@@ -5419,7 +5419,7 @@ id,Literal,y_category
 5418,Ecografia abdomianl,B
 5419,circular cordon,O
 5420,Hemangioma en cuerpo vertebral,9
-5421,Deficit de proteina c,D
+5421,Deficit de proteina c,O
 5422,feto pequeño para edad gestacional,6
 5423,Anemia parto,D
 5424,puerperio,O
