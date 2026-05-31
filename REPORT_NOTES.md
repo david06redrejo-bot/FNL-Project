@@ -167,3 +167,31 @@ problem: ambiguous literals often lack the surrounding context that would
 disambiguate the correct ICD category.
 
 No model has been trained yet; these are tokenizer-design conclusions only.
+
+## Survey-to-Project Method Strategy
+
+After reading Yan et al. (2022), we understood that automated ICD coding is not
+ordinary text classification. The survey frames ICD coding as a clinical,
+administrative, and hierarchical NLP problem: manual coding is slow, coding
+errors affect reimbursement and hospital management, and ICD supports
+statistics, standardization, DRGs, and medical-record management.
+
+The survey also helped us decide what is realistic for this Kaggle assignment.
+We are not solving full multi-label ICD coding over long EMRs. Our target is one
+first-character category for short clinical literals. This makes the sequence
+length problem much smaller, but the task is still meaningful because the data
+is imbalanced, abbreviated, clinically ambiguous, and evaluated with strict
+category accuracy.
+
+Concrete strategy from the survey:
+
+- Implement: majority baseline, TF-IDF character/word n-grams, possible fuzzy or
+  nearest-neighbor lookup, Spanish biomedical-clinical RoBERTa, class-weighting
+  ablations, pooling strategies, simple ensembling, and confidence/error
+  analysis.
+- Future work: full ICD hierarchy GNNs, label-description matching as a central
+  model, full-code prediction, multi-label modeling, knowledge graphs, and
+  clinical deployment/interpretability.
+
+No model has been trained in this step; this is conceptual grounding and project
+strategy.
