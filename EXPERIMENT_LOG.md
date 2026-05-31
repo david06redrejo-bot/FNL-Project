@@ -98,16 +98,16 @@ only from the label prior. It improves accuracy from 0.1252 to 0.5226 and macro
 F1 from 0.0062 to 0.4026. Lowercasing tied the required-clean variant but did
 not improve it, so the conservative preprocessing decision remains unchanged.
 
-## Run v02_tfidf_word_svm_debug
+## Run v02_tfidf_word_svm
 
-**Version:** `v02_tfidf_word_svm_debug`
+**Version:** `v02_tfidf_word_svm`
 
 Metrics:
-- `accuracy`: 0.045455
-- `macro_f1`: 0.033333
-- `weighted_f1`: 0.045455
+- `accuracy`: 0.520073
+- `macro_f1`: 0.474196
+- `weighted_f1`: 0.514018
 
-Run summary: `/home/iadlG010/FNL-Project/outputs/logs/v02_tfidf_word_svm_debug_run.md`
+Run summary: `/home/iadlG010/FNL-Project/outputs/logs/v02_tfidf_word_svm_run.md`
 
 ## Run v03_roberta_cls_debug
 

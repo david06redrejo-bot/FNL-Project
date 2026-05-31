@@ -257,3 +257,30 @@ so we keep the conservative preprocessing decision. The model is much stronger
 than the majority baseline, but it still has clear limitations: it uses surface
 form evidence only, cannot understand clinical context, and may fail on
 synonyms, ambiguity, negation, and categories that require semantic knowledge.
+
+## Word TF-IDF Linear SVM Baseline
+
+We implemented `v02_tfidf_word_svm` to compare character-level surface patterns
+against explicit word-level lexical evidence. This is still a traditional
+vector-space model, but it asks a different question: are complete clinical
+tokens and short word phrases enough to classify the ICD category?
+
+The grid compared unigram, unigram+bigram, and unigram+bigram+trigram TF-IDF
+features, LinearSVC and LogisticRegression classifiers, and `min_df` values 1
+and 2. The best validation configuration was word unigram TF-IDF with
+LinearSVC, `min_df=1`, and `sublinear_tf=True`.
+
+Validation results:
+
+```text
+accuracy: 0.520073
+macro_f1: 0.474196
+weighted_f1: 0.514018
+```
+
+Compared with the character n-gram model, word TF-IDF is slightly lower in
+accuracy but better in macro F1 and weighted F1. This suggests that lexical
+tokens help the model distribute predictions across classes more evenly, while
+character n-grams are very strong for exact surface-form cues. Both baselines
+are useful before moving to Transformers because they define what can be solved
+with sparse vector representations alone.

@@ -118,6 +118,14 @@ python models/v02_tfidf_word_svm.py
 - `outputs/checkpoints/v01_tfidf_char_logreg.joblib`
 - `submissions/v01_tfidf_char_logreg_submission.csv`
 
+`v02_tfidf_word_svm.py` runs the internal word n-gram grid and writes:
+
+- `reports/tables/v02_tfidf_word_grid.csv`
+- `reports/tables/classical_baseline_comparison.csv`
+- `reports/figures/fig_10_classical_baseline_comparison.png`
+- `outputs/checkpoints/v02_tfidf_word_svm.joblib`
+- `submissions/v02_tfidf_word_svm_submission.csv`
+
 Before expensive model work, smoke-test the model-version interface:
 
 ```bash
