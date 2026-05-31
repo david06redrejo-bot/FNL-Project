@@ -59,6 +59,8 @@ reports/tables/*debug*
 # Generated report artifacts
 reports/compiled/*
 !reports/compiled/.gitkeep
+!reports/compiled/README.md
+!reports/compiled/final_report.pdf
 *.aux
 *.bbl
 *.blg
@@ -72,3 +74,5 @@ reports/compiled/*
 experiments/
 agent/
 instructions/
+.texlive/
+.local/

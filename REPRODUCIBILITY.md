@@ -421,6 +421,7 @@ reports/final_report.tex
 Compile it from the `reports/` directory:
 
 ```bash
+export PATH=/home/iadlG010/FNL-Project/.texlive/2026/bin/x86_64-linux:$PATH
 cd reports
 pdflatex final_report.tex
 bibtex final_report || true
@@ -436,11 +437,10 @@ Expected PDF path:
 reports/compiled/final_report.pdf
 ```
 
-Current VM note: on 2026-05-31, this environment did not have `pdflatex`,
-`bibtex`, `latexmk`, `xelatex`, `lualatex`, or `tectonic` installed, so the PDF
-could not be compiled here. The LaTeX source and bibliography were statically
-checked for existing figures, defined references, and available bibliography
-keys.
+Current VM note: on 2026-05-31, TeX Live 2026 was installed in user mode inside
+the workspace under `.texlive/2026/` because the VM did not provide a system
+LaTeX installation and `sudo dnf` was not available. The local TeX Live folder
+is ignored by Git, but the compiled PDF is available at the path above.
 
 Compiled PDFs should be written to `reports/compiled/` and are treated as
 generated artifacts unless the team decides to commit the final version.

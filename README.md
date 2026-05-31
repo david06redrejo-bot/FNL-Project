@@ -26,7 +26,8 @@ analysis, ensembles, and finally a reproducible Kaggle submission.
 
 **University:** Universitat Autonoma de Barcelona  
 **Academic year:** 2025-2026  
-**Supervisors/professors:** Ernest Valveny and Lei Kang
+**Supervisors/professors:** Ernest Valveny and Lei Kang  
+**GitHub:** <https://github.com/david06redrejo-bot/FNL-Project>
 
 ## Competition
 
