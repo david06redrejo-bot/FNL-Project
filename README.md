@@ -220,6 +220,28 @@ kaggle competitions submit \
 
 Full reproducibility notes are in [`REPRODUCIBILITY.md`](REPRODUCIBILITY.md).
 
+## Optional Local Demo
+
+The repository also includes a small console demo for trying a single clinical
+literal locally:
+
+```bash
+python demo/app.py --literal "Hiperparatiroidismo primario"
+```
+
+or interactively:
+
+```bash
+python demo/app.py
+```
+
+This demo is intentionally optional. The final Kaggle system is the `v10`
+ensemble submission recipe, while the demo loads the best available lightweight
+probabilistic artifact for typed examples, currently the character TF-IDF
+logistic regression component. It shows a predicted `y_category` and top-3
+category probabilities, with a clear disclaimer that it is not for real clinical
+use.
+
 ## Notebooks
 
 | Notebook | Purpose |
