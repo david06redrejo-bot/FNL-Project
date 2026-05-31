@@ -58,6 +58,12 @@ models:
     purpose: Spanish biomedical RoBERTa CLS pooling baseline
     expensive: true
     status: implemented
+  v05_roberta_mean:
+    script: models/v05_roberta_mean.py
+    family: transformer
+    purpose: Spanish biomedical RoBERTa mean pooling baseline
+    expensive: true
+    status: implemented
   v03_roberta_cls:
     script: models/v03_roberta_cls.py
     family: transformer

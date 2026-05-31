@@ -131,16 +131,16 @@ Metrics:
 
 Run summary: `/home/iadlG010/FNL-Project/outputs/logs/v04_roberta_mean_debug_run.md`
 
-## Run v05_roberta_mean_class_weighted_debug
+## Run v05_roberta_mean
 
-**Version:** `v05_roberta_mean_class_weighted_debug`
+**Version:** `v05_roberta_mean`
 
 Metrics:
-- `accuracy`: 0.045455
-- `macro_f1`: 0.033333
-- `weighted_f1`: 0.045455
+- `accuracy`: 0.564599
+- `macro_f1`: 0.496567
+- `weighted_f1`: 0.549541
 
-Run summary: `/home/iadlG010/FNL-Project/outputs/logs/v05_roberta_mean_class_weighted_debug_run.md`
+Run summary: `/home/iadlG010/FNL-Project/outputs/logs/v05_roberta_mean_run.md`
 
 ## Run v06_roberta_mean_augmented_debug
 
@@ -230,3 +230,52 @@ over the strongest classical baseline (`0.5693` vs `0.5226`) and improves
 weighted F1 over the word TF-IDF SVM (`0.5543` vs `0.5140`). Macro F1 is similar
 to the best classical baselines, which means minority-category behavior remains
 an important target for the next models.
+
+## Run v05_roberta_mean
+
+**Version:** `v05_roberta_mean`
+
+Metrics:
+- `accuracy`: 0.564599
+- `macro_f1`: 0.496567
+- `weighted_f1`: 0.549541
+
+Run summary: `/home/iadlG010/FNL-Project/outputs/logs/v05_roberta_mean_run.md`
+
+Configuration:
+- backbone: `PlanTL-GOB-ES/roberta-base-biomedical-clinical-es`
+- pooling: attention-mask-aware mean pooling over non-padding tokens
+- hidden size: 768
+- number of classes: 36
+- dropout: 0.1
+- optimizer: AdamW
+- learning rate: 2e-5
+- weight decay: 0.01
+- batch size: 128
+- max epochs: 50
+- patience: 10
+- best epoch: 10
+
+Artifacts:
+- history: `outputs/logs/v05_roberta_mean_history.csv`
+- training curves: `reports/figures/fig_12_roberta_mean_training_curves.png`
+- submission: `submissions/v05_roberta_mean_submission.csv`
+- pooling comparison: `reports/tables/roberta_pooling_comparison.csv`
+
+Interpretation:
+Mean pooling did not beat CLS in validation accuracy (`0.5646` vs `0.5693`), so
+CLS remains the current candidate final model by the competition-oriented
+selection criterion. Mean pooling did slightly improve macro F1 (`0.4966` vs
+`0.4943`), which suggests that averaging token evidence may help some
+minority-category behavior on short literals.
+
+## Run v05_roberta_mean_debug
+
+**Version:** `v05_roberta_mean_debug`
+
+Metrics:
+- `accuracy`: 0.062500
+- `macro_f1`: 0.016667
+- `weighted_f1`: 0.015625
+
+Run summary: `/home/iadlG010/FNL-Project/outputs/logs/v05_roberta_mean_debug_run.md`

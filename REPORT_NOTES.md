@@ -385,3 +385,36 @@ in accuracy and weighted F1. However, macro F1 remains close to the best
 traditional methods, so the next Transformer experiments should focus on
 minority-category robustness, pooling choices, class weighting, and error
 analysis rather than only improving overall accuracy.
+
+## RoBERTa Mean-Pooling Baseline
+
+We implemented `v05_roberta_mean` to test whether averaging contextual token
+representations is better than relying only on the first `<s>` token. This is
+plausible for short clinical literals because the informative evidence may be
+spread across the few biomedical terms, abbreviations, digits, or modifiers in
+the literal.
+
+The pooling operation is attention-mask aware:
+
+```python
+mask = attention_mask.unsqueeze(-1)
+features = (hidden_states * mask).sum(dim=1) / mask.sum(dim=1).clamp(min=1)
+```
+
+Training used the same split and hyperparameters as the CLS baseline.
+
+Validation results:
+
+```text
+accuracy: 0.564599
+macro_f1: 0.496567
+weighted_f1: 0.549541
+best_epoch: 10
+```
+
+The reference orientation mentioned in the assignment was mean pooling 0.570 vs
+CLS 0.565, but our actual internal validation comparison is slightly different:
+CLS has higher accuracy, while mean pooling has slightly higher macro F1. Since
+the competition is accuracy-oriented, CLS remains the current candidate final
+model, but mean pooling is a strong alternative when looking at minority-class
+balance.

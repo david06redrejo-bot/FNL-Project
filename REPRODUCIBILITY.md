@@ -191,6 +191,31 @@ The run writes:
 - `outputs/predictions/v04_roberta_cls_leaderboard_detailed.csv`
 - `submissions/v04_roberta_cls_submission.csv`
 
+## 4.3 RoBERTa Mean-Pooling Baseline
+
+Run a tiny debug job first:
+
+```bash
+python models/v05_roberta_mean.py --debug
+```
+
+Run the full mean-pooling baseline:
+
+```bash
+python models/v05_roberta_mean.py
+```
+
+The run uses the same split and hyperparameters as the CLS baseline, but pools
+the last hidden states by averaging over non-padding tokens. It writes:
+
+- `outputs/checkpoints/v05_roberta_mean.pt`
+- `outputs/metrics/v05_roberta_mean_metrics.json`
+- `outputs/logs/v05_roberta_mean_history.csv`
+- `outputs/predictions/v05_roberta_mean_val_predictions.csv`
+- `outputs/predictions/v05_roberta_mean_leaderboard_detailed.csv`
+- `submissions/v05_roberta_mean_submission.csv`
+- `reports/tables/roberta_pooling_comparison.csv`
+
 Before expensive model work, smoke-test the model-version interface:
 
 ```bash
