@@ -1,0 +1,26 @@
+models:
+  v00_majority_baseline:
+    family: majority
+    purpose: lower-bound baseline
+  v01_tfidf_char_logreg:
+    family: classical
+    purpose: short-literal char n-gram baseline
+  v02_tfidf_word_svm:
+    family: classical
+    purpose: survey-inspired TF-IDF SVM baseline
+  v03_roberta_cls:
+    family: transformer
+    purpose: Spanish biomedical RoBERTa CLS pooling
+  v04_roberta_mean:
+    family: transformer
+    purpose: Spanish biomedical RoBERTa mean pooling
+  v05_roberta_mean_class_weighted:
+    family: transformer
+    purpose: mean pooling with class weighting
+  v06_roberta_mean_augmented:
+    family: transformer
+    purpose: mean pooling with ICD-description augmentation
+  v07_ensemble:
+    family: ensemble
+    purpose: final candidate combination
+

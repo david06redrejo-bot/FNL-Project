@@ -19,3 +19,16 @@ This file tracks every model attempt, including failed and inconclusive attempts
 | HIST-ROBERTA-01 | `notebooks/04_dl_baseline_roberta.ipynb` | Spanish biomedical clinical RoBERTa backbone | No trustworthy final score found; notebook contains an error output | Incomplete exploratory attempt |
 
 **Next experiment to run once data is available:** a clean data and annotation audit that confirms row counts, category set, duplicate literals, ambiguous mappings, and exact submission format.
+
+## 2026-05-31 — Skeleton Smoke-Test Plan
+
+**Goal:** Prepare runnable model-version entry points before rerunning metrics.
+
+**Status:** Scaffold created. The next executable checks are:
+
+- `python -m compileall src models`
+- `python models/v00_majority_baseline.py --dry-run`
+- `python models/v02_tfidf_word_svm.py --dry-run`
+
+Full training still requires restoring the raw Kaggle CSV files into
+`data/raw/`.

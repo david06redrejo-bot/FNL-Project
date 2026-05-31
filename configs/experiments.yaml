@@ -1,0 +1,26 @@
+experiments:
+  - id: v00_majority_baseline
+    script: models/v00_majority_baseline.py
+    status: scaffolded
+  - id: v01_tfidf_char_logreg
+    script: models/v01_tfidf_char_logreg.py
+    status: scaffolded
+  - id: v02_tfidf_word_svm
+    script: models/v02_tfidf_word_svm.py
+    status: scaffolded
+  - id: v03_roberta_cls
+    script: models/v03_roberta_cls.py
+    status: interface_scaffolded
+  - id: v04_roberta_mean
+    script: models/v04_roberta_mean.py
+    status: interface_scaffolded
+  - id: v05_roberta_mean_class_weighted
+    script: models/v05_roberta_mean_class_weighted.py
+    status: interface_scaffolded
+  - id: v06_roberta_mean_augmented
+    script: models/v06_roberta_mean_augmented.py
+    status: interface_scaffolded
+  - id: v07_ensemble
+    script: models/v07_ensemble.py
+    status: interface_scaffolded
+

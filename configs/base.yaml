@@ -1,0 +1,26 @@
+project:
+  name: uab-asho-ai-codification-team-10
+  course: Fundamentals of Natural Language / NLP-I
+  academic_year: "2025-2026"
+  random_state: 42
+
+data:
+  raw_dir: data/raw
+  interim_dir: data/interim
+  processed_dir: data/processed
+  codification_file: codification_data.csv
+  leaderboard_file: leaderboard_data.csv
+  icd_catalog_file: icd_d_p_pairs.csv
+
+target:
+  name: y_category
+  definition: first character of Code
+  expected_categories: "0-9 and A-Z"
+
+outputs:
+  metrics_dir: outputs/metrics
+  predictions_dir: outputs/predictions
+  submissions_dir: submissions
+  checkpoints_dir: outputs/checkpoints
+  logs_dir: outputs/logs
+

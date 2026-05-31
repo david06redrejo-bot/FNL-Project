@@ -1,28 +1,67 @@
-# Python virtual environment
+# Python virtual environments and local configuration
 .venv/
+venv/
 .env
-
-# Jupyter notebooks
-.ipynb_checkpoints/
+.env.*
 
 # Python cache
 __pycache__/
-*.pyc
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
 
-# OS generated files
+# Jupyter
+.ipynb_checkpoints/
+
+# OS/editor generated files
 .DS_Store
 Thumbs.db
+.idea/
+.vscode/
 
-# Agent tools
-agent/
+# Private raw/intermediate data. Keep folder placeholders.
+data/raw/*
+data/interim/*
+data/processed/*
+!data/raw/.gitkeep
+!data/interim/.gitkeep
+!data/processed/.gitkeep
 
-# Step-by-step instructions
-instructions/
+# Generated outputs. Keep folder placeholders.
+outputs/eda/*
+outputs/metrics/*
+outputs/predictions/*
+outputs/checkpoints/*
+outputs/logs/*
+!outputs/eda/.gitkeep
+!outputs/metrics/.gitkeep
+!outputs/predictions/.gitkeep
+!outputs/checkpoints/.gitkeep
+!outputs/logs/.gitkeep
 
-# Data
-data/
+# Large model artifacts
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.joblib
+*.pkl
 
-# Experiments (private)
+# Generated report artifacts
+reports/compiled/*
+!reports/compiled/.gitkeep
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+
+# Local experiments and agent scratch files
 experiments/
-
-
+agent/
+instructions/

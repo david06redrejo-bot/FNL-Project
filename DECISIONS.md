@@ -17,3 +17,23 @@ This file records project decisions for Team 10's UAB-ASHO AI Codification proje
 - Final work should tell the story: EDA -> preprocessing -> reference methods from the survey -> baselines -> RoBERTa backbone -> improved models -> evaluation -> submission -> report.
 
 **Status:** Active.
+
+## 2026-05-31 — Adopt Final Repository Skeleton
+
+**Decision:** Organize the project around a professional final skeleton with
+`src/` for reusable logic, `models/` for runnable versioned experiments,
+`outputs/` for generated artifacts, `reports/` for LaTeX, and `presentations/`
+for final communication material.
+
+**Reasoning:** The final repository must be easy for professors and teammates to
+evaluate. Notebooks should tell the story, but the core implementation must live
+in importable Python modules and runnable model files.
+
+**Implications:**
+
+- Raw data and large generated artifacts stay out of Git.
+- Every model version should write metrics, predictions, submissions, and notes.
+- Historical notebooks remain as project history, while the new numbered
+  notebooks define the final narrative.
+
+**Status:** Active.

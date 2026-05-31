@@ -28,3 +28,13 @@ Potential report section order:
 8. RoBERTa backbone experiment.
 9. Evaluation and error analysis.
 10. Submission and conclusions.
+
+## 2026-05-31 — Repository Skeleton Implemented
+
+The final project structure now reflects the story we want the report to tell:
+we start with the data and annotations, then explain the main task challenges,
+then move from survey-inspired baselines to RoBERTa and improved models.
+
+The report should explicitly say that notebooks are narrative and scripts are
+the reproducibility backbone. This is a good way to show that the team learned
+to separate exploration from reusable implementation.

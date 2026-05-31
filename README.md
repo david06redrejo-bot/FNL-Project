@@ -1,48 +1,97 @@
-# Automated ICD Coding FNL Project
+# UAB-ASHO AI Codification — Team 10
 
-![Python Version](https://img.shields.io/badge/python-3.10%2B-blue)
-![NLP](https://img.shields.io/badge/domain-NLP%20%7C%20Healthcare-green)
+ICD coding matters because a short clinical phrase can determine how a case is
+indexed, audited, studied, and reimbursed. In this project we work on a compact
+version of that problem: given a clinical literal, predict exactly one ICD-10
+category prefix, `y_category`, defined as the first character of `Code`.
 
-## Overview
-This repository contains the codebase and reports for the Natural Language Processing (NLP) project on **Automated International Classification of Diseases (ICD) Coding**. The goal of this project is to build an end-to-end NLP pipeline to automatically assign hierarchical ICD codes to health-related documents such as Electronic Medical Records (EMRs). 
+This repository is for the Fundamentals of Natural Language / NLP-I project at
+Universitat Autonoma de Barcelona, academic year 2025-2026.
 
-This project explores traditional (non-deep learning) baseline machine learning methods based on a thorough literature review, implementing feature extraction techniques like TF-IDF alongside classifiers like SVMs.
+**Team 10**
 
-## Directory Structure
-- `data/`: Contains datasets and ICD code mapping pairs (Ignored by Git).
-- `docs/`: Holds project presentations, literature reviews, and final reports.
-- `notebooks/`: Jupyter Notebooks for data exploration and evaluating non-deep learning baseline methods.
-- `src/`: Python source code, including custom modules for preprocessing and evaluating multi-label text clinical data.
+- Phoebe Iglesias (1713459)
+- David Redrejo (1790336)
+- Pau Rossell (1750424)
 
-## Milestones
-- **March 18th:** Project Introduction.
-- **April 8th:** First Follow-up.
-  - Literature review of reference papers (see `docs/literature_review.md`).
-  - Analysis of datasets and challenges.
-  - Proposal of machine learning methods.
-- **May 11th:** Second Follow-up.
-  - Implementation and evaluation of a first baseline method.
-- **June 1st - June 3rd:** Final Presentation.
-  - Final implementation.
-  - Written report and oral presentation.
+**Supervisors/professors:** Ernest Valveny and Lei Kang  
+**Competition:** Kaggle UAB-ASHO AI Codification (`uab-asho-ai-codification`)
 
-## Setup and Installation
-1. Clone the repository.
-   ```bash
-   git clone https://github.com/user-name/FNL-Project.git
-   cd FNL-Project
-   ```
-2. Create and activate a Virtual Environment.
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
-   ```
-3. Install dependencies.
-   ```bash
-   pip install -r requirements.txt
-   ```
-4. Place testing datasets (`codification_data.csv`, `icd_d_p_pairs.csv`, etc.) in the `data/` directory.
+## Project Story
 
-## Authors
-Group 10 FNL 2025-26 - 
-Phoebe Iglesias, David Redrejo & Pau Rossell
+The repository is organized around a reproducible project arc:
+
+```text
+EDA -> preprocessing -> reference methods -> baselines -> RoBERTa backbone
+-> improved models -> evaluation -> submission -> report
+```
+
+The first real technical phase is **Analyzing the data and the annotations**.
+The second phase is **Understanding the main challenges of the task**. From
+there, the project moves into reference methods from the ICD coding survey,
+classical baselines, RoBERTa experiments, ablations, and final evaluation.
+
+## Repository Structure
+
+```text
+.
+├── data/                  # Raw, interim, and processed data; raw CSVs are private
+├── notebooks/             # Narrative notebooks, not the only source of logic
+├── src/                   # Reusable project code
+├── models/                # Runnable model-version scripts
+├── configs/               # Experiment and model registry configs
+├── outputs/               # Generated metrics, predictions, logs, checkpoints
+├── submissions/           # Submission CSVs
+├── reports/               # Final LaTeX report and report assets
+├── presentations/         # Short and final presentation materials
+└── tests/                 # Lightweight checks
+```
+
+## Final Architecture
+
+Placeholder for final architecture image:
+
+```text
+reports/figures/final_architecture.png
+```
+
+## Main Results
+
+Placeholder for the final result table. Historical notebook metrics must be
+rerun before being reported as final.
+
+| Model | Validation accuracy | Notes |
+|---|---:|---|
+| Majority baseline | TBD | Lower bound |
+| TF-IDF + Logistic Regression | TBD | Classical baseline |
+| TF-IDF + SVM | TBD | Survey-inspired baseline |
+| RoBERTa backbone | TBD | Transformer baseline |
+| Final selected model | TBD | Official submission candidate |
+
+## Data Placement
+
+Place Kaggle files in `data/raw/`:
+
+```text
+data/raw/codification_data.csv
+data/raw/leaderboard_data.csv
+data/raw/icd_d_p_pairs.csv
+```
+
+These files are ignored by Git because they are dataset artifacts, but the
+folder structure is kept with `.gitkeep` files.
+
+## Quick Start
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+python models/v00_majority_baseline.py --dry-run
+python models/v02_tfidf_word_svm.py --train --evaluate --predict --make-submission
+```
+
+Outputs are written to `outputs/metrics/`, `outputs/predictions/`,
+`submissions/`, `EXPERIMENT_LOG.md`, and `REPORT_NOTES.md`.
+
+For full reproduction instructions, see `REPRODUCIBILITY.md`.
