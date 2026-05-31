@@ -61,3 +61,7 @@ in importable Python modules and runnable model files.
 ## EDA Before Modeling
 
 Decision: continue with EDA conclusions only before training. The observed imbalance, duplicate literals, and ambiguous literal-category mappings must shape the baseline design and evaluation plan.
+
+## Final Preprocessing Decision
+
+Decision: use `clean_required` for the final RoBERTa pipeline. This preserves case, accents, punctuation, digits, and abbreviations while stripping leading/trailing spaces and collapsing repeated whitespace. Stronger normalization is reserved for classical-baseline ablations only.

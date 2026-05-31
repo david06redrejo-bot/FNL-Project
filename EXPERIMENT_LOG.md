@@ -36,3 +36,7 @@ Full training still requires restoring the raw Kaggle CSV files into
 ## No model yet; EDA conclusions only
 
 Generated the visual EDA figures and tables. No model training, validation, or prediction was run.
+
+## No model yet; preprocessing conclusions only
+
+Created required-clean processed datasets and preprocessing ablation summaries. No model training, validation, or prediction was run.

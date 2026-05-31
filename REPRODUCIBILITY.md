@@ -67,6 +67,21 @@ This command generates the first report figures and EDA tables, including class
 distribution, long-tail analysis, literal lengths, duplicate/ambiguous literals,
 text-pattern prevalence, and train/leaderboard shift checks.
 
+Create the required-clean preprocessing files with:
+
+```bash
+python scripts/run_preprocessing.py
+```
+
+This command writes:
+
+- `data/processed/train_required_clean.csv`
+- `data/processed/leaderboard_required_clean.csv`
+- `data/interim/preprocessing_ablation/preprocessing_ablation_summary.csv`
+- `data/interim/preprocessing_ablation/preprocessing_ablation_examples.csv`
+
+It does not train any model.
+
 ## 4. Reproduce Baselines
 
 After placing data in `data/raw/`, run:

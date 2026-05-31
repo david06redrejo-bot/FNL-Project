@@ -94,3 +94,37 @@ Normalization risk:
   2186
 
 No model has been trained yet; these are EDA conclusions only.
+
+## Preprocessing Design: Light Cleaning for RoBERTa
+
+The final preprocessing decision is deliberately conservative. For the RoBERTa
+pipeline, we use only required light cleanup: convert null-safe values to text,
+strip leading/trailing spaces, and collapse repeated whitespace.
+
+We do **not** lowercase, remove accents, or remove punctuation for the final
+RoBERTa pipeline because the backbone tokenizer is pretrained on Spanish
+biomedical and clinical text. Aggressive normalization could remove useful
+signals from accents, uppercase abbreviations, punctuation, digits, and compact
+clinical notation.
+
+Processed files created:
+
+- `data/processed/train_required_clean.csv`
+- `data/processed/leaderboard_required_clean.csv`
+
+Ablation artifacts for analysis/classical baselines:
+
+- `data/interim/preprocessing_ablation/preprocessing_ablation_summary.csv`
+- `data/interim/preprocessing_ablation/preprocessing_ablation_examples.csv`
+
+Observed ablation impact:
+
+```text
+                    variant  changed_rows  changed_share
+required whitespace cleanup             3       0.000219
+                  lowercase          8399       0.613066
+             accent removal          3833       0.279781
+        punctuation removal          1338       0.097664
+```
+
+No model has been trained yet; these are preprocessing-design conclusions only.
