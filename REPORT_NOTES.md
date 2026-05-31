@@ -195,3 +195,29 @@ Concrete strategy from the survey:
 
 No model has been trained in this step; this is conceptual grounding and project
 strategy.
+
+## First Modeling Baseline: Majority Category
+
+We implemented `v00_majority_baseline` as the first real model version. This
+baseline deliberately ignores the literal text and predicts the most frequent
+`y_category` observed in the training portion of the stratified 80/20 split.
+
+With seed 42, the split contained 10,960 training rows and 2,740 validation
+rows. The most frequent category in the training split was `Z`, with 1,372
+examples, so the baseline predicted `Z` for every validation and leaderboard
+example.
+
+Validation results:
+
+```text
+accuracy: 0.125182
+macro_f1: 0.006181
+weighted_f1: 0.027854
+```
+
+This result is useful because it separates class-prior performance from actual
+language understanding. The accuracy is not zero because the dataset is
+imbalanced, but the macro F1 is almost zero because the model never predicts the
+minority categories. In the report, we will use this as the minimum modeling
+threshold: every serious baseline must beat it and must predict a broader set
+of categories.

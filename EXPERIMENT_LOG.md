@@ -53,16 +53,22 @@ metrics, detailed predictions, exact Kaggle submissions, checkpoints, run
 summaries, and experiment-log updates. A tiny debug sample can be used for smoke
 tests without expensive training.
 
-## Run v00_majority_baseline_debug
+## Run v00_majority_baseline
 
-**Version:** `v00_majority_baseline_debug`
+**Version:** `v00_majority_baseline`
 
 Metrics:
-- `accuracy`: 0.000000
-- `macro_f1`: 0.000000
-- `weighted_f1`: 0.000000
+- `accuracy`: 0.125182
+- `macro_f1`: 0.006181
+- `weighted_f1`: 0.027854
 
-Run summary: `/home/iadlG010/FNL-Project/outputs/logs/v00_majority_baseline_debug_run.md`
+Run summary: `/home/iadlG010/FNL-Project/outputs/logs/v00_majority_baseline_run.md`
+
+Interpretation:
+This is the sanity baseline for class imbalance. It predicts only the majority
+category `Z`, so the 12.5% validation accuracy comes from the label prior rather
+than from clinical text understanding. All later models must beat this result,
+especially in macro F1.
 
 ## Run v01_tfidf_char_logreg_debug
 
