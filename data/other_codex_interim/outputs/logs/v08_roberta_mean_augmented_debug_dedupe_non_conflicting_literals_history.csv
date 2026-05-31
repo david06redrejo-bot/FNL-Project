@@ -1,0 +1,2 @@
+candidate_id,epoch,train_loss,val_loss,val_accuracy,macro_f1,weighted_f1
+dedupe_non_conflicting_literals,1,3.5653965771198273,3.501691371202469,0.15625,0.05333333333333333,0.08499999999999999

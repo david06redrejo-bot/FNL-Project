@@ -1,0 +1,924 @@
+{
+  "phase": "1. Analyzing the Data and the Annotations",
+  "data_dir": "/home/iadlG010/FNL-Project/data",
+  "csv_file_count": 7,
+  "files": [
+    {
+      "filename": "data/interim/preprocessing_ablation/preprocessing_ablation_examples.csv",
+      "basename": "preprocessing_ablation_examples.csv",
+      "role": "unknown",
+      "shape_rows": 80,
+      "shape_columns": 9,
+      "columns": [
+        "Literal",
+        "required_clean",
+        "lowercase",
+        "remove_accents",
+        "remove_punctuation",
+        "required_changed",
+        "lowercase_changed",
+        "accent_removal_changed",
+        "punctuation_removal_changed"
+      ],
+      "null_counts": {
+        "Literal": 0,
+        "required_clean": 0,
+        "lowercase": 0,
+        "remove_accents": 0,
+        "remove_punctuation": 0,
+        "required_changed": 0,
+        "lowercase_changed": 0,
+        "accent_removal_changed": 0,
+        "punctuation_removal_changed": 0
+      },
+      "duplicate_row_count": 0,
+      "example_literals": [
+        "Hiperreactividad bronquial",
+        "broncoespástica",
+        "miocardiopatía dilatada",
+        "HTA irc 6",
+        "Crisis febriles atípicas"
+      ],
+      "example_codes": [],
+      "first_rows": [
+        {
+          "Literal": "Hiperreactividad bronquial",
+          "required_clean": "Hiperreactividad bronquial",
+          "lowercase": "hiperreactividad bronquial",
+          "remove_accents": "Hiperreactividad bronquial",
+          "remove_punctuation": "Hiperreactividad bronquial",
+          "required_changed": false,
+          "lowercase_changed": true,
+          "accent_removal_changed": false,
+          "punctuation_removal_changed": false
+        },
+        {
+          "Literal": "broncoespástica",
+          "required_clean": "broncoespástica",
+          "lowercase": "broncoespástica",
+          "remove_accents": "broncoespastica",
+          "remove_punctuation": "broncoespástica",
+          "required_changed": false,
+          "lowercase_changed": false,
+          "accent_removal_changed": true,
+          "punctuation_removal_changed": false
+        },
+        {
+          "Literal": "miocardiopatía dilatada",
+          "required_clean": "miocardiopatía dilatada",
+          "lowercase": "miocardiopatía dilatada",
+          "remove_accents": "miocardiopatia dilatada",
+          "remove_punctuation": "miocardiopatía dilatada",
+          "required_changed": false,
+          "lowercase_changed": false,
+          "accent_removal_changed": true,
+          "punctuation_removal_changed": false
+        },
+        {
+          "Literal": "HTA irc 6",
+          "required_clean": "HTA irc 6",
+          "lowercase": "hta irc 6",
+          "remove_accents": "HTA irc 6",
+          "remove_punctuation": "HTA irc 6",
+          "required_changed": false,
+          "lowercase_changed": true,
+          "accent_removal_changed": false,
+          "punctuation_removal_changed": false
+        },
+        {
+          "Literal": "Crisis febriles atípicas",
+          "required_clean": "Crisis febriles atípicas",
+          "lowercase": "crisis febriles atípicas",
+          "remove_accents": "Crisis febriles atipicas",
+          "remove_punctuation": "Crisis febriles atípicas",
+          "required_changed": false,
+          "lowercase_changed": true,
+          "accent_removal_changed": true,
+          "punctuation_removal_changed": false
+        }
+      ],
+      "validation": {
+        "role": "unknown",
+        "valid": false,
+        "columns": [
+          "Literal",
+          "required_clean",
+          "lowercase",
+          "remove_accents",
+          "remove_punctuation",
+          "required_changed",
+          "lowercase_changed",
+          "accent_removal_changed",
+          "punctuation_removal_changed"
+        ],
+        "errors": [
+          "Unknown dataset role `unknown`."
+        ],
+        "warnings": []
+      }
+    },
+    {
+      "filename": "data/interim/preprocessing_ablation/preprocessing_ablation_summary.csv",
+      "basename": "preprocessing_ablation_summary.csv",
+      "role": "unknown",
+      "shape_rows": 4,
+      "shape_columns": 3,
+      "columns": [
+        "variant",
+        "changed_rows",
+        "changed_share"
+      ],
+      "null_counts": {
+        "variant": 0,
+        "changed_rows": 0,
+        "changed_share": 0
+      },
+      "duplicate_row_count": 0,
+      "example_literals": [],
+      "example_codes": [],
+      "first_rows": [
+        {
+          "variant": "required whitespace cleanup",
+          "changed_rows": 3,
+          "changed_share": 0.0002189781021897
+        },
+        {
+          "variant": "lowercase",
+          "changed_rows": 8399,
+          "changed_share": 0.613065693430657
+        },
+        {
+          "variant": "accent removal",
+          "changed_rows": 3833,
+          "changed_share": 0.2797810218978102
+        },
+        {
+          "variant": "punctuation removal",
+          "changed_rows": 1338,
+          "changed_share": 0.0976642335766423
+        }
+      ],
+      "validation": {
+        "role": "unknown",
+        "valid": false,
+        "columns": [
+          "variant",
+          "changed_rows",
+          "changed_share"
+        ],
+        "errors": [
+          "Unknown dataset role `unknown`."
+        ],
+        "warnings": []
+      }
+    },
+    {
+      "filename": "data/processed/leaderboard_required_clean.csv",
+      "basename": "leaderboard_required_clean.csv",
+      "role": "leaderboard_like",
+      "shape_rows": 6667,
+      "shape_columns": 3,
+      "columns": [
+        "id",
+        "Literal",
+        "Literal_required_clean"
+      ],
+      "null_counts": {
+        "id": 0,
+        "Literal": 0,
+        "Literal_required_clean": 0
+      },
+      "duplicate_row_count": 0,
+      "example_literals": [
+        "AMNIODRENAJE",
+        "Hiperparatiroidismo primario",
+        "MIGRANYA parto",
+        "VHC",
+        "Absceso mama izq"
+      ],
+      "example_codes": [],
+      "first_rows": [
+        {
+          "id": 1,
+          "Literal": "AMNIODRENAJE",
+          "Literal_required_clean": "AMNIODRENAJE"
+        },
+        {
+          "id": 2,
+          "Literal": "Hiperparatiroidismo primario",
+          "Literal_required_clean": "Hiperparatiroidismo primario"
+        },
+        {
+          "id": 3,
+          "Literal": "MIGRANYA parto",
+          "Literal_required_clean": "MIGRANYA parto"
+        },
+        {
+          "id": 4,
+          "Literal": "VHC",
+          "Literal_required_clean": "VHC"
+        },
+        {
+          "id": 5,
+          "Literal": "Absceso mama izq",
+          "Literal_required_clean": "Absceso mama izq"
+        }
+      ],
+      "validation": {
+        "role": "leaderboard_like",
+        "valid": true,
+        "columns": [
+          "id",
+          "Literal",
+          "Literal_required_clean"
+        ],
+        "required_columns": [
+          "id",
+          "Literal"
+        ],
+        "optional_columns": [
+          "y_category"
+        ],
+        "missing_required": [],
+        "missing_optional": [
+          "y_category"
+        ],
+        "errors": [],
+        "warnings": [
+          "`y_category` is absent from leaderboard data; this is normal for unlabeled Kaggle test files but differs from the stated expected columns."
+        ]
+      }
+    },
+    {
+      "filename": "data/processed/train_required_clean.csv",
+      "basename": "train_required_clean.csv",
+      "role": "codification_like",
+      "shape_rows": 13700,
+      "shape_columns": 5,
+      "columns": [
+        "Code",
+        "Literal",
+        "y_category",
+        "label_id",
+        "Literal_required_clean"
+      ],
+      "null_counts": {
+        "Code": 0,
+        "Literal": 0,
+        "y_category": 0,
+        "label_id": 0,
+        "Literal_required_clean": 0
+      },
+      "duplicate_row_count": 0,
+      "example_literals": [
+        "Hiperreactividad bronquial",
+        "broncoespástica",
+        "miocardiopatía dilatada",
+        "HTA irc 6",
+        "Crisis febriles atípicas"
+      ],
+      "example_codes": [
+        "J9809",
+        "J9801",
+        "I420",
+        "Y831",
+        "R5600"
+      ],
+      "first_rows": [
+        {
+          "Code": "J9809",
+          "Literal": "Hiperreactividad bronquial",
+          "y_category": "J",
+          "label_id": 19,
+          "Literal_required_clean": "Hiperreactividad bronquial"
+        },
+        {
+          "Code": "J9801",
+          "Literal": "broncoespástica",
+          "y_category": "J",
+          "label_id": 19,
+          "Literal_required_clean": "broncoespástica"
+        },
+        {
+          "Code": "I420",
+          "Literal": "miocardiopatía dilatada",
+          "y_category": "I",
+          "label_id": 18,
+          "Literal_required_clean": "miocardiopatía dilatada"
+        },
+        {
+          "Code": "Y831",
+          "Literal": "HTA irc 6",
+          "y_category": "Y",
+          "label_id": 34,
+          "Literal_required_clean": "HTA irc 6"
+        },
+        {
+          "Code": "R5600",
+          "Literal": "Crisis febriles atípicas",
+          "y_category": "R",
+          "label_id": 27,
+          "Literal_required_clean": "Crisis febriles atípicas"
+        }
+      ],
+      "validation": {
+        "role": "codification_like",
+        "valid": true,
+        "columns": [
+          "Code",
+          "Literal",
+          "y_category",
+          "label_id",
+          "Literal_required_clean"
+        ],
+        "required_columns": [
+          "Code",
+          "Literal"
+        ],
+        "optional_columns": [],
+        "missing_required": [],
+        "missing_optional": [],
+        "errors": [],
+        "warnings": []
+      },
+      "label_mapping": {
+        "sorted_labels": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9",
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F",
+          "G",
+          "H",
+          "I",
+          "J",
+          "K",
+          "L",
+          "M",
+          "N",
+          "O",
+          "P",
+          "Q",
+          "R",
+          "S",
+          "T",
+          "U",
+          "V",
+          "W",
+          "X",
+          "Y",
+          "Z"
+        ],
+        "label2id": {
+          "0": 0,
+          "1": 1,
+          "2": 2,
+          "3": 3,
+          "4": 4,
+          "5": 5,
+          "6": 6,
+          "7": 7,
+          "8": 8,
+          "9": 9,
+          "A": 10,
+          "B": 11,
+          "C": 12,
+          "D": 13,
+          "E": 14,
+          "F": 15,
+          "G": 16,
+          "H": 17,
+          "I": 18,
+          "J": 19,
+          "K": 20,
+          "L": 21,
+          "M": 22,
+          "N": 23,
+          "O": 24,
+          "P": 25,
+          "Q": 26,
+          "R": 27,
+          "S": 28,
+          "T": 29,
+          "U": 30,
+          "V": 31,
+          "W": 32,
+          "X": 33,
+          "Y": 34,
+          "Z": 35
+        },
+        "id2label": {
+          "0": "0",
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "10": "A",
+          "11": "B",
+          "12": "C",
+          "13": "D",
+          "14": "E",
+          "15": "F",
+          "16": "G",
+          "17": "H",
+          "18": "I",
+          "19": "J",
+          "20": "K",
+          "21": "L",
+          "22": "M",
+          "23": "N",
+          "24": "O",
+          "25": "P",
+          "26": "Q",
+          "27": "R",
+          "28": "S",
+          "29": "T",
+          "30": "U",
+          "31": "V",
+          "32": "W",
+          "33": "X",
+          "34": "Y",
+          "35": "Z"
+        },
+        "n_classes": 36
+      },
+      "expected_36_classes": true,
+      "missing_expected_categories": [],
+      "unexpected_categories": []
+    },
+    {
+      "filename": "data/raw/codification_data.csv",
+      "basename": "codification_data.csv",
+      "role": "codification",
+      "shape_rows": 13700,
+      "shape_columns": 2,
+      "columns": [
+        "Code",
+        "Literal"
+      ],
+      "null_counts": {
+        "Code": 0,
+        "Literal": 0
+      },
+      "duplicate_row_count": 0,
+      "example_literals": [
+        "Hiperreactividad bronquial",
+        "broncoespástica",
+        "miocardiopatía dilatada",
+        "HTA irc 6",
+        "Crisis febriles atípicas"
+      ],
+      "example_codes": [
+        "J9809",
+        "J9801",
+        "I420",
+        "Y831",
+        "R5600"
+      ],
+      "first_rows": [
+        {
+          "Code": "J9809",
+          "Literal": "Hiperreactividad bronquial"
+        },
+        {
+          "Code": "J9801",
+          "Literal": "broncoespástica"
+        },
+        {
+          "Code": "I420",
+          "Literal": "miocardiopatía dilatada"
+        },
+        {
+          "Code": "Y831",
+          "Literal": "HTA irc 6"
+        },
+        {
+          "Code": "R5600",
+          "Literal": "Crisis febriles atípicas"
+        }
+      ],
+      "validation": {
+        "role": "codification",
+        "valid": true,
+        "columns": [
+          "Code",
+          "Literal"
+        ],
+        "required_columns": [
+          "Code",
+          "Literal"
+        ],
+        "optional_columns": [],
+        "missing_required": [],
+        "missing_optional": [],
+        "errors": [],
+        "warnings": []
+      },
+      "label_mapping": {
+        "sorted_labels": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9",
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F",
+          "G",
+          "H",
+          "I",
+          "J",
+          "K",
+          "L",
+          "M",
+          "N",
+          "O",
+          "P",
+          "Q",
+          "R",
+          "S",
+          "T",
+          "U",
+          "V",
+          "W",
+          "X",
+          "Y",
+          "Z"
+        ],
+        "label2id": {
+          "0": 0,
+          "1": 1,
+          "2": 2,
+          "3": 3,
+          "4": 4,
+          "5": 5,
+          "6": 6,
+          "7": 7,
+          "8": 8,
+          "9": 9,
+          "A": 10,
+          "B": 11,
+          "C": 12,
+          "D": 13,
+          "E": 14,
+          "F": 15,
+          "G": 16,
+          "H": 17,
+          "I": 18,
+          "J": 19,
+          "K": 20,
+          "L": 21,
+          "M": 22,
+          "N": 23,
+          "O": 24,
+          "P": 25,
+          "Q": 26,
+          "R": 27,
+          "S": 28,
+          "T": 29,
+          "U": 30,
+          "V": 31,
+          "W": 32,
+          "X": 33,
+          "Y": 34,
+          "Z": 35
+        },
+        "id2label": {
+          "0": "0",
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "10": "A",
+          "11": "B",
+          "12": "C",
+          "13": "D",
+          "14": "E",
+          "15": "F",
+          "16": "G",
+          "17": "H",
+          "18": "I",
+          "19": "J",
+          "20": "K",
+          "21": "L",
+          "22": "M",
+          "23": "N",
+          "24": "O",
+          "25": "P",
+          "26": "Q",
+          "27": "R",
+          "28": "S",
+          "29": "T",
+          "30": "U",
+          "31": "V",
+          "32": "W",
+          "33": "X",
+          "34": "Y",
+          "35": "Z"
+        },
+        "n_classes": 36
+      },
+      "expected_36_classes": true,
+      "missing_expected_categories": [],
+      "unexpected_categories": []
+    },
+    {
+      "filename": "data/raw/icd_d_p_pairs.csv",
+      "basename": "icd_d_p_pairs.csv",
+      "role": "icd_catalog",
+      "shape_rows": 179742,
+      "shape_columns": 3,
+      "columns": [
+        "Code",
+        "D_P",
+        "Description"
+      ],
+      "null_counts": {
+        "Code": 0,
+        "D_P": 0,
+        "Description": 0
+      },
+      "duplicate_row_count": 0,
+      "example_literals": [],
+      "example_codes": [
+        "A00",
+        "A000",
+        "A001",
+        "A009",
+        "A01"
+      ],
+      "first_rows": [
+        {
+          "Code": "A00",
+          "D_P": "D",
+          "Description": "Cólera"
+        },
+        {
+          "Code": "A000",
+          "D_P": "D",
+          "Description": "Cólera debido a Vibrio cholerae 01, biotipo cholerae"
+        },
+        {
+          "Code": "A001",
+          "D_P": "D",
+          "Description": "Cólera debido a Vibrio cholerae 01, biotipo El Tor"
+        },
+        {
+          "Code": "A009",
+          "D_P": "D",
+          "Description": "Cólera, no especificado"
+        },
+        {
+          "Code": "A01",
+          "D_P": "D",
+          "Description": "Fiebres tifoidea y paratifoidea"
+        }
+      ],
+      "validation": {
+        "role": "icd_catalog",
+        "valid": true,
+        "columns": [
+          "Code",
+          "D_P",
+          "Description"
+        ],
+        "required_columns": [
+          "Code"
+        ],
+        "optional_columns": [
+          "D_P",
+          "Description"
+        ],
+        "missing_required": [],
+        "missing_optional": [],
+        "errors": [],
+        "warnings": []
+      },
+      "label_mapping": {
+        "sorted_labels": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9",
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F",
+          "G",
+          "H",
+          "I",
+          "J",
+          "K",
+          "L",
+          "M",
+          "N",
+          "O",
+          "P",
+          "Q",
+          "R",
+          "S",
+          "T",
+          "U",
+          "V",
+          "W",
+          "X",
+          "Y",
+          "Z"
+        ],
+        "label2id": {
+          "0": 0,
+          "1": 1,
+          "2": 2,
+          "3": 3,
+          "4": 4,
+          "5": 5,
+          "6": 6,
+          "7": 7,
+          "8": 8,
+          "9": 9,
+          "A": 10,
+          "B": 11,
+          "C": 12,
+          "D": 13,
+          "E": 14,
+          "F": 15,
+          "G": 16,
+          "H": 17,
+          "I": 18,
+          "J": 19,
+          "K": 20,
+          "L": 21,
+          "M": 22,
+          "N": 23,
+          "O": 24,
+          "P": 25,
+          "Q": 26,
+          "R": 27,
+          "S": 28,
+          "T": 29,
+          "U": 30,
+          "V": 31,
+          "W": 32,
+          "X": 33,
+          "Y": 34,
+          "Z": 35
+        },
+        "id2label": {
+          "0": "0",
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "10": "A",
+          "11": "B",
+          "12": "C",
+          "13": "D",
+          "14": "E",
+          "15": "F",
+          "16": "G",
+          "17": "H",
+          "18": "I",
+          "19": "J",
+          "20": "K",
+          "21": "L",
+          "22": "M",
+          "23": "N",
+          "24": "O",
+          "25": "P",
+          "26": "Q",
+          "27": "R",
+          "28": "S",
+          "29": "T",
+          "30": "U",
+          "31": "V",
+          "32": "W",
+          "33": "X",
+          "34": "Y",
+          "35": "Z"
+        },
+        "n_classes": 36
+      },
+      "expected_36_classes": true,
+      "missing_expected_categories": [],
+      "unexpected_categories": []
+    },
+    {
+      "filename": "data/raw/leaderboard_data.csv",
+      "basename": "leaderboard_data.csv",
+      "role": "leaderboard",
+      "shape_rows": 6667,
+      "shape_columns": 2,
+      "columns": [
+        "id",
+        "Literal"
+      ],
+      "null_counts": {
+        "id": 0,
+        "Literal": 0
+      },
+      "duplicate_row_count": 0,
+      "example_literals": [
+        "AMNIODRENAJE",
+        "Hiperparatiroidismo primario",
+        "MIGRANYA parto",
+        "VHC",
+        "Absceso mama izq"
+      ],
+      "example_codes": [],
+      "first_rows": [
+        {
+          "id": 1,
+          "Literal": "AMNIODRENAJE"
+        },
+        {
+          "id": 2,
+          "Literal": "Hiperparatiroidismo primario"
+        },
+        {
+          "id": 3,
+          "Literal": "MIGRANYA parto"
+        },
+        {
+          "id": 4,
+          "Literal": "VHC"
+        },
+        {
+          "id": 5,
+          "Literal": "Absceso mama izq"
+        }
+      ],
+      "validation": {
+        "role": "leaderboard",
+        "valid": true,
+        "columns": [
+          "id",
+          "Literal"
+        ],
+        "required_columns": [
+          "id",
+          "Literal"
+        ],
+        "optional_columns": [
+          "y_category"
+        ],
+        "missing_required": [],
+        "missing_optional": [
+          "y_category"
+        ],
+        "errors": [],
+        "warnings": [
+          "`y_category` is absent from leaderboard data; this is normal for unlabeled Kaggle test files but differs from the stated expected columns."
+        ]
+      }
+    }
+  ],
+  "warnings": [
+    "Non-competition CSV `preprocessing_ablation_examples.csv` has unknown schema: Unknown dataset role `unknown`.",
+    "Non-competition CSV `preprocessing_ablation_summary.csv` has unknown schema: Unknown dataset role `unknown`.",
+    "`y_category` is absent from leaderboard data; this is normal for unlabeled Kaggle test files but differs from the stated expected columns.",
+    "`y_category` is absent from leaderboard data; this is normal for unlabeled Kaggle test files but differs from the stated expected columns."
+  ],
+  "errors": []
+}

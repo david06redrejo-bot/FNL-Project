@@ -102,7 +102,6 @@ representations and robust surface-form signals from classical Machine Learning.
 ├── src/                   # reusable loading, preprocessing, training, evaluation
 ├── models/                # runnable versioned model scripts
 ├── configs/               # experiment plans and model registry
-├── outputs/               # metrics, predictions, logs, checkpoints
 ├── submissions/           # Kaggle-ready CSV files
 ├── reports/               # final report, figures, tables, references
 ├── presentations/         # short and final presentation material

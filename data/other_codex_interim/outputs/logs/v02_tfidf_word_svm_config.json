@@ -1,0 +1,96 @@
+{
+  "best_params": {
+    "classifier": "linear_svc",
+    "min_df": 1,
+    "ngram_range": [
+      1,
+      1
+    ],
+    "sublinear_tf": true
+  },
+  "debug_sample": null,
+  "grid": [
+    {
+      "classifier": "linear_svc",
+      "min_df": 1,
+      "ngram_range": "1-1",
+      "sublinear_tf": true
+    },
+    {
+      "classifier": "linear_svc",
+      "min_df": 2,
+      "ngram_range": "1-1",
+      "sublinear_tf": true
+    },
+    {
+      "classifier": "logreg",
+      "min_df": 1,
+      "ngram_range": "1-1",
+      "sublinear_tf": true
+    },
+    {
+      "classifier": "logreg",
+      "min_df": 2,
+      "ngram_range": "1-1",
+      "sublinear_tf": true
+    },
+    {
+      "classifier": "linear_svc",
+      "min_df": 1,
+      "ngram_range": "1-2",
+      "sublinear_tf": true
+    },
+    {
+      "classifier": "linear_svc",
+      "min_df": 2,
+      "ngram_range": "1-2",
+      "sublinear_tf": true
+    },
+    {
+      "classifier": "logreg",
+      "min_df": 1,
+      "ngram_range": "1-2",
+      "sublinear_tf": true
+    },
+    {
+      "classifier": "logreg",
+      "min_df": 2,
+      "ngram_range": "1-2",
+      "sublinear_tf": true
+    },
+    {
+      "classifier": "linear_svc",
+      "min_df": 1,
+      "ngram_range": "1-3",
+      "sublinear_tf": true
+    },
+    {
+      "classifier": "linear_svc",
+      "min_df": 2,
+      "ngram_range": "1-3",
+      "sublinear_tf": true
+    },
+    {
+      "classifier": "logreg",
+      "min_df": 1,
+      "ngram_range": "1-3",
+      "sublinear_tf": true
+    },
+    {
+      "classifier": "logreg",
+      "min_df": 2,
+      "ngram_range": "1-3",
+      "sublinear_tf": true
+    }
+  ],
+  "label_id_col": "label_id",
+  "model_family": "tfidf_word",
+  "save_model": true,
+  "seed": 42,
+  "selected_by": "highest validation accuracy; ties by macro_f1 and weighted_f1",
+  "target_col": "y_category",
+  "text_col": "Literal_required_clean",
+  "top_k": 5,
+  "validation_size": 0.2,
+  "version_name": "v02_tfidf_word_svm"
+}

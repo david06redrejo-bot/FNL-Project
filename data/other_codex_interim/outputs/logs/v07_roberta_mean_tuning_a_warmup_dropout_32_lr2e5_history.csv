@@ -1,0 +1,2 @@
+epoch,candidate_id,train_loss,val_loss,val_accuracy,macro_f1,weighted_f1
+1,a_warmup_dropout_32_lr2e5,3.5161414444446564,3.443674087524414,0.15234375,0.028944934784740608,0.0845825001379082

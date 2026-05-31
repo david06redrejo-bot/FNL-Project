@@ -1,0 +1,21 @@
+{
+  "backbone": "PlanTL-GOB-ES/roberta-base-biomedical-clinical-es",
+  "batch_size": 128,
+  "candidate_id": "c_recommended_32_lr2e5_warmup006_clip",
+  "dropout": 0.1,
+  "gradient_clip": 1.0,
+  "learning_rate": 2e-05,
+  "max_epochs": 50,
+  "max_length": 32,
+  "patience": 10,
+  "scheduler": "linear",
+  "seed": 42,
+  "stage": "stage_c",
+  "train_limit": null,
+  "use_amp": false,
+  "val_limit": null,
+  "validation_size": 0.2,
+  "version_name": "v07_roberta_mean_tuning",
+  "warmup_ratio": 0.06,
+  "weight_decay": 0.01
+}

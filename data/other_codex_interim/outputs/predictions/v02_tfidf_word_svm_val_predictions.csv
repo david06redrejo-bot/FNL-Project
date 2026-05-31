@@ -1,0 +1,2741 @@
+Literal,y_true,y_pred
+Carcinoma ductal infiltrante,8,8
+obesidad mórbida parto,O,O
+OBESIDAD MORBIDA,E,2
+HTA irc 6,Z,N
+Misoprostol aborto,1,1
+otitis externa,3,3
+Anemia de enfermedad crónica,D,2
+gastritis crónicas parto,O,O
+trombocitopenia part,6,O
+esteatosis hepatica,5,5
+Ecografia renal:,B,B
+Hiperparatiroidismo,2,E
+AngioTC torácico,B,B
+ca mam bilateral,C,C
+déficit factor VII,D,D
+Hipotiroidismo postoperatorio part,O,E
+ENFISEMA,J,J
+caida casual en su domicilio,Y,Y
+Grupo sanguíneo: B negativo,Z,Z
+Enfermedad inflamatori pélvica,N,N
+HPV part,O,O
+donante antebrazo derecho,0,0
+Oxigenoterapia,3,3
+V64.1,Z,O
+GS 0+.,Z,Z
+27 semanas,Z,Z
+H25.9,H,R
+fuamdora 2t,O,F
+a negatiu,Z,Z
+NEOPLASIA RENAL IZQUIERDA,C,C
+flegmo periamigdalar,4,4
+ECO TV,8,B
+DBT,2,3
+Hipertrofia amigdales,4,4
+Esclerosis Multiple parto,O,G
+Fumadora 3T,O,O
+Raynaud,4,I
+drenaje de absceso vulvar,0,0
+34+5 semanas,Z,Z
+DIABETES,2,E
+HELLP,O,O
+hipotiroidisme parto,O,O
+Cistocele,N,N
+ATONIA UTERINA,O,O
+fumador parto,O,O
+Càlcul ureteral,N,N
+Abdominalgia en gestante,N,O
+ansioso parto,F,O
+Historia de tumor de Wilms,Z,Z
+Cataracta senil,3,2
+mastectomia,8,Z
+iot,9,0
+SÍNDROME DEPRESIVO,F,3
+Historia de TROMBOSIS,Z,Z
+Trichomonas vaginales,A,7
+luxación de hombro izquierdo,S,M
+Hipotiroidismo part,2,O
+duplicidad renal,Q,Q
+ECOABD,B,8
+protrusión discal C5-C6,M,M
+Endometriosis,6,N
+Biopsia selectiva ganglio centinela,4,4
+CIR,O,P
+peg,0,0
+Biopsia piel,8,0
+urocultivo,5,N
+IMC 58,Z,Z
+BSGC,4,0
+Histerectomia lap,6,6
+Historia de Carcinoma de cèl·lules basals de pell,Z,Z
+FIBROMIALGIA,M,M
+Varius,4,3
+leiomiomas,D,D
+osea,1,C
+34 sem,Z,Z
+ANEXECTOMIA DERECHA LAPAROSCOPIA,0,0
+Escoliosis dorsolumbar,M,M
+v1551,Z,3
+drenaje pleural,0,0
+Bufeta neurògena,5,N
+Rinoconjuntivitis alérgica,H,H
+Fumadora part,Z,O
+Déficit de ácido fólico,2,E
+historia pólipo colon,V,Z
+rge,5,K
+Hipoacusia OI,H,H
+hernia inguinal izquierda,5,K
+crohn part,K,O
+polipectomia por colonoscopia,V,4
+Varices parto,O,I
+ecografía,B,B
+trastorno de personalidad,F,F
+MASTECTOMIA derecha,0,0
+angor estable,I,4
+Stents farmacoactivos,Z,3
+uretrocele,N,N
+colporrafia anterior,7,7
+foramen oval permeable,7,Q
+ferida quirúrgica,E,E
+Piernas inquietas,G,3
+Prótesis total de cadera derecha,Z,Z
+antibioterápico,3,3
+insufiencia respiratoria aguda,J,5
+Asma extrínseca,4,J
+Comunicacion interauricular,Q,Q
+cirugia bypass,Y,4
+Paralisis facial,3,G
+Escafocefalia,7,3
+ITU's de repetición,Z,Z
+lupus eritematoso cutáneo,L,O
+gemelar monocorial-biamniótica,O,O
+Ooforectomía izquierda,0,0
+DVP,V,3
+reseccion vagina,7,Z
+LINFADENECTOMÍA PELVICA,0,4
+CARCINOMA ENDOMETRIOIDE,1,8
+patología fetal parto,6,O
+Grupo: 0 Positivo,Z,Z
+registro patológico fetal parto,6,O
+N39.0,N,Z
+SOP part,O,E
+Gastritis crónica part,K,O
+glioma de alto grado,1,8
+REDUCCIÓN MAMARIA BILATERAL,0,0
+O positiva,Z,Z
+ENDoMETRIOMA,6,6
+mc-ba,O,O
+Hernia inguinal izquierda,K,K
+Historia de LITIASIS RENAL,Z,Z
+Prematuridad 750,P,P
+Prótesis invertida de hombro derecho,0,0
+Insuficiencia Respiratoria crónica hipercápnica,J,5
+F44.7,F,Z
+jugando al futbol,Y,Y
+D.M,E,C
+candidiasis vaginal parto,B,B
+Diabetes mellitus tipo 1,E,E
+Diabetis mellitus,E,E
+papiledema,3,3
+Sdme prostático,N,N
+asimetria mamaria,6,7
+febril 2,7,7
+Diabetes Mellitus tipo II,E,E
+Vasculitis leucocitoclástica,M,M
+PIELOGRAFÍA RETRÓGRADA IZQUIERDA,B,8
+Roncador habitual,7,6
+insuficiencia tricuspídea,I,I
+HEMORRAGIA POST PARTO. -,O,O
+ECOGRAFIA RENO-VESICAL,B,B
+ferro,3,3
+Puerpero,Z,3
+semana 40,O,Z
+Hèrnia de hiatus,5,K
+prótesis mamarias,V,Z
+hemicolectomía derecha,V,Z
+Grupo A+,Z,Z
+Histerectomía,Z,6
+Dolor lumbar,7,M
+Historia de Radioterapia,Z,Z
+bypass femoro-tibial,Z,4
+BLOQUEO DE RAMA IZQUIERDA,I,I
+Escherichia Coli,B,B
+edemas,7,R
+Depresion parto,F,F
+corioamnionitis,6,O
+Ecocardiografía rn,B,B
+Poliuria,7,3
+Hipotiroidismo primario autoinmune,E,E
+sop parto,E,E
+v103,Z,3
+Cardiopatía congénita corregida,V,Q
+LUMBAGO AMB CIÀTICA,M,M
+Talasemia minor,D,D
+EXPANSOR MAMA derecha,0,0
+hipotiroidismo ANTEPARTO,6,6
+ascítis maligna,7,7
+HISTERECTOMÍA abdominal RADICAL,0,0
+fecaloma,5,K
+SGB 2,6,6
+agresividad,F,3
+Radiografía de tórax y abdomen,B,B
+PSORIASIS,6,L
+Anexectomía izquierda,0,0
+v133,Z,3
+historia ictus,V,Z
+alzheimer,3,G
+cordal incluido,5,3
+Von Willebrand parto,O,D
+Anemia puerperal,O,O
+CISTITIS AGUDA,5,5
+N04.8,N,N
+alergia Àcars,V,V
+adhesiolisis,6,5
+Liquido teñido,O,O
+Adenoidectomía,0,2
+infecciones urinarias de repetición,Z,Z
+IMC: 31,Z,Z
+cirugía endoscópica nasosinusal,2,2
+Padres consanguíneos,Z,Z
+Litiasis renales derechas,N,5
+ALERGIA Marisco,Z,Z
+versión cefálica externa,1,O
+I21.4,I,Z
+TC cráneo,8,B
+vaginosis,6,3
+desgarro 1er grado,0,O
+DMNID,E,E
+colocación de doble J derecho,0,0
+Utero miomatoso part,D,D
+Alergia al huevo,Z,Z
+Epilepsia generalizada parto,O,G
+DG anteparto,6,6
+OBESIDAD part,E,Z
+Protesis mamarias,V,Z
+tce,S,8
+conizacion parto,O,O
+UROPATÍA OBSTRUCTIVA BILATERAL,N,N
+Historia de SARS cov2,Z,Z
+hernia inguinal izquierda,K,K
+TC de abdomen,B,B
+Diabetes gestacional Insulina,O,O
+dermatitis,L,L
+Elongación aórtica,Q,I
+carcinoma seroso,8,8
+Desgarro perineal de 2º grado,O,O
+preeclampsia leve part,O,O
+leucocitosis part,O,D
+Alergia Ibuprofèn,Z,Z
+Hallux valgus izquierdo 3,0,M
+hígado graso,K,K
+laparoscópica robótica,1,8
+anticoagulación,V,Z
+Síndrome vertiginoso,3,3
+ALERGIAS: Pirazolonas,Z,Z
+Absceso axila derecha,L,N
+Desgarro cervix,0,0
+Epilepsia,G,G
+EVISCERACIÓN,T,0
+Legrado obstetrico evacuador,1,1
+mieloma múltiple,C,9
+parainfluenzae,B,3
+Historia de SARSCOV2,Z,Z
+Carcinomas basocelulares historia,V,Z
+TC de abdomen,8,B
+Miopía part,O,H
+Sangrado postoperatorio,9,N
+hipotiroidismo Tiroidectomía parto,O,E
+ansiedad part,O,O
+fórceps,7,7
+Preclampsia,6,O
+Hiperplasia suprarenal congénita,E,Q
+40 .+2 semanas,Z,Z
+Oxitocica,3,3
+intoxicación etílica,F,F
+Cirrosis hepática por VHC,B,B
+desgarro vulvar,0,0
+Colesteatoma,H,3
+Alzheimer,F,G
+R45.4,R,R
+Riñones poliquísticos,7,N
+DISTOCIA DE HOMBROS,O,1
+Fractura,V,S
+Preeclamsia leve,O,6
+659.61,O,O
+Historia parto prematuridad,O,O
+kjelland,1,7
+retraso de crecimiento intrauterino,O,R
+Pielonefritis del injerto,N,T
+Alergia AUGMENTINE,V,Z
+ECOABD,8,8
+Alérgica al optalidon,Z,Z
+Enterobacter cloacae,B,0
+Hipoacusia IZQUIERDA,H,H
+hiperparatiroidismo primario,E,E
+amniorrexis,O,O
+Mujer,Z,Z
+Corticoides,9,3
+Amigdalitis,4,4
+cpap 2,5,Z
+Xoc sèptic,7,R
+ARTROSI,M,M
+salpinguectomía bilateral,0,0
+hemianopsia,3,H
+dm 2 parto,O,6
+carcinoma endometrial,C,C
+Febricula,7,R
+Síndrome hipoventilación; Obesidad,E,2
+metástasis de carcinoma,8,C
+contractura muscular cervical,M,7
+trastorno de conducta,F,F
+historia ICTUS,Z,Z
+Amigdalotomia,2,3
+Cervicitis cronica,N,N
+anti-D,O,O
+bocavirus,B,B
+Síndrome de Down,Q,7
+Lumbago,7,7
+H60.311,H,G
+Carcinoma urotelial de alto grado,8,8
+Tendinitis supraespinoso hombro derecho,M,M
+Insuficiencia respiratoria crónica agudizada,5,J
+colocación de SNG,9,0
+hiperventilación,R,7
+Gammaglobulina anti-D,6,3
+mtx colon,1,1
+metotrexate,9,3
+HTA irc 3b,N,I
+mastectomia izquierda,8,0
+790.4,R,R
+Dolor torácico atípico,R,R
+Historia de tuberculosis,Z,Z
+DOBLE SALPINGECTOMÍA,0,0
+Hipertrofia adenoamigdalar,4,4
+ECO TV: útero,B,B
+resbalar,E,3
+PTR dcha cementada,0,Z
+restreñimiento,K,3
+Retinosis pigmentaria,H,3
+Eco 2,B,B
+Síndrome diarreico,7,R
+ALERGIAS A ESTREPTOMICINA,V,Z
+HTA irc ICC,N,I
+Alergia a ibuprofeno,Z,Z
+GS: O positivo,Z,Z
+recambio de expansor mamario,V,8
+AVORTAMENT,6,O
+CARCINOMA ENDOMETRIOIDE,8,8
+Anemia materna,6,O
+Fibrosis quística pulmonar,2,E
+Hipotiroidisimo parto,E,O
+Polineuropatía diabética 2,2,3
+Mellitus,E,E
+alérgico a la Penicilina,V,V
+Radiografía de tórax,B,B
+Migraña con aura part,O,G
+prodomos parto,O,O
+alergica niquel,Z,Z
+Radiografía de tórax:,B,B
+Enol ocasional,3,3
+V12.59,Z,Z
+traumática,E,3
+h fr,V,V
+HERNIA UMBILICAL malla,0,0
+Hernioplastia Lichtenstein,0,0
+neoplasia mucinosa,8,8
+cuadro catarral,J,J
+Celiaquía part,K,K
+pediculosi capitis,1,B
+COVID,U,U
+Citrobacter koseri,B,3
+prolapso uteri,6,N
+Aspergilosis broncopulmonar alérgica,5,5
+problemas sociofamiliar,Z,R
+T85.898A,T,T
+Ecografía escrot,B,B
+atropello en vía pública,V,Y
+Hipoacusia bilateral,3,H
+39,Z,Z
+ganglio centinella,4,4
+asma parto,O,O
+oseas,1,1
+RAFI femur,7,7
+ALERGIA metal,Z,Z
+re ++,Z,V
+Histerectomia total abd,0,0
+alteracion conductual,3,R
+Hipertensión irc,N,N
+paratiroidectomía inferior derecha,0,0
+Grupo A negativo,Z,Z
+péctus carinatum,Q,Q
+Atrofia cerebelosa,G,N
+AISLAMIENTO,8,9
+amniodrenaje,7,1
+RCTG : no tranquilizador,O,O
+Teratoma ovárico izquierdo,D,D
+anemia posparto,O,O
+trombocitopenia parto,6,O
+rotura prematura de membranas,O,O
+cannabis,F,F
+Enteroccocus faecalis,B,B
+amigdalectomia,2,2
+Anemia normocítica,2,D
+Esterilización tubárica,V,Z
+color: sangui,O,O
+Ecografía Abdominal,B,B
+ansiedad part,E,O
+Nódulo tiroideo,2,E
+Adenocarcinoma de cérvix,C,C
+Enfermerdad diverticular,K,3
+retención de placenta,O,O
+Herpes corneal,B,A
+PRÓTESIS BILATERAL,Z,Z
+fosfomicina,3,3
+Granulomatosis de Wegener,4,M
+Alergia a polen,V,Z
+COVid parto,O,O
+desgarro grado 2,O,0
+litiasis renales,N,5
+poliposis endometrial,N,4
+Tiroïdectomía total,0,0
+Desgarro IIIB,0,O
+Anexectomía izquierda,Z,0
+coronariografía,8,B
+traumatismo,E,S
+FIEBRE PUERPERAL,O,O
+Somnolencia,R,7
+POLICITEMIA rn,P,P
+Hernia inguinal bilateral,5,K
+pna 2t,N,N
+Renograma,C,3
+QUISTE EPIDÉRMICO,L,N
+Grupo sanguíneo: AB Negativo,Z,Z
+hipertensión pulmonar,I,I
+cistectomía radical laparoscópico,0,0
+hemorragia post-parto,O,O
+escisión piel pierna derecha,0,0
+Anti-D,3,O
+doble anexectomía,0,0
+displasia pulmonar,Q,Q
+caida en su domicilio,W,Y
+MASTOPATÍA FIBROQUÍSTICA izq,N,N
+DM2 parto,O,O
+Óbito Fetal,O,O
+Fiebre postparto,O,O
+prolapso de cordón,6,O
+Nutrición Parenteral,9,3
+NST no tranquilizador,6,O
+afàsia residual,4,R
+historia TVP,V,Z
+Hipopotasemia rn,P,P
+Mastoplastia de aumento,Z,Z
+NEOPLASIA UROTELIAL,8,8
+Preeclampsia grave,O,O
+SGB: positivo,O,V
+DEFORMIDAD DENTOFACIAL,5,3
+ecografía de abdomen,B,B
+piperacilina,3,3
+sedante,3,3
+Malaltia renal crònica,N,N
+Bronquiolitis aguda vrs rn,J,P
+Gestación bicorial biamniótica,O,O
+Anemia postparto 2,2,6
+ECO cerebral,B,B
+desgarro periuretral,0,0
+extracción manual placenta,1,1
+Nefrectomía radical derecha,0,0
+neoplasia de ciego,C,1
+ECO 2T,B,B
+desgarros vulvar,0,7
+Rinitis parto,J,J
+TRANSVERSA,O,O
+hernia discal cervical,M,M
+T14.8XXA,T,3
+GS B +,Z,Z
+Residencia,Z,V
+Prótesis de cadera,V,Z
+artrosis lumbar,M,M
+VPH,B,0
+HTA ERC 3,N,N
+40.6 sem,Z,Z
+Déficit Vit D.,E,E
+Incontinencia Urinaria de Esfuerzo,N,N
+FÓRCEPS,1,7
+Absceso en Labio mayor izquierdo,N,0
+Discapacidad intelectual lleu,F,F
+abscés tubo-ovàric,6,6
+Síndrome de Hiperestimulación ovárica,N,N
+fumadora 2t,O,O
+pólipo endometrial,0,N
+OXITOCINA,3,3
+apendicectomía lap,0,0
+gestación gemelar part,6,O
+POLIPO UTERINO,N,N
+ansioso,F,3
+M24.411,M,G
+Ertapenem,3,3
+Gestación gemelar bicorial/biamniótica,O,O
+Historia de Quemadura,Z,Z
+duplicidad renal,Q,Q
+rectorragia/hematoquecia,K,K
+Anemia 2t,O,O
+Sèpsia,9,3
+Otitis media crónica,3,H
+irc 2,N,N
+Cardiopatia isquemica,I,I
+576.8,K,N
+ea qt,T,T
+Macroglosia congenita,7,7
+Retraso puberal,2,E
+Febre rn,7,P
+histerectomia total,0,0
+neumonia covid,J,J
+Déficit VitD,E,E
+Historia de CARCINOMA BASOCELULAR EN MEJILLA IZQUIERDA,Z,Z
+dependencia de OH,F,Z
+Infección respiratoria,5,5
+Hipertensión Insufiencia renal crónica estadio 3,I,5
+Masa suprarrenal izquierda,E,E
+Intolerancia a la lactosa parto,6,E
+Cistadenoma mucinoso (,8,8
+urocultivo,N,N
+deterior cognitivo,F,F
+Linfadenectomia AORTOCAVA,0,4
+Insuficiència cardíaca dreta,I,I
+gea Rotavirus,A,A
+Obesa,E,E
+deposició líquida,R,3
+paratiroidectomía superior izquierda,0,0
+EAP,4,3
+pielonefritis aguda rn,P,P
+carrer,E,3
+v13.67,Z,Z
+TC abdominopélvico con CIV.,B,B
+Ductus,Q,7
+quiste ovari,6,6
+Livedo reticularis,R,3
+MIGRAÑA part,G,G
+Laminectomía,0,0
+absceso mamario,N,N
+derivacion ventriculoperitoneal,V,V
+Mioma intramural,D,D
+paresia ESI,G,3
+revisión manual de cavidad,0,0
+Hiperactividad bronquial,5,N
+mastopatía fibroquística,N,N
+anemia posparto,6,O
+biopsia vesical,0,0
+asma parto,Z,O
+TAC abdomen con contraste,B,B
+Gea,5,K
+reflujo gastroesofágico,K,K
+Edema cerebral,3,3
+Neurinoma de Morton,G,G
+MANCHESTER,0,0
+D. Mellitus,E,E
+doppler tsa,B,B
+Reducción amigdalar,2,7
+donante de médula ósea,V,4
+broncospasmo,5,3
+historia linfoma,Z,Z
+Cirrosis hepática,K,K
+EPI anteparto,6,6
+fa,I,I
+Quistes paratubáricos,N,N
+hta + ERC 4,5,N
+Taquicardia parto,O,O
+Hepatitis C part,B,O
+Anti -D,3,O
+paf,0,0
+- Rx tórax y abdomen,B,B
+ITU por E. coli,N,B
+GSrh: O positivo,Z,Z
+PARACENTESIS,0,0
+nefrostomías,Z,0
+RTU vejiga,0,0
+biopsias vesicales,0,0
+"??? , color: teñido",O,O
+AngioTC torácica,8,B
+Hiperrreactividad bronquial,5,J
+Hipotiroidismo Congénito,2,E
+Insuficiencia venosa crónica parto,I,I
+epigastràlgia,R,R
+PERITONECTOMÍA,0,0
+27 SEMANAS,Z,Z
+: E.coli,B,B
+crisis hipertensiva,I,I
+Linfadenectomía paraórtica,0,4
+HIPERURICÈMIA,E,7
+Trocanteritis bilateral,M,M
+protesis valvula aòrtica,V,I
+sospecha de perdida de bienestar fetal,6,6
+GEU izquierdo,O,O
+entorsis,X,3
+Dermatitis atópica,6,L
+mareos ortostáticos,I,3
+útero septo,7,Q
+Hemiplejia,3,G
+re +,Z,V
+b pos,Z,Z
+N25.81,N,O
+marcapasos,Z,Z
+endometriosis intestino,6,N
+Ecografías abdominales,B,B
+lloc,E,E
+RESTOS PLACENTARIOS,O,O
+Salpingitis crónica,N,N
+Inserción velamentosa de cordón,O,O
+Amniocentesi,7,3
+Cardiopatía hipertensiva,I,4
+PCR SARS CoV-2: negativo,Z,Z
+peritonectomía,5,0
+Salpinguectomía izquierda lap,0,0
+HISTERECTOMÍA TOTAL,0,0
+color: TEÑIDO,O,O
+ANEXECTOMIA DERECHA lap,0,0
+historia Adenocarcinoma de pulmón,Z,Z
+cpmi derecha,M,0
+Enfermedad de Berger,N,M
+doble j izq,0,0
+Insuficiencia venosa eeii,I,I
+Meningitis en la infancia,Z,V
+Cos estrany oido,0,9
+Alergia PARACETAMOL,Z,Z
+Hipotiroidismo parto,E,O
+angina de esfuerzo,I,I
+crisis asmática grave,J,J
+Prolapse de cupula vaginal,6,N
+Mioma,2,D
+Fumadora anteparto,6,6
+Flegmo dentari,5,6
+ira 2 qx,5,9
+Celiaca part,K,O
+BIRD,I,4
+Insuficiencia cardiaca izquierda,4,I
+: O negativo,Z,Z
+resección transuretral de próstata,0,0
+obesidad mórbida part,O,O
+QUIMIOTERAPIA,Z,9
+nutrición enteral,3,3
+URO-TC,B,B
+Litiasis biliar,5,K
+Dispepsia,K,K
+ALÉRGICA A CODEÍNA,Z,Z
+SONDAJE VESICAL,0,0
+R80.1,R,O
+HT,V,0
+NST,O,O
+Hernia inguinal derecha,0,K
+itu pARTO,6,O
+Tumorectomía Mama Derecha,0,0
+meniscectomia,V,0
+Esofagogastroduodenoscòpia,4,3
+GEA,5,K
+Hiponatremia rn,P,P
+diarrea,R,K
+ferroterapia,2,3
+HBP intervenida,V,V
+40 sem,Z,Z
+somnolencia,R,7
+Esofagitis,K,5
+Morganella morganii,B,3
+TAC cranial,B,8
+Poliposis colonica,2,K
+laparoscopia asistida por robot,8,1
+anemización,D,D
+protesis mamaria,8,Z
+Grupo sanguíneo: A+.,Z,Z
+HPV parto,O,O
+bronquiectasia,J,4
+Abceso qx,9,9
+GSRH:A positivo,Z,Z
+Sobrepeso parto,E,E
+N12,N,3
+Cervicitis,N,N
+Pielonefritis de repetició,Z,V
+Kjelland,1,7
+Canalizacion de via periferica,0,0
+ansiedad generalizada parto,F,O
+Hipertransaminasemia,7,R
+concentrados de hematíes,3,9
+Fiebre qx,R,R
+Monorreno de nacimiento,7,Q
+LUMBOARTROSIS,M,7
+ptc izq no cementada,0,0
+sigmoidectomia,V,3
+salpingectomia bilateral,6,0
+790.7,R,R
+Metrorragias,N,6
+ECOGRAFIA ABDOMINAL/RENAL,B,B
+TEP,I,V
+Dislipémia,E,2
+gonalgia bilateral,M,M
+Vive en residencia,Z,Z
+Carcinoma de células escamosas,8,8
+mtx ganglio pelvic,1,1
+portador de gastrostomia,Z,Z
+quistes renal derecho,N,N
+Cólico renal,N,N
+salpingitis aguda,N,N
+SSF,3,3
+CA EPIDERMOIDE,8,8
+anexectomia bilateral por laparoscopia,6,0
+ansiedad,3,F
+40sg,Z,Z
+Ventosa,1,O
+Diabtes Mellitus,2,E
+IMC 45,V,Z
+Linfoma No Hodgkin,9,9
+Amniorexis artificial,1,1
+taponamiento vaginal,2,2
+enf puerperal,6,O
+Morganella morganii,0,3
+Fractura supracondilea femur derecho,S,S
+orquidopexia derecha,0,0
+pectus excavatum,7,Q
+Rx tórax:,B,B
+Esquizofrenia,2,F
+Broncoscopia,3,3
+ITUs de repeticion,Z,Z
+IMc 39,V,Z
+intolerancia Lactosa parto,O,E
+Flemon dental,K,5
+SUTURA VESICAL,0,0
+hemoroide int,K,K
+Empeoramiento de la función renal,N,N
+deterioro de función renal,N,N
+Intolerancia a la lactosa parto,E,E
+Íleo paralítico postquirurgico,K,9
+acidosis metabólica,E,2
+Pectus excavatum corregido,V,V
+fototerapia,6,3
+Bronquitis aguda adenovirus,B,J
+eef,3,3
+N17.9,N,R
+Alérgica a la penicilina,Z,V
+vomitos qx,9,9
+MF,7,7
+Doble lesión aórtica,I,0
+puncion dural posparto,O,6
+stent,Z,Z
+Cólico biliar anteparto,6,6
+Punció lumbar,0,M
+Historia de meningitis,Z,V
+asma part,Z,J
+Sinusitis esfenoidal cronica,J,4
+Alergias alimentarias,Z,Z
+Adenocarcinoma prostático,C,N
+antibióticos,3,3
+Fondo de ojo,0,H
+Fractura diafisaria de húmero izquierdo,S,S
+VAC,F,8
+TC Toraco-Abdominal,B,B
+IMC &gt;40,V,Z
+debut diabético,E,3
+IAM historia,4,4
+Miastenia gravis,G,3
+absceso bartholino,6,N
+enfermedad de Kawasaki,4,M
+AR,M,7
+Gammapatia Monoclonal,D,D
+ESTENOSIS URETERAL IZQUIERDA,Q,N
+nutrición enteral sng,0,3
+colon irritable parto,5,K
+cin 2,6,N
+Anexectomía derecha laparoscopica,0,0
+Amikacina,3,3
+Obesidad mórbida,E,2
+miopia part,O,H
+36+2 semanas,Z,Z
+Fractura de radio distal izquierdo,S,S
+Vaginosis bacteriana,6,G
+intubació,9,3
+Artritis rodilla,M,M
+COVID historia,Z,Z
+Déficit factor VII,D,D
+desgarro grado IIIa,O,0
+Fatiga crónica,R,R
+Shock qx,9,R
+insuficiencia respiratoria cronica,5,5
+Portadora de gastrostomia,Z,Z
+Edemas part,O,O
+Trisomia 21,Q,O
+epiléptica,3,G
+colitis ulcerosa parto,6,K
+Puerperio,Z,O
+hipoacusia derecha,H,H
+Parálisis facial derecha,3,G
+OOFORECTOMÍA BILATERAL,0,0
+Linfadenectomia aortica,4,4
+incontinencia de urgencia,N,N
+Litiasis parotidea,5,1
+sjogren,M,M
+quistes hepaticos,K,K
+quiste hemorrágico ovario izquierdo,N,N
+Adenocarninoma próstata,C,8
+pelado de MER,0,H
+portadora de colostomía,V,Z
+Fractura humero proximal,8,S
+Ooferectomía bilateral,Z,Z
+Espondilosis,M,M
+intolerància oral,R,E
+BRIHH,4,I
+re +,V,V
+Asma part,O,J
+lesión cerebral sugestiva de M1,1,1
+Estenosis Aórtica,I,I
+Al.lèrgia al LÀTEX,Z,V
+39.2 semanas,Z,Z
+RADIO-YODO :HIPOTIROIDISMO,E,E
+Arnold- Chiari,Q,Q
+Grupo sanguíneo: A negativo,Z,Z
+macrosomía parto,O,O
+Prematuridad 31,P,P
+mioma submucoso,D,D
+shock septico,7,R
+VOMITOS,7,7
+EPILÉPTICAS,G,3
+. A negativo,Z,Z
+Hemorragia Postparto,O,O
+Sincope,R,R
+TAC abdominal,B,B
+metrorragia post-menopáusica,N,6
+cesària anterior,O,O
+Polhidramnios,O,6
+ALERGICA AAS,Z,Z
+Hidrocefalia crónica del adulto,3,G
+Alérgica a AINES,Z,Z
+Estenosis pulmonar,Q,I
+hipertrofia CCII,J,4
+Desgarro cérvix,0,0
+Rabdomiolisis,M,7
+TC toraco abdominal,B,B
+reduccion mama unilateral,8,7
+esclerosis multiple parto,O,G
+alergia penicilina,Z,V
+Trastorn ansiós-depressiu,F,3
+diverticulosis parto,K,O
+miomas,2,8
+Hernia Discal L5-S1 parto,M,M
+Absceso Mama derecha,N,N
+HISTERECTOMÍA TOTAL SIMPLE,0,0
+CSt,O,O
+H25.13,H,R
+Histeroscopía Quirúrgica,0,0
+Electroencefalograma,4,4
+POLINEUROPATIA EN DIABETIS,3,E
+esplenomegalia,R,R
+febriles,R,7
+abces dentari,5,3
+Alergia a Lamotrigina,Z,Z
+Prótesis rodilla izquierda,V,Z
+: III plano OA,O,O
+Cefalea tensional,G,G
+parto,O,O
+oxigeno,9,3
+Avortament diferit,O,O
+osteoporosis corticoidea,M,T
+ECO abd,B,B
+Nódulo vocales,J,J
+Vaginoitis parto,Z,O
+AMENAZA DE PARTO PRETÉRMINO,O,O
+Prostatitis aguda,N,N
+Colecistitis cronica litiasica,5,5
+SÍNDROME DE PIERNAS INQUIETAS,G,3
+afonía,R,R
+ALERGIA A PENICILINA,V,Z
+Detrussor hiperactiu,5,3
+itu E.faecalis,N,B
+neoplàsia d'ovari,1,6
+eventroplastia,5,5
+Anemia microcitica,D,2
+exprematur,V,V
+Prolapso de cupula vaginal,N,N
+itus repeticion,Z,Z
+adherencias,5,K
+adenitis mesentèrica,I,I
+historia familiar ca ovario,Z,Z
+EMFERMEDAD DE MEMBRANA HIALINA,P,P
+TC ABDOMINO-PELVICO,B,B
+Acné juvenil,L,7
+RNM cerebral,B,B
+Traqueomalacia congenita,7,Q
+Ca endometrio,C,C
+laceración en labios,0,0
+65661,O,3
+Historia de Cáncer de vejiga,Z,Z
+vertiginoso periférico,H,H
+nefropatia dm,E,2
+Aborto,1,O
+celiaquia part,K,K
+Estimulación oxitócica,3,3
+Prótesis de rodilla bilateral,Z,Z
+Quistes paratubáricos. -,N,N
+Cesárea anterior:,O,O
+: 40+6,Z,Z
+telemetria,8,4
+SMD,D,3
+Hematèmesi,K,3
+bloqueo de rama derecha,I,I
+Alergia PENICILINA,Z,V
+Carcinoma renal izquierdo,C,C
+Coxartrosis cadera derecha,M,M
+Histerectomia subtotal,6,6
+colelitiasi,5,3
+Tto quimioterápico,V,3
+bronquitis VRS,J,J
+Ventilación mecánica no invasiva,9,9
+0 RH: positivo,Z,Z
+Alergia a la proteína de la leche de vaca,5,Z
+AL.LÈRGIES PENICILINA,V,V
+obesidad parto,O,Z
+cetonemia,E,E
+rhinovirus,0,B
+Fibrogastroscopia,0,3
+Megaurèter congènit,7,7
+Hipotiroidismo por tiroidectomia,E,E
+inhibicion lactancia,O,O
+Malformación arteriovenosa cerebral,Q,7
+bulla,J,3
+IMC: 35,Z,Z
+HERNIA EPIGÁSTRICA,K,K
+Mioma subseroso part,D,D
+Alergica a:Quinolona,Z,Z
+neumonia,4,J
+CDI de mama izquieda,C,C
+pna 2t,O,N
+osteoporosis,M,M
+tratamiento quimoterápico,V,V
+amputación EII,Z,6
+hipotiroidismo Tiroidectomia parto,O,E
+EPOC infeccion respiratoria,J,J
+doble anexectomia,0,0
+26 sem,Z,Z
+Anexectomia izquierda laparoscópica,0,0
+desgarro de II,O,O
+retirada dvp,0,8
+prótesis mecánica aortica,Z,9
+TAC abdomen,8,B
+ruptura artificial membranas,1,O
+Zika + parto,6,A
+TBC secuelas,B,4
+sonda vesical,0,0
+V08,Z,3
+demencia alzheimer,F,F
+Linfangioma,D,2
+adenoamigdalectomia,0,0
+infección de herida quirúrgica,T,T
+LAVADO PERITONEAL,3,3
+Q44.6,Q,Q
+Anemia posparto,2,O
+ALERGIA IBUPROFENO,Z,Z
+Grupo A Rh+,Z,Z
+tumorectomia mama izquierda,8,0
+varices parto,O,I
+fiebre puerperal,O,O
+Carcinoma Ductal in situ,8,8
+doble J izq,0,0
+agotamiento materno,O,Z
+Alérgica a Mercurio,Z,Z
+Rinitis alérgica,4,J
+cicatriz,7,L
+miopía parto,O,6
+Craneofaringioma,D,3
+Circuncisión,6,0
+Laringotraqueoscopia,3,3
+Fibrilación auricular paroxística,I,I
+FACO + LIO en saco OD,0,0
+Adenoma pleomorfo,8,8
+Alergia penicilina,Z,V
+retirada de Port-a-Cath,8,8
+Anemia ferropénica,D,2
+obesidad morbida parto,E,O
+Linfadenectomía axilar derecha,4,0
+CATARATA MADURA EN O.I.,H,Z
+SARS-COV2 negativo,Z,Z
+biopsia esofago proximal,0,0
+GRupo 0+,Z,Z
+antibioteràpia,9,9
+cannabis part,F,F
+Deformidad pie izquierdo,M,0
+aorta bicúspide,Q,Q
+Fumadora part,F,O
+CoVid part,U,O
+NEOPLASIA,8,8
+linfadenectomia paraaórtica,4,0
+RECONVERSIÓN A LAPAROTOMÍA,Z,Z
+RMN,8,B
+Otitis Mitjana crónica colesteatomatosa,3,3
+Nicotina,F,3
+Rubeola NO INMUNE .,O,Z
+anemia ferropénica parto,D,O
+anemia part,D,D
+Sordomudo,3,3
+", se extrae coagulo",1,1
+Port-a-Cath,8,0
+Utero septo parto,6,Q
+Artrosis manos,M,M
+Desgarros de II grado,O,O
+Anemia ferropenia,D,E
+rotura artificial membranes,1,O
+Ooforectomia bilateral,Z,0
+Migraña sin aura part,G,G
+V26.89,Z,N
+Convulsions no especificades,R,R
+Diabética,2,E
+FEBRE,7,7
+Nefrostomía,Z,0
+neoplasia inespecifica,8,8
+Artritis Psoriasica,L,6
+nefropatia diabética,E,E
+obesidad parto,E,Z
+registro poco tranquilizador,O,O
+absceso tubo-ovárico derecho,N,N
+papiledema bilateral,H,0
+carcinoma de mama derecha,C,C
+HITERECTOMIA,Z,3
+im it,I,I
+ITUs de repeticón,Z,Z
+Atrèsia esofàgica sense fístula,Q,7
+sangrado PUERPERIO,O,O
+Depresión parto,O,F
+MIOMA INTRaMURAL,2,D
+autismo,F,3
+Ex-hábito enólico,F,3
+Fumador pasivo,Z,F
+Gestación ectópica tubárica derecha,O,O
+Portadora de PTR bilateral,V,Z
+Insuficiencia cardíaca: cardiopatía hipertensiva,4,I
+E. faecalis,B,B
+cordocentesis,1,3
+SOP part,O,E
+prematuridad 36,P,6
+Enolismo ocasional,3,F
+portadora de marcapasos,Z,Z
+crup,4,3
+TBR,P,3
+Carcinoma lobulillar infiltrante (,8,8
+ca ovárico,1,D
+Pielonefritis,5,N
+itu puerperal,O,O
+PCR SARS CoV-2: Negativa,Z,Z
+Mitomicina,3,3
+metrorragia,6,N
+Hiperplasia benigna de próstata,6,6
+Discopatia cervical,7,M
+rinitis atópicas,J,J
+TC abd,B,B
+dolor postoperatorio agudo,3,R
+Salpinguectomía derecha,0,0
+Bulimia,F,F
+Papiloma Mama derecha,D,D
+Trastorno adaptativo mixto,F,F
+heparina,Z,3
+útero septo parto,O,Q
+doble lesión aórtica,I,0
+cefalea holocraneal,7,R
+WPW parto,I,O
+esofagitis eosinofilica,K,K
+retirada PROTESIS MAMA izq,0,0
+pico febril,R,R
+Anexectomía bilateral,0,0
+Rivaroxaban,Z,3
+Punción dural posparto,G,6
+Histerectomia abdominal total lap,0,0
+Uveitis,3,H
+Tumoración,8,8
+Historia de cáncer de recto,Z,Z
+alergia al NOLOTIL,Z,V
+Atelectasias,J,5
+Hipotiroidismo gestacional,O,O
+Càlcul vesical,N,N
+Grupo sanguíneo: O Rh: POSITIVO,Z,Z
+Dolor crónico,3,G
+Hematíes,2,9
+SALPINGECTOMÍA BILATERAL,0,0
+miomectomía histeroscópica,6,0
+K57.00,K,K
+FISSURA PALATINA,7,7
+puñetazos,Y,3
+demencia alzheimer,G,F
+cólon irritable part,O,K
+Dolor toràcic inespecificat,7,R
+RxTx,B,3
+o negtivo,Z,Z
+maduración cervical,3,3
+Radiografia de tòrax,B,B
+SEPSIS UROLÓGICA,N,0
+quiste paratubárico,N,N
+By pass Aortobifemoral,Z,Z
+Canal estrecho lumbar,7,0
+Leiomioma,8,D
+Hemicolectomía izquierda,Z,Z
+Gastritis crónica,5,K
+historia Polipos colon,Z,Z
+historia parto prematur,O,V
+granulomas hepáticos,K,2
+adherencias peritoneales,5,5
+antibióticos,9,3
+deceleraciones,O,3
+Limfadenectomia pèlvica,4,4
+bolsa rota,O,O
+Mastitis aguda puerperal,O,O
+G40.319,G,G
+HPV parto,G,O
+Insuficiencia venosa periferica,I,4
+Palpitaciones,7,R
+coletasis parto,K,O
+Dacriocistitis crónica,H,K
+"D M tipo 2,",E,E
+Ooforectomia,V,V
+Mioclonias,G,3
+EXPANSOR MAMARIO BILATERAL,0,8
+diverticulosi,K,3
+Maltrato físico,T,Z
+Gestación gemelar part,6,O
+Sangrado Puerperio,O,O
+Dolor abdominal a estudio,7,R
+lecho quirúrgico,E,O
+anti-D JOSE,O,O
+Migrañas parto,G,O
+USE,0,3
+flutter auricular,I,I
+turbinoplastia,J,J
+mujer,Z,Z
+Fumadora part,J,O
+ANTIBIOTERAPIA,3,9
+obesitat mòrbida,2,E
+DM 2,E,2
+ECO cardiografia,B,B
+anexectomia izquierda,0,0
+quiste hepatic,5,V
+ANEXECTOMÍA BILATERAL VÍA LAPAROSCÓPICA,0,0
+Equímosis,R,R
+Obesidad parto,O,Z
+Colestasis part,Z,O
+Alivio de expulsivo,O,O
+rinitis alergica,J,J
+biopsia de GC,4,4
+hemiparesia izquierda residual,I,G
+recambio de catéter ureteral,Z,5
+hta irc anteparto,6,6
+Reimplante ureteral,5,5
+GS: O positiu,Z,Z
+EXPANSOR mama derecha,0,0
+33+3 semanas,Z,Z
+linfadenectomía axilar izquierdas,0,4
+hemorragia post parto,O,O
+colapso pulmon,J,1
+Grupo sanguíneo: 0 Rh negativo,Z,Z
+secundaria a diureticos,T,3
+desgarro 2,O,0
+historia de caídas,Z,Z
+Grupo sanguíneo: 0 rh positivo,Z,Z
+TRASTORNO ANSIOSO-DEPRESIVO,F,F
+cirugía bariátrica anteparto,6,6
+Rx ABD,B,B
+febricular,R,R
+HIPERPLASIA SUPRARRENAL CONGÉNITA,E,E
+stents farmacoactivos,V,3
+Cesarea Anterior,O,O
+Hipercolesterolemia part,E,E
+Ateromatosis aorto-ilíaca,4,4
+Radiografía de abdomen,8,B
+ansioso depresivo,3,F
+GS A positivo,Z,Z
+caída,E,W
+Derrame pleural derecho,J,J
+recambio de catéter ureteral JJ izquierdo,0,0
+IMC: 38.,Z,Z
+adenopatias,7,7
+etmoidectomía bilateral,0,0
+NEOPLASIA DE COLON TRANSVERSO,C,1
+Tiroides multinodular,E,E
+carcinoma mama derecha,C,C
+Fibromialgia parto,M,O
+Hipertrofia benigna de próstata,6,6
+Ecografía pulmonar,B,B
+Adenocarcinoma in situ endocervical,D,8
+Limfocele,4,3
+Adenoamigdalectomía,0,0
+Ecografía abdomen,B,B
+legrado puerperal,6,1
+Malaltia inflamatòria pélvica,6,N
+ecografía abdomen,8,B
+Hipotiroidismo parto,Z,O
+Queratosis actínicas,7,L
+protesis esofágica,4,Z
+ansioso depresivo,F,F
+epilepsia parto,O,G
+Grupo sanguineo: A rh positivo,Z,Z
+doble anexectomía por vía laparoscópica,6,0
+nefrostomia,Z,0
+bronquiolitis VRS,J,J
+III plano OIDA,O,O
+Estrabismo,H,3
+Anemia 3t,O,D
+Bomba de insulina,Z,Z
+SAG,O,O
+QUISTE,L,N
+Alergia: ibuprofeno,V,Z
+40 +4 SG,Z,Z
+cdi mama der,C,C
+cierre de fisura palatina,2,7
+Litiasis renal.,N,N
+Alergia: penicilina,Z,V
+rabdomiolisis,M,7
+Laceraciones de I grado,O,O
+tce historia,Z,Z
+30,Z,Z
+Gonartrosis de rodilla,M,M
+PARA 0000,6,O
+Desgarro vaginal grado II,O,0
+hipoglicemia,2,2
+Asma estacional,J,4
+gamma anti d,9,3
+CESÁREA ANTERIOR,O,O
+rafi tobillo,7,7
+Diabetis Gestacional,O,6
+Al·lergia: peix,Z,V
+Desgarro 1,O,O
+Disminución movimientos fetales,O,O
+ca endometrio historia,Z,Z
+LINFADENECTOMIA AXILAR DERECHA,0,0
+vacuna triple vírica,3,B
+O neg,Z,Z
+macrosoma,6,O
+VCE,1,3
+GS Rh: A positivo,Z,Z
+Vertigo,3,R
+Esteatosis hepatica,5,5
+Polipo fosa nasal,4,4
+HEMATOMA EPISIOTOMIA,O,0
+déficit IgA,D,N
+desgarro 1,0,O
+goanrtrosis izq,M,0
+hiperuricemia,E,7
+Trastorno Adaptativo,F,F
+laringectomía total,3,3
+"Dolor, maluc esquerre",M,M
+Alérgica a los Aines,Z,Z
+encefalomalacia,G,3
+historia fx,Z,Z
+HIPOTIROÏDISME part,O,O
+vomitos biliosos,R,R
+Pneumònia Pneumocòccica,J,J
+atropello en vía pública,Y,Y
+Urticaria crónica autoinmune,L,E
+adiro,Z,3
+ILE por TRISOMÍA,O,Z
+diabetes gestacional con insulina,O,O
+ABSCESO DE BARTHOLINO,N,N
+hiperlipemia part,Z,E
+Linfoma folicular grado 1,C,0
+histerectomía subtotal,0,6
+catéter doble J,5,0
+. Desgarro I,O,O
+Cardiopàtía isquémica,4,I
+Alergia aines,Z,Z
+lma,9,3
+IMC 41,V,Z
+ERC estadio IV,N,5
+asma parto,I,O
+SAHOS,3,3
+RPM 1,O,O
+OBESIDAD MÓRBIDA parto,E,O
+hta ice,D,I
+Espasmes del plor,R,R
+sufrimiento fetal agudo,6,6
+HIPERPARATIROIDISMO SECUNDARIO,E,2
+Mioma subseroso,2,D
+anexectomía bilateral laparoscopica,0,0
+ligadura tubárica bilateral,0,0
+Obesidad,2,E
+Alergia a metamizol,V,Z
+carcinoma de mama,1,C
+hbp,N,N
+M1 hepáticas,1,1
+RxAbdomen,8,3
+PCR covid: negativa,Z,Z
+Restrenyiment,K,K
+Disnea,7,R
+hipertrofia amigdalas,4,4
+Gastritis crónica part,O,O
+ECOcardiografía rn,B,B
+POLIPO ENDOMETRIAL,0,N
+Legrado,6,1
+BAV 1º.,I,I
+absceso tubo-ovarico,6,N
+obesidad parto,Z,Z
+Intolerancia a los hidratos de carbono parto,O,O
+mastectomia,V,Z
+LAPAROSCOPIA,0,5
+Kawasaki,M,M
+BGP,0,3
+Legrado,0,1
+Papiloma Intraductal,8,8
+fiebre prolongada,R,O
+Hemodialisis,Z,Z
+Grupo y Rh: O+,Z,Z
+Hiperparatiroidismo secundario a ERC,N,N
+Sd febril,R,R
+Ecografia 2t,B,B
+infeccion de herida quirurgica,9,T
+Desgarro,0,O
+parto gemelar,6,O
+madden DERECHA,0,0
+Obesidad mórbida part,6,O
+Migrañas con aura parto,O,G
+diarreco,7,3
+Hemofília A grave,D,D
+icc,4,I
+obesidad part,E,Z
+Asherman,N,3
+Adenoma pleomorfo de parótida derecha,D,2
+39+4 semanas,Z,Z
+obesidad parto,Z,Z
+Hernia discal parto,O,O
+itus repetición,Z,Z
+anhidramnios anteparto,6,6
+carcinomatosi peritoneal,1,1
+antibioticos,3,3
+Cirugia bariátrica,Z,Z
+TC abdominopélvico,8,B
+bicorial biamniotica,V,O
+Hernia inguinal izquierda,5,K
+hemoderivats,9,3
+Déficit de vitamina B12,2,E
+Tiroiditis de Hashimoto,2,E
+Hiperparatiroidismo parto,E,O
+40+1 SEMANAS,Z,Z
+hemorroides internas,4,K
+Enfermedad Renal Crónica,5,N
+PNA,5,N
+CESAREA CLASICA,1,1
+claudicación familiar,V,I
+E coli,B,B
+rafi RADIO DISTAL DERECHO,0,0
+infeccion qx,9,9
+hipercolesterolemia,2,E
+anemia ferropénica parto,O,O
+nódulo tiroideo,E,E
+GS O +,Z,Z
+Tabaquismo,F,F
+catarata,H,H
+Hernia diafragmática,5,K
+Preeclamsia grave,O,O
+Biopsia endometrial,0,0
+Linfadenectomía pelvica,4,4
+E74.10,E,R
+Preclampsia,O,O
+Ecografía transfontanelar,B,B
+ALERGIA A METAMIZOL,Z,Z
+Enfermedad del nodo sinusal,I,R
+lavado nasal,3,3
+Ex-tabaquismo,Z,Z
+rosácea parto,O,L
+leiomioma subseroso,D,D
+CPAP 1,5,5
+cefalea postpuncion dural,3,3
+dexketoprofeno,3,3
+PTI anteparto,6,6
+Quemadura 2 muslo izquierdo,T,T
+40+0 SG,Z,Z
+nefroureterectomía izquierda laparoscópica,0,0
+Abuso de alcohol,F,F
+Esterilidad primaria,N,6
+hemocromatosis,E,E
+SOP parto,E,E
+Prostatectomía Radical laparoscópica,0,0
+MIOMAS UTERINOS,2,2
+Neoplasia endocrina múltiple,2,C
+gastritis autoinmune,K,E
+PARTO prematuro,O,O
+obesidad part,Z,Z
+ligadura tubárica,V,V
+Ligadura,Z,0
+Hipotirodismo parto,O,O
+Esofagitis eosinofílica,K,K
+ANTIBIÓTICO,3,9
+Gestación ectópica izquierda,O,O
+dehiscencia episiotomia,O,T
+obesidad part,O,Z
+CIN III,8,2
+Parto 41,O,O
+Encefalopatía CONGENITA,7,Q
+Ex tabaquismo,Z,Z
+COXARTROSIS DERECHA,M,M
+Sacroileitis derecha,M,0
+Estafilococo,B,3
+Version Cefalica externa,1,O
+laparoscopia,5,5
+neumonía basal derecha,J,J
+desgarro grado dos,O,0
+Prótesis cadera,V,Z
+neo mama,1,1
+GS: 0 +,Z,Z
+O134,O,3
+anticoagulada,Z,V
+Mastectomia izq,Z,0
+preeclampsia rn,P,P
+K35.33,K,P
+TC CRANEAL,8,B
+Historia de Meniscectomia,Z,Z
+Laceración periuretral,0,O
+Ingesta de cáustico,9,R
+Sordera,H,H
+artritis reumatoide,M,M
+alteración del lenguaje,7,R
+enema,3,3
+trasplante,E,Z
+methergin IM.,3,3
+Nebulizaciones,3,3
+Cataracta OI,0,0
+cardioversión eléctrica,5,3
+Fibrilación,4,I
+retención de restos placentarios,O,O
+histerectomía lap,6,6
+Histerectomía lap,0,6
+Gestante de 36 semanas,6,Z
+podalica 1,O,O
+lipofilling mama izquierda,0,0
+bronquitis,4,J
+PEG,4,0
+Osteopororsis,M,3
+vessament pleural dret,J,J
+hidronefrosis fetal parto,6,O
+Sindrome vertiginoso,3,3
+CARCINOMA DUCTAL INFILTRANTE DE MAMA IZDA,C,C
+historia polipo colon,V,Z
+protesis mamàries,Z,V
+nebulización,3,3
+antiinflamatorio,9,3
+Punción dural accidental,3,3
+bronquitis aguda,4,J
+quemadura 2 muslo derecho,T,T
+oxígeno,3,3
+CARCINOMA UROTELIAL,8,8
+Amígdalas hipertróficas,J,3
+"40,6 setmanes",Z,Z
+Cesarea ant,6,O
+cardioversión eléctrica,4,3
+GASTRECTOMÍA,Z,Z
+Inducción médica,3,3
+sangrado postquirúrgico,9,9
+rash,L,3
+Fatiga crònica,R,R
+migraña con aura,G,G
+Ecografia obs,8,8
+Gammaglobulina anti-D,9,3
+cambio de nefrostomia,Z,9
+Taquipnea,R,R
+cefotaxima,3,3
+Neoplasia. de ovario,1,1
+ANEXECTOMÍA BILATERAL POR LAPAROSCOPIA,0,0
+Retirada DIU,0,Z
+S.marcescens,B,B
+fractura de húmero proximal derecho,S,S
+tunel carpiano bilateral,G,G
+quistectomia ovario,6,0
+Quistectomía ovario derecho,6,0
+Morganella Morganii,B,3
+anti- D,3,O
+anèmia 2t,O,O
+Pseudomonas,0,0
+Presbicia,H,3
+POLIMIALGIA REUMÁTICA,M,I
+uñas encarnadas,L,3
+Historia neo colon,Z,Z
+Sondatge vesical,5,0
+historia Tromboflebitis,Z,Z
+Bandolera,O,O
+NST no tranquilizador,6,O
+CoVid historia,Z,Z
+Psoriasis parto,6,L
+escoliosis parto,Q,O
+VARICES ESENCIALES MII,I,I
+adenopatias laterocervicales,R,7
+Nefropatía diabetica,2,E
+Monocorial-Biamniótica,O,O
+Hepatopatía crónica,K,K
+utero doble parto,Q,O
+Neoplasia mamaria derecha,C,C
+macrosoma parto,O,O
+historia fractura,V,Z
+psiquiatrica,F,F
+expansor mama,8,0
+fiebre parto,O,O
+meningitis crónica,G,G
+Rx senos,B,8
+Historia de SARS-COV2,Z,Z
+CIN,8,N
+transplante hepático,V,K
+NST no tranquilizador,O,O
+síndrome depresivo,F,3
+Trastorno adaptativo part,O,O
+rubeola No inmune,O,Z
+GLAUCOMa,H,H
+GSRh:O positivo,Z,Z
+Espondilitis anquilosante parto,O,O
+Exfumadora,V,Z
+EcoTV,8,8
+Episodios presincopales,R,R
+pneumònia bilobar,J,J
+acidosis,2,E
+SUTURA ileon,0,4
+reflujo gastoesofagico,K,5
+Historia de Tabaquismo,Z,Z
+neoplasia de mama,1,C
+hernia hiatal,5,5
+Pielonefritis crónica,N,N
+gastritis crónicas parto,K,O
+leucocitosis con neutrofilia,2,D
+Hepatitis B parto,D,O
+cardiologia part,O,O
+Quiste de ovario izdo,N,N
+sigmoidectomía,Z,3
+HISTERECTOMIA VIA VAGINAL,0,6
+Graves,2,E
+TIT,0,3
+hipertrigliceridemia parto,E,O
+trasplante renal,V,Z
+Hemorroides internas,4,K
+punción dural posparto,O,6
+hipotiroidismo (,2,E
+Asma parto,E,O
+TROMBOSIS historia,V,Z
+M1 cerebral,1,1
+Alérgica a: pólen,Z,Z
+Fx h,V,V
+antibioterapico,3,3
+oxigenoterapia,3,3
+Radiografía de abdomen,B,B
+Rn,Z,P
+Hipotirodismo part,Z,O
+Neumonía COVID parto,J,O
+rinitis alergica parto,O,J
+migraña parto,O,G
+Hernia umbilical,5,5
+39+3 semanas,Z,Z
+Cor Pulmonale crónico,I,4
+Vitíligo,7,L
+Obesidad part,6,Z
+oxitócica,3,3
+Grupo sanguineo B positivo,Z,Z
+atb,3,9
+tunel carpiano,G,G
+HTA irc 5,I,N
+BCNO,J,3
+FA paroxistica,I,I
+cesaria anterior,O,O
+catarata OD,H,H
+alcohol parto,O,F
+donante muslo izquierdo,0,0
+expansor,8,8
+RGE,K,K
+ITU e.coli,N,B
+sueroteràpia endovenosa,9,9
+Migrañas PART,G,O
+Insuficiencia mitral y aórtica,I,I
+Alergia a amoxicilina,V,Z
+trombocitopenia parto,D,O
+TOC part,O,F
+ltb,6,Z
+Úlcus duodenal,K,K
+Bacteriemia posparto,R,O
+hiperpotasemia,2,E
+Gestante de 41 +1 semanas,Z,Z
+Transaminasas,7,R
+Fractura nasal,8,S
+cistoadenofibroma mucinoso,9,9
+alteración de la coagulación,R,2
+metrorragias postmenopausica,6,N
+hemofilia parto,O,D
+TMPi,C,3
+Quistes parapiélicos,5,N
+Sars Cov2 negativo,Z,Z
+hematiés,3,9
+Asma parto,Q,O
+catéteres JJ,5,Z
+Polimialgia reumática,7,I
+OOFORECTOMÍA DERECHA LAPAROSCÓPICA,0,0
+síndrome mielodisplásico,9,D
+historia tromboflebitis,V,Z
+Estenosi laringe,4,3
+cataracta ull esquerre,0,0
+hta icc,I,I
+Meniscectomía izquierda,0,0
+hipotiroidismo PART,E,O
+ABOROTO DIFERIDO,O,6
+nebulizado,9,3
+oxigenoterapia crónica domiciliaria,V,9
+Ecografia obstétrica,8,8
+HTA irc icc,I,I
+hipomagnesemia,2,E
+antibioticoteràpia,9,3
+cesárea,7,1
+drenaje absceso anal,0,K
+GS O+,Z,Z
+sospechosa de pérdida de bienestar fetal,O,O
+MIOMAS UTERINOS,D,2
+RN,Z,P
+Telemetría,4,4
+rx tórax,B,B
+hipocalcemia,2,P
+Carcinoma seroso papilar de endometrio,C,8
+Desviación septal,J,J
+Consumo esporádico de cocaína,F,F
+Angio TaC torácico,B,B
+pérdida de consciencia,R,R
+Distocia de rotación,O,O
+asma part,4,J
+Angio TaC pulmonar,B,B
+anemia ferropénica 2t,D,O
+TEP en 2013,V,6
+hernioplastia umbilical con malla,0,0
+mujer,V,Z
+PAAF ganglio,4,5
+divertículos vesicales,N,K
+hiperparatiroidismo primario,2,E
+E.coli BLEE,Z,B
+Historia de IAM,I,4
+Retención aguda de orina,R,R
+ANEXECTOMIA DERECHA,0,0
+Dismenorrea,N,6
+alcalosis,2,E
+desgarro 2,0,0
+proteus mirabilis,B,0
+Granulomas hepaticos,K,2
+Colón irritable.,K,K
+cetosis,E,3
+Epilpesia part,O,O
+Endometriosi pelvica,6,6
+Pancreatitis,K,K
+HTP moderada,I,I
+Hiperglucemias,R,R
+biòpsia selectiva de gangli sentinella,4,4
+CENS,0,2
+estenosis ureteral,5,5
+Extracción manual de placenta,1,1
+Prematuridad 30,P,P
+: O neg,Z,Z
+tac torax,B,B
+Cesárea anterior,O,O
+Rendu Osler Weber,I,Q
+B Rh negativo,Z,Z
+Desgarro IV,O,3
+robótica lap,8,8
+UVEÏTIS,H,H
+astigmatisme part,O,H
+Neuropatía sensitivo-motora,G,G
+Paracetamol,9,3
+RDNP,3,3
+GSRh: O+.,Z,Z
+ex fumadora,Z,Z
+cuadro viral,0,0
+Asma persistent greu,J,J
+niño,V,3
+COLELITIASIS,K,K
+Enol,F,3
+Malabsorción intestinal,5,5
+CARDIOPATIA ISQUEMICA,I,I
+anemia ferropénica parto,6,O
+Amoxicilina,9,V
+Rinitis alergica parto,D,J
+sarcoma uterino,1,1
+FR CADERA DERECHA,S,S
+Rasgo talasémico part,F,D
+metrorragia 1t,O,O
+Grip,4,J
+rubeola NO INMune,O,Z
+Madre con neoplasia gástrica,Z,P
+hiponatrèmia,E,2
+próteisis de cadera izquierda,Z,Z
+cuadro vagal,R,R
+neoplasia cie mama,1,1
+Fractura supracondilea humeral izquierda,S,S
+ERGE con esofagitis,K,K
+diabética nefropatia,2,E
+artritis reumatoide,7,M
+Hiperplasia suprarrenal congénita,E,E
+APENDICITIS AGUDA PERFORADA,K,K
+LES parto,O,O
+reimplante ureteral,5,5
+temblor esencial,3,G
+Aflojamiento PTC derecha,T,T
+apnea,R,G
+SINOVECTOMÍA rodilla derecha,0,0
+Empiema,5,5
+POP total,N,N
+endometriosis parto,O,O
+Anemia ferropenica anteparto,6,2
+disforia de género,F,Z
+P.mirabilis,B,0
+prematuridad 1500,P,P
+Quiste dermoide,9,7
+ciatica,M,M
+CARCINOMA DE MAMA IZQUIERDA,C,C
+sutura uretral,0,0
+Z60.8,Z,N
+Ca mama derecha,C,C
+g935,G,3
+miopía parto,H,6
+Fibrilación auricular paroxísitca,I,I
+TA elevadas,R,V
+infeccion cateter periferica,T,0
+anemia postquirúrgica,D,G
+vaso vagales,R,7
+Parkinson,G,G
+"Neoplàsia maligna, ronyó esquerre",C,8
+Grupo: A Rh: negativo,Z,Z
+perineorrafia,0,0
+úlceras vulva,N,5
+Alzheimer 2,2,G
+RUBEOLA NEGATIVO,Z,O
+ACCIDENT,X,X
+neumococo,0,B
+Presentación inestable,O,I
+Epilpesia part,G,O
+verruga vulvar,B,B
+hipotensión,4,I
+Pielonefritis del injerto,T,T
+Amenada de parto prematuro,O,O
+ne SNG,3,3
+PLAQUETES,3,3
+Grupo sanguineo materno AB +,Z,Z
+TRASTORNO DE LA MARCHA,R,R
+Colecistitis aguda litiásica,K,5
+prolapso cervical,N,N
+Ex-enolismo,F,F
+PREECLAMPSIA GRAVE,O,O
+Grupo sanguíneo: O +.,Z,Z
+Mastectomia tipo Madden mama derecha,0,0
+hipotiroidismo gestacional,O,O
+cefalohematoma rn,P,P
+Hiperinsulinismo congénito,2,Q
+hiperglicemia,R,7
+VHB parto,O,O
+Migraña,G,G
+esteatosis,K,K
+Antibioticoterapia,3,3
+disminucion de movimientos fetales,O,O
+Anti-D,O,O
+artritis psoriásica,L,6
+GRUPO SANGUÍNEO: O POSITIVO,Z,Z
+Quemadura 2 Mano izquierda,T,0
+Colelitiasis parto,6,O
+Parto gemelar,6,O
+Nutrición enteral,9,3
+gestación ectópica tubárica derecha,O,O
+hipertensa,4,3
+MIGRAÑA part,O,G
+IMC 47,V,Z
+htda,Z,3
+RTU,V,Z
+Hipoglucemias en dm,2,2
+Alergia al polen,V,Z
+ANTIBIOTERAPIA INTRAVENOSA,3,3
+Estenosis subglótica,4,I
+Grupo: 0 positivo,Z,Z
+shock septico,I,R
+dg,O,6
+HTA. ERC icc,I,I
+APGAR,4,4
+estenosis de canal lumbar,M,0
+Histerectomia lap,0,6
+caiguda,E,3
+Alcohol part,F,F
+Desorientació,R,3
+Desgarro Perineal IIº,O,O
+Rubeola NEGATIVO,Z,O
+TROMBOCITOSI ESSENCIAL,D,2
+sospecha de pérdida de bienestar fetal,6,6
+Colitis ulcerosa part,K,K
+Ex -fumadora,Z,Z
+Gestación Cronológicamente Prolongada,6,O
+Historia de FRACTURA,Z,Z
+exPrematuro,V,V
+accidente de tráfico,Y,E
+Grupo sanguíneo: A positivo,Z,Z
+Quiste ovario derecho,N,N
+Esferocitosis hereditària parto,D,O
+Alergia a acaros,V,Z
+Diverticulitis colon,K,K
+CORIOAMNIONITIS AGUDA,O,O
+catéter,3,0
+Grupo sanguíneo materno: A +,Z,Z
+Histerectomia total,6,0
+biopsia Colon,4,4
+Anemia ferropenica,2,2
+sindrome derpesivo part,O,O
+EXPANSOR MAMA DERECHA,0,0
+sinusotomia frontal bilateral,0,D
+esteatosis,5,K
+Dermatitis Atópica parto,O,L
+absceso perianal,K,K
+Protesisi cadera izquierda,Z,Z
+nauseas vomitos,R,R
+colestasis,K,5
+DAP,Q,3
+ureterostomía,Z,3
+talassemia minor part,O,O
+Psoriasi,L,6
+líquido pleural,3,0
+Grupo 0+,Z,Z
+hernia de hiato,5,K
+trastorno bipolar part,O,F
+mastectomia der,0,0
+HISTERECTOMIA TOTAL,0,0
+Doble annexectomia lap,6,6
+dtt bilateral,0,0
+melenas,5,K
+Miopia parto,O,6
+rn muerto,Z,V
+Prótesis de cadera,Z,Z
+TUMORECTOMÍA mama izquierda,0,0
+ltb,0,Z
+DAI,Z,V
+drenatge toràcic esquerre,0,B
+miopia parto,O,6
+bronquiolitis vrs rn,P,P
+Sd depresivo,3,F
+Propess,3,3
+Leiomiomas uterinos,8,D
+Gestación gemelar,6,O
+Dinámica uterina,6,O
+Politraumatismo,9,T
+laceracion en labios,0,0
+Fx 1/3 medio clavícula DER,S,R
+TAC de abdomen,B,B
+Laceración en labios,0,0
+MALROTACIÓN INTESTINAL,Q,5
+Asma 2t,J,O
+Neoplasia de recto,C,1
+aborto en curso con metrorragia,O,O
+tumorectomia Mama der,0,0
+655.83,6,O
+hipertension arterial,I,4
+PTR dcha,0,Z
+alteración cognitiva,R,R
+L12.0,L,Z
+sinusitis aguda,4,4
+ojo seco,H,H
+Monitorización pulsioximétrica,4,4
+ECO,8,B
+Estreñiment,5,3
+ecografía,B,B
+transaminasas,R,R
+leucocitosis part,D,D
+Prótesis de rodilla derecha,0,Z
+anemizante,D,D
+Trichomonas vaginalis,A,0
+Cesárea ant,O,O
+Miomas,D,8
+hernia hiatus parto,O,K
+b NEGATIVO,Z,Z
+Artrosis generalizada,7,M
+CATARATA,3,H
+Primigesta de 40+,O,O
+HOSp,E,E
+Rinitis Alergica parto,O,J
+Atrofia muscular espinal,3,N
+MICROVEJIGA,N,3
+borto diferi,O,3
+oxitocina,7,3
+Trombosis portal,I,K
+estilsona,9,3
+Implante de prótesis mama,8,Z
+miocardiopatía dilatada,I,I
+OH- ocasional,3,F
+POLIQUISTOSIS HEPATica,7,Q
+CST,O,O
+GEU sangrado,6,O
+IM moderada,I,3
+nódulos tiroideos,2,E
+Laceració renal,8,N
+Arritmia,I,I
+41 SEMANAS,Z,Z
+cistocele,6,N
+perthes,7,M
+Angiodisplasia de colon,K,K
+ITU part,O,O
+Neutropenia,D,2
+OOFORECTOMÍA IZQUIERDA LAPAROSCÓPICA.,0,0
+lipotimia,R,3
+DM2,E,2
+621.9,N,N
+psicótica,F,3
+Grupo sanguineo: A+,Z,Z
+RM espinal,8,B
+Cáncer de mama bilateral,C,C
+METRORRAGIA POSTMENOPÁUSICA,N,N
+podálica,6,O
+Dolicocolon,Q,7
+Periapendicitis,K,3
+policitemia vera,9,D
+aborto,1,O
+Hipotoroidismo part,O,E
+quiste branquial,Q,0
+endometriosis recto,6,N
+metrorragia puerperal,O,O
+Desgarro I (,0,O
+40 +4 sg,Z,Z
+TC cervical,B,B
+Secuelas de polio,B,4
+TRASTORN DEPRESSIU,3,F
+divertículos en sigma,K,K
+Tendinitis aquilea,7,3
+COVID-19,U,U
+hemangioma,9,D
+CLAUSTROFÒBIA,F,F
+ITU 3t,N,O
+sobreinfección,J,5
+fractura diente,8,S
+FPIES,K,3
+pérdidas digestivas,K,D
+INSURE,0,3
+hta icc irc,N,I
+Estapedectomía izquierda,0,0
+bypass aortocoronario,V,4
+Insuf mitral,4,I
+: 0 Negativo,Z,Z
+Hepatopatía part,O,K
+IVC,I,I
+Metrorragia parto,O,O
+Radiografia de cráneo,B,B
+Mucositis,5,5
+v1259,Z,3
+Osteoporosis,7,M
+SGB rn,Z,V
+hepatomegalia,R,R
+plasma,9,9
+quiste ovario Derecha,N,N
+miomas uterinos,2,2
+Enfermedad inflamatoria pélvica,N,N
+quistes paratubáricos,N,N
+Sangrado postamigdalectomia,9,J
+alcalosis metabólica,E,E
+Pneumonia necrotizante,5,J
+Colestasis parto,K,O
+E faecalis,B,B
+Hidronefrosis congenita,7,Q
+Alergia Voltaren,Z,Z
+bacteriemia,7,R
+leucopenia,2,P
+GsRh: A positivo,Z,Z
+sobreinfecciónrespiratoria,5,3
+ooforectomía derecha,Z,0
+PIELOGRAFÍA RETRÓGRADAIZQUIERDA,B,B
+liquen plano,L,L
+Tc abdominal,8,B
+huevo,Z,6
+apendicectomia laparoscopica,0,0
+útero bicorne,7,Q
+calle,E,Z
+desgarro clitoris,0,0
+ht,6,0
+Vértigo periférico,H,H
+alergia a Penicilina,Z,Z
+Parálisis de Bell,G,G
+Atrofia macular,7,H
+litiasis vesical,0,0
+Dislipemia mixta,2,E
+Enfermedad pulmonar obstructiva crónica,J,4
+dismenorrea,N,6
+tabaco parto,G,O
+Hemorroides grado IV,K,4
+ilpp muslo derecho,0,0
+Retraso en el lenguaje,F,R
+Adiro,Z,3
+Madden derecha,0,0
+"HERNIA UMBILICAL,",K,5
+Sindrome gripal,4,3
+coxa vara,7,3
+ventosa,1,O
+cin,8,N
+Ligadura tubárica,Z,V
+Histerectomía,0,6
+Migraña sin aura,G,G
+Propionibacterium acnes,B,3
+Wegener,M,M
+ileo paralítico qx,9,9
+Escoliosis parto,6,O
+PORTADORA DE CPAP,Z,Z
+leiomiomas submucosos,D,D
+cataracta od,0,0
+retraso pondoestatural,R,7
+ha Cáncer de mama,V,Z
+espondilosis dorsolumbar,M,M
+Biopsias vesicales múltiples,0,0
+Quistes corticales bilaterales,N,N
+Crohn parto,O,O
+infección de herida quirúrgica de cesárea,O,T
+colección subcutánea,L,0
+hta,I,I
+41+0 semanas,Z,Z
+aumento de PSA,R,Z
+BIRDHH,I,4
+laceracion paraclitoriana,O,O
+Ca mama izquierda,C,C
+broncoaspiració,5,3
+Estenosis coana,Q,I
+ecg,4,3
+FOP,Q,3
+Síndrome de Sjögren,M,M
+PIRAZOLONAS,Z,Z
+linfadenectomía axilar derecha,0,0
+gafas nasales,3,3
+déficit de atención,R,E
+Adenocarcinoma de colon,1,K
+BSGC INGUINAL BILATERAL,0,0
+hemorroides posparto,4,O
+dilatacion laringe,3,3
+Mioma submucosa,D,D
+Parto precipitado,O,O
+tratamiento analgésico,9,3
+artrosis manos,M,M
+corticoides,3,3
+Cistocele,6,N
+CIN III,D,2
+rtu vejiga,Z,0
+Fractura subcapital de fémur izquierdo,S,S
+esteatosis hepatica,K,5
+histerctomia abdominal,6,0
+grado I,0,O
+artrodesi,Z,Z
+Osteotomía tibia izquierda,0,0
+Disfonía,R,7
+gemelar,P,6
+quemadura muslo izquierdo,0,0
+enterococo,B,B
+mastectomia esquerre,8,8
+Mc Bride,0,0
+A positivo.,Z,Z
+Vértigos,R,R
+Fimosis,N,6
+Rúbeola NO inmune,O,Z
+Utero bicorne parto,Q,O
+tumor vesical,C,0
+FPP,O,3
+eutiroidea,2,3
+Histerectomia laparoscopia,0,0
+Quistes renal izquierdo,N,N
+Diverticulosis sigmoidea.,K,K
+Hematoma sobreinfectado,9,9
+Alergia a las sulfamidas,Z,Z
+cesárea previa,O,O
+historia embarazo ectopico,V,Z
+quiste ovario parto,O,N
+uce,1,1
+Proctitis,K,5
+Hallux valgus,7,M
+prótesis de cadera derecha,Z,Z
+cateteres doble J.,5,0
+taquiarritmias auriculares,I,3
+Carcinoma de células claras de ovario izquierdo,C,8
+Hiperlordosis lumbar,M,M
+ECG,8,3
+Alergica a Penicilina,V,Z
+crisis epilépticas,G,3
+estimulación oxitocínica,7,3
+Esclerosis múltiple parto,Z,G
+duodeno,0,0
+absceso renal,N,N
+histerectomia,E,6
+TROMBOPENIA parto,O,D
+Talasemia part,D,D
+gestación gemelos,6,6
+antibiòtico,3,9
+dlp,E,E
+Cardiopatía isquémica crónica,I,I
+obeso,E,2
+polipo cervix parto,D,N
+epilepsia,G,G
+Leucopenia,D,P
+microadenoma hipofisario,D,D
+36+2 semanasa,Z,6
+Disgeusia,R,3
+bandolera,O,O
+ERC,N,N
+591,N,3
+Madden derecha,0,0
+Déficit de Vit D,E,E
+Diverticulosis,K,K
+HTA IRC,N,I
+calle,Y,Z
+colonoscopia,0,4
+Ecografia de adbomen,B,B
+Meniscopatia interna GENOLL dret,0,M
+ANEXECTOMÍA DERECHA LAPAROSCOPICA,0,0
+LTb lap,0,0
+desgarro cérvix,0,0
+VIH part,O,O
+POLIPOSIS NASAL,J,4
+Renograma,9,3
+infiltración,0,3
+sueroteràpia,9,3
+: A negativo,Z,Z
+CISTOGRAFIA,B,B
+40+1 SG,Z,Z
+NST patológico parto,6,O
+gammaglobulina anti D,3,3
+Gestación no controlada,O,O
+TCE,8,8
+41+2 sg,Z,Z
+Obesidad 2t,O,Z
+FA lenta,I,I
+Úlcera corneal OD,H,H
+TURBINOPLASTIA,J,J
+Enterovirus,0,B
+apendicectomía laproscópica,0,0
+Eco abdominopélvica,B,B
+Anemia hipocromica microcitica,2,D
+Portadora de PEG,V,Z
+radiografia de tòrax,B,B
+colección en pared abdominal,L,6
+endometriosis parto,D,O
+: 0 positiu,Z,Z
+Grupo sanguíneo: B Negativo,Z,Z
+Rx Dorsal,B,B
+depressiu,3,F
+Grupo rh: A+,Z,Z
+Diabetes gestacional,O,O
+institucionalizado en residencia,Z,Z
+globo vesical,7,R
+TC craneal con contraste,B,B
+HTA ERC grado 5,N,N
+FA PERMANENTE,I,I
+incontinencia de orina,7,R
+Ecocardio,8,B
+Alergia al polen,J,Z
+Distocia de hombros,O,1
+ANEMIA POSTOPERATORIA,D,D
+Cannabis part,O,F
+Pielonefritis aguda por E .Coli,N,B
+UROTC,8,B
+Clostridium difficile,0,3
+Hipermenorrees,6,6
+pp,O,O
+reducción fetal,O,O
+bloqueo de rama derecha,4,I
+tumorectomía der,0,0
+radiculopatia sacra,M,M
+TC abdomino pelvico,B,B
+sutura nervio,0,0
+NEFROURETERECTOMÍA DERECHA LAPAROSCÓPICA,0,0
+drenatge Absces anal,0,K
+Esteatosis hepática parto,K,O
+quiste de bartholino sobreinfectado,N,N
+Orquidopexia derecha,0,0
+enoxaparina,3,3
+HEMANGIOMAS HEPÁTICOS,D,D
+Extracción de DIU,9,Z
+Deterioro cognitivo vascular,2,F
+obesitat part,O,O
+ea AINEs,T,T
+extrasístoles ventriculares,I,I
+epilepsia parto,O,G
+radiografía de tórax,B,B
+Vértigos posicionales,H,R
+HERNIA INGUINAL IZQUIERDA,K,K
+protesis hombro bilateral,Z,Z
+ecocardio NEN,B,B
+Alergica a:METAMIZOL,Z,Z
+HTA ERC 3,I,N
+líquid cefalorraquidi,0,0
+Hepatitis B parto,B,O
+LITIASIS VESICALES,N,0
+Pólipo vesicular,5,5
+dolor torácico crónico,R,R
+HTP,4,I
+DMTII,E,3
+angioTC abdominal,B,B
+Esterilización tubárica,Z,Z
+oh esporadico,F,F
+alopecia areata,L,L
+obesida 2t,O,Z
+Síndrome ansioso parto,F,O
+RE: +++,Z,V
+Hernia diafragmatica,K,K
+hta irc 6 icc,I,I
+ALERGIAS Quinolonas,Z,Z
+Aneurisma de aorta abdominal,I,I
+Grupo sanguíneo materno: 0 Rh: positivo,Z,Z
+Ansiedad parto,O,O
+Preclampsia grave puerperal,O,O
+Ansiedad part,F,O
+32+ 5 semanas,Z,Z
+Bocio endotorácico,E,E
+cardiopatia hipertensiva icc,4,I
+prótesis de rodilla bilateral,Z,Z
+ascitis maligna,R,7
+Linfadenectomía iliaca,4,4
+ecografía cerebral,B,B
+Ecografia renal,B,B
+intolerancia lactosa,2,E
+febril parto,O,O
+cistectomía radical laparoscópica,0,0
+matrorragia postmenopausica,N,N
+MIOMECTOMÍA HISTEROSCÓPICA,0,0
+Doble anexectomia laparocopia,0,0
+Ecotv,8,8
+sonda nasogàstrica,0,0
+amigdalectomia,E,2
+Ansiedad parto,O,O
+"40,2 setmanes",Z,Z
+Hipotiroididsmo part,O,E
+Encefalopatía de Wernicke. -,E,3
+Grupo: 0+.,Z,Z
+Ecografía reno vesical,B,B
+Hipertensión Arterial,4,4
+otitis media cronica IZQUIERDA,H,H
+recien nacida,Z,Z
+Hipotiroïdisme congènit,E,E
+Bronquitis crónica parto,O,J
+Gran extracción,1,1
+CISTOCELE,0,N
+mtx axilares,1,1
+antecedente obito fetal,V,O
+resección de Rectosigma,4,Z
+: A Negativo,Z,Z
+historia Ulcus gástrico,V,Z
+UMF,O,O
+Rt,Z,Z
+Hepatopatía,K,K
+les parto,M,O
+retraso estatura,7,7
+Adenoamigdalectomía,J,0
+ansioso,3,3
+ECO 2t,B,B
+Leucocituria,7,3
+taponamiento nasal,2,2
+31+4 semanas,Z,Z
+Debut dm 1,2,E
+Sondaje vesical,5,0
+color: sanguinolento,O,O
+v420,Z,3
+Pseudomona,B,0
+polineuropatia diabetica 2,2,3
+Colocación de catéteres doble J,5,V
+a negativ,Z,Z
+Dislipidemia,E,2
+Gestación sin controlar,O,O
+episodis paroxístics,R,3
+Polipos colónicos resecados,V,K
+Carcinomas basocelulares región lumbar derecha,C,M
+presencia lio,Z,0
+Alérgica a la Penicilina,Z,V
+traqueostomía,0,V
+Insuficiencia mitral,I,I
+hipercolesterolemia,E,E
+PTI,D,D
+GS: O Rh +,Z,Z
+Sjögren,M,M
+Sangrado postparto,O,O
+Espondilolistesis L5-S1.-,M,M
+Trastorno límite personalidad,F,3
+Alérgica a Penicilina,Z,Z
+Trastorno esquizoafectivo,F,F
+Linfoma difuso de células grandes B,9,Z
+Emesis gravídica,O,O
+Quistes de Naboth. -,N,N
+Anexectomia bilateral laparoscópica,0,0
+Sd ansioso depresivo parto,F,F
+Extraccion manual de placenta,1,1
+portadora de audífonos,Z,Z
+MASTECTOMÍA DERECHA,0,0
+Anemia crónica,D,D
+Adherencias part,O,O
+toracoscopia,3,3
+o99284,O,3
+Rinitis alérgica part,O,J
+Historia de Rtto,Z,Z
+Anemia de Blackfan Diamond,D,2
+356.2,G,T
+Hipertensión Enfermedad renal crónica estadío 4,N,I
+Gestación anembrionada,O,O
+Version cefálica externa,1,O
+Hipocalcemia,E,P
+DOBLE ANEXECTOMÏA,0,0
+TBC latente,Z,0
+Eritema multiforme,L,6
+suboclusión intestial,5,5
+EXPULSIVO PROLONGADO,O,O
+lavados vesicales continuos,3,3
+Flemón periamigdalino izquierdo,J,5
+hernia discal parto,M,O
+33+1 semanas,Z,Z
+0 NEGATIVO,Z,Z
+resección intestino,V,Z
+mtx pulmon,1,1
+M1 hepática,C,1
+CUMS,8,3
+Flútter auricular,I,I
+abuela materna Ca de mama,Z,V
+MASTECTOMÍA BILATERAL,0,0
+ca uroterial,8,C
+ABSCESO DE MAMA IZQUIERDA,N,N
+Hemorriodes,K,3
+Restos puerperales,O,O
+antibiòtica,9,3
+obesitat mòrbida part,E,O
+vaginitis parto,N,O
+biopsias peritoneales lap,5,5
+Sindrome ansioso depresivo,F,3
+Protesis mamaria,V,Z
+Rx de Abdomen,8,B
+Desgarro IIIb,0,O
+40 rn,P,P
+Fibrilación auricular rápida,I,I
+Rinitis vasomotora,J,J
+Acné papulopustuloso,7,7
+fumadora parto,Z,O
+polineuropatía diabética 2,2,3
+anuria,R,R
+Antrostomia maxilar derecha,2,0
+Historia de carcinoma de mama,Z,Z
+cistectomía radical,0,0
+Ecografia via urinària,B,B
+fractura ángulo mandibular,8,7
+ADC endometrio,C,0
+Obesidad Mórbida,E,2
+Trastorno esquizoafectivo tipo bipolar,F,F
+Herpes genital parto,A,O
+abceso cuello,6,N
+Cesárea ant anteparto,6,6
+Historia de acv,Z,Z
+robot,8,8
+BMN parto,O,E
+Grupo y Rh: O +,Z,Z
+GS AB+,Z,Z
+cicatriz,L,L
+diuretico,3,3
+obesidad part,O,Z
+Doppler renal,B,B
+fractura cubit esquerre,S,8
+Punción dural posparto,O,6
+Miocardiopatía Hipertensiva icc,4,I
+vulvitis,6,N
+Alergia a clavulánico,V,Z
+HIPOTIROIDISMO parto,6,O
+Hepatitis B parto,O,O
+DIslipemia,E,2
+Ooforectomía,V,V
+espina bífida,Q,7
+drenatge transtimpanic,2,3
+campo futbol,E,Y
+gestación prolongada,O,O
+TC abdominopélvico contraste,B,B
+SG:40+2,Z,Z
+hernia hiato,K,K
+RCTG patológico,6,O
+quiste ovario parto,6,N
+hematuri,R,3
+tumor mucinoso borderline ovario izq,D,D
+EPOC Bronquitis. cronica,4,J
+Inmunodeficiencia,D,2
+LINFADENECTOMÍA AXILAR IZQUIERDA,0,0
+Tumorectomía,8,8
+síndrome febril,R,R
+desorientacón,R,3
+ansioso part,F,O
+Desgarro 2,O,0
+ecografías obs,8,8
+Episiotomía,7,0
+fibrosis mama,6,N
+GS materno A+,Z,Z
+Cesárea previa,O,O
+Historia de tuberculosa,Z,Z
+hierro,9,9
+Avortament espontani incomplet,O,O
+ROTURA MENISCO EXTERNO RODILLA IZQUIERDA,M,M
+Anticoagulada,Z,V
+Pielonefritis de repetició,V,V
+anemia parto,6,D
+cuerpo exttraño,E,9
+fr. supracondílea húmero,8,S
+Grupo sanguíneo materno: O Rh positivo,Z,Z
+TRASTORN DEL METABOLISME DE LES LIPOPROTEÏNES,E,M
+recien nacida,V,Z
+Historia de Qt,Z,Z
+hipoacusia neurosensorial,H,H
+Hernia Inguinal Derecha,K,K
+RTU-vejiga,Z,0
+ANSIETAT,F,F
+Carcinoma cie mama izq,C,C
+S Aureus,B,0
+vía venosa,0,3
+artroplastia total de cadera bilateral,Z,Z
+microcefalia,Q,7
+enemas,3,3
+Alergia al nolotil,V,V
+GS: B +,Z,Z
+GsRH: O positivo (,Z,Z
+linfadenectomia axilar izquierda,0,0
+Hiperlipemia part,O,E
+anticoagulante,3,V
+malformación vascular facial,7,G
+hiperparatiroidismo,2,E
+MIomas part,O,8
+carcioma endometrio,C,0
+fiv,V,O
+Ovarios con múltiples quistes foliculares,N,N
+Psoriasis part,O,L
+Gemelar bicorial biamniotica,O,O
+legrado uterino obstetrico,6,1
+hipotir parto,O,O
+hipoalbuminemia,2,E
+histerectomia,0,6
+DOBLE ANEXECTOMÍA LAPAROSCÓPIA,0,0
+tumorectomia mamaria izquierda,0,0
+Apnea,R,G
+estado amputación dedo mano derecha,Z,6
+Sangrado uterino anómalo,N,N
+Anemia normocítica,D,D
+Disfagia,7,R
+Enf Crohn,K,K
+Streptococcus Intermedius,B,B
+O pos,Z,Z
+Wolff-Parkinson-White,I,G
+Crisis febriles atípicas,R,7
+Autismo,F,3
+Om,2,3
+migrañas parto,O,O
+Corticoterapia,3,3
+embolización,3,3
+paracentesis,5,0
+FUMADORA part,6,O
+Ileo adinámico,5,5
+Legrado evacuador obstetrico,1,1
+SG 40 +2,Z,Z
+historia ca cervix,V,V
+distocia de hombro,O,M
+mETÁSTASIS ganglio axilar,C,1
+Ovario poliquistico,2,E
+ptc,Z,V
+enfisematoso,4,J
+Síndrome de ansiedad,F,F
+Trastorno bipolar tipo I,F,F
+E.M,G,O
+Hipocalcemia,2,P
+Carcinoma papilar,8,8
+Fumadora part,O,O
+PCR SARSCOV2 negativa,Z,Z
+desgarro de labio menor,O,0
+hidrocefalia,3,3
+24 semanas,Z,Z
+Gastritis crònica,K,K
+Candidiasis vaginal 3t,B,B
+Alergica a la Penicilina,V,V
+pubertad precoz,E,2
+Escoliosis dorsal,M,M
+salpingitis,N,N
+prótesis de rodilla,Z,Z
+angiopatía amiloide,I,3
+M1 hepáticas,C,1
+Ureterohidronefrosis,N,N
+preeclampsia,O,O
+ecografia tiroidea,8,E
+anemia 2t,Z,O
+Endometriosis bilateral,N,N
+Bulimia nerviosa parto,F,F
+GS A+,Z,Z
+IMC 42,Z,O
+Depresión,3,F
+Grupo sanguíneo: O +,Z,Z
+Síndrome ansioso depresiva parto,6,F
+RE+++/+++,Z,V
+fotosensibilidad solar,L,3
+ECOabd,B,8
+Neumonia COVID parto,O,O
+oxigeno domiciliario,Z,Z
+INFECCIÓN RESPIRATORIA,J,5
+litiasis renal drecha,0,N
+temblores,R,3
+icc,I,I
+ECOGRAFÍA obst,B,B
+desnutrición grave,E,E
+Hipotiroidismo Gestacional,O,O
+Mastectomía simple,8,8
+A rh negativo,Z,Z
+placenta previa hemorragia,6,O
+soplo cardiaco,R,7
+RESTOS ABORTIVOS,O,O
+amputacion dedo mano derecha,Z,6
+prolapso genital cistocele,6,N
+Taquicardia paroxística,I,I
+peg,0,0
+timoma,8,3
+Madden der,0,0
+Epilèpsia,3,G
+Covid historia,Z,Z
+hiperplasia nodular hepática,K,E
+broncodilatador,9,3
+Carcinoma infiltrante,8,8
+SOP parto,E,E
+rosácea,6,L
+ESCLERODERMIA,M,7
+Drepanocitosis,2,2
+miomas part,D,8
+HBA,4,3
+Caída,V,W
+Estimulación,3,3
+REM,O,3
+Cataratas bilateras,3,H
+Trastorno ansioso depresivo,F,F
+Sd. Antifosfolipídico,D,2
+Rx tórax,B,B
+ENCONDROMA,9,3
+Cesària,1,1
+candidiasis vaginal part,B,O
+Otoscopia,1,1
+edema EII,R,3
+tratamiento,9,V
+Asma parto,6,O
+Epilepsia refractaria,G,2
+Obesidad part,Z,Z
+Neoplasia endometrio,1,C
+sobreinfeccio respiratoria,5,5
+linfadenectomía axilar izq,0,0
+parada cardiaca,4,I
+rx de tórax,B,B
+neoplasia ureter izquierdo,C,C
+biopsia DUODENO,4,0
+dolor ciático,M,R
+IMC 43,Z,Z
+Fractura periprotesica cadera derecha,S,S
+Candidiasis,1,B
+ecocardiografía rn,B,B
+COLOCACION gastrostomía,V,V
+Alfa talasemia,2,2
+colon irritable parto,O,K
+parto estacionado,O,O
+meningioma,D,9
+Metoclopramida,3,3
+EKG,4,3
+Hasimoto part,O,E
+celulitis pie derecho,L,N
+Metrorragia puerperal,O,O
+protésica aórtica,Z,I
+infección de vías respiratorias alta,J,J
+Esclerosis multiple parto,O,G
+: 40+1 SG,Z,Z
+leucemia aguda mieloblástica,2,2
+CARDIOPATIA HIPERTENSIVA,I,4
+HIPERTENSIÓ,I,4
+neurofibromatosis,Q,Q
+ITU rn,P,P
+Hipertrofia adenoidea,J,4
+Anemia anteparto,6,6
+Dermatitis atopica parto,O,L
+Carcinoma Mama izquierda,C,C
+neoplasia prostático,C,1
+mioclonias,G,3
+Asma parto,O,O
+Ecografía urinaria,B,B
+vive en Residencia,Z,Z
+Trasplante de córnea,Z,Z
+TRASTORNS DEL METABOLISME DE LES LIPOPROTEÏNES,E,M
+hernia diafragmática fetal parto,6,O
+hashimoto part,E,O
+CUMS,B,3
+pielonefritis del injerto renal,N,N
+prolapso cistocele,6,N
+Espasmos esofágicos,K,5
+"Grupo sanguíneo: 0, Rh: +",Z,Z
+INCONTINENCIA URINARIA,R,7
+dga2,O,3
+ca. de mama,1,C
+hipotiroidismo,E,E
+Incompatibilidad Rh,O,6
+HISTERECTOMIA TOTAL VAGINAL,0,0
+diplopia,H,H
+aumentine,3,3
+HISTERECTOMÍA abdominal RADICAL,0,0
+HIPERGLUCEMIA,R,R
+Circulares,O,O
+talasemia minor part,D,D
+dehiscencia herida quirúrgica,9,T
+36+5 semanas,Z,Z
+TOT,5,0
+quiste de Naboth,6,N
+Ligadura tubárica bilateral,0,0
+Síndrome metabólico parto,O,E
+aborto séptico,O,1
+Hipotiroidismo 3t,O,O
+hipoacusia,3,H
+prostatectomía radical laparoscópica asistida por robot,0,8
+Saos,G,3
+tce con pérdida de conciencia,S,R
+Alergia a PENICILINAS,Z,Z
+Hematúria,R,R
+Líquido cefaloraquídeo,0,0
+26+1 semanas,Z,Z
+Herpes oftálmico,B,A
+fiebre persistente,R,7
+Historia ca Vesical,Z,Z
+Trastorno Distímico,F,F
+Insuficiencia renal cronica,5,5
+Sintrom,Z,V
+Hipoacusia bilateral,H,H
+vía central,0,3
+Ecografía cadera dreta,B,B
+artrogriposis,7,Q
+suero glucosado,3,3
+pti parto,D,D
+BSGC d,0,0
+imc 46,V,V
+desgarro periuretral,O,0
+Rasgo talasémico part,O,D
+Alergia a codeina,Z,Z
+Antibioteràpia,3,9
+Síndrome de apnea obstructiva del sueño,G,G
+doble anexectomía,6,0
+Desgarro I grado,6,O
+dialisis,Z,5
+A neg,Z,Z
+absceso de mama derecha,N,N
+BRDHH,4,I
+Estenosis lumbar,M,M
+enol,F,3
+fIV,O,O
+cervicalgia,7,7
+bronconeumonia,4,J
+cesarea rn,P,P
+"Déficit de vitamina D,",E,E
+HPV parto,O,O
+hiperfosforemia,2,E
+Absces de pulmo,5,5
+ÚTERO MIOMATOSO,D,D
+fístula rectovaginal,6,N
+eosinofílica,D,K
+leiomioma uterino,D,D
+Hipotiroidsmo part,E,O
+Preeclampsia leve,O,O
+CDI,1,8
+vulvectomía parcial,7,0
+Biopsia renal izquierdo,0,0
+Hemorroides pp,O,O
+Ecografía RENOVESICAL,B,B
+Tumorectomia mama derecha,0,0
+Miocardiopatia dilatada,I,I
+Metaplasia gástrica,K,4
+consumo de alcohol,F,F
+Mamoplastia de aumento,V,Z
+madden derecha,0,0
+cateter DOBLE J BILATERAL,0,0
+desgarro grado IIIA,0,0
+Ecografia toràcica,8,B
+Grupo A Rh +,Z,Z
+Sindrome de mallory weiss,5,K
+fibroadenoma mama izq,D,D
+LIQUEN,L,L
+VIH A3,0,Z
+Artritis Reumatoide,M,M
+tabaquismo parto,F,F
+aines,E,T
+Dislipermia,E,3
+extracción de diu,9,Z
+STC derecho,G,0
+Depressió,3,3
+cistectomía radical,0,0
+obesidad part,E,Z
+Ex-bebedor,F,F
+historia ca MAMA,V,Z
+DGA2,O,3
+ALERGIAS: AINES,Z,Z
+Adenocarcinoma endocervical,C,8
+post covid,U,U
+ovario poliquístico,2,E
+legrado evacuador obstétrico,1,1
+Discopatía degenerativa L4-L5,M,M
+pólipo uterino,N,N
+insuficiencia mitral reumatica,I,I
+lista de espera trasplante,V,Z
+Hemangioma Hepatico,D,2
+Eventración,5,5
+Artrosi,7,M
+stc,G,0
+alteracion conductual,3,R
+mastitis pueperal,O,N
+DM tipo I,E,E
+drenaje Mama derecha,0,0
+cistectomía radical laparoscopica,0,0
+Estenosis aórtica,4,I
+Edema de Reinke,J,4
+TC CRANEAL,B,B
+Hemoptisis,R,7
+Sufrimiento fetal agudo,6,6
+ECG,4,3
+historia neoplasia de mama,V,Z
+rectocele,6,N
+Conización,6,0
+hta irc 2,I,I
+app,6,O
+Cistitis aguda sense hematúria,N,5
+pancreatitis crónica parto,K,O
+ITU en puerperio,O,O
+vomitos,R,7
+intolerancia lactosa parto,O,E
+HIPOGLICEMIA,E,2
+V10.51,Z,Z
+Distocia social,V,Z
+Gastritis crónica parto,K,O
+Fumadora puerperio,O,O
+Trombocitosis reactiva,D,F
+INSULINA,3,Z
+Oligoamnios anteparto,6,6
+MYCOPLASMA PNEUMONIAE,B,0
+Cistitis,5,5
+methergin im,3,3
+LEGRADO obst,1,6
+hipermesis gravidica,O,6
+Cifosis dorsal,M,M
+Varices esofágicas,I,I
+inmunoglobulinas,9,3
+1CCHH,3,3
+Desgarro grado II,6,0
+Traqueostomía,V,V
+Hashimoto parto,M,O
+HISTERECTOMÍA SUBTOTAL,0,6
+Sinusitis parto,J,O
+Diabetis insípida,2,E
+Hipoacusia neurosensorial,3,H
+Anti D.,O,O
+rotura de cordón umbilical,O,O
+GS: AB+,Z,Z
+Divorciado,Z,3
+bypass gastrico lap,4,4
+neoplasia de lengua,C,1
+MIOMATOSO,2,D
+septoplastia,2,0
+laringomalacia,7,Q
+líquido meconial,O,O
+Deterioro cognitivo leve,G,F
+dislipémia,2,2
+ferropenia,2,E
+mf,4,7
+Histerectomía total,Z,0
+reflujo vesicoureteral congenito,7,Q
+Intolerancia digestiva rn,P,P
+Alergia paracetamol,Z,Z
+fractura olecranon derecho,S,S
+779.89,P,N
+Sd adherencial,5,F
+Migrañas part,G,O
+Versión cefálica externa,1,O
+cefalea dural posparto,O,O
+EICH,D,3
+GAMMAPATÍA MONOCLONAL,9,D
+historia melanoma,V,V
+Pielonefritis de repetición,Z,V
+Abscés parafaringi,4,K
+migraña PART,O,G
+Cirrosis hepática enólica,K,K
+TURBINOPLASTIA,0,J
+vejiga neurógena,N,N
+Sjögren,7,M
+LIQUIDO TEÑIDO,O,O
+donante enmuerte,0,0
+mastopatia fibroquistica,N,N

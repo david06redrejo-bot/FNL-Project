@@ -1,0 +1,83 @@
+{
+  "best_params": {
+    "class_weight": null,
+    "ngram_range": [
+      3,
+      5
+    ],
+    "preprocessing_variant": "required_clean"
+  },
+  "debug_sample": null,
+  "grid": [
+    {
+      "class_weight": "none",
+      "ngram_range": "2-4",
+      "preprocessing_variant": "required_clean"
+    },
+    {
+      "class_weight": "balanced",
+      "ngram_range": "2-4",
+      "preprocessing_variant": "required_clean"
+    },
+    {
+      "class_weight": "none",
+      "ngram_range": "3-5",
+      "preprocessing_variant": "required_clean"
+    },
+    {
+      "class_weight": "balanced",
+      "ngram_range": "3-5",
+      "preprocessing_variant": "required_clean"
+    },
+    {
+      "class_weight": "none",
+      "ngram_range": "2-6",
+      "preprocessing_variant": "required_clean"
+    },
+    {
+      "class_weight": "balanced",
+      "ngram_range": "2-6",
+      "preprocessing_variant": "required_clean"
+    },
+    {
+      "class_weight": "none",
+      "ngram_range": "2-4",
+      "preprocessing_variant": "lowercase"
+    },
+    {
+      "class_weight": "balanced",
+      "ngram_range": "2-4",
+      "preprocessing_variant": "lowercase"
+    },
+    {
+      "class_weight": "none",
+      "ngram_range": "3-5",
+      "preprocessing_variant": "lowercase"
+    },
+    {
+      "class_weight": "balanced",
+      "ngram_range": "3-5",
+      "preprocessing_variant": "lowercase"
+    },
+    {
+      "class_weight": "none",
+      "ngram_range": "2-6",
+      "preprocessing_variant": "lowercase"
+    },
+    {
+      "class_weight": "balanced",
+      "ngram_range": "2-6",
+      "preprocessing_variant": "lowercase"
+    }
+  ],
+  "label_id_col": "label_id",
+  "model_family": "tfidf_char_logreg",
+  "save_model": true,
+  "seed": 42,
+  "selected_by": "highest validation accuracy; ties by macro_f1 and weighted_f1",
+  "target_col": "y_category",
+  "text_col": "Literal_required_clean",
+  "top_k": 5,
+  "validation_size": 0.2,
+  "version_name": "v01_tfidf_char_logreg"
+}

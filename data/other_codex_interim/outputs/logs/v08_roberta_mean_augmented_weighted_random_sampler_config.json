@@ -1,0 +1,21 @@
+{
+  "backbone": "PlanTL-GOB-ES/roberta-base-biomedical-clinical-es",
+  "batch_size": 128,
+  "candidate_id": "weighted_random_sampler",
+  "debug": false,
+  "debug_leaderboard_examples": 32,
+  "debug_train_examples": 32,
+  "debug_val_examples": 32,
+  "dropout": 0.1,
+  "learning_rate": 2e-05,
+  "max_epochs": 50,
+  "max_length": 32,
+  "patience": 10,
+  "seed": 42,
+  "strategy": "keep all train rows and sample inversely to y_category frequency",
+  "use_amp": false,
+  "use_weighted_sampler": true,
+  "validation_size": 0.2,
+  "version_name": "v08_roberta_mean_augmented",
+  "weight_decay": 0.01
+}

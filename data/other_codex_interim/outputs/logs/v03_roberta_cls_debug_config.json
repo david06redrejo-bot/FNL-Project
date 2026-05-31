@@ -1,0 +1,12 @@
+{
+  "debug_sample": 120,
+  "label_id_col": "label_id",
+  "model_family": "debug_logreg",
+  "save_model": true,
+  "seed": 42,
+  "target_col": "y_category",
+  "text_col": "Literal_required_clean",
+  "top_k": 5,
+  "validation_size": 0.2,
+  "version_name": "v03_roberta_cls_debug"
+}

@@ -1,0 +1,2 @@
+epoch,candidate_id,train_loss,val_loss,val_accuracy,macro_f1,weighted_f1
+1,a_longer_64_lr3e5,3.506769672036171,3.4014817774295807,0.1640625,0.02514746027979704,0.08117493479331593

@@ -1,0 +1,12 @@
+{
+  "debug_sample": null,
+  "label_id_col": "label_id",
+  "model_family": "majority",
+  "save_model": true,
+  "seed": 42,
+  "target_col": "y_category",
+  "text_col": "Literal_required_clean",
+  "top_k": 5,
+  "validation_size": 0.2,
+  "version_name": "v00_majority_baseline"
+}

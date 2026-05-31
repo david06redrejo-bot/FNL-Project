@@ -1,0 +1,5 @@
+{
+  "model_family": "svm",
+  "model_id": "v06_roberta_mean_augmented",
+  "status": "dry_run_ok"
+}

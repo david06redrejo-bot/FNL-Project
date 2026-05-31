@@ -1,0 +1,2 @@
+candidate_id,epoch,train_loss,val_loss,val_accuracy,macro_f1,weighted_f1
+focal_gamma1,1,3.6242111325263977,3.4013055562973022,0.0,0.0,0.0

@@ -1,0 +1,5 @@
+{
+  "model_family": "logreg",
+  "model_id": "v01_tfidf_char_logreg",
+  "status": "dry_run_ok"
+}

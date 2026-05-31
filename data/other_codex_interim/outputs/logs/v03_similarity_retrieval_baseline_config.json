@@ -1,0 +1,106 @@
+{
+  "best_params": {
+    "analyzer": "char_wb",
+    "k": 1,
+    "method": "train_literal_char_wb_3-5_k1",
+    "ngram_range": [
+      3,
+      5
+    ],
+    "retrieval_index": "training_literals"
+  },
+  "debug_sample": null,
+  "description_file_available": true,
+  "grid": [
+    {
+      "accuracy": 0.458029197080292,
+      "analyzer": "word",
+      "k": 1,
+      "macro_f1": 0.42431802071248376,
+      "method": "train_literal_word_1-2_k1",
+      "ngram_range": "1-2",
+      "retrieval_index": "training_literals",
+      "weighted_f1": 0.46410076329264893
+    },
+    {
+      "accuracy": 0.42956204379562046,
+      "analyzer": "word",
+      "k": 3,
+      "macro_f1": 0.38081309726265644,
+      "method": "train_literal_word_1-2_k3",
+      "ngram_range": "1-2",
+      "retrieval_index": "training_literals",
+      "weighted_f1": 0.43535609860164104
+    },
+    {
+      "accuracy": 0.44416058394160585,
+      "analyzer": "word",
+      "k": 5,
+      "macro_f1": 0.39332570207660017,
+      "method": "train_literal_word_1-2_k5",
+      "ngram_range": "1-2",
+      "retrieval_index": "training_literals",
+      "weighted_f1": 0.44616457376949326
+    },
+    {
+      "accuracy": 0.49744525547445256,
+      "analyzer": "char_wb",
+      "k": 1,
+      "macro_f1": 0.46278856539912183,
+      "method": "train_literal_char_wb_3-5_k1",
+      "ngram_range": "3-5",
+      "retrieval_index": "training_literals",
+      "weighted_f1": 0.49611957322951167
+    },
+    {
+      "accuracy": 0.481021897810219,
+      "analyzer": "char_wb",
+      "k": 3,
+      "macro_f1": 0.42758096397338247,
+      "method": "train_literal_char_wb_3-5_k3",
+      "ngram_range": "3-5",
+      "retrieval_index": "training_literals",
+      "weighted_f1": 0.4751234592883174
+    },
+    {
+      "accuracy": 0.47335766423357667,
+      "analyzer": "char_wb",
+      "k": 5,
+      "macro_f1": 0.42266330051395334,
+      "method": "train_literal_char_wb_3-5_k5",
+      "ngram_range": "3-5",
+      "retrieval_index": "training_literals",
+      "weighted_f1": 0.4647967219205447
+    },
+    {
+      "accuracy": 0.2697080291970803,
+      "analyzer": "word",
+      "k": 1,
+      "macro_f1": 0.24025573850981788,
+      "method": "icd_description_word_1-2_k1",
+      "ngram_range": "1-2",
+      "retrieval_index": "icd_descriptions",
+      "weighted_f1": 0.25669477878212626
+    },
+    {
+      "accuracy": 0.33138686131386863,
+      "analyzer": "char_wb",
+      "k": 1,
+      "macro_f1": 0.248032382135319,
+      "method": "icd_description_char_wb_3-5_k1",
+      "ngram_range": "3-5",
+      "retrieval_index": "icd_descriptions",
+      "weighted_f1": 0.28182574741326233
+    }
+  ],
+  "label_id_col": "label_id",
+  "model_family": "similarity_retrieval",
+  "save_model": true,
+  "seed": 42,
+  "selected_by": "highest validation accuracy; ties by macro_f1 and weighted_f1",
+  "target_col": "y_category",
+  "text_col": "Literal_required_clean",
+  "top_k": 5,
+  "validation_size": 0.2,
+  "version_name": "v03_similarity_retrieval_baseline"
+}

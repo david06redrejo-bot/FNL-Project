@@ -1,0 +1,19 @@
+{
+  "backbone": "PlanTL-GOB-ES/roberta-base-biomedical-clinical-es",
+  "batch_size": 128,
+  "debug": false,
+  "debug_leaderboard_examples": 16,
+  "debug_train_examples": 16,
+  "debug_val_examples": 16,
+  "dropout": 0.1,
+  "learning_rate": 2e-05,
+  "max_epochs": 50,
+  "max_length": 32,
+  "patience": 10,
+  "pooling": "cls",
+  "seed": 42,
+  "use_amp": false,
+  "validation_size": 0.2,
+  "version_name": "v04_roberta_cls",
+  "weight_decay": 0.01
+}

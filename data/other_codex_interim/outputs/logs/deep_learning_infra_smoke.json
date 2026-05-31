@@ -1,0 +1,16 @@
+{
+  "checkpoint": "/home/iadlG010/FNL-Project/outputs/checkpoints/deep_learning_infra_smoke.pt",
+  "device": "cuda",
+  "eval_accuracy": 0.0,
+  "leaderboard_examples": 8,
+  "max_length": 32,
+  "status": "ok",
+  "submission_columns": [
+    "id",
+    "y_category"
+  ],
+  "tokenizer_vocab_size": 52000,
+  "train_examples": 16,
+  "train_loss": 3.582271635532379,
+  "validation_examples": 8
+}
