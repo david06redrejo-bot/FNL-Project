@@ -136,6 +136,27 @@ retrieval baseline and writes:
 - `outputs/checkpoints/v03_similarity_retrieval_baseline.joblib`
 - `submissions/v03_similarity_retrieval_baseline_submission.csv`
 
+## 4.1 Deep Learning Infrastructure Smoke Test
+
+Before training the full RoBERTa model, verify the PyTorch data and training
+contract with a tiny run:
+
+```bash
+python scripts/smoke_test_deep_learning_infra.py
+```
+
+This command loads the tokenizer from
+`PlanTL-GOB-ES/roberta-base-biomedical-clinical-es`, builds tiny train,
+validation, and leaderboard datasets, trains a toy classifier on 16 examples,
+evaluates on 8 examples, saves a checkpoint, and validates the exact
+`id,y_category` submission format. It does **not** train RoBERTa.
+
+Run the infrastructure tests with:
+
+```bash
+pytest -q tests/test_deep_learning_infrastructure.py tests/test_preprocessing.py
+```
+
 Before expensive model work, smoke-test the model-version interface:
 
 ```bash

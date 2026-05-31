@@ -325,3 +325,25 @@ cosine similarity 1.0, which reveals an important risk: identical or nearly
 identical literals can map to different categories when the original code
 differs. This supports the decision to keep retrieval as an ablation and move on
 to stronger learned models.
+
+## Deep Learning Infrastructure Prepared
+
+Before training RoBERTa, we prepared the PyTorch infrastructure. This step was
+intentionally separated from full model training so that we could verify the
+data contract first.
+
+Implemented components:
+
+- `ICDLiteralDataset` for train, validation, and leaderboard modes;
+- tokenizer loading from `PlanTL-GOB-ES/roberta-base-biomedical-clinical-es`;
+- default `max_length=32`, based on the previous tokenization analysis;
+- deterministic label mappings;
+- device detection and seed control for Python, NumPy, PyTorch, and CUDA;
+- one-epoch training, evaluation, prediction, checkpoint save/load utilities;
+- tests for dataset shapes, label mapping, batch structure, leaderboard mode,
+  and submission format.
+
+The smoke test used only 16 training examples and 8 validation examples with a
+tiny classifier. It did not train the full RoBERTa model. Its purpose was to
+verify that the tokenizer, datasets, dataloaders, metrics, checkpointing, and
+submission contract work together before the expensive Transformer experiments.

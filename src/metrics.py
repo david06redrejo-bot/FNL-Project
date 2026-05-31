@@ -109,3 +109,31 @@ def top_k_predictions_from_proba(
             ]
         )
     return output
+
+
+def metrics_from_logits(
+    labels,
+    logits,
+    id2label: dict[int, str],
+) -> dict[str, Any]:
+    """Compute the full metric contract from integer labels and model logits."""
+    logits_array = np.asarray(logits)
+    label_ids = np.asarray(labels)
+    probabilities = softmax(logits_array)
+    pred_ids = probabilities.argmax(axis=1)
+    label_names = [id2label[idx] for idx in sorted(id2label)]
+    y_true = [id2label[int(idx)] for idx in label_ids]
+    y_pred = [id2label[int(idx)] for idx in pred_ids]
+    return compute_full_metrics(
+        y_true,
+        y_pred,
+        labels=label_names,
+        y_proba=probabilities,
+    )
+
+
+def softmax(logits: np.ndarray) -> np.ndarray:
+    """Numerically stable softmax for metric computation."""
+    shifted = logits - logits.max(axis=1, keepdims=True)
+    exp = np.exp(shifted)
+    return exp / exp.sum(axis=1, keepdims=True)

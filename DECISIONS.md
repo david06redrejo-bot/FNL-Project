@@ -73,3 +73,24 @@ the initial default `max_length` to **32**. This value is based
 on the observed token length percentiles of required-clean train and leaderboard
 literals, not on an arbitrary default. Future ablations may compare nearby
 values, but this is the default starting point.
+
+## Deep Learning Infrastructure Decision
+
+Decision: build the RoBERTa phase around a reusable PyTorch dataset and training
+utility layer before training the full model. `ICDLiteralDataset` uses the
+required-clean literal text, the tokenizer from
+`PlanTL-GOB-ES/roberta-base-biomedical-clinical-es`, padding/truncation, and the
+default `max_length=32`.
+
+Reasoning: the classical baselines are now strong enough that the Transformer
+stage must be reproducible and controlled. We need deterministic label mapping,
+consistent batch structure, checkpointing, metric computation, and submission
+format validation before running an expensive model.
+
+Implications:
+
+- Train/validation datasets return `input_ids`, `attention_mask`, and `labels`.
+- Leaderboard datasets return `id`, `input_ids`, and `attention_mask` only.
+- Seeds are set for Python, NumPy, PyTorch, and CUDA where available.
+- Full RoBERTa training should reuse the shared dataset/training utilities
+  instead of notebook-only code.

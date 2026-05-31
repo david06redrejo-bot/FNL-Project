@@ -326,3 +326,149 @@ def run_sklearn_model_version(
         make_submission=make_submission,
         load_model_path=load_model_path,
     )
+
+
+def train_one_epoch(
+    model: Any,
+    dataloader: Any,
+    optimizer: Any,
+    device: Any,
+    scaler: Any | None = None,
+    use_mixed_precision: bool = False,
+) -> dict[str, float]:
+    """Train a PyTorch model for one epoch."""
+    import torch
+
+    model.train()
+    total_loss = 0.0
+    total_examples = 0
+    autocast_enabled = bool(use_mixed_precision and getattr(device, "type", "") == "cuda")
+
+    for batch in dataloader:
+        batch = {
+            key: value.to(device) if hasattr(value, "to") else value
+            for key, value in batch.items()
+        }
+        optimizer.zero_grad(set_to_none=True)
+        with torch.autocast(device_type=device.type, enabled=autocast_enabled):
+            outputs = model(
+                input_ids=batch["input_ids"],
+                attention_mask=batch["attention_mask"],
+                labels=batch["labels"],
+            )
+            loss = outputs.loss
+        if scaler is not None and autocast_enabled:
+            scaler.scale(loss).backward()
+            scaler.step(optimizer)
+            scaler.update()
+        else:
+            loss.backward()
+            optimizer.step()
+        batch_size = int(batch["labels"].shape[0])
+        total_examples += batch_size
+        total_loss += float(loss.detach().cpu()) * batch_size
+
+    return {"train_loss": total_loss / max(total_examples, 1)}
+
+
+def evaluate_torch_model(
+    model: Any,
+    dataloader: Any,
+    device: Any,
+    id2label: dict[int, str],
+) -> dict[str, Any]:
+    """Evaluate a PyTorch classifier and return project metrics."""
+    import torch
+
+    from .metrics import metrics_from_logits
+
+    model.eval()
+    all_logits = []
+    all_labels = []
+    total_loss = 0.0
+    total_examples = 0
+    with torch.no_grad():
+        for batch in dataloader:
+            batch = {
+                key: value.to(device) if hasattr(value, "to") else value
+                for key, value in batch.items()
+            }
+            outputs = model(
+                input_ids=batch["input_ids"],
+                attention_mask=batch["attention_mask"],
+                labels=batch["labels"],
+            )
+            batch_size = int(batch["labels"].shape[0])
+            total_examples += batch_size
+            total_loss += float(outputs.loss.detach().cpu()) * batch_size
+            all_logits.append(outputs.logits.detach().cpu().numpy())
+            all_labels.append(batch["labels"].detach().cpu().numpy())
+
+    logits = np.concatenate(all_logits, axis=0)
+    labels = np.concatenate(all_labels, axis=0)
+    metrics = metrics_from_logits(labels, logits, id2label=id2label)
+    metrics["eval_loss"] = total_loss / max(total_examples, 1)
+    return metrics
+
+
+def predict_torch_model(
+    model: Any,
+    dataloader: Any,
+    device: Any,
+    id2label: dict[int, str],
+) -> pd.DataFrame:
+    """Predict leaderboard rows with a PyTorch classifier."""
+    import torch
+
+    model.eval()
+    rows = []
+    with torch.no_grad():
+        for batch in dataloader:
+            ids = batch["id"]
+            input_ids = batch["input_ids"].to(device)
+            attention_mask = batch["attention_mask"].to(device)
+            outputs = model(input_ids=input_ids, attention_mask=attention_mask)
+            pred_ids = outputs.logits.argmax(dim=1).detach().cpu().numpy()
+            for row_id, pred_id in zip(ids, pred_ids, strict=False):
+                rows.append({"id": row_id, "y_category": id2label[int(pred_id)]})
+    return pd.DataFrame(rows)[["id", "y_category"]]
+
+
+def save_torch_checkpoint(
+    path: Path,
+    model: Any,
+    optimizer: Any | None = None,
+    epoch: int | None = None,
+    config: dict[str, Any] | None = None,
+    metrics: dict[str, Any] | None = None,
+) -> Path:
+    """Save a lightweight PyTorch checkpoint."""
+    import torch
+
+    path.parent.mkdir(parents=True, exist_ok=True)
+    payload: dict[str, Any] = {
+        "model_state_dict": model.state_dict(),
+        "epoch": epoch,
+        "config": config or {},
+        "metrics": metrics or {},
+    }
+    if optimizer is not None:
+        payload["optimizer_state_dict"] = optimizer.state_dict()
+    torch.save(payload, path)
+    return path
+
+
+def load_torch_checkpoint(
+    path: Path,
+    model: Any,
+    optimizer: Any | None = None,
+    map_location: str | Any = "cpu",
+) -> dict[str, Any]:
+    """Load a PyTorch checkpoint into a model and optionally an optimizer."""
+    import torch
+
+    checkpoint = torch.load(path, map_location=map_location)
+    model.load_state_dict(checkpoint["model_state_dict"])
+    if optimizer is not None and "optimizer_state_dict" in checkpoint:
+        optimizer.load_state_dict(checkpoint["optimizer_state_dict"])
+    return checkpoint

@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import os
 import random
 from datetime import datetime, timezone
 from pathlib import Path
@@ -17,9 +18,28 @@ def utc_timestamp() -> str:
 
 
 def set_seed(seed: int = 42) -> None:
-    """Set common random seeds."""
+    """Set Python, NumPy, PyTorch, and CUDA seeds when available."""
+    os.environ["PYTHONHASHSEED"] = str(seed)
     random.seed(seed)
     np.random.seed(seed)
+    try:
+        import torch
+
+        torch.manual_seed(seed)
+        torch.cuda.manual_seed_all(seed)
+        torch.backends.cudnn.deterministic = True
+        torch.backends.cudnn.benchmark = False
+    except ImportError:
+        pass
+
+
+def get_device(prefer_cuda: bool = True):
+    """Return the best available PyTorch device."""
+    import torch
+
+    if prefer_cuda and torch.cuda.is_available():
+        return torch.device("cuda")
+    return torch.device("cpu")
 
 
 def save_json(payload: dict[str, Any], path: Path) -> None:
@@ -35,4 +55,3 @@ def append_markdown_entry(path: Path, heading: str, body: str) -> None:
         path.write_text(f"# {path.stem.replace('_', ' ').title()}\n", encoding="utf-8")
     with path.open("a", encoding="utf-8") as handle:
         handle.write(f"\n## {utc_timestamp()} — {heading}\n\n{body.strip()}\n")
-
