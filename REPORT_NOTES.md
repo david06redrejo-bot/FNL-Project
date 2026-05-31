@@ -54,3 +54,43 @@ The observed label set has 36 classes: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D,
 
 Warnings:
 - `y_category` is absent from leaderboard data; this is normal for unlabeled Kaggle test files but differs from the stated expected columns.
+
+## Visual EDA Conclusions
+
+We continued the first phase with a visual EDA inspired by a Data Engineering
+mindset: before modeling, we inspected the data-generating process, data
+quality, distributions, missingness, duplicates, and possible leakage.
+
+Core size and annotation facts:
+
+- Training rows: 13700
+- Leaderboard rows: 6667
+- Unique full ICD codes in training: 4059
+- Unique `y_category` labels: 36
+- Unique full ICD codes in the ICD catalog: 179742
+
+The top 10 categories by row count are: [{'y_category': 'Z', 'count': 1715}, {'y_category': 'O', 'count': 1505}, {'y_category': '0', 'count': 1141}, {'y_category': '6', 'count': 637}, {'y_category': '3', 'count': 592}, {'y_category': 'B', 'count': 579}, {'y_category': 'N', 'count': 536}, {'y_category': 'E', 'count': 500}, {'y_category': 'V', 'count': 491}, {'y_category': '5', 'count': 408}].
+The bottom 10 categories by row count are: [{'y_category': 'W', 'count': 7}, {'y_category': 'X', 'count': 10}, {'y_category': 'A', 'count': 22}, {'y_category': 'U', 'count': 22}, {'y_category': 'Y', 'count': 36}, {'y_category': 'T', 'count': 70}, {'y_category': 'S', 'count': 71}, {'y_category': 'P', 'count': 101}, {'y_category': 'L', 'count': 110}, {'y_category': 'Q', 'count': 145}].
+
+Duplicate and ambiguity findings:
+
+- Duplicate literals: 1668
+- Same literal with multiple full ICD codes: 1668
+- Same literal with multiple `y_category` labels: 1486
+
+Train/leaderboard comparison:
+
+- 51.8% of unique normalized leaderboard
+  literals appear in the training set.
+- Mean character length is 16.95 in train and
+  17.15 in leaderboard.
+
+Normalization risk:
+
+- Raw unique literals: 11584
+- Unique literals after lowercase/accent-stripped normalization:
+  7844
+- Normalization collision keys:
+  2186
+
+No model has been trained yet; these are EDA conclusions only.

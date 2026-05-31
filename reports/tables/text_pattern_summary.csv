@@ -1,0 +1,17 @@
+dataset,pattern,count,share
+train,has_digit,1093,0.07978102189781022
+train,is_all_upper,1621,0.11832116788321168
+train,has_slash,33,0.0024087591240875912
+train,has_hyphen,286,0.020875912408759124
+train,has_parentheses,47,0.0034306569343065694
+train,has_accent,3833,0.27978102189781023
+train,has_punctuation,1338,0.09766423357664233
+train,has_measurement_like,192,0.014014598540145985
+leaderboard,has_digit,506,0.07589620518974051
+leaderboard,is_all_upper,754,0.11309434528273586
+leaderboard,has_slash,14,0.0020998950052497373
+leaderboard,has_hyphen,125,0.018749062546872655
+leaderboard,has_parentheses,16,0.0023998800059997
+leaderboard,has_accent,1973,0.295935203239838
+leaderboard,has_punctuation,597,0.0895455227238638
+leaderboard,has_measurement_like,92,0.013799310034498274

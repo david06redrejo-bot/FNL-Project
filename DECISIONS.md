@@ -57,3 +57,7 @@ in importable Python modules and runnable model files.
   notebooks define the final narrative.
 
 **Status:** Active.
+
+## EDA Before Modeling
+
+Decision: continue with EDA conclusions only before training. The observed imbalance, duplicate literals, and ambiguous literal-category mappings must shape the baseline design and evaluation plan.

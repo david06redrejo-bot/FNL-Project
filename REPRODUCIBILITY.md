@@ -57,6 +57,16 @@ label mapping, and writes:
 - `reports/tables/data_schema_summary.csv`
 - an entry in `REPORT_NOTES.md`
 
+Continue the non-modeling EDA with:
+
+```bash
+python scripts/run_visual_eda.py
+```
+
+This command generates the first report figures and EDA tables, including class
+distribution, long-tail analysis, literal lengths, duplicate/ambiguous literals,
+text-pattern prevalence, and train/leaderboard shift checks.
+
 ## 4. Reproduce Baselines
 
 After placing data in `data/raw/`, run:

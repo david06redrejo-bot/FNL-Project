@@ -32,3 +32,7 @@ This file tracks every model attempt, including failed and inconclusive attempts
 
 Full training still requires restoring the raw Kaggle CSV files into
 `data/raw/`.
+
+## No model yet; EDA conclusions only
+
+Generated the visual EDA figures and tables. No model training, validation, or prediction was run.

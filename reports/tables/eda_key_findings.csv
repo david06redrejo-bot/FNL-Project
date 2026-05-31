@@ -1,0 +1,9 @@
+topic,finding,modeling_implication
+Dataset size,13700 training rows and 6667 leaderboard rows.,"Validation can be meaningful, but rare classes still need careful reporting."
+Label space,36 y_category labels and 4059 unique full ICD codes.,"The target is broad category prediction, not full ICD-code assignment."
+Class imbalance,Top category Z has 1715 rows; bottom category W has 7 rows.,Accuracy will be dominated by common categories; macro metrics and error analysis are needed.
+Short context,Median train literal length is 2 whitespace tokens.,"Models receive little context, so ambiguity and abbreviation handling matter."
+Duplicate literals,1668 literals appear more than once.,Exact-match and leakage-aware splits must be considered.
+Ambiguous literals,1486 literals map to multiple y_category labels.,"Some errors may reflect missing clinical context, not only weak modeling."
+Normalization,Accent/case normalization creates 2186 collision keys.,Normalization helps matching but can collapse distinct surface forms.
+Train/leaderboard overlap,51.8% of unique normalized leaderboard literals appear in train.,A hybrid exact-match plus generalization strategy is plausible.

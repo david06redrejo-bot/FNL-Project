@@ -1,0 +1,37 @@
+y_category,n_rows,n_unique_codes,example_literals
+0,1141,393,0wqfxzz || 1 stent || 1 vaso || 57.22 || <font><font>Alimentaria intoxicación</font></font>
+1,287,75,", se extrae coagulo || ABORTO || ADK colon || ADK de ovario || ADK próstata"
+2,404,168,285.1 || ALTERACIÓN DE LA COAGULACIÓN || ANEMIA AGUDa || ANEMIA SANG || ANEMIA hierro
+3,592,163,1CCHH || 2 CCHH || 2CH || ANALGÉSICO || ANTI D
+4,399,148,AC XFA || AC x FA || ACxFA || AMO || APGAR
+5,408,158,Absces de pulmo || Absceso odontogeno || Absceso pulmonar || Abscés de pulmó || Acalasia
+6,637,227,0020 || 0020 ANTEpaRTO || 0020 antepart || 0020 anteparto || 0020 parto
+7,395,211,AMO tíbia || ARTROSI || ASCITIS MALIGNA || ASÍMETRIA FACIAL congenita || Acné papulopustuloso
+8,406,131,8838 || ADENOCARCINOMA || ADENOCARCINOMA ACINAR || ADENOCARCINOMA ENDOMETRIAL DE TIPO ENDOMETRIOIDE || ADENOCARCINOMA ENDOMETRIOIDE
+9,278,84,2 CCHH || 2 CH || 3CCHH || ATb || Abceso qx
+A,22,15,A09 || ERISIPELA EN EXTREMIDAD SUPERIOR DERECHA || Gastroenteritis aguda por Salmonella entérica || Herpes Genital parto || Herpes genital parto
+B,579,144,- Rx tórax y abdomen || 041.19 || 041.89 || : E. coli. || : E.Coli
+C,205,65,196.5 || ADC endometrio || ADENOCARCINOMA DE ENDOCERVIX || ADENOCARCINOMA DE ENDOMETRIO || ADENOCARCINOMA ENDOMETRIAL
+D,336,85,285.21 || ADENOMA PARATIROIDEO || ANEMIA || ANEMIA FERROPÉNICA || ANEMIA HEMORRÁGICA
+E,500,124,246.9 || ACIDOSIS METABÓLICA || Acidemia propiónica || Acidosi || Alcalosis metabólica
+F,302,69,290.3 || ALTERACIÓ DEL COMPORTAMENT || ANSIEDAD || ANSIETAT || Abuso de alcohol
+G,214,81,356.2 || Alzheimer || Amaurosis fugax || Ansiedad parto || Apnea del son
+H,146,73,Acufenos || Acúfeno bilateral || Ambliopia OD || Ambliopia OI || Ambliopia OI.
+I,370,108,412 || 437.0 || 440.0 || 441.2 || AC x FA
+J,234,82,516.31 || ADENOAMIGDALITIS CRONICA || ASMA || ASMA part || ATELECTASIA
+K,381,128,. Hernia hiatal || 569.49 || 576.8 || APENDICITIS AGUDA || APENDICITIS AGUDA PERFORADA
+L,110,60,Absceso axila derecha || Absceso muslo derecho || Abscesos inguinales || Acné juvenil || Artritis Psoriasica
+M,288,146,AR || ARTRITIS || ARTROSI || Anterolistesis L4-L5 || Artirtis crónica juvenil
+N,536,154,584.5 || 591 || 593.89 || 596.89 || 612.1
+O,1505,216,", color: teñido || . Desgarro I || 0000 || 0020 || 1001"
+P,101,52,40 rn || 771.89 || 77189 || 779.89 || APNEA DE LA PREMATURIDAD
+Q,145,89,Acondroplasia || Agenesia renal izquierda || Aplasia cutis || Apéndices preauriculares || Arnold Chiari
+R,357,117,783.3 || 790.4 || 790.7 || 790.92 || Abdominalgia
+S,71,46,850.0 || Abrasión en rodilla izq || Erosion rodilla derecha || FR CADERA DERECHA || FR DIAFISARIA DE TIBIA Y PERONÉ DERECHOS
+T,70,47,AFLOJAMIENTO PTR IZQDA || Aflojamiento PTC derecha || Ahogamiento || Bacteriemia CVC || CE esofágico
+U,22,2,COVID || COVID 19 || COVID PARTO || COVID part || COVID parto
+V,491,129,AL.LÈRGIES PENICILINA || ALERGIA : AMOXICILINA || ALERGIA A CONTRASTES YODADOS || ALERGIA A LA CODEINA || ALERGIA A LA PENICILINA
+W,7,4,CAIDA || caida || caida desde silla de ruedas || caida en su domicilio || caída
+X,10,6,ACCIDENT || Quemadura || Remdesivir || accdient || accident
+Y,36,20,HTA irc 6 || LLOC || accidente de tráfico || agresión || atropello en vía pública
+Z,1715,239,", Ex fumador || - Grupo sanguíneo: A Positivo || . A negativo || . A positivo || 0 NEGATIVO"
