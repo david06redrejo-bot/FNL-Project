@@ -82,6 +82,24 @@ This command writes:
 
 It does not train any model.
 
+Analyze RoBERTa tokenization before training with:
+
+```bash
+python scripts/analyze_tokenization.py
+```
+
+This command loads
+`PlanTL-GOB-ES/roberta-base-biomedical-clinical-es`, tokenizes the required-clean
+train and leaderboard literals, and writes:
+
+- `reports/tables/token_length_summary.csv`
+- `reports/tables/truncation_by_max_length.csv`
+- `reports/figures/fig_07_token_length_distribution.png`
+- `reports/figures/fig_08_truncation_rate_by_max_length.png`
+
+If the tokenizer is not cached locally, this command needs network access to
+download it from Hugging Face.
+
 ## 4. Reproduce Baselines
 
 After placing data in `data/raw/`, run:

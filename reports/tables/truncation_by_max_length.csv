@@ -1,0 +1,13 @@
+dataset,max_length,truncated_examples,total_examples,truncation_rate,recommended_default
+train,32,0,13700,0.0,True
+train,64,0,13700,0.0,False
+train,96,0,13700,0.0,False
+train,128,0,13700,0.0,False
+train,192,0,13700,0.0,False
+train,256,0,13700,0.0,False
+leaderboard,32,0,6667,0.0,True
+leaderboard,64,0,6667,0.0,False
+leaderboard,96,0,6667,0.0,False
+leaderboard,128,0,6667,0.0,False
+leaderboard,192,0,6667,0.0,False
+leaderboard,256,0,6667,0.0,False

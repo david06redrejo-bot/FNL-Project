@@ -40,3 +40,7 @@ Generated the visual EDA figures and tables. No model training, validation, or p
 ## No model yet; preprocessing conclusions only
 
 Created required-clean processed datasets and preprocessing ablation summaries. No model training, validation, or prediction was run.
+
+## No model yet; tokenizer analysis only
+
+Analyzed RoBERTa tokenizer lengths with `PlanTL-GOB-ES/roberta-base-biomedical-clinical-es`. Recommended max_length=32. No model training, validation, or prediction was run.

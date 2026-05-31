@@ -65,3 +65,11 @@ Decision: continue with EDA conclusions only before training. The observed imbal
 ## Final Preprocessing Decision
 
 Decision: use `clean_required` for the final RoBERTa pipeline. This preserves case, accents, punctuation, digits, and abbreviations while stripping leading/trailing spaces and collapsing repeated whitespace. Stronger normalization is reserved for classical-baseline ablations only.
+
+## RoBERTa Tokenizer max_length Decision
+
+Decision: use `PlanTL-GOB-ES/roberta-base-biomedical-clinical-es` as the tokenizer for RoBERTa experiments and set
+the initial default `max_length` to **32**. This value is based
+on the observed token length percentiles of required-clean train and leaderboard
+literals, not on an arbitrary default. Future ablations may compare nearby
+values, but this is the default starting point.
