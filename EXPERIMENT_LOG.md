@@ -462,3 +462,73 @@ Metrics:
 - `weighted_f1`: 0.549054
 
 Run summary: `/home/iadlG010/FNL-Project/outputs/logs/v07_roberta_mean_tuning_run.md`
+
+## Run v08_roberta_mean_augmented
+
+**Version:** `v08_roberta_mean_augmented`
+
+Metrics:
+- `accuracy`: 0.568613
+- `macro_f1`: 0.481648
+- `weighted_f1`: 0.549150
+
+Run summary: `/home/iadlG010/FNL-Project/outputs/logs/v08_roberta_mean_augmented_run.md`
+
+## Run v08_roberta_mean_augmented_debug_weighted_random_sampler
+
+**Version:** `v08_roberta_mean_augmented_debug_weighted_random_sampler`
+
+Metrics:
+- `accuracy`: 0.031250
+- `macro_f1`: 0.008547
+- `weighted_f1`: 0.004808
+
+Run summary: `/home/iadlG010/FNL-Project/outputs/logs/v08_roberta_mean_augmented_debug_weighted_random_sampler_run.md`
+
+## Run v08_roberta_mean_augmented_dedupe_non_conflicting_literals
+
+**Version:** `v08_roberta_mean_augmented_dedupe_non_conflicting_literals`
+
+Metrics:
+- `accuracy`: 0.568613
+- `macro_f1`: 0.481648
+- `weighted_f1`: 0.549150
+
+Run summary: `/home/iadlG010/FNL-Project/outputs/logs/v08_roberta_mean_augmented_dedupe_non_conflicting_literals_run.md`
+
+## Run v08_roberta_mean_augmented_weighted_random_sampler
+
+**Version:** `v08_roberta_mean_augmented_weighted_random_sampler`
+
+Metrics:
+- `accuracy`: 0.542336
+- `macro_f1`: 0.522584
+- `weighted_f1`: 0.536961
+
+Run summary: `/home/iadlG010/FNL-Project/outputs/logs/v08_roberta_mean_augmented_weighted_random_sampler_run.md`
+
+## Interpretation v08_roberta_mean_augmented
+
+Purpose: explore safe data strategies without unsafe clinical text
+augmentation.
+
+What was tested:
+
+- original mean-pooling reference (`v05`);
+- conservative deduplication of non-conflicting duplicate literals;
+- `WeightedRandomSampler` for class-balanced exposure during training.
+
+What was not used:
+
+- random deletion of medical words;
+- unverified synonym replacement;
+- negation changes;
+- back-translation;
+- class-balanced batch sampler, kept as future work because
+  `WeightedRandomSampler` already tested the sampling hypothesis with less
+  implementation risk.
+
+Conclusion: conservative deduplication is the best v08 candidate by accuracy
+(`0.568613`), but CLS (`v04`, `0.569343`) remains slightly ahead. Weighted
+sampling improves macro F1 (`0.522584`) but loses too much validation accuracy
+for the competition objective.

@@ -273,6 +273,28 @@ The tuning script writes:
 - `outputs/metrics/v07_roberta_mean_tuning_metrics.json`
 - `submissions/v07_roberta_mean_tuning_submission.csv`
 
+## 4.6 Safe Data-Strategy Experiments
+
+Run the safe clinical data-strategy experiments:
+
+```bash
+python models/v08_roberta_mean_augmented.py
+```
+
+For a tiny smoke test:
+
+```bash
+python models/v08_roberta_mean_augmented.py --debug
+```
+
+The script writes:
+
+- `reports/tables/v08_data_strategy_results.csv`
+- `reports/tables/v08_roberta_mean_augmented_duplicate_report.csv`
+- `reports/safe_augmentation_note.md`
+- `outputs/metrics/v08_roberta_mean_augmented_metrics.json`
+- `submissions/v08_roberta_mean_augmented_submission.csv`
+
 Before expensive model work, smoke-test the model-version interface:
 
 ```bash

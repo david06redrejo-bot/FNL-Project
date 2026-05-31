@@ -75,12 +75,12 @@ defaulting to `42`.
 | `v00_majority_baseline.py` | Majority-class lower bound |
 | `v01_tfidf_char_logreg.py` | Character n-gram TF-IDF logistic regression |
 | `v02_tfidf_word_svm.py` | TF-IDF linear SVM baseline |
-| `v03_roberta_cls.py` | RoBERTa with CLS pooling |
-| `v04_roberta_mean.py` | RoBERTa with mean pooling |
-| `v05_roberta_mean_class_weighted.py` | RoBERTa mean pooling with class weighting |
-| `v06_roberta_mean_augmented.py` | RoBERTa with ICD-description augmentation |
-| `v07_ensemble.py` | Final ensemble candidate |
+| `v03_similarity_retrieval_baseline.py` | TF-IDF nearest-neighbor retrieval baseline |
+| `v04_roberta_cls.py` | RoBERTa with CLS pooling |
+| `v05_roberta_mean.py` | RoBERTa with mean pooling |
+| `v06_roberta_mean_imbalance_aware.py` | RoBERTa mean pooling with weighted/focal losses |
+| `v07_roberta_mean_tuning.py` | Controlled mean-pooling hyperparameter tuning |
+| `v08_roberta_mean_augmented.py` | Safe data-strategy ablations: conservative deduplication and weighted sampling |
 
-The RoBERTa and ensemble scripts currently expose the required interface. Their
-expensive internals should be filled in only after the baseline pipeline is
-validated.
+Legacy skeleton scripts are still present where useful for continuity, but the
+validated model sequence is `v00` through `v08` as listed above.

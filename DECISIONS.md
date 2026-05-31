@@ -94,3 +94,30 @@ Implications:
 - Seeds are set for Python, NumPy, PyTorch, and CUDA where available.
 - Full RoBERTa training should reuse the shared dataset/training utilities
   instead of notebook-only code.
+
+## Safe Clinical Data-Augmentation Decision
+
+Decision: do not use aggressive augmentation for clinical literals. We do not
+randomly delete medical words, replace clinical terms with unverified synonyms,
+alter negation, or back-translate literals as if the label were guaranteed to
+stay unchanged.
+
+Reasoning: the literals are short and semantically dense. A small change in
+punctuation, abbreviation, negation, or terminology can change the correct ICD
+category. The dataset also contains many duplicate literals with conflicting
+categories, so blindly deduplicating by literal would remove real ambiguity from
+the task.
+
+Implementation decision for `v08`: test only safe data strategies that do not
+invent new clinical text:
+
+- keep the original mean-pooling model as the reference;
+- drop duplicate training literals only when all copies share the same
+  `y_category`;
+- keep all rows but use `WeightedRandomSampler` to expose rare categories more
+  often during training.
+
+Result: conservative deduplication improved mean-pooling accuracy to `0.568613`
+but did not beat the CLS model (`0.569343`). Weighted sampling improved macro F1
+to `0.522584`, but reduced accuracy to `0.542336`, so it remains an ablation
+rather than the final accuracy candidate.

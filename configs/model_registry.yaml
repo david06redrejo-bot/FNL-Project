@@ -76,6 +76,12 @@ models:
     purpose: controlled hyperparameter tuning for RoBERTa mean pooling
     expensive: true
     status: implemented
+  v08_roberta_mean_augmented:
+    script: models/v08_roberta_mean_augmented.py
+    family: transformer
+    purpose: safe data-strategy ablations for clinical literals
+    expensive: true
+    status: implemented
   v03_roberta_cls:
     script: models/v03_roberta_cls.py
     family: transformer

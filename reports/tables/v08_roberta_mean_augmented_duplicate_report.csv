@@ -1,0 +1,5 @@
+measure,value
+train_rows,10960
+exact_duplicate_rows,0
+duplicate_literal_rows,1442
+conflicting_duplicate_literals,1032

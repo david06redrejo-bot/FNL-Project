@@ -1,0 +1,4 @@
+candidate_version,strategy,accuracy,macro_f1,weighted_f1,best_epoch,train_rows_after_strategy,is_reference
+v08_roberta_mean_augmented_dedupe_non_conflicting_literals,drop duplicate train literals only when all copies share y_category,0.5686131386861314,0.4816478629114776,0.5491498480063064,7,10820,False
+v05_roberta_mean,original train reference,0.5645985401459854,0.49656689039778307,0.5495406105287156,10,10960,True
+v08_roberta_mean_augmented_weighted_random_sampler,keep all train rows and sample inversely to y_category frequency,0.5423357664233577,0.5225837425330968,0.5369605091810935,15,10960,False

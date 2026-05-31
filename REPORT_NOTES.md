@@ -521,3 +521,53 @@ best_epoch: 13
 This matched the standard mean-pooling accuracy but did not beat CLS. Therefore
 the recommended mean-pooling training configuration is useful for future runs,
 but CLS remains the current final candidate by validation accuracy.
+
+## Safe Data Strategies and Clinical Augmentation
+
+We explored data augmentation only under a clinical-safety constraint. After the
+EDA and preprocessing phases, we understood that “augmentation” in medical text
+is risky: a literal may be only a few tokens long, and changing a word,
+punctuation mark, abbreviation, number, or negation could silently change the
+diagnosis category.
+
+For this reason, `v08_roberta_mean_augmented` deliberately avoids random word
+deletion, unverified synonym replacement, negation changes, and back-translation.
+Those ideas are left as future work unless they can be reviewed with domain
+experts or controlled with verified medical terminology resources.
+
+The safe experiments were data-handling strategies:
+
+- a reference to the original `v05` mean-pooling run;
+- conservative deduplication, where duplicate literals are dropped only when all
+  copies have the same `y_category`;
+- `WeightedRandomSampler`, which keeps all rows but samples rare categories more
+  often during training.
+- a custom class-balanced batch sampler was considered, but we kept it as future
+  work because `WeightedRandomSampler` already tests the sampling hypothesis
+  with less implementation risk.
+
+The duplicate report for the training split showed:
+
+```text
+train rows: 10960
+duplicate literal rows: 1442
+conflicting duplicate literals: 1032
+```
+
+This confirmed that duplicate handling is not trivial. If the same literal maps
+to different categories, removing it as a duplicate would hide ambiguity instead
+of solving it.
+
+Validation results:
+
+```text
+v05 original mean reference          accuracy 0.564599  macro_f1 0.496567
+v08 conservative deduplication       accuracy 0.568613  macro_f1 0.481648
+v08 weighted random sampler          accuracy 0.542336  macro_f1 0.522584
+```
+
+Conservative deduplication almost reached the CLS model, but it did not surpass
+it. Weighted sampling improved macro F1, which means it helped the long-tail
+view of the task, but the accuracy drop is too large for the competition
+objective. Our responsible-AI conclusion is that safe data strategies are useful
+for analysis, but they should not be oversold as clinical augmentation.

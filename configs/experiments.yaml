@@ -84,6 +84,16 @@ completed_experiments:
     best_candidate: c_recommended_32_lr2e5_warmup006_clip
     best_epoch: 13
     lesson: warmup and gradient clipping matched standard mean-pooling accuracy but did not beat CLS or v05 macro F1.
+  - id: v08_roberta_mean_augmented
+    script: models/v08_roberta_mean_augmented.py
+    family: transformer
+    status: completed
+    validation_accuracy: 0.568613
+    macro_f1: 0.481648
+    weighted_f1: 0.549150
+    best_candidate: dedupe_non_conflicting_literals
+    best_epoch: 7
+    lesson: conservative deduplication nearly matched CLS accuracy; weighted sampling improved macro F1 but hurt accuracy.
 
 advanced_experiment_roadmap:
   - id: exp_class_weighted_loss
@@ -166,7 +176,7 @@ advanced_experiment_roadmap:
     expected_benefit: more examples for rare classes.
     risk: changing clinical meaning or creating wrong labels.
     implementation_cost: high
-    decision: maybe
+    decision: completed_safe_data_strategy_ablation
   - id: exp_pseudo_labeling
     candidate: pseudo-labeling leaderboard data
     hypothesis: high-confidence predictions may adapt to leaderboard distribution.
