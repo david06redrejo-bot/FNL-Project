@@ -51,6 +51,9 @@ outputs/logs/*
 *.joblib
 *.pkl
 
+# Debug smoke-test submissions are generated artifacts.
+submissions/*_debug_submission.csv
+
 # Generated report artifacts
 reports/compiled/*
 !reports/compiled/.gitkeep

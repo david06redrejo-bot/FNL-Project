@@ -1,26 +1,78 @@
+interface:
+  required_actions:
+    - load_data
+    - train_or_load_model
+    - evaluate_validation
+    - predict_leaderboard
+    - generate_submission
+    - write_metrics
+    - write_predictions
+    - update_experiment_logs
+  split:
+    train_fraction: 0.8
+    validation_fraction: 0.2
+    stratify_by: label_id
+    seed: 42
+  submission_contract:
+    columns:
+      - id
+      - y_category
+    allow_extra_columns: false
+  output_contract:
+    config: outputs/logs/{version_name}_config.json
+    metrics: outputs/metrics/{version_name}_metrics.json
+    validation_predictions: outputs/predictions/{version_name}_val_predictions.csv
+    leaderboard_detailed: outputs/predictions/{version_name}_leaderboard_detailed.csv
+    submission: submissions/{version_name}_submission.csv
+    run_summary: outputs/logs/{version_name}_run.md
+    model_artifact: outputs/checkpoints/{version_name}.joblib
+
 models:
   v00_majority_baseline:
+    script: models/v00_majority_baseline.py
     family: majority
     purpose: lower-bound baseline
+    expensive: false
+    status: interface_ready
   v01_tfidf_char_logreg:
+    script: models/v01_tfidf_char_logreg.py
     family: classical
-    purpose: short-literal char n-gram baseline
+    purpose: short-literal char n-gram logistic regression
+    expensive: false
+    status: interface_ready
   v02_tfidf_word_svm:
+    script: models/v02_tfidf_word_svm.py
     family: classical
-    purpose: survey-inspired TF-IDF SVM baseline
+    purpose: survey-inspired TF-IDF linear SVM baseline
+    expensive: false
+    status: interface_ready
   v03_roberta_cls:
+    script: models/v03_roberta_cls.py
     family: transformer
     purpose: Spanish biomedical RoBERTa CLS pooling
+    expensive: true
+    status: interface_ready_internals_pending
   v04_roberta_mean:
+    script: models/v04_roberta_mean.py
     family: transformer
     purpose: Spanish biomedical RoBERTa mean pooling
+    expensive: true
+    status: interface_ready_internals_pending
   v05_roberta_mean_class_weighted:
+    script: models/v05_roberta_mean_class_weighted.py
     family: transformer
-    purpose: mean pooling with class weighting
+    purpose: RoBERTa mean pooling with class weighting
+    expensive: true
+    status: interface_ready_internals_pending
   v06_roberta_mean_augmented:
+    script: models/v06_roberta_mean_augmented.py
     family: transformer
-    purpose: mean pooling with ICD-description augmentation
+    purpose: RoBERTa mean pooling with ICD-description augmentation
+    expensive: true
+    status: interface_ready_internals_pending
   v07_ensemble:
+    script: models/v07_ensemble.py
     family: ensemble
     purpose: final candidate combination
-
+    expensive: false
+    status: interface_ready_internals_pending

@@ -1,28 +1,74 @@
-# Model Versions
+# Model Version Interface
 
-Each file in this folder is a runnable model-version entry point. The shared
-interface is:
+Every file in `models/` is a deliverable model-version script. The shared
+contract is strict: each version must be able to load data, train or load a
+model, evaluate on validation, predict the leaderboard, generate a named Kaggle
+submission, write metrics, write predictions, and update experiment logs.
+
+## Commands
+
+Smoke-test the full interface on a tiny debug sample:
 
 ```bash
 python models/v00_majority_baseline.py --dry-run
-python models/v02_tfidf_word_svm.py --train --evaluate --predict --make-submission
+python models/v01_tfidf_char_logreg.py --dry-run
 ```
 
-If no action flag is provided, the script runs the full train/evaluate/predict
-and submission flow. All model versions write outputs to:
+Run the full default flow for a lightweight model:
 
-- `outputs/metrics/`
-- `outputs/predictions/`
-- `submissions/`
-- `EXPERIMENT_LOG.md`
-- `REPORT_NOTES.md`
+```bash
+python models/v00_majority_baseline.py
+```
 
-The classical models are already wired to reusable code in `src/`. The RoBERTa
-and ensemble files currently provide the final traceable command interface and
-will receive their full transformer/ensemble internals during the modeling
-phase once data and compute availability are confirmed.
+Specific flags are also supported:
 
-## Planned Versions
+```bash
+python models/v02_tfidf_word_svm.py --train --evaluate --predict --make-submission
+python models/v02_tfidf_word_svm.py --load-model-path outputs/checkpoints/v02_tfidf_word_svm.joblib --evaluate --predict --make-submission
+```
+
+## Output Contract
+
+For a version named `vXX_name`, every run writes:
+
+- `outputs/logs/vXX_name_config.json`
+- `outputs/metrics/vXX_name_metrics.json`
+- `outputs/metrics/vXX_name_per_class_metrics.csv`
+- `outputs/predictions/vXX_name_val_predictions.csv`
+- `outputs/predictions/vXX_name_leaderboard_detailed.csv`
+- `submissions/vXX_name_submission.csv`
+- `outputs/logs/vXX_name_run.md`
+- `outputs/checkpoints/vXX_name.joblib` when applicable
+
+Kaggle submissions contain exactly:
+
+```text
+id,y_category
+```
+
+Detailed prediction files may include literals, validation truth labels,
+probabilities, logits, or top-k fields depending on the model.
+
+## Metrics
+
+The interface writes:
+
+- accuracy
+- macro precision
+- macro recall
+- macro F1
+- weighted F1
+- confusion matrix
+- per-class metrics
+- top-k accuracy when probabilities are available
+- log loss when probabilities are available
+
+## Split
+
+The internal split is `80/20`, stratified by `label_id`, with configurable seed
+defaulting to `42`.
+
+## Versions
 
 | Version | Purpose |
 |---|---|
@@ -35,3 +81,6 @@ phase once data and compute availability are confirmed.
 | `v06_roberta_mean_augmented.py` | RoBERTa with ICD-description augmentation |
 | `v07_ensemble.py` | Final ensemble candidate |
 
+The RoBERTa and ensemble scripts currently expose the required interface. Their
+expensive internals should be filled in only after the baseline pipeline is
+validated.

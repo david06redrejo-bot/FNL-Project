@@ -32,6 +32,7 @@ Run a dry-run model command to verify that imports, paths, and logging work:
 
 ```bash
 python models/v00_majority_baseline.py --dry-run
+python models/v00_majority_baseline.py --dry-run --load-model-path outputs/checkpoints/v00_majority_baseline_debug.joblib
 ```
 
 Run syntax checks:
@@ -109,6 +110,16 @@ python models/v00_majority_baseline.py
 python models/v01_tfidf_char_logreg.py
 python models/v02_tfidf_word_svm.py
 ```
+
+Before expensive model work, smoke-test the model-version interface:
+
+```bash
+python models/v00_majority_baseline.py --dry-run
+```
+
+This debug run uses a tiny sample but still exercises the full contract:
+configuration, 80/20 split, validation metrics, detailed predictions, exact
+`id,y_category` submission, checkpoint, run summary, and experiment-log update.
 
 Each script writes:
 
