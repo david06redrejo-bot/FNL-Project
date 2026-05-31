@@ -338,6 +338,23 @@ This command writes:
 - `reports/figures/fig_13_confidence_correct_vs_wrong.png`
 - `reports/figures/fig_14_training_curves.png`
 
+## 4.9 Final Submission Copy
+
+Create the final upload file from the selected `v09_ensemble` submission:
+
+```bash
+python - <<'PY'
+import pandas as pd
+sub = pd.read_csv('submissions/v09_ensemble_submission.csv')
+assert list(sub.columns) == ['id', 'y_category']
+assert len(sub) == 6667
+sub.to_csv('submissions/final_submission.csv', index=False)
+
+detailed = pd.read_csv('outputs/predictions/v09_ensemble_leaderboard_detailed.csv')
+detailed.to_csv('outputs/predictions/final_leaderboard_detailed.csv', index=False)
+PY
+```
+
 Before expensive model work, smoke-test the model-version interface:
 
 ```bash

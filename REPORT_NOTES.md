@@ -645,3 +645,28 @@ Interpretability is treated carefully. We use confusion matrices, confidence
 analysis, margins, and representative examples. We do not claim that
 probabilities or future attention/token attributions are faithful clinical
 explanations; they are diagnostics that help us understand model behavior.
+
+## Final Submission Story
+
+Notebook 08 creates the final submission story and declares `v09_ensemble` as
+the final candidate. The final upload file is:
+
+```text
+submissions/final_submission.csv
+```
+
+The detailed leaderboard predictions are:
+
+```text
+outputs/predictions/final_leaderboard_detailed.csv
+```
+
+The notebook explains the complete progression from EDA to preprocessing,
+survey grounding, baselines, RoBERTa, improvements, evaluation, and submission.
+It also records the team context: after the early baseline and short
+presentation/follow-up with Lei Kang, the team was on the right track and at one
+point was second in the competition.
+
+The final competition result is not verified in repository files yet. If the
+team wants to state a final ranking, evidence should be added as a score table
+or screenshot before the report is finalized.

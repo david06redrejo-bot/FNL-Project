@@ -57,16 +57,30 @@ reports/figures/final_architecture.png
 
 ## Main Results
 
-Placeholder for the final result table. Historical notebook metrics must be
-rerun before being reported as final.
+The current final candidate is `v09_ensemble`, selected using the shared
+validation split. The Kaggle/public/private score should be added only after the
+team places score evidence in the repository.
 
 | Model | Validation accuracy | Notes |
 |---|---:|---|
-| Majority baseline | TBD | Lower bound |
-| TF-IDF + Logistic Regression | TBD | Classical baseline |
-| TF-IDF + SVM | TBD | Survey-inspired baseline |
-| RoBERTa backbone | TBD | Transformer baseline |
-| Final selected model | TBD | Official submission candidate |
+| Majority baseline (`v00`) | 0.125182 | Lower bound from class imbalance |
+| TF-IDF char Logistic Regression (`v01`) | 0.522628 | Strong classical surface-pattern baseline |
+| TF-IDF word SVM (`v02`) | 0.520073 | Word-level lexical baseline |
+| Similarity retrieval (`v03`) | 0.497445 | Survey-inspired retrieval baseline |
+| RoBERTa CLS (`v04`) | 0.569343 | Best single model by validation accuracy |
+| RoBERTa mean (`v05`) | 0.564599 | Slightly higher macro-F1 than CLS among simple pooling baselines |
+| Safe dedupe RoBERTa mean (`v08`) | 0.568613 | Conservative data-strategy ablation |
+| Final ensemble (`v09`) | 0.576642 | Final validation-selected submission candidate |
+
+Final submission files:
+
+```text
+submissions/final_submission.csv
+outputs/predictions/final_leaderboard_detailed.csv
+```
+
+See `FINAL_MODEL_CARD.md` and `SUBMISSION.md` for the final model declaration
+and exact Kaggle upload instructions.
 
 ## Data Placement
 

@@ -170,3 +170,24 @@ Implications:
   feedback were used to choose the ensemble;
 - remaining limitations are short-literal ambiguity, rare categories,
   abbreviations, and broad ICD-prefix confusions.
+
+## Final Submission Declaration
+
+Decision: copy the selected `v09_ensemble` Kaggle file to
+`submissions/final_submission.csv` and use that file as the final upload
+candidate.
+
+Reasoning: the repository should expose one unambiguous final submission file
+instead of forcing reviewers to choose among many experiment submissions.
+
+Files:
+
+- `submissions/final_submission.csv`
+- `outputs/predictions/final_leaderboard_detailed.csv`
+- `FINAL_MODEL_CARD.md`
+- `SUBMISSION.md`
+- `notebooks/08_submission_and_final_story.ipynb`
+
+Competition result note: local files do not verify the final public/private
+score or ranking. A final-placement claim must be supported by evidence under
+`reports/tables/` or `reports/figures/` before it is used in the report.

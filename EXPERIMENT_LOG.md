@@ -563,3 +563,23 @@ Generated final evaluation artifacts:
 Conclusion: `v09_ensemble` is the current final candidate because it improves
 over the best individual model on validation accuracy, macro F1, and weighted
 F1.
+
+## Final Submission Declaration
+
+**Final model:** `v09_ensemble`
+
+Created final submission artifacts:
+
+- `submissions/final_submission.csv`
+- `outputs/predictions/final_leaderboard_detailed.csv`
+- `FINAL_MODEL_CARD.md`
+- `SUBMISSION.md`
+- `notebooks/08_submission_and_final_story.ipynb`
+
+Validation metrics:
+
+- `accuracy`: 0.576642
+- `macro_f1`: 0.506277
+- `weighted_f1`: 0.561544
+
+Competition score/ranking: not verified in repository files.
