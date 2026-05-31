@@ -18,6 +18,26 @@ This file records project decisions for Team 10's UAB-ASHO AI Codification proje
 
 **Status:** Active.
 
+## 2026-05-31 — Decision: y_category Is Derived From the First Character of Code
+
+**Decision:** The supervised target for this project is `y_category`, computed as
+`Code.astype(str).str[0]` and normalized to uppercase for label mapping.
+
+**Reasoning:** The Kaggle task asks for exactly one ICD category prefix per
+clinical literal. This keeps the project focused on category-level codification
+rather than full ICD code prediction.
+
+**Implications:**
+
+- Training files must contain `Code` and `Literal`.
+- Derived labels must be checked against the expected 36 categories: digits
+  `0`-`9` and letters `A`-`Z`.
+- Every model should train and evaluate on `y_category`, not the full `Code`.
+- Any mismatch in observed classes must be written to the EDA outputs and
+  report notes before modeling starts.
+
+**Status:** Active.
+
 ## 2026-05-31 — Adopt Final Repository Skeleton
 
 **Decision:** Organize the project around a professional final skeleton with

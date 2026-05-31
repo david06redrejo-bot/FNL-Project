@@ -40,6 +40,23 @@ Run syntax checks:
 python -m compileall src models
 ```
 
+## 3.1 Data and Annotation Validation
+
+Before training any model, run the first project phase:
+
+```bash
+python scripts/analyze_data_annotations.py
+```
+
+This command inspects all CSV files under `data/`, validates schemas, derives
+`y_category = Code.astype(str).str[0]` when `Code` is available, builds the
+label mapping, and writes:
+
+- `outputs/eda/data_file_inventory.csv`
+- `outputs/eda/schema_validation.json`
+- `reports/tables/data_schema_summary.csv`
+- an entry in `REPORT_NOTES.md`
+
 ## 4. Reproduce Baselines
 
 After placing data in `data/raw/`, run:

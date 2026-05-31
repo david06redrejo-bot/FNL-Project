@@ -38,3 +38,19 @@ then move from survey-inspired baselines to RoBERTa and improved models.
 The report should explicitly say that notebooks are narrative and scripts are
 the reproducibility backbone. This is a good way to show that the team learned
 to separate exploration from reusable implementation.
+
+## 1. Analyzing the Data and the Annotations
+
+We inspected all CSV files under `data/` and validated them against the competition annotation contract.
+
+| File | Role | Shape | Schema status |
+|---|---|---:|---|
+| `codification_data.csv` | `codification` | 13700 x 2 | valid |
+| `icd_d_p_pairs.csv` | `icd_catalog` | 179742 x 3 | valid |
+| `leaderboard_data.csv` | `leaderboard` | 6667 x 2 | valid |
+
+The training labels are derived as `y_category = Code.astype(str).str[0]`.
+The observed label set has 36 classes: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z.
+
+Warnings:
+- `y_category` is absent from leaderboard data; this is normal for unlabeled Kaggle test files but differs from the stated expected columns.
