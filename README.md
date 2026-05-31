@@ -226,6 +226,7 @@ Full reproducibility notes are in [`REPRODUCIBILITY.md`](REPRODUCIBILITY.md).
 ## Reports And Presentations
 
 - Final LaTeX report: [`reports/final_report.tex`](reports/final_report.tex)
+- Final compiled report target: [`reports/compiled/final_report.pdf`](reports/compiled/final_report.pdf)
 - References: [`reports/references.bib`](reports/references.bib)
 - Figures: [`reports/figures/`](reports/figures/)
 - Tables: [`reports/tables/`](reports/tables/)

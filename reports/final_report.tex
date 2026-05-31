@@ -33,7 +33,7 @@
 \newcommand{\course}{Fundamentals of Natural Language / NLP-I}
 \newcommand{\team}{Team 10}
 \newcommand{\repo}{\texttt{TODO\_GITHUB\_REPOSITORY\_LINK}}
-\newcommand{\kaggle}{\texttt{TODO\_KAGGLE\_COMPETITION\_LINK}}
+\newcommand{\kaggle}{\url{https://www.kaggle.com/competitions/uab-asho-ai-codification}}
 
 \title{\vspace{-1.2em}\textbf{ICD-10 Category Codification from Clinical Literals using Classical NLP Baselines and Biomedical RoBERTa}}
 \author{
@@ -96,7 +96,32 @@ df["y_category"] = df["Code"].astype(str).str[0]
 
 The training set contains all 36 expected categories. The leaderboard file does not contain \texttt{y\_category}, which is normal for an unlabeled Kaggle test file even though the initial statement mentioned it.
 
+The full EDA found 4,059 unique ICD codes in training and 179,742 ICD codes in the catalogue. It also found 1,668 duplicate literal groups with multiple full ICD codes, and 1,486 duplicate literal groups with multiple \texttt{y\_category} labels. Examples such as \emph{obesidad parto}, \emph{Fumadora part}, and \emph{Hipotiroidismo parto} appeared with several different codes and categories. This was one of the strongest warnings that the task is not only string matching: identical or nearly identical literals may still be ambiguous.
+
 Figure~\ref{fig:catdist} shows the class distribution. The largest categories are much more frequent than the tail, so a model can obtain non-trivial accuracy by learning imbalance. Figure~\ref{fig:longtail} makes the long-tail shape clearer.
+
+Table~\ref{tab:eda} records the main EDA numbers used later in the modeling decisions.
+
+\begin{table}[h]
+\centering
+\caption{Key EDA values used in the report.}
+\label{tab:eda}
+\begin{tabularx}{\columnwidth}{Xr}
+\toprule
+Observation & Value \\
+\midrule
+Training rows & 13,700 \\
+Leaderboard rows & 6,667 \\
+Unique training ICD codes & 4,059 \\
+Unique \texttt{y\_category} labels & 36 \\
+Duplicate literal groups & 1,668 \\
+Same literal, multiple categories & 1,486 \\
+Leaderboard normalized literals seen in train & 51.8\% \\
+Mean train literal length & 16.95 chars \\
+Mean leaderboard literal length & 17.15 chars \\
+\bottomrule
+\end{tabularx}
+\end{table}
 
 \begin{figure}[h]
 \centering
@@ -126,11 +151,20 @@ The second phase was \emph{Understanding the main challenges of the task}. The d
 
 \textbf{Train--test shift.} We can compare literal lengths and surface patterns between train and leaderboard, but we do not observe leaderboard labels. Figure~\ref{fig:lengthshift} shows that the token/length scale is similar, which reduces but does not remove distribution-shift concerns.
 
+Figure~\ref{fig:patterns} shows that the train and leaderboard sets share similar surface patterns. In training, 27.98\% of literals contain accents, 11.83\% are all-uppercase, 9.77\% contain punctuation, and 7.98\% contain digits. The leaderboard values are close: 29.59\% accents, 11.31\% all-uppercase, 8.95\% punctuation, and 7.59\% digits. This supported the decision to preserve these signals instead of aggressively normalizing them away.
+
 \begin{figure}[h]
 \centering
 \includegraphics[width=\columnwidth]{figures/fig_05_train_vs_leaderboard_lengths.png}
 \caption{Train versus leaderboard literal lengths. Both splits contain short literals, but labels are unavailable for leaderboard rows.}
 \label{fig:lengthshift}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\columnwidth]{figures/fig_06_text_pattern_presence.png}
+\caption{Presence of digits, uppercase literals, accents, punctuation, and other clinical-text patterns in train and leaderboard data.}
+\label{fig:patterns}
 \end{figure}
 
 \section{Course and Literature Grounding}
@@ -208,6 +242,8 @@ Mean pooling may help short literals because every token can contribute directly
 
 All experiments used a stratified 80/20 train/validation split by \texttt{label\_id}. Seeds were configurable and fixed in Python, NumPy, and PyTorch where applicable. Classical models were trained with scikit-learn~\cite{pedregosa2011scikit}. RoBERTa models used the Hugging Face Transformers ecosystem~\cite{wolf2020transformers} and the Spanish biomedical-clinical checkpoint from PlanTL-GOB-ES~\cite{plantlroberta}.
 
+Before filling the final report, we inspected \texttt{outputs/metrics}, \texttt{outputs/logs}, \texttt{EXPERIMENT\_LOG.md}, \texttt{REPORT\_NOTES.md}, \texttt{DECISIONS.md}, and \texttt{submissions}. Files containing \texttt{debug}, \texttt{dry\_run}, or \texttt{smoke} were treated as infrastructure checks only and are not reported as final metrics. The results in Table~\ref{tab:results} come from full runs or from the consolidated final evaluation tables.
+
 For neural models, the main setup was cross entropy loss:
 \begin{equation}
 \mathcal{L}
@@ -264,6 +300,8 @@ Figure~\ref{fig:modelcomparison} visualizes the same trend: the jump from majori
 
 The result was not simply ``deep learning beats everything''. Character and word TF--IDF remained competitive and became valuable ensemble members. This was one of the useful lessons from the project: in short clinical literals, surface form still matters.
 
+The v10 search produced two important variants. The strongest validation-accuracy recipe was \texttt{vote\_diverse\_no\_retrieval\_val\_weighted}, with accuracy 0.583577, macro-F1 0.501074, and weighted-F1 0.564988. The final public candidate was \texttt{vote\_diverse\_no\_retrieval}, with validation accuracy 0.579562 and the best verified public score, 0.587. We report this distinction explicitly because internal validation and public leaderboard evidence are related but not identical.
+
 \section{Error Analysis and Interpretability}
 
 The evaluation notebook asks: \emph{Which model should we trust as our final submission?} To answer it, we inspected confusion matrices, per-class recall, confidence distributions, and real examples. Figure~\ref{fig:confusion} shows the final confusion matrix. Figure~\ref{fig:recall} shows that performance is uneven across categories, which is expected from the long tail.
@@ -292,6 +330,32 @@ Confidence analysis in Figure~\ref{fig:confidence} showed that high confidence d
 \end{figure}
 
 We treat interpretability carefully. Confusion matrices, margins, nearest examples, and feature weights are useful diagnostics, but they are not proof of medical reasoning. If attention or token attribution is added later, it should be presented with limitations rather than as a faithful explanation of clinical causality.
+
+The most frequent confusion pairs also made clinical sense at the surface level. Table~\ref{tab:confusions} shows examples: \texttt{V} was often confused with \texttt{Z} for literals such as \emph{prótesis mamarias} and \emph{alergia Àcars}; \texttt{6} was confused with \texttt{O} for pregnancy-related literals such as \emph{patología fetal parto}; and \texttt{2} was confused with \texttt{E} for endocrine/metabolic-looking literals such as \emph{DIABETES}. Figure~\ref{fig:topconfusions} visualizes the top confused pairs.
+
+\begin{table}[h]
+\centering
+\caption{Top observed confusion pairs for the final candidate.}
+\label{tab:confusions}
+\begin{tabularx}{\columnwidth}{ccrX}
+\toprule
+True & Pred. & Count & Example literals \\
+\midrule
+V & Z & 51 & prótesis mamarias; alergia Àcars \\
+6 & O & 40 & patología fetal parto; preclampsia \\
+2 & E & 35 & DIABETES; déficit de ácido fólico \\
+6 & N & 26 & endometriosis; prolapso uteri \\
+5 & K & 24 & esteatosis hepática; hernia inguinal \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\columnwidth]{figures/fig_15_top_confused_pairs.png}
+\caption{Top confused category pairs. The plot was generated from validation predictions, not from leaderboard labels.}
+\label{fig:topconfusions}
+\end{figure}
 
 \section{Final System and Kaggle Submission}
 

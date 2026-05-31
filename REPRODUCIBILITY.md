@@ -418,6 +418,30 @@ The LaTeX source starts at:
 reports/final_report.tex
 ```
 
+Compile it from the `reports/` directory:
+
+```bash
+cd reports
+pdflatex final_report.tex
+bibtex final_report || true
+pdflatex final_report.tex
+pdflatex final_report.tex
+mkdir -p compiled
+cp final_report.pdf compiled/final_report.pdf
+```
+
+Expected PDF path:
+
+```text
+reports/compiled/final_report.pdf
+```
+
+Current VM note: on 2026-05-31, this environment did not have `pdflatex`,
+`bibtex`, `latexmk`, `xelatex`, `lualatex`, or `tectonic` installed, so the PDF
+could not be compiled here. The LaTeX source and bibliography were statically
+checked for existing figures, defined references, and available bibliography
+keys.
+
 Compiled PDFs should be written to `reports/compiled/` and are treated as
 generated artifacts unless the team decides to commit the final version.
 
