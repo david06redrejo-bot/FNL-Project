@@ -1,4 +1,4 @@
-# Final Model Card: v09 Ensemble
+# Final Model Card: v10 Diverse Ensemble
 
 ## Model Identity
 
@@ -6,7 +6,9 @@
 - **Course:** Fundamentals of Natural Language / NLP-I, Universitat Autonoma de Barcelona, 2025-2026
 - **Team:** Team 10: Phoebe Iglesias, David Redrejo, Pau Rossell
 - **Supervisors/professors:** Ernest Valveny and Lei Kang
-- **Final candidate:** `v09_ensemble`
+- **Final Kaggle public candidate:** `v10_vote_diverse_no_retrieval`
+- **Best validation-accuracy recipe from v10 search:** `v10_vote_diverse_no_retrieval_val_weighted`
+- **Best macro-F1-oriented validation candidate:** `v09_ensemble`
 - **Submission file:** `submissions/final_submission.csv`
 
 ## Task
@@ -17,36 +19,51 @@ digits `0`-`9` and letters `A`-`Z`.
 
 ## Model Description
 
-The final model is a validation-selected majority-vote ensemble. It combines:
+The final Kaggle public model is `v10_vote_diverse_no_retrieval`, a majority
+vote over deliberately different model families:
 
+- `v08_safe_dedupe`
 - `v04_roberta_cls`
-- `v05_roberta_mean`
-- `v08_roberta_mean_dedupe`
-- `v08_roberta_mean_weighted_sampler`
 - `v01_tfidf_char_logreg`
+- `v02_word_tfidf_svm`
 
-Ties are resolved using average probabilities. The ensemble uses saved
-validation and leaderboard predictions from completed model runs. It does not
-use leaderboard labels or public leaderboard feedback.
+This combines neural contextual representations with classical vector-space
+models. It does not use leaderboard labels.
 
 ## Selection Rationale
 
-The ensemble was selected because it improved over the best single model on the
-shared validation split:
+The final public-leaderboard submission was selected after submitting the main
+candidates to Kaggle:
 
 | model | accuracy | macro F1 | weighted F1 |
 |---|---:|---:|---:|
 | `v04_roberta_cls` | 0.569343 | 0.494329 | 0.554347 |
 | `v09_ensemble` | 0.576642 | 0.506277 | 0.561544 |
+| `v08_safe_dedupe` | 0.568613 | 0.481648 | 0.549150 |
+| `v10_vote_diverse_no_retrieval_val_weighted` | 0.583577 | 0.501074 | 0.564988 |
+| `v10_vote_diverse_no_retrieval` | 0.579562 | 0.496677 | 0.561294 |
 
-Accuracy matters because it is the competition-oriented metric. Macro F1 also
-matters because the EDA showed a long-tailed and imbalanced label distribution.
+Kaggle public scores:
+
+| model | public score |
+|---|---:|
+| `v10_vote_diverse_no_retrieval` | **0.587** |
+| `v10_vote_diverse_no_retrieval_val_weighted` | 0.586 |
+| `v08_safe_dedupe` | 0.583 |
+| `v04_roberta_cls` | 0.573 |
+| `v09_ensemble` | 0.573 |
+
+`v10_vote_diverse_no_retrieval_val_weighted` is the strongest validation-accuracy
+recipe from the diverse ensemble search. `v09_ensemble` remains useful for
+macro-F1 discussion, but `v10_vote_diverse_no_retrieval` is the best verified
+Kaggle public submission.
 
 ## Inputs and Outputs
 
 - **Input:** clinical literal text from `leaderboard_data.csv`.
 - **Output:** one uppercase `y_category` prefix per row.
-- **Kaggle submission contract:** exactly two columns, `id` and `y_category`.
+- **Kaggle submission contract observed in this competition:** `id`, `Literal`,
+  and `y_category`.
 
 ## Preprocessing
 
@@ -63,10 +80,9 @@ backbone tokenizer is trained for Spanish biomedical and clinical text.
 
 ## Known Strengths
 
-- Improves over individual RoBERTa and classical baselines on validation.
-- Combines contextual RoBERTa signals with character-level TF-IDF surface
-  patterns.
-- More robust than relying on a single pooling strategy.
+- Best verified public leaderboard score among submitted candidates.
+- Conservative duplicate handling avoids hiding conflicting duplicate literals.
+- Uses a Spanish biomedical-clinical RoBERTa backbone.
 
 ## Known Limitations
 
@@ -85,8 +101,10 @@ future work, it should be treated as exploratory and limited.
 
 ## Competition Result
 
-Final Kaggle/public/private score is **not verified in repository files**.
-Evidence should be placed here before the final report is submitted:
+Best verified public score: `0.587`.
+
+Private/final ranking is **not verified in repository files**. Evidence should
+be placed here before the final report is submitted:
 
 ```text
 reports/figures/kaggle_final_ranking.png

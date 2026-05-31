@@ -560,13 +560,15 @@ Generated final evaluation artifacts:
 - `reports/figures/fig_13_confidence_correct_vs_wrong.png`
 - `reports/figures/fig_14_training_curves.png`
 
-Conclusion: `v09_ensemble` is the current final candidate because it improves
-over the best individual model on validation accuracy, macro F1, and weighted
-F1.
+Conclusion at the time: `v09_ensemble` improved over the best individual model on validation accuracy, macro F1, and weighted F1. It was later replaced as final public candidate by `v10_vote_diverse_no_retrieval`.
 
 ## Final Submission Declaration
 
-**Final model:** `v09_ensemble`
+**Best validation-accuracy model from the v10 search:** `v10_vote_diverse_no_retrieval_val_weighted`
+
+**Best macro-F1-oriented validation model among the main completed candidates:** `v09_ensemble`
+
+**Best verified Kaggle public model:** `v10_vote_diverse_no_retrieval`
 
 Created final submission artifacts:
 
@@ -576,10 +578,75 @@ Created final submission artifacts:
 - `SUBMISSION.md`
 - `notebooks/08_submission_and_final_story.ipynb`
 
-Validation metrics:
+Final selected public-candidate validation metrics:
 
-- `accuracy`: 0.576642
-- `macro_f1`: 0.506277
-- `weighted_f1`: 0.561544
+- `model`: `v10_vote_diverse_no_retrieval`
+- `accuracy`: 0.579562
+- `macro_f1`: 0.496677
+- `weighted_f1`: 0.561294
 
-Competition score/ranking: not verified in repository files.
+Related validation trade-offs:
+
+- `v10_vote_diverse_no_retrieval_val_weighted`: accuracy 0.583577, macro_f1 0.501074, weighted_f1 0.564988
+- `v09_ensemble`: accuracy 0.576642, macro_f1 0.506277, weighted_f1 0.561544
+
+Kaggle public scores:
+
+- `v10_vote_diverse_no_retrieval`: 0.587
+- `v10_vote_diverse_no_retrieval_val_weighted`: 0.586
+- `v08_safe_dedupe`: 0.583
+- `v04_roberta_cls`: 0.573
+- `v09_ensemble`: 0.573
+- `v07_mean_tuning`: 0.572
+- `legacy_svm_improved_training_accuracy`: 0.571
+
+Private/final ranking: not verified in repository files.
+
+## Diverse Ensemble Search v10
+
+**Script:** `models/v10_diverse_ensemble_search.py`
+
+Best validation recipe: `vote_diverse_no_retrieval_val_weighted`
+
+- validation accuracy: 0.583577
+- macro F1: 0.501074
+- weighted F1: 0.564988
+
+Best Kaggle public recipe: `vote_diverse_no_retrieval`
+
+- public score: 0.587
+
+Models combined: `v08_safe_dedupe`, `v04_roberta_cls`, `v01_char_tfidf_logreg`, `v02_word_tfidf_svm`.
+
+Conclusion: diverse model families improved over the previous `v09` ensemble and over individual RoBERTa submissions.
+
+## Final Evaluation Notebook Refresh
+
+**Artifact:** `notebooks/07_evaluation_error_analysis_and_interpretability.ipynb`
+
+Final candidate used in the evaluation notebook:
+
+- `v10_vote_diverse_no_retrieval`
+
+Metrics:
+
+- `validation_accuracy`: 0.579562
+- `macro_f1`: 0.496677
+- `weighted_f1`: 0.561294
+- `kaggle_public_score`: 0.587
+
+The notebook includes model comparison, final confusion matrix, per-class
+recall, confidence distributions, real high/low-confidence examples, top
+confused pairs, training curves, and the interpretability limitations required
+for the final report.
+
+## Run v10_diverse_ensemble_search
+
+**Version:** `v10_diverse_ensemble_search`
+
+Metrics:
+- `accuracy`: 0.583577
+- `macro_f1`: 0.501074
+- `weighted_f1`: 0.564988
+
+Run summary: `/home/iadlG010/FNL-Project/outputs/logs/v10_diverse_ensemble_search_run.md`

@@ -82,6 +82,7 @@ defaulting to `42`.
 | `v07_roberta_mean_tuning.py` | Controlled mean-pooling hyperparameter tuning |
 | `v08_roberta_mean_augmented.py` | Safe data-strategy ablations: conservative deduplication and weighted sampling |
 | `v09_ensemble.py` | Validation-driven ensemble over completed model predictions |
+| `v10_diverse_ensemble_search.py` | Diverse ML ensemble search combining RoBERTa, TF-IDF char, TF-IDF word, retrieval, and imbalance-aware variants |
 
 Legacy skeleton scripts are still present where useful for continuity, but the
 validated model sequence is `v00` through `v08` as listed above.

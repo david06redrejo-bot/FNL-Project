@@ -103,6 +103,17 @@ completed_experiments:
     weighted_f1: 0.561544
     best_candidate: majority_vote
     lesson: majority voting over complementary RoBERTa and TF-IDF models improved validation accuracy over the best single model.
+  - id: v10_diverse_ensemble_search
+    script: models/v10_diverse_ensemble_search.py
+    family: ensemble
+    status: completed
+    validation_accuracy: 0.583577
+    macro_f1: 0.501074
+    weighted_f1: 0.564988
+    kaggle_public_best: 0.587
+    best_validation_candidate: vote_diverse_no_retrieval_val_weighted
+    best_public_candidate: vote_diverse_no_retrieval
+    lesson: diverse ensembles combining RoBERTa, character TF-IDF, and word TF-IDF improved over v09 and became the final public candidate.
 
 advanced_experiment_roadmap:
   - id: exp_class_weighted_loss

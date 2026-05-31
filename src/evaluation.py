@@ -26,7 +26,7 @@ from .interpretability import (
 from .paths import METRICS_DIR, PREDICTIONS_DIR, REPORTS_DIR
 
 
-FINAL_MODEL = "v09_ensemble"
+FINAL_MODEL = "v10_vote_diverse_no_retrieval"
 
 MODEL_METRIC_FILES = {
     "v00_majority": METRICS_DIR / "v00_majority_baseline_metrics.json",
@@ -42,6 +42,7 @@ MODEL_METRIC_FILES = {
     "v08_safe_dedupe": METRICS_DIR / "v08_roberta_mean_augmented_dedupe_non_conflicting_literals_metrics.json",
     "v08_weighted_sampler": METRICS_DIR / "v08_roberta_mean_augmented_weighted_random_sampler_metrics.json",
     "v09_ensemble": METRICS_DIR / "v09_ensemble_metrics.json",
+    "v10_diverse_ensemble": METRICS_DIR / "v10_vote_diverse_no_retrieval_metrics.json",
 }
 
 MODEL_FAMILIES = {
@@ -58,6 +59,7 @@ MODEL_FAMILIES = {
     "v08_safe_dedupe": "safe data strategy",
     "v08_weighted_sampler": "safe data strategy",
     "v09_ensemble": "ensemble",
+    "v10_diverse_ensemble": "diverse ensemble",
 }
 
 TRAINING_HISTORY_FILES = {
@@ -75,6 +77,11 @@ def load_json(path: Path) -> dict[str, Any]:
 def load_experiment_comparison(metric_files: dict[str, Path] | None = None) -> pd.DataFrame:
     """Load metrics for the final comparison table."""
     metric_files = metric_files or MODEL_METRIC_FILES
+    kaggle_scores_path = REPORTS_DIR / "tables" / "kaggle_submission_scores.csv"
+    kaggle_scores = {}
+    if kaggle_scores_path.exists():
+        score_df = pd.read_csv(kaggle_scores_path)
+        kaggle_scores = score_df.groupby("model_id")["publicScore"].max().to_dict()
     rows = []
     for model_id, path in metric_files.items():
         if not path.exists():
@@ -104,6 +111,7 @@ def load_experiment_comparison(metric_files: dict[str, Path] | None = None) -> p
                 "best_epoch": metrics.get("best_epoch"),
                 "selected_candidate": metrics.get("selected_candidate"),
                 "selected_recipe": metrics.get("selected_recipe"),
+                "kaggle_public_score": kaggle_scores.get(model_id, metrics.get("kaggle_public_score")),
             }
         )
     return pd.DataFrame(rows).sort_values(["accuracy", "macro_f1"], ascending=[False, False], na_position="last")
@@ -245,6 +253,25 @@ def plot_confidence_correct_vs_wrong(predictions: pd.DataFrame, path: Path) -> N
     plt.close(fig)
 
 
+def plot_top_confused_pairs(top_confusions: pd.DataFrame, path: Path) -> None:
+    """Save a chart of the most frequent true/predicted error pairs."""
+    path.parent.mkdir(parents=True, exist_ok=True)
+    if top_confusions.empty:
+        return
+    plot_df = top_confusions.head(15).copy()
+    plot_df["pair"] = plot_df["y_true"].astype(str) + " -> " + plot_df["y_pred"].astype(str)
+    plot_df = plot_df.sort_values("count", ascending=True)
+    _style()
+    fig, ax = plt.subplots(figsize=(9, 6))
+    sns.barplot(data=plot_df, y="pair", x="count", color="#e45756", ax=ax)
+    ax.set_title("Top confused category pairs")
+    ax.set_xlabel("Validation errors")
+    ax.set_ylabel("True -> predicted")
+    fig.tight_layout()
+    fig.savefig(path, dpi=180, bbox_inches="tight")
+    plt.close(fig)
+
+
 def plot_training_curves(path: Path) -> None:
     """Save a compact training-curve comparison for best model families."""
     path.parent.mkdir(parents=True, exist_ok=True)
@@ -289,12 +316,14 @@ def save_final_figures() -> dict[str, Path]:
         "per_class_recall": figures_dir / "fig_12_per_class_recall.png",
         "confidence": figures_dir / "fig_13_confidence_correct_vs_wrong.png",
         "training_curves": figures_dir / "fig_14_training_curves.png",
+        "top_confusions": figures_dir / "fig_15_top_confused_pairs.png",
     }
     plot_model_comparison(comparison, paths["model_comparison"])
     plot_confusion_matrix(matrix, paths["confusion_matrix"])
     plot_per_class_recall(per_class, paths["per_class_recall"])
     plot_confidence_correct_vs_wrong(predictions, paths["confidence"])
     plot_training_curves(paths["training_curves"])
+    plot_top_confused_pairs(build_top_confusions(predictions), paths["top_confusions"])
     return paths
 
 

@@ -1,49 +1,49 @@
 example_group,Literal,y_true,y_pred,confidence,confidence_margin,top2_label,top2_confidence,is_correct,possible_error_reason
-correct_high_confidence,Grupo sanguíneo: B Negativo,Z,Z,0.9847865415102744,0.982838167396657,V,0.0019483741136175025,True,broad ICD prefix ambiguity
-correct_high_confidence,Grupo sanguíneo: 0 Rh negativo,Z,Z,0.9847583702031478,0.9829863324128147,V,0.0017720377903331032,True,digit or measurement-like signal
-correct_high_confidence,Grupo sanguíneo: B negativo,Z,Z,0.9844242812071471,0.9824856978738051,V,0.0019385833333420038,True,broad ICD prefix ambiguity
-correct_high_confidence,Grupo sanguíneo: A negativo,Z,Z,0.9844202969811099,0.9825373232812502,V,0.0018829736998597034,True,broad ICD prefix ambiguity
-correct_high_confidence,Grupo sanguíneo: O Rh: POSITIVO,Z,Z,0.9841009406154304,0.9822089114338471,V,0.0018920291815833032,True,abbreviation or uppercase clinical shorthand
-correct_high_confidence,Grupo sanguíneo: 0 rh positivo,Z,Z,0.9835162638953614,0.9815866289248971,O,0.0019296349704643035,True,digit or measurement-like signal
-correct_high_confidence,Grupo sanguineo: A rh positivo,Z,Z,0.9834566011370787,0.9814771670304768,O,0.0019794341066018037,True,broad ICD prefix ambiguity
-correct_high_confidence,GRUPO SANGUÍNEO: O POSITIVO,Z,Z,0.9832068637133694,0.9809403900359445,V,0.002266473677424904,True,abbreviation or uppercase clinical shorthand
-correct_high_confidence,Grupo sanguíneo: AB Negativo,Z,Z,0.9829406321565873,0.9805879176694754,V,0.0023527144871119043,True,abbreviation or uppercase clinical shorthand
-correct_high_confidence,Grupo: A Rh: negativo,Z,Z,0.982742896879845,0.9804753153291744,O,0.0022675815506705043,True,broad ICD prefix ambiguity
-correct_high_confidence,Grupo sanguíneo: A positivo,Z,Z,0.9824499805129063,0.9803478604350929,V,0.002102120077813404,True,broad ICD prefix ambiguity
-correct_high_confidence,Grupo sanguineo B positivo,Z,Z,0.9821435615644758,0.9797428708015095,O,0.0024006907629663047,True,broad ICD prefix ambiguity
-correct_low_confidence,lipotimia,R,R,0.1759016763333321,0.007814488936087327,3,0.16808718739724476,True,short literal / insufficient context; low confidence margin / similar categories
-correct_low_confidence,lma,9,9,0.18183423622217884,0.03076714544518555,8,0.1510670907769933,True,short literal / insufficient context; low confidence margin / similar categories
-correct_low_confidence,CENS,0,0,0.18207710407624272,0.010010245536841628,8,0.1720668585394011,True,short literal / insufficient context; abbreviation or uppercase clinical shorthand; low confidence margin / similar categories
-correct_low_confidence,EXPULSIVO PROLONGADO,O,O,0.18900930047509112,0.057898053188045306,L,0.13111124728704582,True,short literal / insufficient context; abbreviation or uppercase clinical shorthand; low confidence margin / similar categories
-correct_low_confidence,eosinofílica,D,D,0.20098573513858992,0.021661521218044932,D,0.17932421392054498,True,short literal / insufficient context; low confidence margin / similar categories
-correct_low_confidence,cuadro vagal,R,R,0.2051640022134143,0.013819302791676591,O,0.1913446994217377,True,short literal / insufficient context; low confidence margin / similar categories
-correct_low_confidence,retirada dvp,0,0,0.21475614321555175,0.05442195386477139,4,0.16033418935078037,True,short literal / insufficient context; low confidence margin / similar categories
-correct_low_confidence,Neurinoma de Morton,G,G,0.22111883036258992,0.03530764938817976,D,0.18581118097441016,True,low confidence margin / similar categories
-correct_low_confidence,ira 2 qx,5,5,0.22765676330532825,0.04381152345909087,9,0.18384523984623738,True,digit or measurement-like signal; low confidence margin / similar categories
-correct_low_confidence,úlceras vulva,N,N,0.22902827574174783,0.018518105326718548,6,0.21051017041502929,True,short literal / insufficient context; low confidence margin / similar categories
-correct_low_confidence,toracoscopia,3,3,0.23186438836569556,0.013707181408972424,5,0.21815720695672314,True,short literal / insufficient context; low confidence margin / similar categories
-correct_low_confidence,adenitis mesentèrica,I,I,0.23401252453836505,0.021033941219971347,I,0.2129785833183937,True,short literal / insufficient context; low confidence margin / similar categories
-wrong_high_confidence,Historia de IAM,I,Z,0.940392112253705,0.9130461114005324,V,0.027346000853172646,False,abbreviation or uppercase clinical shorthand; high-confidence error / possible ambiguous mapping
-wrong_high_confidence,miomectomía histeroscópica,6,0,0.9058871832318524,0.8734650917006205,6,0.03242209153123186,False,short literal / insufficient context; high-confidence error / possible ambiguous mapping
-wrong_high_confidence,alergia Àcars,V,Z,0.8787810086864281,0.7881276476941294,V,0.09065336099229866,False,short literal / insufficient context; high-confidence error / possible ambiguous mapping
-wrong_high_confidence,Portadora de PTR bilateral,V,Z,0.8686689000921405,0.7987401103741009,V,0.06992878971803963,False,abbreviation or uppercase clinical shorthand; high-confidence error / possible ambiguous mapping
-wrong_high_confidence,Gestación Cronológicamente Prolongada,6,O,0.8686615285362506,0.822879051238233,6,0.04578247729801757,False,high-confidence error / possible ambiguous mapping
-wrong_high_confidence,tumorectomia mama izquierda,8,0,0.866936792874228,0.79525385738932,8,0.07168293548490802,False,high-confidence error / possible ambiguous mapping
-wrong_high_confidence,Quistectomía ovario derecho,6,0,0.8637466182608995,0.8253911982466289,N,0.03835542001427066,False,high-confidence error / possible ambiguous mapping
-wrong_high_confidence,Enolismo ocasional,3,F,0.8631390483270163,0.8197190482306987,3,0.04342000009631749,False,short literal / insufficient context; high-confidence error / possible ambiguous mapping
-wrong_high_confidence,Hipoacusia bilateral,3,H,0.8613489466307199,0.8312636071205112,3,0.030085339510208742,False,short literal / insufficient context; high-confidence error / possible ambiguous mapping
-wrong_high_confidence,Prótesis de rodilla derecha,0,Z,0.8590374236284806,0.8022454242205515,V,0.05679199940792912,False,high-confidence error / possible ambiguous mapping
-wrong_high_confidence,WPW parto,I,O,0.8580633200360265,0.8137191911542521,6,0.044344128881774386,False,short literal / insufficient context; abbreviation or uppercase clinical shorthand; high-confidence error / possible ambiguous mapping
-wrong_high_confidence,NST no tranquilizador,6,O,0.8577949566111295,0.8395728656703323,6,0.01822209094079713,False,possible negation or exclusion cue; abbreviation or uppercase clinical shorthand; high-confidence error / possible ambiguous mapping
-wrong_low_confidence,Varius,4,Q,0.11183988677074484,0.013046552637621528,O,0.09879333413312331,False,short literal / insufficient context; low confidence margin / similar categories
-wrong_low_confidence,eef,3,4,0.12236840566622313,0.034192889584752265,7,0.08817551608147087,False,short literal / insufficient context; low confidence margin / similar categories
-wrong_low_confidence,Cataracta senil,3,9,0.13094689877251522,0.007793041341577919,9,0.1231538574309373,False,short literal / insufficient context; low confidence margin / similar categories
-wrong_low_confidence,CLAUSTROFÒBIA,F,7,0.1340692461379726,0.004851534168804378,8,0.12921771196916823,False,short literal / insufficient context; low confidence margin / similar categories
-wrong_low_confidence,Flegmo dentari,5,K,0.1373539144563062,0.044315992948558564,D,0.09303792150774765,False,short literal / insufficient context; low confidence margin / similar categories
-wrong_low_confidence,Absces de pulmo,5,J,0.14069488405090322,0.0008581003745062044,7,0.13983678367639701,False,low confidence margin / similar categories
-wrong_low_confidence,ENDoMETRIOMA,6,D,0.1521439617307627,0.00963927725991201,N,0.14250468447085068,False,short literal / insufficient context; low confidence margin / similar categories
-wrong_low_confidence,DAP,Q,4,0.15508396715806513,0.0039014818178401967,4,0.15118248534022494,False,short literal / insufficient context; abbreviation or uppercase clinical shorthand; low confidence margin / similar categories
-wrong_low_confidence,hbp,N,2,0.16365211598063836,0.0481019917840009,E,0.11555012419663746,False,short literal / insufficient context; low confidence margin / similar categories
-wrong_low_confidence,edema EII,R,M,0.16493176210745744,0.034587544767908845,4,0.1303442173395486,False,short literal / insufficient context; abbreviation or uppercase clinical shorthand; low confidence margin / similar categories
-wrong_low_confidence,paf,0,O,0.1668869375384951,0.042232700244091564,0,0.12465423729440353,False,short literal / insufficient context; low confidence margin / similar categories
-wrong_low_confidence,DEFORMIDAD DENTOFACIAL,5,Q,0.1685810828099901,0.03760930096463866,7,0.13097178184535144,False,short literal / insufficient context; abbreviation or uppercase clinical shorthand; low confidence margin / similar categories
+correct_high_confidence,Grupo sanguíneo: 0 Rh negativo,Z,Z,0.9856066480883069,0.9839649040072173,V,0.001641744081089603,True,digit or measurement-like signal
+correct_high_confidence,Grupo sanguíneo: B Negativo,Z,Z,0.9847418769098158,0.9829433601966585,V,0.0017985167131573034,True,broad ICD prefix ambiguity
+correct_high_confidence,Grupo sanguíneo: A negativo,Z,Z,0.9846495584579844,0.9827841612196867,V,0.0018653972382977027,True,broad ICD prefix ambiguity
+correct_high_confidence,Grupo sanguíneo: B negativo,Z,Z,0.9845704501890743,0.9827012503978418,V,0.0018691997912325036,True,broad ICD prefix ambiguity
+correct_high_confidence,Grupo sanguíneo: O Rh: POSITIVO,Z,Z,0.9841906018049008,0.982216930507373,O,0.0019736712975278034,True,abbreviation or uppercase clinical shorthand
+correct_high_confidence,Grupo sanguineo: A rh positivo,Z,Z,0.983246259536312,0.980813628599034,O,0.0024326309372780046,True,broad ICD prefix ambiguity
+correct_high_confidence,Grupo sanguíneo: 0 rh positivo,Z,Z,0.9831949413489538,0.9808093681796529,O,0.002385573169300904,True,digit or measurement-like signal
+correct_high_confidence,GRUPO SANGUÍNEO: O POSITIVO,Z,Z,0.9823366193687985,0.9799053259298605,O,0.0024312934389380037,True,abbreviation or uppercase clinical shorthand
+correct_high_confidence,Grupo: A Rh: negativo,Z,Z,0.9819998779964304,0.9792643469577855,O,0.0027355310386449044,True,broad ICD prefix ambiguity
+correct_high_confidence,Grupo sanguíneo: AB Negativo,Z,Z,0.9818562842143054,0.9798243718598393,O,0.0020319123544661043,True,abbreviation or uppercase clinical shorthand
+correct_high_confidence,Grupo sanguíneo: A positivo,Z,Z,0.9816032154102898,0.978975005546232,O,0.002628209864057905,True,broad ICD prefix ambiguity
+correct_high_confidence,40 .+2 semanas,Z,Z,0.9815929001837435,0.9785125974304892,O,0.0030803027532542043,True,digit or measurement-like signal
+correct_low_confidence,resbalar,E,E,0.11209617916775728,0.033107868310508964,T,0.07898831085724832,True,short literal / insufficient context; low confidence margin / similar categories
+correct_low_confidence,Wegener,M,M,0.1156373914400155,0.008249657343837202,M,0.1073877340961783,True,short literal / insufficient context; low confidence margin / similar categories
+correct_low_confidence,caida casual en su domicilio,Y,Y,0.12312355135788135,0.0004887774856069949,Y,0.12263477387227435,True,low confidence margin / similar categories
+correct_low_confidence,ea AINEs,T,T,0.12383483080109156,0.029789902504530938,9,0.09404492829656062,True,short literal / insufficient context; low confidence margin / similar categories
+correct_low_confidence,CLAUSTROFÒBIA,F,F,0.14403625324351524,0.042644450937714753,1,0.10139180230580049,True,short literal / insufficient context; low confidence margin / similar categories
+correct_low_confidence,ENDoMETRIOMA,6,6,0.15766212093459417,0.026155564078781335,N,0.13150655685581283,True,short literal / insufficient context; low confidence margin / similar categories
+correct_low_confidence,lesión cerebral sugestiva de M1,1,1,0.16319828004300488,0.005299013861405993,D,0.15789926618159889,True,digit or measurement-like signal; low confidence margin / similar categories
+correct_low_confidence,toracoscopia,3,3,0.1822134533854026,0.006099087468713238,0,0.17611436591668936,True,short literal / insufficient context; low confidence margin / similar categories
+correct_low_confidence,CENS,0,0,0.1824715266758142,0.03959828150519565,Z,0.14287324517061856,True,short literal / insufficient context; abbreviation or uppercase clinical shorthand; low confidence margin / similar categories
+correct_low_confidence,retirada dvp,0,0,0.18433925315428176,0.03416414988501537,V,0.1501751032692664,True,short literal / insufficient context; low confidence margin / similar categories
+correct_low_confidence,coxa vara,7,7,0.18693760967087286,0.03088448185444395,O,0.1560531278164289,True,short literal / insufficient context; low confidence margin / similar categories
+correct_low_confidence,DISTOCIA DE HOMBROS,O,O,0.18767065245493578,0.03857817401980776,O,0.14909247843512802,True,abbreviation or uppercase clinical shorthand; low confidence margin / similar categories
+wrong_high_confidence,Historia de IAM,I,Z,0.9190114618508229,0.8801288972676263,V,0.03888256458319665,False,abbreviation or uppercase clinical shorthand; high-confidence error / possible ambiguous mapping
+wrong_high_confidence,Alergia a polen,V,Z,0.9066566096161642,0.8395618794365072,V,0.06709473017965711,False,high-confidence error / possible ambiguous mapping
+wrong_high_confidence,placenta previa hemorragia,6,O,0.9032436866137286,0.8758496220738201,6,0.027394064539908437,False,high-confidence error / possible ambiguous mapping
+wrong_high_confidence,tumorectomia mama izquierda,8,0,0.896198046770064,0.8639976034420475,8,0.03220044332801654,False,high-confidence error / possible ambiguous mapping
+wrong_high_confidence,WPW parto,I,O,0.8855001392416609,0.8365662263947867,6,0.04893391284687419,False,short literal / insufficient context; abbreviation or uppercase clinical shorthand; high-confidence error / possible ambiguous mapping
+wrong_high_confidence,alergia Àcars,V,Z,0.8784412972794933,0.7972012020680795,V,0.08124009521141372,False,short literal / insufficient context; high-confidence error / possible ambiguous mapping
+wrong_high_confidence,Portadora de PTR bilateral,V,Z,0.8750347059469946,0.8376618702468304,V,0.037372835700164274,False,abbreviation or uppercase clinical shorthand; high-confidence error / possible ambiguous mapping
+wrong_high_confidence,Alergia a acaros,V,Z,0.8720471091237414,0.7779030067691163,V,0.09414410235462507,False,high-confidence error / possible ambiguous mapping
+wrong_high_confidence,miomectomía histeroscópica,6,0,0.8719812974738954,0.8255442606025197,6,0.04643703687137566,False,short literal / insufficient context; high-confidence error / possible ambiguous mapping
+wrong_high_confidence,Alergia al polen,V,Z,0.8690942595861187,0.7728374002348328,V,0.09625685935128597,False,high-confidence error / possible ambiguous mapping
+wrong_high_confidence,Alergia al polen,J,Z,0.8690942595861187,0.7728374002348328,V,0.09625685935128597,False,high-confidence error / possible ambiguous mapping
+wrong_high_confidence,Sondaje vesical,5,0,0.8418068815477006,0.787770428645655,5,0.054036452902045486,False,short literal / insufficient context; high-confidence error / possible ambiguous mapping
+wrong_low_confidence,T14.8XXA,T,Z,0.09806082113598916,0.007914480250387018,T,0.09014634088560214,False,short literal / insufficient context; digit or measurement-like signal; low confidence margin / similar categories
+wrong_low_confidence,T85.898A,T,Z,0.10790700455790739,0.026202017382422144,T,0.08170498717548524,False,short literal / insufficient context; digit or measurement-like signal; low confidence margin / similar categories
+wrong_low_confidence,Flegmo dentari,5,6,0.11640721804769083,0.01838772860954753,2,0.0980194894381433,False,short literal / insufficient context; low confidence margin / similar categories
+wrong_low_confidence,eef,3,4,0.1193008604880313,0.005822320664442798,N,0.1134785398235885,False,short literal / insufficient context; low confidence margin / similar categories
+wrong_low_confidence,atropello en vía pública,V,S,0.1236477870845859,0.0056456594880258115,E,0.11800212759656009,False,low confidence margin / similar categories
+wrong_low_confidence,atropello en vía pública,Y,S,0.1236477870845859,0.0056456594880258115,E,0.11800212759656009,False,low confidence margin / similar categories
+wrong_low_confidence,Absces de pulmo,5,N,0.12474857411387003,0.020352915371656746,7,0.10439565874221328,False,low confidence margin / similar categories
+wrong_low_confidence,Ingesta de cáustico,9,T,0.1252535104753963,0.012758078464796416,E,0.11249543201059987,False,low confidence margin / similar categories
+wrong_low_confidence,caida en su domicilio,W,Y,0.1255235786848641,0.017071176135597554,S,0.10845240254926655,False,low confidence margin / similar categories
+wrong_low_confidence,Varius,4,O,0.13121666615979857,0.004739159302805496,V,0.12647750685699308,False,short literal / insufficient context; low confidence margin / similar categories
+wrong_low_confidence,Craneofaringioma,D,8,0.13176081070116086,0.028908145204570565,2,0.10285266549659029,False,short literal / insufficient context; low confidence margin / similar categories
+wrong_low_confidence,bulla,J,2,0.1356282194716374,0.030853457165528245,9,0.10477476230610915,False,short literal / insufficient context; low confidence margin / similar categories

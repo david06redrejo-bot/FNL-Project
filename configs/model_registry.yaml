@@ -88,6 +88,12 @@ models:
     purpose: validation-driven ensemble over completed model predictions
     expensive: false
     status: implemented
+  v10_diverse_ensemble_search:
+    script: models/v10_diverse_ensemble_search.py
+    family: ensemble
+    purpose: search diverse ML ensembles over completed model predictions
+    expensive: false
+    status: implemented
   v03_roberta_cls:
     script: models/v03_roberta_cls.py
     family: transformer

@@ -149,45 +149,79 @@ validation accuracy `0.576642`, macro F1 `0.506277`, and weighted F1 `0.561544`.
 
 ## Final Model Candidate Decision
 
-Decision: use `v09_ensemble` as the current final submission candidate.
+Decision: use `v10_vote_diverse_no_retrieval` as the final Kaggle public
+submission candidate, while reporting the validation trade-off explicitly.
 
-Reasoning: the final evaluation notebook compares all completed model versions
-on the same validation split. `v09_ensemble` improves over the best individual
-model (`v04_roberta_cls`) on accuracy, macro F1, and weighted F1:
+Reasoning: after the first ensemble pass, `v09_ensemble` improved over the best
+individual model (`v04_roberta_cls`) on accuracy, macro F1, and weighted F1.
+The later `v10` diverse-ensemble search improved validation accuracy and
+produced the best verified public score:
 
 ```text
-v04_roberta_cls  accuracy 0.569343  macro_f1 0.494329  weighted_f1 0.554347
-v09_ensemble     accuracy 0.576642  macro_f1 0.506277  weighted_f1 0.561544
+v04_roberta_cls                           accuracy 0.569343  macro_f1 0.494329  weighted_f1 0.554347  public 0.573
+v09_ensemble                              accuracy 0.576642  macro_f1 0.506277  weighted_f1 0.561544  public 0.573
+v10_vote_diverse_no_retrieval_val_weighted accuracy 0.583577  macro_f1 0.501074  weighted_f1 0.564988  public 0.586
+v10_vote_diverse_no_retrieval             accuracy 0.579562  macro_f1 0.496677  weighted_f1 0.561294  public 0.587
 ```
 
 Implications:
 
-- the final report should present `v09_ensemble` as the validation-selected
-  final candidate;
+- the final report should present `v10_vote_diverse_no_retrieval` as the final
+  public-leaderboard submission candidate;
+- `v10_vote_diverse_no_retrieval_val_weighted` should be discussed as the best
+  validation-accuracy recipe from the v10 search;
+- `v09_ensemble` should remain in the analysis as the stronger macro-F1
+  candidate among the main completed models;
 - individual RoBERTa and TF-IDF models remain important for ablation and
   explanation;
-- the project should state that no leaderboard labels or public leaderboard
-  feedback were used to choose the ensemble;
+- the project should state that no leaderboard labels were used, and that
+  public leaderboard feedback is reported separately from validation metrics;
 - remaining limitations are short-literal ambiguity, rare categories,
   abbreviations, and broad ICD-prefix confusions.
 
 ## Final Submission Declaration
 
-Decision: copy the selected `v09_ensemble` Kaggle file to
-`submissions/final_submission.csv` and use that file as the final upload
-candidate.
+Decision: after submitting individual models and broader diverse ensembles to
+Kaggle, use `v10_vote_diverse_no_retrieval` as the final public-leaderboard
+candidate and copy its Kaggle-format file to `submissions/final_submission.csv`.
 
 Reasoning: the repository should expose one unambiguous final submission file
 instead of forcing reviewers to choose among many experiment submissions.
 
+Reasoning update: `v09_ensemble` was replaced because broader diverse ensembles
+performed better. Kaggle public leaderboard scores showed:
+
+```text
+v10_vote_diverse_no_retrieval               public score 0.587
+v10_vote_diverse_no_retrieval_val_weighted  public score 0.586
+v08_safe_dedupe                             public score 0.583
+v04_roberta_cls                             public score 0.573
+v09_ensemble                                public score 0.573
+```
+
+Therefore the final upload candidate should follow the best verified public
+score, while the report should clearly explain the validation/public difference.
+
 Files:
 
 - `submissions/final_submission.csv`
+- `submissions/final_submission_two_column_internal.csv`
 - `outputs/predictions/final_leaderboard_detailed.csv`
 - `FINAL_MODEL_CARD.md`
 - `SUBMISSION.md`
 - `notebooks/08_submission_and_final_story.ipynb`
 
-Competition result note: local files do not verify the final public/private
-score or ranking. A final-placement claim must be supported by evidence under
-`reports/tables/` or `reports/figures/` before it is used in the report.
+Competition result note: local files verify the public score table, but not the
+private/final ranking. A final-placement claim must be supported by private
+leaderboard evidence under `reports/tables/` or `reports/figures/`.
+
+## Evaluation Notebook Decision
+
+Decision: the main evaluation notebook uses `v10_vote_diverse_no_retrieval` as
+the final candidate because it has the best verified public score and improves
+validation accuracy over the previous `v09` ensemble.
+
+Trade-off: `v09_ensemble` remains slightly stronger on macro F1, so the report
+must not hide the imbalance perspective. The final recommendation is therefore:
+use `v10` for the competition submission, and discuss `v09` as the stronger
+macro-F1-oriented ensemble.

@@ -1,21 +1,21 @@
 y_true,y_pred,count,example_literals
-V,Z,48,prótesis mamarias || hemicolectomía derecha || alergia Àcars || Protesis mamarias
-6,O,38,patología fetal parto || registro patológico fetal parto || corioamnionitis || Preclampsia
+V,Z,51,prótesis mamarias || hemicolectomía derecha || alergia Àcars || Protesis mamarias
+6,O,40,patología fetal parto || registro patológico fetal parto || corioamnionitis || Preclampsia
 2,E,35,Hiperparatiroidismo || DBT || DIABETES || Déficit de ácido fólico
-5,K,26,esteatosis hepatica || rge || Hèrnia de hiatus || fecaloma
 6,N,26,Endometriosis || prolapso uteri || abscés tubo-ovàric || endometriosis intestino
-Z,V,25,IMC 58 || problemas sociofamiliar || Alérgica a la penicilina || stent
+5,K,24,esteatosis hepatica || rge || hernia inguinal izquierda || Hèrnia de hiatus
 8,B,21,TC cráneo || TC de abdomen || ECOABD || AngioTC torácica
-O,E,19,obesidad mórbida parto || Hipotiroidismo postoperatorio part || hipotiroidisme parto || SOP part
+9,3,20,Corticoides || Nutrición Parenteral || Sèpsia || intubació
+7,R,20,edemas || Poliuria || Febricula || Síndrome diarreico
+Z,V,19,IMC 58 || stent || Alergia PENICILINA || alergia al NOLOTIL
 4,I,19,Raynaud || EAP || Insuficiencia cardiaca izquierda || BRIHH
-7,R,19,edemas || Febricula || Síndrome diarreico || Hipertransaminasemia
-9,3,17,Corticoides || Nutrición Parenteral || oxigeno || hemoderivats
+O,E,17,obesidad mórbida parto || Hipotiroidismo postoperatorio part || hipotiroidisme parto || SOP part
 Z,0,16,Anexectomía izquierda || nefrostomías || RECONVERSIÓN A LAPAROTOMÍA || HITERECTOMIA
-3,9,14,Oxigenoterapia || Cataracta senil || antibioterápico || antibióticos
-3,F,14,alzheimer || Enol ocasional || alteracion conductual || ansiedad
 7,M,14,Dolor lumbar || Lumbago || Discopatia cervical || Canal estrecho lumbar
-0,Z,12,Ooforectomía izquierda || PTR dcha cementada || doble anexectomía || Nefrectomía radical derecha
+3,F,13,alzheimer || Enol ocasional || ansiedad || Sordomudo
+4,J,13,Asma extrínseca || neumonia || Rinitis alérgica || Polipo fosa nasal
+0,O,13,desgarro 1er grado || Desgarro IIIB || desgarro periuretral || paf
+6,0,12,salpingectomia bilateral || anexectomia bilateral por laparoscopia || Circuncisión || miomectomía histeroscópica
+1,O,12,versión cefálica externa || Ventosa || ruptura artificial membranas || rotura artificial membranes
 7,Q,12,foramen oval permeable || Escafocefalia || Macroglosia congenita || útero septo
-E,2,12,Diabetis mellitus || DMNID || Síndrome hipoventilación; Obesidad || Masa suprarrenal izquierda
-4,J,12,Asma extrínseca || neumonia || Rinitis alérgica || Polipo fosa nasal
-O,G,11,Esclerosis Multiple parto || Epilepsia generalizada parto || Migraña con aura part || esclerosis multiple parto
+0,Z,11,Ooforectomía izquierda || PTR dcha cementada || doble anexectomía || RTU vejiga

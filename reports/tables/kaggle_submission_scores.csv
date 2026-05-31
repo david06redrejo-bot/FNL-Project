@@ -1,0 +1,17 @@
+ref,fileName,model_id,description,status,publicScore,privateScore,date
+53228942,v10_vote_diverse_no_retrieval_kaggle.csv,v10_vote_diverse_no_retrieval,Team 10 v10 diverse vote no retrieval,COMPLETE,0.587,,2026-05-31 18:49:19
+53228932,v10_vote_diverse_no_retrieval_val_weighted_kaggle.csv,v10_vote_diverse_no_retrieval_val_weighted,Team 10 v10 diverse vote no retrieval val weighted,COMPLETE,0.586,,2026-05-31 18:48:43
+53225365,v08_safe_dedupe_kaggle.csv,v08_safe_dedupe,Team 10 v08 safe dedupe RoBERTa mean Kaggle format,COMPLETE,0.583,,2026-05-31 16:29:29
+53228934,v10_vote_validation_top_plus_tfidf_val_weighted_kaggle.csv,v10_vote_validation_top_plus_tfidf_val_weighted,Team 10 v10 validation top plus TFIDF val weighted,COMPLETE,0.58,,2026-05-31 18:48:53
+53228937,v10_vote_validation_top_plus_tfidf_kaggle.csv,v10_vote_validation_top_plus_tfidf,Team 10 v10 validation top plus TFIDF vote,COMPLETE,0.579,,2026-05-31 18:49:06
+53225359,v04_roberta_cls_kaggle.csv,v04_roberta_cls,Team 10 v04 RoBERTa CLS Kaggle format,COMPLETE,0.573,,2026-05-31 16:29:18
+53225348,final_v09_ensemble_kaggle.csv,v09_ensemble,Team 10 final v09 ensemble Kaggle format,COMPLETE,0.573,,2026-05-31 16:29:05
+53225414,v07_mean_tuning_kaggle.csv,v07_mean_tuning,Team 10 v07 mean tuning Kaggle format,COMPLETE,0.572,,2026-05-31 16:30:57
+52549712,svm_improved_training_accuracy.csv,legacy_svm_improved_training_accuracy,trying new stuff,COMPLETE,0.571,,2026-05-11 15:20:56
+53225371,v05_roberta_mean_kaggle.csv,v05_roberta_mean,Team 10 v05 RoBERTa mean Kaggle format,COMPLETE,0.556,,2026-05-31 16:29:38
+53225428,v06_focal_gamma1_kaggle.csv,v06_focal_gamma1,Team 10 v06 focal gamma1 Kaggle format,COMPLETE,0.555,,2026-05-31 16:31:16
+53225376,v01_char_tfidf_logreg_kaggle.csv,v01_char_tfidf_logreg,Team 10 v01 char TFIDF logreg Kaggle format,COMPLETE,0.55,,2026-05-31 16:29:49
+53225433,v06_focal_gamma2_kaggle.csv,v06_focal_gamma2,Team 10 v06 focal gamma2 Kaggle format,COMPLETE,0.548,,2026-05-31 16:31:25
+53225420,v06_class_weighted_kaggle.csv,v06_class_weighted,Team 10 v06 class weighted Kaggle format,COMPLETE,0.539,,2026-05-31 16:31:06
+53225440,v02_word_tfidf_svm_kaggle.csv,v02_word_tfidf_svm,Team 10 v02 word TFIDF SVM Kaggle format,COMPLETE,0.536,,2026-05-31 16:31:35
+53225407,v08_weighted_sampler_kaggle.csv,v08_weighted_sampler,Team 10 v08 weighted sampler Kaggle format,COMPLETE,0.533,,2026-05-31 16:30:45

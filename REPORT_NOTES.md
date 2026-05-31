@@ -485,8 +485,7 @@ The main lesson is a trade-off. Class-weighted CE improved macro F1 and helped
 some categories, but it reduced accuracy. Focal loss preserved accuracy better
 than class weighting, but did not improve over the standard mean-pooling
 baseline. Therefore, imbalance-aware losses are useful ablations and evidence
-for the report, but they should not replace CLS as the current final candidate
-under the competition's accuracy-oriented objective.
+for the report, but they did not replace CLS at that stage under the competition's accuracy-oriented objective.
 
 ## RoBERTa Mean-Pooling Hyperparameter Tuning
 
@@ -520,7 +519,7 @@ best_epoch: 13
 
 This matched the standard mean-pooling accuracy but did not beat CLS. Therefore
 the recommended mean-pooling training configuration is useful for future runs,
-but CLS remains the current final candidate by validation accuracy.
+but CLS remained the strongest candidate at that stage by validation accuracy.
 
 ## Safe Data Strategies and Clinical Augmentation
 
@@ -648,8 +647,26 @@ explanations; they are diagnostics that help us understand model behavior.
 
 ## Final Submission Story
 
-Notebook 08 creates the final submission story and declares `v09_ensemble` as
-the final candidate. The final upload file is:
+Notebook 08 creates the final submission story and declares
+`v10_vote_diverse_no_retrieval` as the final public-leaderboard submission
+candidate. After submitting models to Kaggle, the best public candidate first
+became `v08_safe_dedupe`; after the `v10` diverse-ensemble search, the final
+public candidate became `v10_vote_diverse_no_retrieval`. The related
+`v10_vote_diverse_no_retrieval_val_weighted` recipe is the strongest validation
+accuracy recipe from that search, while `v09_ensemble` remains useful because it
+has stronger macro F1 among the main completed candidates.
+
+Kaggle public scores:
+
+```text
+v10_vote_diverse_no_retrieval                0.587
+v10_vote_diverse_no_retrieval_val_weighted   0.586
+v08_safe_dedupe                              0.583
+v04_roberta_cls                              0.573
+v09_ensemble                                 0.573
+```
+
+The final upload file is:
 
 ```text
 submissions/final_submission.csv
@@ -667,6 +684,45 @@ It also records the team context: after the early baseline and short
 presentation/follow-up with Lei Kang, the team was on the right track and at one
 point was second in the competition.
 
-The final competition result is not verified in repository files yet. If the
-team wants to state a final ranking, evidence should be added as a score table
-or screenshot before the report is finalized.
+The public score table is now saved in
+`reports/tables/kaggle_submission_scores.csv`. The private/final ranking is not
+verified in repository files yet. If the team wants to state a final ranking,
+private leaderboard evidence should be added as a score table or screenshot
+before the report is finalized.
+
+The final diverse ensemble is closer to the Machine Learning idea of combining
+models with different error patterns: one RoBERTa safe-data model, one RoBERTa
+CLS model, one character TF-IDF model, and one word TF-IDF SVM.
+
+## Final Evaluation Notebook Refresh
+
+Notebook 07 was refreshed after the `v10` diverse-ensemble search. The final
+evaluation now compares all model versions from `v00` through `v10` and uses
+`v10_vote_diverse_no_retrieval` as the final candidate.
+
+Key result:
+
+```text
+v10_vote_diverse_no_retrieval
+validation accuracy: 0.579562
+macro F1: 0.496677
+weighted F1: 0.561294
+Kaggle public score: 0.587
+```
+
+Important caveat: `v09_ensemble` has slightly higher macro F1, but `v10` has
+higher validation accuracy and the best verified Kaggle public score. This is
+reported as an accuracy/public-score vs macro-F1 trade-off.
+
+The final evaluation artifacts are:
+
+- `reports/tables/final_experiment_comparison.csv`;
+- `reports/tables/final_per_class_metrics.csv`;
+- `reports/tables/final_error_examples.csv`;
+- `reports/tables/final_top_confusions.csv`;
+- `reports/figures/fig_10_model_comparison.png`;
+- `reports/figures/fig_11_final_confusion_matrix.png`;
+- `reports/figures/fig_12_per_class_recall.png`;
+- `reports/figures/fig_13_confidence_correct_vs_wrong.png`;
+- `reports/figures/fig_14_training_curves.png`;
+- `reports/figures/fig_15_top_confused_pairs.png`.

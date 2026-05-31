@@ -318,6 +318,19 @@ The script writes:
 - `outputs/predictions/v09_ensemble_leaderboard_detailed.csv`
 - `submissions/v09_ensemble_submission.csv`
 
+Run the broader diverse ensemble search:
+
+```bash
+python models/v10_diverse_ensemble_search.py
+```
+
+The script writes:
+
+- `reports/tables/v10_diverse_ensemble_search.csv`
+- `reports/tables/v10_diverse_ensemble_submission_plan.csv`
+- `outputs/metrics/v10_diverse_ensemble_search_metrics.json`
+- `submissions/v10_*_kaggle.csv` files for selected candidate recipes
+
 ## 4.8 Final Evaluation and Error Analysis
 
 Generate final comparison tables and figures:
@@ -340,19 +353,26 @@ This command writes:
 
 ## 4.9 Final Submission Copy
 
-Create the final upload file from the selected `v09_ensemble` submission:
+Create the final upload file from the best verified public candidate,
+`v10_vote_diverse_no_retrieval`:
 
 ```bash
 python - <<'PY'
 import pandas as pd
-sub = pd.read_csv('submissions/v09_ensemble_submission.csv')
-assert list(sub.columns) == ['id', 'y_category']
+sub = pd.read_csv('submissions/v10_vote_diverse_no_retrieval_kaggle.csv')
+assert list(sub.columns) == ['id', 'Literal', 'y_category']
 assert len(sub) == 6667
 sub.to_csv('submissions/final_submission.csv', index=False)
 
-detailed = pd.read_csv('outputs/predictions/v09_ensemble_leaderboard_detailed.csv')
+detailed = pd.read_csv('outputs/predictions/v10_vote_diverse_no_retrieval_leaderboard_detailed.csv')
 detailed.to_csv('outputs/predictions/final_leaderboard_detailed.csv', index=False)
 PY
+```
+
+The two-column internal variant is stored as:
+
+```text
+submissions/final_submission_two_column_internal.csv
 ```
 
 Before expensive model work, smoke-test the model-version interface:
