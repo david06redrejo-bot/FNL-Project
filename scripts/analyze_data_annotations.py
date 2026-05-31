@@ -188,7 +188,14 @@ def main() -> int:
 
         for summary in summaries:
             validation_payload["warnings"].extend(summary["validation"].get("warnings", []))
-            validation_payload["errors"].extend(summary["validation"].get("errors", []))
+            errors = summary["validation"].get("errors", [])
+            if summary["role"] == "unknown":
+                validation_payload["warnings"].extend(
+                    f"Non-competition CSV `{summary['basename']}` has unknown schema: {error}"
+                    for error in errors
+                )
+            else:
+                validation_payload["errors"].extend(errors)
 
         training = next(
             (

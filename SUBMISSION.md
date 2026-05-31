@@ -17,7 +17,7 @@ submissions/v10_vote_diverse_no_retrieval_kaggle.csv
 It contains exactly:
 
 ```text
-id,Literal,y_category
+id,y_category
 ```
 
 and `6667` prediction rows.
@@ -87,7 +87,7 @@ import pandas as pd
 sub = pd.read_csv('submissions/v10_vote_diverse_no_retrieval_kaggle.csv')
 assert list(sub.columns) == ['id', 'Literal', 'y_category']
 assert len(sub) == 6667
-sub.to_csv('submissions/final_submission.csv', index=False)
+sub[['id', 'y_category']].to_csv('submissions/final_submission.csv', index=False)
 
 detailed = pd.read_csv('outputs/predictions/v10_vote_diverse_no_retrieval_leaderboard_detailed.csv')
 detailed.to_csv('outputs/predictions/final_leaderboard_detailed.csv', index=False)

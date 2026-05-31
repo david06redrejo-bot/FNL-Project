@@ -362,17 +362,17 @@ import pandas as pd
 sub = pd.read_csv('submissions/v10_vote_diverse_no_retrieval_kaggle.csv')
 assert list(sub.columns) == ['id', 'Literal', 'y_category']
 assert len(sub) == 6667
-sub.to_csv('submissions/final_submission.csv', index=False)
+sub[['id', 'y_category']].to_csv('submissions/final_submission.csv', index=False)
 
 detailed = pd.read_csv('outputs/predictions/v10_vote_diverse_no_retrieval_leaderboard_detailed.csv')
 detailed.to_csv('outputs/predictions/final_leaderboard_detailed.csv', index=False)
 PY
 ```
 
-The two-column internal variant is stored as:
+The Kaggle upload file must contain exactly two columns:
 
 ```text
-submissions/final_submission_two_column_internal.csv
+submissions/final_submission.csv
 ```
 
 Before expensive model work, smoke-test the model-version interface:
@@ -421,7 +421,7 @@ reports/final_report.tex
 Compile it from the `reports/` directory:
 
 ```bash
-export PATH=/home/iadlG010/FNL-Project/.texlive/2026/bin/x86_64-linux:$PATH
+export PATH="$PWD/.texlive/2026/bin/x86_64-linux:$PATH"
 cd reports
 pdflatex final_report.tex
 bibtex final_report || true

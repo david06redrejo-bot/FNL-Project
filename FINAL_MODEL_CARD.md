@@ -62,8 +62,7 @@ Kaggle public submission.
 
 - **Input:** clinical literal text from `leaderboard_data.csv`.
 - **Output:** one uppercase `y_category` prefix per row.
-- **Kaggle submission contract observed in this competition:** `id`, `Literal`,
-  and `y_category`.
+- **Kaggle submission contract:** exactly `id` and `y_category`.
 
 ## Preprocessing
 

@@ -172,10 +172,10 @@ Run the project phases:
 
 ```bash
 # 1. Data inventory and schema validation
-python -m src.data_loading
+python scripts/analyze_data_annotations.py
 
 # 2. Required light preprocessing
-python -m src.preprocessing
+python scripts/run_preprocessing.py
 
 # 3. Tokenization analysis
 python scripts/analyze_tokenization.py

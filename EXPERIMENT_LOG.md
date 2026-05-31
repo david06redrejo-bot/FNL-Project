@@ -62,7 +62,7 @@ Metrics:
 - `macro_f1`: 0.006181
 - `weighted_f1`: 0.027854
 
-Run summary: `/home/iadlG010/FNL-Project/outputs/logs/v00_majority_baseline_run.md`
+Run summary: `outputs/logs/v00_majority_baseline_run.md`
 
 Interpretation:
 This is the sanity baseline for class imbalance. It predicts only the majority
@@ -79,7 +79,7 @@ Metrics:
 - `macro_f1`: 0.402554
 - `weighted_f1`: 0.494943
 
-Run summary: `/home/iadlG010/FNL-Project/outputs/logs/v01_tfidf_char_logreg_run.md`
+Run summary: `outputs/logs/v01_tfidf_char_logreg_run.md`
 
 Best validation configuration:
 - preprocessing: required-clean
@@ -107,7 +107,7 @@ Metrics:
 - `macro_f1`: 0.474196
 - `weighted_f1`: 0.514018
 
-Run summary: `/home/iadlG010/FNL-Project/outputs/logs/v02_tfidf_word_svm_run.md`
+Run summary: `outputs/logs/v02_tfidf_word_svm_run.md`
 
 ## Run v03_roberta_cls_debug
 
@@ -118,7 +118,7 @@ Metrics:
 - `macro_f1`: 0.033333
 - `weighted_f1`: 0.045455
 
-Run summary: `/home/iadlG010/FNL-Project/outputs/logs/v03_roberta_cls_debug_run.md`
+Run summary: `outputs/logs/v03_roberta_cls_debug_run.md`
 
 ## Run v04_roberta_mean_debug
 
@@ -129,7 +129,7 @@ Metrics:
 - `macro_f1`: 0.033333
 - `weighted_f1`: 0.045455
 
-Run summary: `/home/iadlG010/FNL-Project/outputs/logs/v04_roberta_mean_debug_run.md`
+Run summary: `outputs/logs/v04_roberta_mean_debug_run.md`
 
 ## Run v05_roberta_mean
 
@@ -140,7 +140,7 @@ Metrics:
 - `macro_f1`: 0.496567
 - `weighted_f1`: 0.549541
 
-Run summary: `/home/iadlG010/FNL-Project/outputs/logs/v05_roberta_mean_run.md`
+Run summary: `outputs/logs/v05_roberta_mean_run.md`
 
 ## Run v06_roberta_mean_augmented_debug
 
@@ -151,7 +151,7 @@ Metrics:
 - `macro_f1`: 0.033333
 - `weighted_f1`: 0.045455
 
-Run summary: `/home/iadlG010/FNL-Project/outputs/logs/v06_roberta_mean_augmented_debug_run.md`
+Run summary: `outputs/logs/v06_roberta_mean_augmented_debug_run.md`
 
 ## Run v07_ensemble_debug
 
@@ -162,7 +162,7 @@ Metrics:
 - `macro_f1`: 0.033333
 - `weighted_f1`: 0.045455
 
-Run summary: `/home/iadlG010/FNL-Project/outputs/logs/v07_ensemble_debug_run.md`
+Run summary: `outputs/logs/v07_ensemble_debug_run.md`
 
 ## Run v03_similarity_retrieval_baseline
 
@@ -173,7 +173,7 @@ Metrics:
 - `macro_f1`: 0.462789
 - `weighted_f1`: 0.496120
 
-Run summary: `/home/iadlG010/FNL-Project/outputs/logs/v03_similarity_retrieval_baseline_run.md`
+Run summary: `outputs/logs/v03_similarity_retrieval_baseline_run.md`
 
 Best validation configuration:
 - retrieval index: training literals
@@ -203,7 +203,7 @@ Metrics:
 - `macro_f1`: 0.494329
 - `weighted_f1`: 0.554347
 
-Run summary: `/home/iadlG010/FNL-Project/outputs/logs/v04_roberta_cls_run.md`
+Run summary: `outputs/logs/v04_roberta_cls_run.md`
 
 Configuration:
 - backbone: `PlanTL-GOB-ES/roberta-base-biomedical-clinical-es`
@@ -240,7 +240,7 @@ Metrics:
 - `macro_f1`: 0.496567
 - `weighted_f1`: 0.549541
 
-Run summary: `/home/iadlG010/FNL-Project/outputs/logs/v05_roberta_mean_run.md`
+Run summary: `outputs/logs/v05_roberta_mean_run.md`
 
 Configuration:
 - backbone: `PlanTL-GOB-ES/roberta-base-biomedical-clinical-es`
@@ -384,7 +384,7 @@ Metrics:
 - `macro_f1`: 0.016667
 - `weighted_f1`: 0.015625
 
-Run summary: `/home/iadlG010/FNL-Project/outputs/logs/v05_roberta_mean_debug_run.md`
+Run summary: `outputs/logs/v05_roberta_mean_debug_run.md`
 
 ## Run v06_roberta_mean_imbalance_aware
 
@@ -395,7 +395,7 @@ Metrics:
 - `macro_f1`: 0.480394
 - `weighted_f1`: 0.539776
 
-Run summary: `/home/iadlG010/FNL-Project/outputs/logs/v06_roberta_mean_imbalance_aware_run.md`
+Run summary: `outputs/logs/v06_roberta_mean_imbalance_aware_run.md`
 
 ## Run v06_roberta_mean_imbalance_aware_debug_focal_gamma1
 
@@ -406,7 +406,7 @@ Metrics:
 - `macro_f1`: 0.000000
 - `weighted_f1`: 0.000000
 
-Run summary: `/home/iadlG010/FNL-Project/outputs/logs/v06_roberta_mean_imbalance_aware_debug_focal_gamma1_run.md`
+Run summary: `outputs/logs/v06_roberta_mean_imbalance_aware_debug_focal_gamma1_run.md`
 
 ## Run v06_roberta_mean_imbalance_aware_debug_focal_gamma2
 
@@ -417,7 +417,7 @@ Metrics:
 - `macro_f1`: 0.012987
 - `weighted_f1`: 0.011364
 
-Run summary: `/home/iadlG010/FNL-Project/outputs/logs/v06_roberta_mean_imbalance_aware_debug_focal_gamma2_run.md`
+Run summary: `outputs/logs/v06_roberta_mean_imbalance_aware_debug_focal_gamma2_run.md`
 
 ## Run v06_roberta_mean_imbalance_aware_class_weight_balanced
 
@@ -428,7 +428,7 @@ Metrics:
 - `macro_f1`: 0.518270
 - `weighted_f1`: 0.537546
 
-Run summary: `/home/iadlG010/FNL-Project/outputs/logs/v06_roberta_mean_imbalance_aware_class_weight_balanced_run.md`
+Run summary: `outputs/logs/v06_roberta_mean_imbalance_aware_class_weight_balanced_run.md`
 
 ## Run v06_roberta_mean_imbalance_aware_focal_gamma1
 
@@ -439,7 +439,7 @@ Metrics:
 - `macro_f1`: 0.480394
 - `weighted_f1`: 0.539776
 
-Run summary: `/home/iadlG010/FNL-Project/outputs/logs/v06_roberta_mean_imbalance_aware_focal_gamma1_run.md`
+Run summary: `outputs/logs/v06_roberta_mean_imbalance_aware_focal_gamma1_run.md`
 
 ## Run v06_roberta_mean_imbalance_aware_focal_gamma2
 
@@ -450,7 +450,7 @@ Metrics:
 - `macro_f1`: 0.492846
 - `weighted_f1`: 0.542396
 
-Run summary: `/home/iadlG010/FNL-Project/outputs/logs/v06_roberta_mean_imbalance_aware_focal_gamma2_run.md`
+Run summary: `outputs/logs/v06_roberta_mean_imbalance_aware_focal_gamma2_run.md`
 
 ## Run v07_roberta_mean_tuning
 
@@ -461,7 +461,7 @@ Metrics:
 - `macro_f1`: 0.494151
 - `weighted_f1`: 0.549054
 
-Run summary: `/home/iadlG010/FNL-Project/outputs/logs/v07_roberta_mean_tuning_run.md`
+Run summary: `outputs/logs/v07_roberta_mean_tuning_run.md`
 
 ## Run v08_roberta_mean_augmented
 
@@ -472,7 +472,7 @@ Metrics:
 - `macro_f1`: 0.481648
 - `weighted_f1`: 0.549150
 
-Run summary: `/home/iadlG010/FNL-Project/outputs/logs/v08_roberta_mean_augmented_run.md`
+Run summary: `outputs/logs/v08_roberta_mean_augmented_run.md`
 
 ## Run v08_roberta_mean_augmented_debug_weighted_random_sampler
 
@@ -483,7 +483,7 @@ Metrics:
 - `macro_f1`: 0.008547
 - `weighted_f1`: 0.004808
 
-Run summary: `/home/iadlG010/FNL-Project/outputs/logs/v08_roberta_mean_augmented_debug_weighted_random_sampler_run.md`
+Run summary: `outputs/logs/v08_roberta_mean_augmented_debug_weighted_random_sampler_run.md`
 
 ## Run v08_roberta_mean_augmented_dedupe_non_conflicting_literals
 
@@ -494,7 +494,7 @@ Metrics:
 - `macro_f1`: 0.481648
 - `weighted_f1`: 0.549150
 
-Run summary: `/home/iadlG010/FNL-Project/outputs/logs/v08_roberta_mean_augmented_dedupe_non_conflicting_literals_run.md`
+Run summary: `outputs/logs/v08_roberta_mean_augmented_dedupe_non_conflicting_literals_run.md`
 
 ## Run v08_roberta_mean_augmented_weighted_random_sampler
 
@@ -505,7 +505,7 @@ Metrics:
 - `macro_f1`: 0.522584
 - `weighted_f1`: 0.536961
 
-Run summary: `/home/iadlG010/FNL-Project/outputs/logs/v08_roberta_mean_augmented_weighted_random_sampler_run.md`
+Run summary: `outputs/logs/v08_roberta_mean_augmented_weighted_random_sampler_run.md`
 
 ## Interpretation v08_roberta_mean_augmented
 
@@ -542,7 +542,7 @@ Metrics:
 - `macro_f1`: 0.506277
 - `weighted_f1`: 0.561544
 
-Run summary: `/home/iadlG010/FNL-Project/outputs/logs/v09_ensemble_run.md`
+Run summary: `outputs/logs/v09_ensemble_run.md`
 
 ## Final Evaluation Notebook
 
@@ -649,4 +649,4 @@ Metrics:
 - `macro_f1`: 0.501074
 - `weighted_f1`: 0.564988
 
-Run summary: `/home/iadlG010/FNL-Project/outputs/logs/v10_diverse_ensemble_search_run.md`
+Run summary: `outputs/logs/v10_diverse_ensemble_search_run.md`

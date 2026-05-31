@@ -16,7 +16,7 @@ This local installation is ignored by Git. To use it in this VM, prepend its
 binary directory to `PATH`:
 
 ```bash
-export PATH=/home/iadlG010/FNL-Project/.texlive/2026/bin/x86_64-linux:$PATH
+export PATH=.texlive/2026/bin/x86_64-linux:$PATH
 ```
 
 Compile from the repository root with:

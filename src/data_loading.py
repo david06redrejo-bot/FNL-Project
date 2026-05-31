@@ -9,7 +9,7 @@ from typing import Any
 import pandas as pd
 
 from .config import EXPECTED_CATEGORIES
-from .paths import DATA_DIR, RAW_DATA_DIR
+from .paths import DATA_DIR, PROJECT_ROOT, RAW_DATA_DIR
 
 
 RAW_FILENAMES = {
@@ -179,9 +179,13 @@ def inspect_csv_file(path: Path, max_examples: int = 5) -> tuple[dict[str, Any],
     df = load_csv_path(path)
     role = infer_dataset_role(path, df.columns.tolist())
     validation = validate_schema(df, role)
+    try:
+        display_path = str(path.relative_to(PROJECT_ROOT))
+    except ValueError:
+        display_path = str(path)
 
     summary = {
-        "filename": str(path),
+        "filename": display_path,
         "basename": path.name,
         "role": role,
         "shape_rows": int(df.shape[0]),
