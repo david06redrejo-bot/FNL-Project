@@ -64,6 +64,16 @@ completed_experiments:
     weighted_f1: 0.549541
     best_epoch: 10
     lesson: mean pooling slightly improves macro F1 but does not beat CLS accuracy.
+  - id: v06_roberta_mean_imbalance_aware
+    script: models/v06_roberta_mean_imbalance_aware.py
+    family: transformer
+    status: completed
+    validation_accuracy: 0.557299
+    macro_f1: 0.480394
+    weighted_f1: 0.539776
+    best_candidate: focal_gamma1
+    best_epoch: 9
+    lesson: imbalance-aware losses did not beat mean pooling by accuracy; class weighting improved macro F1 but hurt accuracy.
 
 advanced_experiment_roadmap:
   - id: exp_class_weighted_loss
@@ -73,7 +83,7 @@ advanced_experiment_roadmap:
     expected_benefit: better minority-class recall and macro F1.
     risk: lower overall accuracy if frequent categories are over-penalized.
     implementation_cost: low
-    decision: implement
+    decision: completed_ablation
     planned_script: models/v06_roberta_mean_class_weighted.py
   - id: exp_focal_loss
     candidate: focal loss
@@ -82,7 +92,7 @@ advanced_experiment_roadmap:
     expected_benefit: improved hard-example learning.
     risk: extra hyperparameters and possible instability.
     implementation_cost: medium
-    decision: maybe
+    decision: completed_ablation
   - id: exp_max_length_tuning
     candidate: max_length tuning
     hypothesis: nearby max_length values may affect rare longer literals without much cost.

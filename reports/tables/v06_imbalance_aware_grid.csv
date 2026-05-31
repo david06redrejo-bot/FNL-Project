@@ -1,0 +1,5 @@
+candidate_version,loss_name,focal_gamma,use_class_weights,accuracy,macro_f1,weighted_f1,best_epoch,is_reference_v05
+v05_roberta_mean,standard_cross_entropy,,False,0.5645985401459854,0.49656689039778307,0.5495406105287156,10,True
+v06_roberta_mean_imbalance_aware_focal_gamma1,focal_loss,1.0,False,0.5572992700729927,0.480393561147362,0.5397758462870894,9,False
+v06_roberta_mean_imbalance_aware_focal_gamma2,focal_loss,2.0,False,0.5554744525547445,0.492845903046953,0.5423962078956412,11,False
+v06_roberta_mean_imbalance_aware_class_weight_balanced,class_weighted_cross_entropy,,True,0.5445255474452555,0.5182700280807696,0.5375463941653781,15,False

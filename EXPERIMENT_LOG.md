@@ -293,6 +293,43 @@ Roadmap artifacts:
 - `reports/tables/advanced_experiment_roadmap.csv`
 - `notebooks/05_advanced_model_experiments.ipynb`
 
+## Run v06_roberta_mean_imbalance_aware
+
+**Version:** `v06_roberta_mean_imbalance_aware`
+
+Grid:
+- mean + class-weighted CrossEntropyLoss
+- mean + focal loss gamma 1
+- mean + focal loss gamma 2
+- v05 mean standard CrossEntropyLoss included as reference
+
+Best v06 candidate by validation accuracy:
+- `v06_roberta_mean_imbalance_aware_focal_gamma1`
+
+Metrics:
+- `accuracy`: 0.557299
+- `macro_f1`: 0.480394
+- `weighted_f1`: 0.539776
+- `best_epoch`: 9
+
+Important comparison:
+- v05 standard mean: accuracy 0.564599, macro F1 0.496567
+- v06 focal gamma 1: accuracy 0.557299, macro F1 0.480394
+- v06 class-weighted CE: accuracy 0.544526, macro F1 0.518270
+
+Interpretation:
+The imbalance-aware losses did not become the final model by validation
+accuracy. Focal gamma 1 is the best v06 candidate by accuracy but remains below
+v05 mean and v04 CLS. Class-weighted CE is the most useful imbalance ablation:
+it improves macro F1 substantially, but the accuracy drop is too large for the
+competition-oriented final criterion.
+
+Artifacts:
+- grid: `reports/tables/v06_imbalance_aware_grid.csv`
+- class weights: `reports/tables/v06_roberta_mean_imbalance_aware_class_weights.csv`
+- recall comparison vs v05: `reports/tables/v06_per_class_recall_vs_v05.csv`
+- canonical submission: `submissions/v06_roberta_mean_imbalance_aware_submission.csv`
+
 ## Run v05_roberta_mean_debug
 
 **Version:** `v05_roberta_mean_debug`
@@ -303,3 +340,69 @@ Metrics:
 - `weighted_f1`: 0.015625
 
 Run summary: `/home/iadlG010/FNL-Project/outputs/logs/v05_roberta_mean_debug_run.md`
+
+## Run v06_roberta_mean_imbalance_aware
+
+**Version:** `v06_roberta_mean_imbalance_aware`
+
+Metrics:
+- `accuracy`: 0.557299
+- `macro_f1`: 0.480394
+- `weighted_f1`: 0.539776
+
+Run summary: `/home/iadlG010/FNL-Project/outputs/logs/v06_roberta_mean_imbalance_aware_run.md`
+
+## Run v06_roberta_mean_imbalance_aware_debug_focal_gamma1
+
+**Version:** `v06_roberta_mean_imbalance_aware_debug_focal_gamma1`
+
+Metrics:
+- `accuracy`: 0.000000
+- `macro_f1`: 0.000000
+- `weighted_f1`: 0.000000
+
+Run summary: `/home/iadlG010/FNL-Project/outputs/logs/v06_roberta_mean_imbalance_aware_debug_focal_gamma1_run.md`
+
+## Run v06_roberta_mean_imbalance_aware_debug_focal_gamma2
+
+**Version:** `v06_roberta_mean_imbalance_aware_debug_focal_gamma2`
+
+Metrics:
+- `accuracy`: 0.062500
+- `macro_f1`: 0.012987
+- `weighted_f1`: 0.011364
+
+Run summary: `/home/iadlG010/FNL-Project/outputs/logs/v06_roberta_mean_imbalance_aware_debug_focal_gamma2_run.md`
+
+## Run v06_roberta_mean_imbalance_aware_class_weight_balanced
+
+**Version:** `v06_roberta_mean_imbalance_aware_class_weight_balanced`
+
+Metrics:
+- `accuracy`: 0.544526
+- `macro_f1`: 0.518270
+- `weighted_f1`: 0.537546
+
+Run summary: `/home/iadlG010/FNL-Project/outputs/logs/v06_roberta_mean_imbalance_aware_class_weight_balanced_run.md`
+
+## Run v06_roberta_mean_imbalance_aware_focal_gamma1
+
+**Version:** `v06_roberta_mean_imbalance_aware_focal_gamma1`
+
+Metrics:
+- `accuracy`: 0.557299
+- `macro_f1`: 0.480394
+- `weighted_f1`: 0.539776
+
+Run summary: `/home/iadlG010/FNL-Project/outputs/logs/v06_roberta_mean_imbalance_aware_focal_gamma1_run.md`
+
+## Run v06_roberta_mean_imbalance_aware_focal_gamma2
+
+**Version:** `v06_roberta_mean_imbalance_aware_focal_gamma2`
+
+Metrics:
+- `accuracy`: 0.555474
+- `macro_f1`: 0.492846
+- `weighted_f1`: 0.542396
+
+Run summary: `/home/iadlG010/FNL-Project/outputs/logs/v06_roberta_mean_imbalance_aware_focal_gamma2_run.md`

@@ -216,6 +216,35 @@ the last hidden states by averaging over non-padding tokens. It writes:
 - `submissions/v05_roberta_mean_submission.csv`
 - `reports/tables/roberta_pooling_comparison.csv`
 
+## 4.4 Imbalance-Aware RoBERTa Mean-Pooling Variants
+
+Run a tiny debug grid first:
+
+```bash
+python models/v06_roberta_mean_imbalance_aware.py --debug
+```
+
+Run the full imbalance-aware grid:
+
+```bash
+python models/v06_roberta_mean_imbalance_aware.py
+```
+
+By default this compares class-weighted CrossEntropyLoss and focal loss with
+gamma values 1 and 2. Focal gammas are configurable:
+
+```bash
+python models/v06_roberta_mean_imbalance_aware.py --focal-gammas 1,2
+```
+
+The run writes:
+
+- `reports/tables/v06_imbalance_aware_grid.csv`
+- `reports/tables/v06_roberta_mean_imbalance_aware_class_weights.csv`
+- `reports/tables/v06_per_class_recall_vs_v05.csv`
+- `outputs/metrics/v06_roberta_mean_imbalance_aware_metrics.json`
+- `submissions/v06_roberta_mean_imbalance_aware_submission.csv`
+
 Before expensive model work, smoke-test the model-version interface:
 
 ```bash

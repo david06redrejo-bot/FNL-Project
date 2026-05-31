@@ -53,6 +53,8 @@ outputs/logs/*
 
 # Debug smoke-test submissions are generated artifacts.
 submissions/*_debug_submission.csv
+submissions/*debug*_submission.csv
+reports/tables/*debug*
 
 # Generated report artifacts
 reports/compiled/*

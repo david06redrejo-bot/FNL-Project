@@ -458,3 +458,32 @@ Maybe/future directions include focal loss, label smoothing, freezing/unfreezing
 safe augmentation, layer-wise learning-rate decay, and pseudo-labeling. These
 are useful ideas, but they need controlled validation before becoming final
 claims.
+
+## Imbalance-Aware RoBERTa Experiments
+
+We implemented `v06_roberta_mean_imbalance_aware` to test whether changing the
+loss function helps the long-tail label distribution observed in EDA and
+discussed in the ICD coding survey.
+
+The class weights were computed from the training split only, so no validation
+or leaderboard information leaked into the loss. We tested:
+
+- mean pooling with class-weighted CrossEntropyLoss;
+- mean pooling with focal loss gamma 1;
+- mean pooling with focal loss gamma 2.
+
+Results:
+
+```text
+v05 standard mean          accuracy 0.564599  macro_f1 0.496567
+v06 focal gamma 1          accuracy 0.557299  macro_f1 0.480394
+v06 focal gamma 2          accuracy 0.555474  macro_f1 0.492846
+v06 class-weighted CE      accuracy 0.544526  macro_f1 0.518270
+```
+
+The main lesson is a trade-off. Class-weighted CE improved macro F1 and helped
+some categories, but it reduced accuracy. Focal loss preserved accuracy better
+than class weighting, but did not improve over the standard mean-pooling
+baseline. Therefore, imbalance-aware losses are useful ablations and evidence
+for the report, but they should not replace CLS as the current final candidate
+under the competition's accuracy-oriented objective.

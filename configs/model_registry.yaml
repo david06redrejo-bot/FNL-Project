@@ -64,6 +64,12 @@ models:
     purpose: Spanish biomedical RoBERTa mean pooling baseline
     expensive: true
     status: implemented
+  v06_roberta_mean_imbalance_aware:
+    script: models/v06_roberta_mean_imbalance_aware.py
+    family: transformer
+    purpose: RoBERTa mean pooling with class-weighted and focal losses
+    expensive: true
+    status: implemented
   v03_roberta_cls:
     script: models/v03_roberta_cls.py
     family: transformer
