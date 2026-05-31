@@ -9,10 +9,11 @@ under time pressure. A single literal can carry administrative and clinical
 weight, but assigning the right ICD category manually is slow and error-prone.
 
 This project asks a practical NLP question: **can we automatically predict the
-ICD-10 category prefix for a short clinical literal?** We approach the task as
-students progressively building understanding: first the data and annotations,
-then preprocessing, classical baselines, biomedical RoBERTa models, error
-analysis, ensembles, and finally a reproducible Kaggle submission.
+ICD-10 category prefix for a short clinical literal?** We did not treat the
+answer as obvious. We first inspected the data and annotations, then used that
+evidence to decide how much preprocessing was safe, which baselines were worth
+building, when RoBERTa was justified, and why the final model should be an
+ensemble rather than a single architecture.
 
 ## Project Identity
 
@@ -77,7 +78,12 @@ categories: digits `0`-`9` and letters `A`-`Z`.
 
 ![Final architecture diagram](reports/figures/final_architecture_diagram.png)
 
-The final public candidate is a deliberately diverse ensemble:
+The EDA suggested that no single representation would capture the whole task:
+some literals depend on biomedical context, while others are mostly surface
+forms, abbreviations, digits, or punctuation. This changed how we approached
+the final stage. Instead of choosing only the best-looking neural model, we
+combined models that made different kinds of errors. The final public candidate
+is a deliberately diverse ensemble:
 
 - `v08_safe_dedupe`: RoBERTa mean pooling with safe duplicate handling.
 - `v04_roberta_cls`: RoBERTa CLS pooling.
@@ -106,7 +112,10 @@ representations and robust surface-form signals from classical Machine Learning.
 ## Main Results
 
 Validation metrics use the shared internal split. Public scores are included
-only when a verified Kaggle submission exists.
+only when a verified Kaggle submission exists. The table should be read as the
+story of the project: the majority baseline measured imbalance, TF-IDF showed
+that short literals contain strong surface signal, RoBERTa added contextual
+biomedical representations, and the final ensemble used both views.
 
 | Version | Model | Validation accuracy | Macro F1 | Weighted F1 | Kaggle public |
 |---|---|---:|---:|---:|---:|
@@ -133,8 +142,9 @@ SUBMISSION.md
 
 ## Model Evolution
 
-We did not jump directly to the final model. Each version answers a specific
-question from the data, the course, or the ICD-coding survey.
+We did not jump directly to the final model. After each result, we asked what it
+explained and what it still missed. Each version answers a specific question
+from the data, the course, or the ICD-coding survey.
 
 | Version | Question |
 |---|---|
@@ -246,7 +256,8 @@ The system can make mistakes on ambiguous literals, abbreviations, rare
 categories, and cases that require clinical context. Any real healthcare use
 would require expert validation, governance, privacy review, monitoring,
 accountability, and integration with professional coders rather than replacing
-them.
+them. The useful role of a system like this would be to support review, not to
+make unchecked administrative or clinical decisions.
 
 ## Acknowledgements And References
 

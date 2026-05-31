@@ -29,8 +29,11 @@ Target duration: 6-8 minutes.
 - Leaderboard rows: 6,667.
 - ICD catalogue rows: 179,742.
 - Training labels cover 36 categories.
-- EDA revealed imbalance, duplicate literals, ambiguous mappings, abbreviations,
+- We first used EDA to understand what the dataset made possible and what it
+  hid: imbalance, duplicate literals, ambiguous mappings, abbreviations,
   accents, punctuation, and digits.
+- Transition: "After this first observation, we knew preprocessing could not be
+  just aggressive cleaning."
 
 ## 5. Main Challenges
 
@@ -44,14 +47,20 @@ Target duration: 6-8 minutes.
 
 ## 6. Methods and Model Evolution
 
-- `v00`: majority baseline.
-- `v01`: character TF-IDF logistic regression.
-- `v02`: word TF-IDF SVM.
-- `v03`: similarity/retrieval baseline.
-- `v04`: RoBERTa CLS pooling.
-- `v05`: RoBERTa mean pooling.
+- `v00`: majority baseline, useful because it measured how much imbalance alone
+  explained.
+- `v01`: character TF-IDF logistic regression, motivated by abbreviations,
+  morphology, digits, and punctuation.
+- `v02`: word TF-IDF SVM, to test whether complete words carried enough signal.
+- `v03`: similarity/retrieval baseline, useful even when limited because it
+  showed why exact matching was not enough.
+- `v04`: RoBERTa CLS pooling, our first contextual biomedical model.
+- `v05`: RoBERTa mean pooling, tested because short literals may distribute
+  evidence across all tokens.
 - `v06-v08`: imbalance-aware losses, tuning, and safe data strategies.
 - `v09-v10`: ensembles over complementary model families.
+- Transition: "This is why we moved from single-model comparison to diversity:
+  the classical models and RoBERTa were different in useful ways."
 
 ## 7. Results
 
@@ -70,6 +79,8 @@ Target duration: 6-8 minutes.
   ICD-prefix confusion.
 - Confidence helps debugging but should not be treated as a clinical
   explanation.
+- Transition: "The evaluation did not only tell us which model won; it told us
+  what kind of mistakes would matter in practice."
 
 ## 9. What Would Happen in a Hospital?
 
@@ -85,6 +96,9 @@ Target duration: 6-8 minutes.
 - Limited context from short literals.
 - No comparison or ensemble with podium teams' models unless they become
   available and allowed.
+- These limitations naturally define future work: full-code prediction,
+  hierarchy-aware models, safer confidence thresholds, and comparison with other
+  teams if allowed.
 
 ## 11. Final Reflection
 
@@ -93,6 +107,9 @@ Target duration: 6-8 minutes.
 - Classical baselines remained useful even after RoBERTa.
 - Language is central to healthcare records, so NLP systems must be useful,
   careful, and accountable.
+- Closing idea: "The final score matters, but the main thing we take away is
+  the workflow: understand the data, protect the meaning of the text, test
+  simple models honestly, and only then trust stronger models."
 
 ## Suggested Timing
 

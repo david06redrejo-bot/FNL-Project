@@ -52,14 +52,14 @@
 \maketitle
 
 \begin{abstract}
-This report describes our solution for the Kaggle competition \emph{UAB-ASHO AI Codification}. The task is to predict exactly one ICD-10 category prefix, \texttt{y\_category}, from a short clinical literal. We approached the project as a progressive NLP pipeline: data and annotation analysis, careful preprocessing, classical vector-space baselines, biomedical Spanish RoBERTa fine-tuning, imbalance-aware variants, error analysis, and a final diverse ensemble. Our best verified public Kaggle score in the repository is 0.587, obtained with \texttt{v10\_vote\_diverse\_no\_retrieval}. The private/final competition ranking is not claimed because no verified evidence is stored in the repository yet. Beyond the score, the project helped us connect course concepts---corpora, regular expressions, tokenization, TF--IDF, Transformers, pretrained language models, evaluation, and ensembles---to a realistic healthcare language problem.
+This report describes our solution for the Kaggle competition \emph{UAB-ASHO AI Codification}. The task is to predict exactly one ICD-10 category prefix, \texttt{y\_category}, from a short clinical literal. We built the project as a sequence of decisions rather than a single model jump: first data and annotation analysis, then conservative preprocessing, classical vector-space baselines, biomedical Spanish RoBERTa fine-tuning, imbalance-aware variants, error analysis, and finally a diverse ensemble. Our best verified public Kaggle score in the repository is 0.587, obtained with \texttt{v10\_vote\_diverse\_no\_retrieval}. The private/final competition ranking is not claimed because no verified evidence is stored in the repository yet. Beyond the score, the project helped us connect course concepts---corpora, regular expressions, tokenization, TF--IDF, Transformers, pretrained language models, evaluation, and ensembles---to a realistic healthcare language problem.
 \end{abstract}
 
 \section{Introduction: Why ICD Coding Matters}
 
 ICD coding is one of those hospital processes that is easy to underestimate until we see what depends on it. Codes support clinical documentation, statistics, diagnosis-related groups (DRGs), reimbursement, hospital management, audits, and longitudinal analysis of care. Manual coding requires expertise and attention: clinical language is abbreviated, incomplete, and often written under pressure. Errors can affect not only data quality, but also administrative decisions and financial flows.
 
-Automated ICD coding is therefore attractive, but risky. A model can help by ranking or suggesting likely categories, yet it should not replace professional coders. Our project focuses on a narrower competition task: given a clinical literal, predict the first character of the ICD code. This is much simpler than full ICD coding from complete electronic medical records, but it is still a meaningful NLP problem because short literals often lack context and may contain abbreviations, punctuation, accents, digits, and domain-specific shorthand.
+Automated ICD coding is therefore attractive, but risky. A model can help by ranking or suggesting likely categories, yet it should not replace professional coders. Our project focuses on a narrower competition task: given a clinical literal, predict the first character of the ICD code. This is much simpler than full ICD coding from complete electronic medical records. After this first observation, however, the task did not become trivial: short literals often lack context and may contain abbreviations, punctuation, accents, digits, and domain-specific shorthand.
 
 \section{Project Context and Competition}
 
@@ -97,7 +97,7 @@ df["y_category"] = df["Code"].astype(str).str[0]
 
 The training set contains all 36 expected categories. The leaderboard file does not contain \texttt{y\_category}, which is normal for an unlabeled Kaggle test file even though the initial statement mentioned it.
 
-The full EDA found 4,059 unique ICD codes in training and 179,742 ICD codes in the catalogue. It also found 1,668 duplicate literal groups with multiple full ICD codes, and 1,486 duplicate literal groups with multiple \texttt{y\_category} labels. Examples such as \emph{obesidad parto}, \emph{Fumadora part}, and \emph{Hipotiroidismo parto} appeared with several different codes and categories. This was one of the strongest warnings that the task is not only string matching: identical or nearly identical literals may still be ambiguous.
+The full EDA found 4,059 unique ICD codes in training and 179,742 ICD codes in the catalogue. It also found 1,668 duplicate literal groups with multiple full ICD codes, and 1,486 duplicate literal groups with multiple \texttt{y\_category} labels. Examples such as \emph{obesidad parto}, \emph{Fumadora part}, and \emph{Hipotiroidismo parto} appeared with several different codes and categories. This changed how we approached modeling: identical or nearly identical literals could not be treated as automatically solved string matches.
 
 Figure~\ref{fig:catdist} shows the class distribution. The largest categories are much more frequent than the tail, so a model can obtain non-trivial accuracy by learning imbalance. Figure~\ref{fig:longtail} makes the long-tail shape clearer.
 
@@ -140,7 +140,7 @@ Mean leaderboard literal length & 17.15 chars \\
 
 \section{Understanding the Main Challenges}
 
-The second phase was \emph{Understanding the main challenges of the task}. The data suggested five central difficulties.
+The second phase was \emph{Understanding the main challenges of the task}. After the first EDA pass, the data suggested five central difficulties.
 
 \textbf{Class imbalance.} The majority baseline already reaches 0.125 accuracy by always predicting the most frequent category. Accuracy is therefore necessary but not sufficient; macro-F1 is important to see rare-class behavior.
 
@@ -192,7 +192,7 @@ text = text.strip()
 text = re.sub(r"\s+", " ", text)
 \end{lstlisting}
 
-We did not lowercase, remove accents, or remove punctuation for the final RoBERTa pipeline. The reason is linguistic and practical: the backbone tokenizer was pretrained on Spanish biomedical and clinical text, and the EDA showed that case, accents, punctuation, digits, and abbreviations may encode medical meaning. More aggressive normalization was treated as an ablation for classical models, not as the default.
+We did not lowercase, remove accents, or remove punctuation for the final RoBERTa pipeline. The reason is linguistic and practical: the backbone tokenizer was pretrained on Spanish biomedical and clinical text, and the EDA showed that case, accents, punctuation, digits, and abbreviations may encode medical meaning. This is why we moved from EDA to preprocessing cautiously. More aggressive normalization was treated as an ablation for classical models, not as the default.
 
 Subword tokenization also influenced design. With \texttt{PlanTL-GOB-ES/roberta-base-biomedical-clinical-es}, the median token length was 5 tokens in both train and leaderboard, the 99th percentile was 12, and the maximum was 24 for training. We selected a default \texttt{max\_length} of 32, shown in Figure~\ref{fig:toklen}. This is a small but important example of not treating Transformer input length as arbitrary.
 
@@ -209,13 +209,13 @@ We implemented each model as a runnable versioned script that loads data, create
 
 \textbf{Majority baseline.} \texttt{v00} predicts the most frequent training-split class for every example. It is intentionally weak but essential: it tells us how much imbalance alone explains.
 
-\textbf{Character TF--IDF.} \texttt{v01} uses \texttt{TfidfVectorizer(analyzer="char\_wb")} with logistic regression. Character n-grams are useful for abbreviations, fragments, morphology, and punctuation-heavy clinical literals.
+\textbf{Character TF--IDF.} \texttt{v01} uses \texttt{TfidfVectorizer(analyzer="char\_wb")} with logistic regression. The EDA suggested this baseline because many useful clues live inside short words, abbreviations, fragments, and punctuation-heavy clinical literals.
 
 \textbf{Word TF--IDF.} \texttt{v02} uses word n-grams with linear SVM/logistic alternatives. This tests whether whole-word lexical signal is enough.
 
 \textbf{Similarity retrieval.} \texttt{v03} treats the task as nearest-neighbor retrieval over training literals using TF--IDF cosine similarity. It is intuitive and related to information-retrieval views of coding, but limited when similar strings have different labels.
 
-\textbf{RoBERTa CLS.} \texttt{v04} fine-tunes a Spanish biomedical-clinical RoBERTa backbone. For CLS pooling:
+\textbf{RoBERTa CLS.} \texttt{v04} fine-tunes a Spanish biomedical-clinical RoBERTa backbone. We moved to RoBERTa after the classical baselines showed that text signal existed, but sparse surface features could not fully resolve ambiguity. For CLS pooling:
 \begin{equation}
 \mathbf{h} = \mathbf{H}_{[:,0,:]},
 \end{equation}
@@ -228,7 +228,7 @@ where the first token representation is passed through dropout and a linear clas
 \end{equation}
 Mean pooling may help short literals because every token can contribute directly to the representation.
 
-\textbf{Improvements.} \texttt{v06} tested class-weighted cross entropy and focal loss. \texttt{v07} tuned learning rate, warmup, dropout, weight decay, batch size, gradient clipping, and AMP. \texttt{v08} tested safe data strategies, especially duplicate handling and sampling. We avoided unsafe augmentation such as random medical-word deletion or unverified synonym replacement.
+\textbf{Improvements.} The RoBERTa baselines improved accuracy, but rare classes and ambiguous literals remained fragile. This is why \texttt{v06} tested class-weighted cross entropy and focal loss, \texttt{v07} tuned learning rate, warmup, dropout, weight decay, batch size, gradient clipping, and AMP, and \texttt{v08} tested safe data strategies, especially duplicate handling and sampling. We avoided unsafe augmentation such as random medical-word deletion or unverified synonym replacement.
 
 \textbf{Ensemble.} \texttt{v09} combined complementary saved models. \texttt{v10} broadened the search toward diverse Machine Learning combinations. The final public candidate, \texttt{v10\_vote\_diverse\_no\_retrieval}, is a majority vote over RoBERTa safe-dedupe mean, RoBERTa CLS, character TF--IDF logistic regression, and word TF--IDF SVM. Figure~\ref{fig:arch} shows the final architecture.
 
@@ -290,7 +290,7 @@ v10 & Diverse ensemble & \textbf{0.579562} & 0.496677 & 0.561294 & \textbf{0.587
 \end{tabular}
 \end{table*}
 
-Figure~\ref{fig:modelcomparison} visualizes the same trend: the jump from majority baseline to TF--IDF was large, RoBERTa improved further, and ensembles gave the best final candidates.
+Figure~\ref{fig:modelcomparison} visualizes the same trend. The jump from majority baseline to TF--IDF was large, which confirmed that the literals contain real lexical signal. RoBERTa improved further by adding contextual biomedical representations, and ensembles gave the best final candidates by combining both kinds of evidence.
 
 \begin{figure}[h]
 \centering
@@ -299,7 +299,7 @@ Figure~\ref{fig:modelcomparison} visualizes the same trend: the jump from majori
 \label{fig:modelcomparison}
 \end{figure}
 
-The result was not simply ``deep learning beats everything''. Character and word TF--IDF remained competitive and became valuable ensemble members. This was one of the useful lessons from the project: in short clinical literals, surface form still matters.
+The result was not simply ``deep learning beats everything''. Character and word TF--IDF remained competitive and became valuable ensemble members. The result was useful even when those models were not the final model because they showed that, in short clinical literals, surface form still matters.
 
 The v10 search produced two important variants. The strongest validation-accuracy recipe was \texttt{vote\_diverse\_no\_retrieval\_val\_weighted}, with accuracy 0.583577, macro-F1 0.501074, and weighted-F1 0.564988. The final public candidate was \texttt{vote\_diverse\_no\_retrieval}, with validation accuracy 0.579562 and the best verified public score, 0.587. We report this distinction explicitly because internal validation and public leaderboard evidence are related but not identical.
 
@@ -369,15 +369,15 @@ The detailed leaderboard predictions are:
 outputs/predictions/final_leaderboard_detailed.csv
 \end{lstlisting}
 
-The observed Kaggle submission format for accepted files included exactly:
+The final Kaggle submission file contains exactly:
 \begin{lstlisting}
-id, Literal, y_category
+id, y_category
 \end{lstlisting}
 The best verified public score is 0.587 for \texttt{v10\_vote\_diverse\_no\_retrieval}. We do not state a final private ranking because no verified private leaderboard evidence is stored.
 
 \section{What Would Happen in a Hospital?}
 
-In a hospital, a system like this could help professional coders by suggesting candidate categories, highlighting uncertain cases, and making routine coding faster. It could improve consistency in records, accelerate statistics, and support DRG-related administrative workflows.
+In a hospital, a system like this could help professional coders by suggesting candidate categories, highlighting uncertain cases, and making routine coding faster. It could improve consistency in records, accelerate statistics, and support DRG-related administrative workflows. That is the positive scenario, but it only makes sense if the system is designed as support.
 
 The risks are equally real. A wrong code may affect reimbursement, hospital management indicators, quality statistics, or downstream clinical data reuse. If users trust the model too much, high-confidence errors could become harmful. Privacy is also central: clinical text must be handled under strict governance, with access control and anonymization where appropriate. Bias is another risk: if some categories, services, or language styles are underrepresented, the model may perform worse for them. For these reasons, the system should support professionals, not replace them. Interpretability tools should help review decisions, but human accountability remains necessary.
 
@@ -387,7 +387,7 @@ First, the target is only the broad ICD prefix, not the full ICD code. This make
 
 \section{Future Work}
 
-Future work could predict full ICD codes rather than only prefixes, use ICD descriptions more explicitly, model hierarchy through parent--child relations or graph neural networks, add calibrated confidence thresholds for human review, and compare with other teams' methods if allowed. Another promising path is a retrieval-augmented model that proposes similar historical literals and ICD descriptions together with the predicted category. Any augmentation should remain clinically safe: we would avoid random deletion, unverified synonym replacement, or changes that affect negation.
+Future work follows directly from these limitations. We could predict full ICD codes rather than only prefixes, use ICD descriptions more explicitly, model hierarchy through parent--child relations or graph neural networks, add calibrated confidence thresholds for human review, and compare with other teams' methods if allowed. Another promising path is a retrieval-augmented model that proposes similar historical literals and ICD descriptions together with the predicted category. Any augmentation should remain clinically safe: we would avoid random deletion, unverified synonym replacement, or changes that affect negation.
 
 \section{Conclusion and Reflection}
 
@@ -404,8 +404,8 @@ python -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 
-python -m src.data_loading
-python -m src.preprocessing
+python scripts/analyze_data_annotations.py
+python scripts/run_preprocessing.py
 python scripts/analyze_tokenization.py
 
 python models/v00_majority_baseline.py

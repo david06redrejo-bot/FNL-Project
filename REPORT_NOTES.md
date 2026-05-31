@@ -1,10 +1,14 @@
 # Report Notes
 
-This file accumulates observations, explanations, and writing ideas for the final report. The final report should be written in English and should sound like a student team progressively understanding the task through the course.
+This file collects observations, explanations, and writing ideas for the final
+report. The report should read as a student research story: we first inspected
+the data, then let each observation shape the next decision.
 
 ## 2026-05-31 — Initial Storyline After Repository Takeover
 
-The repository already suggests a good narrative arc, but it needs to be rebuilt and verified:
+The repository already suggested a useful narrative arc, but the first thing we
+learned was that the existing files could not simply be trusted. We needed to
+rebuild the story from verified data and reproducible outputs:
 
 1. We first understood that the task is not full-document ICD coding, but short clinical literal classification.
 2. The target for the Kaggle task is exactly one prefix category, `y_category`, defined as the first character of `Code`.
@@ -12,7 +16,10 @@ The repository already suggests a good narrative arc, but it needs to be rebuilt
 4. The early EDA reports describe very short inputs, around two words on average, with mixed Spanish/Catalan, abbreviations, accents, digits, and inconsistent casing.
 5. Existing reports claim strong label imbalance and many-to-many literal/code ambiguity. These points are central to the report, but must be rerun from the raw dataset before final claims.
 6. The survey/literature-review material motivates classic TF-IDF + SVM methods as reference baselines and also explains why neural models such as RoBERTa are worth testing.
-7. The final narrative should not pretend that the team knew the best method from the beginning. It should show a progression: inspect annotations, understand the challenge, build simple baselines, improve them, then compare with a RoBERTa backbone and decide based on evidence.
+7. The final narrative should not pretend that the team knew the best method
+   from the beginning. It should show the actual progression: inspect
+   annotations, understand the challenge, build simple baselines, learn from
+   their failures, compare with RoBERTa, and decide based on evidence.
 
 Important writing rule: do not fabricate leaderboard scores or validation results. Use only rerun metrics or clearly label historical notebook values as previous/reported results.
 
@@ -31,9 +38,11 @@ Potential report section order:
 
 ## 2026-05-31 — Repository Skeleton Implemented
 
-The final project structure now reflects the story we want the report to tell:
-we start with the data and annotations, then explain the main task challenges,
-then move from survey-inspired baselines to RoBERTa and improved models.
+The final project structure now reflects the story we want the report to tell.
+We start with the data and annotations, then explain the main task challenges,
+then move from survey-inspired baselines to RoBERTa and improved models. This
+changed the repository from a collection of experiments into a traceable
+project.
 
 The report should explicitly say that notebooks are narrative and scripts are
 the reproducibility backbone. This is a good way to show that the team learned
@@ -41,7 +50,10 @@ to separate exploration from reusable implementation.
 
 ## 1. Analyzing the Data and the Annotations
 
-We inspected all CSV files under `data/` and validated them against the competition annotation contract.
+We inspected all CSV files under `data/` and validated them against the
+competition annotation contract. This was the first real technical phase because
+we could not choose preprocessing, models, or evaluation until we knew what the
+labels actually meant.
 
 | File | Role | Shape | Schema status |
 |---|---|---:|---|
@@ -66,7 +78,9 @@ Warnings:
 
 We continued the first phase with a visual EDA inspired by a Data Engineering
 mindset: before modeling, we inspected the data-generating process, data
-quality, distributions, missingness, duplicates, and possible leakage.
+quality, distributions, missingness, duplicates, and possible leakage. After
+this first observation, the task stopped looking like a simple lookup problem
+and started looking like short-text clinical classification with ambiguity.
 
 Core size and annotation facts:
 
@@ -100,13 +114,16 @@ Normalization risk:
 - Normalization collision keys:
   2186
 
-No model has been trained yet; these are EDA conclusions only.
+No model had been trained yet at this point; these were EDA conclusions only.
+They became the reason for the next step: conservative preprocessing.
 
 ## Preprocessing Design: Light Cleaning for RoBERTa
 
-The final preprocessing decision is deliberately conservative. For the RoBERTa
-pipeline, we use only required light cleanup: convert null-safe values to text,
-strip leading/trailing spaces, and collapse repeated whitespace.
+The final preprocessing decision is deliberately conservative. The EDA suggested
+that accents, uppercase abbreviations, punctuation, and digits could carry
+meaning. For the RoBERTa pipeline, we therefore use only required light cleanup:
+convert null-safe values to text, strip leading/trailing spaces, and collapse
+repeated whitespace.
 
 We do **not** lowercase, remove accents, or remove punctuation for the final
 RoBERTa pipeline because the backbone tokenizer is pretrained on Spanish
@@ -134,7 +151,9 @@ required whitespace cleanup             3       0.000219
         punctuation removal          1338       0.097664
 ```
 
-No model has been trained yet; these are preprocessing-design conclusions only.
+No model had been trained yet at this point; these were preprocessing-design
+conclusions only. This is why the first models use the required-clean text
+instead of silently normalizing away clinical clues.
 
 ## Tokenizer Analysis Blocked
 
@@ -181,7 +200,9 @@ After reading Yan et al. (2022), we understood that automated ICD coding is not
 ordinary text classification. The survey frames ICD coding as a clinical,
 administrative, and hierarchical NLP problem: manual coding is slow, coding
 errors affect reimbursement and hospital management, and ICD supports
-statistics, standardization, DRGs, and medical-record management.
+statistics, standardization, DRGs, and medical-record management. This changed
+how we approached the project: even though our Kaggle target is only one prefix,
+we still treated imbalance, ambiguity, and interpretability as central issues.
 
 The survey also helped us decide what is realistic for this Kaggle assignment.
 We are not solving full multi-label ICD coding over long EMRs. Our target is one
@@ -222,12 +243,12 @@ macro_f1: 0.006181
 weighted_f1: 0.027854
 ```
 
-This result is useful because it separates class-prior performance from actual
-language understanding. The accuracy is not zero because the dataset is
-imbalanced, but the macro F1 is almost zero because the model never predicts the
-minority categories. In the report, we will use this as the minimum modeling
-threshold: every serious baseline must beat it and must predict a broader set
-of categories.
+The result was useful even though it was not meant to be competitive because it
+separated class-prior performance from actual language understanding. The
+accuracy is not zero because the dataset is imbalanced, but the macro F1 is
+almost zero because the model never predicts the minority categories. In the
+report, we use this as the minimum modeling threshold: every serious baseline
+must beat it and must predict a broader set of categories.
 
 ## Character TF-IDF Logistic Regression Baseline
 
@@ -237,10 +258,12 @@ coding survey's historical stage of traditional ML methods: before using
 Transformers, a strong vector-space baseline can already capture many surface
 patterns.
 
-Character n-grams are especially appropriate for these clinical literals
-because the text is short and often compact. They can capture Spanish
-morphology, abbreviations, punctuation, digits, laterality fragments, and pieces
-of medical terms even when whitespace tokenization is unreliable.
+Character n-grams are especially appropriate for these clinical literals because
+the text is short and often compact. This is why we moved from the majority
+baseline to a model that reads the literal surface form. Character n-grams can
+capture Spanish morphology, abbreviations, punctuation, digits, laterality
+fragments, and pieces of medical terms even when whitespace tokenization is
+unreliable.
 
 The internal grid compared:
 
