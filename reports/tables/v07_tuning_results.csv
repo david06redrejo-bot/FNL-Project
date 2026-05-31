@@ -1,0 +1,8 @@
+candidate_version,candidate_id,stage,max_length,learning_rate,batch_size,dropout,weight_decay,warmup_ratio,scheduler,gradient_clip,max_epochs,patience,train_limit,val_limit,use_amp,accuracy,macro_f1,weighted_f1,best_epoch,device
+v07_roberta_mean_tuning_c_recommended_32_lr2e5_warmup006_clip,c_recommended_32_lr2e5_warmup006_clip,stage_c,32,2e-05,128,0.1,0.01,0.06,linear,1.0,50,10,,,False,0.5645985401459854,0.4941507933282063,0.5490539680917063,13,cuda
+v07_roberta_mean_tuning_b_lr3e5_dropout2,b_lr3e5_dropout2,stage_b,32,3e-05,64,0.2,0.01,0.06,linear,1.0,4,2,4096.0,1024.0,False,0.4658203125,0.2606760414106327,0.3897876937540299,4,cuda
+v07_roberta_mean_tuning_b_warmup_32_lr2e5,b_warmup_32_lr2e5,stage_b,32,2e-05,64,0.1,0.01,0.06,linear,1.0,4,2,4096.0,1024.0,False,0.4345703125,0.2202066781925264,0.3487026449404466,4,cuda
+v07_roberta_mean_tuning_a_baseline_32_lr2e5,a_baseline_32_lr2e5,stage_a,32,2e-05,32,0.1,0.01,0.0,none,1.0,1,1,512.0,256.0,False,0.203125,0.03236637685513805,0.10262680330216138,1,cuda
+v07_roberta_mean_tuning_a_longer_64_lr3e5,a_longer_64_lr3e5,stage_a,64,3e-05,32,0.1,0.05,0.1,linear,1.0,1,1,512.0,256.0,False,0.1640625,0.02514746027979704,0.08117493479331593,1,cuda
+v07_roberta_mean_tuning_a_amp_32_lr2e5,a_amp_32_lr2e5,stage_a,32,2e-05,32,0.1,0.01,0.06,linear,1.0,1,1,512.0,256.0,True,0.15234375,0.028988257184851613,0.08408013474528567,1,cuda
+v07_roberta_mean_tuning_a_warmup_dropout_32_lr2e5,a_warmup_dropout_32_lr2e5,stage_a,32,2e-05,32,0.2,0.01,0.06,linear,1.0,1,1,512.0,256.0,False,0.15234375,0.028944934784740608,0.0845825001379082,1,cuda

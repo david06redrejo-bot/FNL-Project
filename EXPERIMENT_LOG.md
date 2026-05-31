@@ -330,6 +330,51 @@ Artifacts:
 - recall comparison vs v05: `reports/tables/v06_per_class_recall_vs_v05.csv`
 - canonical submission: `submissions/v06_roberta_mean_imbalance_aware_submission.csv`
 
+## Run v07_roberta_mean_tuning
+
+**Version:** `v07_roberta_mean_tuning`
+
+Staged search:
+- Stage A: quick subset sanity checks for max_length, dropout, warmup, weight
+  decay, and AMP.
+- Stage B: medium subset runs for promising learning-rate/dropout settings.
+- Stage C: one final full run with the recommended controlled configuration.
+
+Best candidate:
+- `c_recommended_32_lr2e5_warmup006_clip`
+
+Recommended mean-pooling training configuration:
+- max_length: 32
+- learning_rate: 2e-5
+- batch_size: 128
+- dropout: 0.1
+- weight_decay: 0.01
+- scheduler: linear warmup
+- warmup_ratio: 0.06
+- gradient_clip: 1.0
+- AMP: off for the final run
+
+Metrics:
+- `accuracy`: 0.564599
+- `macro_f1`: 0.494151
+- `weighted_f1`: 0.549054
+- `best_epoch`: 13
+
+Interpretation:
+The tuned mean-pooling configuration matched the standard v05 mean-pooling
+accuracy but did not improve over it, and it remains below the CLS model by
+validation accuracy. The experiment still gives a useful recommended training
+configuration for future mean-pooling runs: keep max_length 32 and lr 2e-5,
+use batch size 128 when GPU memory allows, and use gradient clipping plus a
+small warmup schedule. We did not expand into a large grid because the first
+controlled runs did not show a clear gain.
+
+Artifacts:
+- tuning table: `reports/tables/v07_tuning_results.csv`
+- top-run curves:
+  `reports/figures/v07_roberta_mean_tuning_c_recommended_32_lr2e5_warmup006_clip_training_curves.png`
+- canonical submission: `submissions/v07_roberta_mean_tuning_submission.csv`
+
 ## Run v05_roberta_mean_debug
 
 **Version:** `v05_roberta_mean_debug`
@@ -406,3 +451,14 @@ Metrics:
 - `weighted_f1`: 0.542396
 
 Run summary: `/home/iadlG010/FNL-Project/outputs/logs/v06_roberta_mean_imbalance_aware_focal_gamma2_run.md`
+
+## Run v07_roberta_mean_tuning
+
+**Version:** `v07_roberta_mean_tuning`
+
+Metrics:
+- `accuracy`: 0.564599
+- `macro_f1`: 0.494151
+- `weighted_f1`: 0.549054
+
+Run summary: `/home/iadlG010/FNL-Project/outputs/logs/v07_roberta_mean_tuning_run.md`

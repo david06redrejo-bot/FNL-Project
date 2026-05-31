@@ -245,6 +245,34 @@ The run writes:
 - `outputs/metrics/v06_roberta_mean_imbalance_aware_metrics.json`
 - `submissions/v06_roberta_mean_imbalance_aware_submission.csv`
 
+## 4.5 Controlled RoBERTa Mean-Pooling Tuning
+
+Run Stage A quick checks:
+
+```bash
+python models/v07_roberta_mean_tuning.py --stage stage_a
+```
+
+Run Stage B medium subset checks:
+
+```bash
+python models/v07_roberta_mean_tuning.py --stage stage_b
+```
+
+Run Stage C final full run:
+
+```bash
+python models/v07_roberta_mean_tuning.py --stage stage_c
+```
+
+The tuning script writes:
+
+- `reports/tables/v07_tuning_results.csv`
+- run configs under `outputs/logs/`
+- training curves under `reports/figures/`
+- `outputs/metrics/v07_roberta_mean_tuning_metrics.json`
+- `submissions/v07_roberta_mean_tuning_submission.csv`
+
 Before expensive model work, smoke-test the model-version interface:
 
 ```bash

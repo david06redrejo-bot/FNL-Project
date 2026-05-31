@@ -70,6 +70,12 @@ models:
     purpose: RoBERTa mean pooling with class-weighted and focal losses
     expensive: true
     status: implemented
+  v07_roberta_mean_tuning:
+    script: models/v07_roberta_mean_tuning.py
+    family: transformer
+    purpose: controlled hyperparameter tuning for RoBERTa mean pooling
+    expensive: true
+    status: implemented
   v03_roberta_cls:
     script: models/v03_roberta_cls.py
     family: transformer

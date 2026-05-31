@@ -487,3 +487,37 @@ than class weighting, but did not improve over the standard mean-pooling
 baseline. Therefore, imbalance-aware losses are useful ablations and evidence
 for the report, but they should not replace CLS as the current final candidate
 under the competition's accuracy-oriented objective.
+
+## RoBERTa Mean-Pooling Hyperparameter Tuning
+
+We implemented `v07_roberta_mean_tuning` as a controlled staged search rather
+than a large grid. The tuned parameters were chosen because they matter for
+Transformer fine-tuning and because they are connected to previous evidence:
+
+- `max_length`: informed by tokenization analysis, with 32 as the default and 64
+  as a sanity check;
+- learning rate: 1e-5, 2e-5, and 3e-5 were considered, with controlled runs for
+  2e-5 and 3e-5;
+- batch size: 32 for quick checks, 64 for medium runs, 128 for full training;
+- dropout and weight decay: regularization knobs because validation loss rises
+  after the best epoch;
+- warmup scheduler and gradient clipping: standard stabilizers for PLM
+  fine-tuning;
+- AMP: tested in Stage A only, kept off for the final run for reproducibility.
+
+The final Stage C configuration used max_length 32, learning rate 2e-5, batch
+size 128, dropout 0.1, weight decay 0.01, linear warmup ratio 0.06, and gradient
+clipping 1.0.
+
+Validation result:
+
+```text
+accuracy: 0.564599
+macro_f1: 0.494151
+weighted_f1: 0.549054
+best_epoch: 13
+```
+
+This matched the standard mean-pooling accuracy but did not beat CLS. Therefore
+the recommended mean-pooling training configuration is useful for future runs,
+but CLS remains the current final candidate by validation accuracy.

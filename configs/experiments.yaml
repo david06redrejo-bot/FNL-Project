@@ -74,6 +74,16 @@ completed_experiments:
     best_candidate: focal_gamma1
     best_epoch: 9
     lesson: imbalance-aware losses did not beat mean pooling by accuracy; class weighting improved macro F1 but hurt accuracy.
+  - id: v07_roberta_mean_tuning
+    script: models/v07_roberta_mean_tuning.py
+    family: transformer
+    status: completed
+    validation_accuracy: 0.564599
+    macro_f1: 0.494151
+    weighted_f1: 0.549054
+    best_candidate: c_recommended_32_lr2e5_warmup006_clip
+    best_epoch: 13
+    lesson: warmup and gradient clipping matched standard mean-pooling accuracy but did not beat CLS or v05 macro F1.
 
 advanced_experiment_roadmap:
   - id: exp_class_weighted_loss
@@ -100,7 +110,7 @@ advanced_experiment_roadmap:
     expected_benefit: avoid accidental truncation and confirm robustness.
     risk: likely small gain; larger max_length increases memory.
     implementation_cost: low
-    decision: maybe
+    decision: completed_ablation
   - id: exp_learning_rate_tuning
     candidate: learning-rate tuning
     hypothesis: 1e-5 or 3e-5 may improve convergence over 2e-5.
@@ -108,7 +118,7 @@ advanced_experiment_roadmap:
     expected_benefit: better validation peak or smoother training.
     risk: more GPU time.
     implementation_cost: low
-    decision: implement
+    decision: completed_ablation
   - id: exp_freeze_unfreeze
     candidate: freezing and unfreezing backbone
     hypothesis: freezing early may reduce overfitting, then unfreezing can adapt the PLM.
@@ -132,7 +142,7 @@ advanced_experiment_roadmap:
     expected_benefit: smoother early training and possibly better peak accuracy.
     risk: additional schedule hyperparameters.
     implementation_cost: low
-    decision: implement
+    decision: completed_ablation
   - id: exp_label_smoothing
     candidate: label smoothing
     hypothesis: smoothing may help ambiguous short literals and reduce overconfidence.
@@ -148,7 +158,7 @@ advanced_experiment_roadmap:
     expected_benefit: better generalization.
     risk: excessive dropout may underfit short signals.
     implementation_cost: low
-    decision: implement
+    decision: completed_ablation
   - id: exp_safe_data_augmentation
     candidate: data augmentation only if safe
     hypothesis: conservative augmentation may improve minority categories.
