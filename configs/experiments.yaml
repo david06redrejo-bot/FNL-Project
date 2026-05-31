@@ -1,26 +1,173 @@
-experiments:
+project:
+  name: uab-asho-ai-codification
+  team: Team 10
+  target: y_category
+  selection_metric: validation_accuracy
+  secondary_metrics:
+    - macro_f1
+    - weighted_f1
+  split:
+    strategy: stratified_train_validation
+    train_fraction: 0.8
+    validation_fraction: 0.2
+    stratify_by: label_id
+    seed: 42
+
+completed_experiments:
   - id: v00_majority_baseline
     script: models/v00_majority_baseline.py
-    status: scaffolded
+    family: sanity_baseline
+    status: completed
+    validation_accuracy: 0.125182
+    macro_f1: 0.006181
+    weighted_f1: 0.027854
+    lesson: class imbalance alone gives non-trivial accuracy but almost no macro F1.
   - id: v01_tfidf_char_logreg
     script: models/v01_tfidf_char_logreg.py
-    status: scaffolded
+    family: classical_tfidf
+    status: completed
+    validation_accuracy: 0.522628
+    macro_f1: 0.402554
+    weighted_f1: 0.494943
+    lesson: character n-grams capture useful clinical surface patterns.
   - id: v02_tfidf_word_svm
     script: models/v02_tfidf_word_svm.py
-    status: scaffolded
-  - id: v03_roberta_cls
-    script: models/v03_roberta_cls.py
-    status: interface_scaffolded
-  - id: v04_roberta_mean
-    script: models/v04_roberta_mean.py
-    status: interface_scaffolded
-  - id: v05_roberta_mean_class_weighted
-    script: models/v05_roberta_mean_class_weighted.py
-    status: interface_scaffolded
-  - id: v06_roberta_mean_augmented
-    script: models/v06_roberta_mean_augmented.py
-    status: interface_scaffolded
-  - id: v07_ensemble
-    script: models/v07_ensemble.py
-    status: interface_scaffolded
+    family: classical_tfidf
+    status: completed
+    validation_accuracy: 0.520073
+    macro_f1: 0.474196
+    weighted_f1: 0.514018
+    lesson: word-level lexical features improve macro F1 over char logistic regression.
+  - id: v03_similarity_retrieval_baseline
+    script: models/v03_similarity_retrieval_baseline.py
+    family: retrieval
+    status: completed
+    validation_accuracy: 0.497445
+    macro_f1: 0.462789
+    weighted_f1: 0.496120
+    lesson: nearest-neighbor retrieval is useful but limited by ambiguous literals.
+  - id: v04_roberta_cls
+    script: models/v04_roberta_cls.py
+    family: transformer
+    status: completed
+    validation_accuracy: 0.569343
+    macro_f1: 0.494329
+    weighted_f1: 0.554347
+    best_epoch: 10
+    lesson: CLS pooling is the current candidate final model by validation accuracy.
+  - id: v05_roberta_mean
+    script: models/v05_roberta_mean.py
+    family: transformer
+    status: completed
+    validation_accuracy: 0.564599
+    macro_f1: 0.496567
+    weighted_f1: 0.549541
+    best_epoch: 10
+    lesson: mean pooling slightly improves macro F1 but does not beat CLS accuracy.
 
+advanced_experiment_roadmap:
+  - id: exp_class_weighted_loss
+    candidate: class-weighted loss
+    hypothesis: weighting rare categories should improve recall and macro F1.
+    reason: EDA and per-class metrics show rare labels with zero or low recall.
+    expected_benefit: better minority-class recall and macro F1.
+    risk: lower overall accuracy if frequent categories are over-penalized.
+    implementation_cost: low
+    decision: implement
+    planned_script: models/v06_roberta_mean_class_weighted.py
+  - id: exp_focal_loss
+    candidate: focal loss
+    hypothesis: focusing on hard examples may help ambiguous and minority cases.
+    reason: survey highlights imbalance; retrieval examples reveal difficult near-duplicates.
+    expected_benefit: improved hard-example learning.
+    risk: extra hyperparameters and possible instability.
+    implementation_cost: medium
+    decision: maybe
+  - id: exp_max_length_tuning
+    candidate: max_length tuning
+    hypothesis: nearby max_length values may affect rare longer literals without much cost.
+    reason: tokenization analysis recommends 32, but p99 is close enough to test 48 or 64.
+    expected_benefit: avoid accidental truncation and confirm robustness.
+    risk: likely small gain; larger max_length increases memory.
+    implementation_cost: low
+    decision: maybe
+  - id: exp_learning_rate_tuning
+    candidate: learning-rate tuning
+    hypothesis: 1e-5 or 3e-5 may improve convergence over 2e-5.
+    reason: training curves show overfitting after epoch 10, so optimization schedule matters.
+    expected_benefit: better validation peak or smoother training.
+    risk: more GPU time.
+    implementation_cost: low
+    decision: implement
+  - id: exp_freeze_unfreeze
+    candidate: freezing and unfreezing backbone
+    hypothesis: freezing early may reduce overfitting, then unfreezing can adapt the PLM.
+    reason: short dataset and short literals increase overfitting risk.
+    expected_benefit: more stable training.
+    risk: underfitting if frozen too long.
+    implementation_cost: medium
+    decision: maybe
+  - id: exp_layerwise_lr_decay
+    candidate: layer-wise learning rate decay
+    hypothesis: lower layers need smaller updates than higher layers and classifier head.
+    reason: pretrained biomedical representations should be preserved.
+    expected_benefit: safer fine-tuning.
+    risk: more complex optimizer groups.
+    implementation_cost: medium
+    decision: future_work
+  - id: exp_warmup_scheduler
+    candidate: warmup scheduler
+    hypothesis: warmup plus decay may stabilize transformer fine-tuning.
+    reason: course material on neural training and common PLM fine-tuning practice.
+    expected_benefit: smoother early training and possibly better peak accuracy.
+    risk: additional schedule hyperparameters.
+    implementation_cost: low
+    decision: implement
+  - id: exp_label_smoothing
+    candidate: label smoothing
+    hypothesis: smoothing may help ambiguous short literals and reduce overconfidence.
+    reason: same literal can map to different categories in the data.
+    expected_benefit: better calibration and robustness.
+    risk: may hurt strict accuracy if labels are mostly reliable.
+    implementation_cost: low
+    decision: maybe
+  - id: exp_dropout_tuning
+    candidate: dropout tuning
+    hypothesis: dropout 0.2 or 0.3 may reduce overfitting after best epoch.
+    reason: train loss keeps falling while validation loss rises.
+    expected_benefit: better generalization.
+    risk: excessive dropout may underfit short signals.
+    implementation_cost: low
+    decision: implement
+  - id: exp_safe_data_augmentation
+    candidate: data augmentation only if safe
+    hypothesis: conservative augmentation may improve minority categories.
+    reason: imbalance remains a problem, but clinical text normalization is risky.
+    expected_benefit: more examples for rare classes.
+    risk: changing clinical meaning or creating wrong labels.
+    implementation_cost: high
+    decision: maybe
+  - id: exp_pseudo_labeling
+    candidate: pseudo-labeling leaderboard data
+    hypothesis: high-confidence predictions may adapt to leaderboard distribution.
+    reason: EDA noted possible train-leaderboard length and distribution shifts.
+    expected_benefit: better leaderboard performance.
+    risk: confirmation bias and leakage-like overfitting to public leaderboard.
+    implementation_cost: high
+    decision: future_work
+  - id: exp_ensembling
+    candidate: ensembling best classical and RoBERTa models
+    hypothesis: TF-IDF and RoBERTa make different errors.
+    reason: classical models have strong macro F1; RoBERTa has best accuracy.
+    expected_benefit: improved accuracy and robustness.
+    risk: calibration differences and more complex submission pipeline.
+    implementation_cost: medium
+    decision: implement
+  - id: exp_calibration_analysis
+    candidate: calibration and confidence analysis
+    hypothesis: confidence patterns can guide thresholding, ensembling, and error analysis.
+    reason: clinical deployment needs interpretability and uncertainty awareness.
+    expected_benefit: better diagnostic understanding, maybe better ensemble weights.
+    risk: may not directly improve Kaggle score.
+    implementation_cost: medium
+    decision: implement

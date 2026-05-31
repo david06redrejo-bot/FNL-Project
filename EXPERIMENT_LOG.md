@@ -269,6 +269,30 @@ selection criterion. Mean pooling did slightly improve macro F1 (`0.4966` vs
 `0.4943`), which suggests that averaging token evidence may help some
 minority-category behavior on short literals.
 
+## Advanced Experiment Roadmap
+
+No new advanced model was trained in this step. We created a structured roadmap
+before adding more model variants.
+
+Inputs used:
+- EDA: imbalance, duplicates, ambiguous literals, possible distribution shift.
+- Preprocessing: conservative required-clean text remains the default.
+- Baselines: TF-IDF and retrieval define strong non-neural references.
+- RoBERTa CLS: current best validation accuracy, `0.569343`.
+- RoBERTa mean: slightly better macro F1, `0.496567`, but lower accuracy.
+
+Decisions:
+- implement next: class-weighted loss, learning-rate tuning, warmup scheduler,
+  dropout tuning, ensembling, calibration/confidence analysis.
+- maybe: focal loss, max-length tuning, freezing/unfreezing, label smoothing,
+  safe data augmentation.
+- future work: layer-wise learning-rate decay, pseudo-labeling.
+
+Roadmap artifacts:
+- `configs/experiments.yaml`
+- `reports/tables/advanced_experiment_roadmap.csv`
+- `notebooks/05_advanced_model_experiments.ipynb`
+
 ## Run v05_roberta_mean_debug
 
 **Version:** `v05_roberta_mean_debug`

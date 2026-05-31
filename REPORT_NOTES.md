@@ -418,3 +418,43 @@ CLS has higher accuracy, while mean pooling has slightly higher macro F1. Since
 the competition is accuracy-oriented, CLS remains the current candidate final
 model, but mean pooling is a strong alternative when looking at minority-class
 balance.
+
+## Advanced Model Experiment Roadmap
+
+Before implementing more advanced models, we created a structured roadmap. This
+was important because the project already had many possible directions, and we
+wanted the next experiments to answer clear questions rather than become random
+model stacking.
+
+What we learned so far:
+
+- EDA showed imbalance, ambiguity, duplicated literals, and possible leaderboard
+  distribution shift.
+- Preprocessing showed that clinical Spanish should not be aggressively
+  normalized for RoBERTa.
+- Classical baselines showed that surface lexical information is already strong.
+- Retrieval showed that similarity is intuitive but fragile when literals are
+  ambiguous.
+- CLS pooling is the current best model by validation accuracy.
+- Mean pooling slightly improves macro F1 but does not beat CLS accuracy.
+
+Remaining weaknesses:
+
+- rare categories still have very low recall;
+- some labels have zero recall in the RoBERTa validation reports;
+- validation loss rises after the best epoch, suggesting overfitting;
+- short literals can lack context;
+- leaderboard shift cannot be ruled out from observed fields alone.
+
+Next planned priorities:
+
+- class-weighted loss;
+- learning-rate and warmup tuning;
+- dropout tuning;
+- ensembling best classical and RoBERTa models;
+- calibration and confidence/error analysis.
+
+Maybe/future directions include focal loss, label smoothing, freezing/unfreezing,
+safe augmentation, layer-wise learning-rate decay, and pseudo-labeling. These
+are useful ideas, but they need controlled validation before becoming final
+claims.
