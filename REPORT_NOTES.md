@@ -284,3 +284,44 @@ tokens help the model distribute predictions across classes more evenly, while
 character n-grams are very strong for exact surface-form cues. Both baselines
 are useful before moving to Transformers because they define what can be solved
 with sparse vector representations alone.
+
+## Similarity Retrieval Baseline
+
+We implemented `v03_similarity_retrieval_baseline` as an optional traditional
+method inspired by the information-retrieval view of ICD coding. Instead of
+training a discriminative classifier, the model retrieves the nearest known
+clinical literal or ICD description and assigns the retrieved item's
+`y_category`.
+
+The dataset contains `data/raw/icd_d_p_pairs.csv`, with ICD `Code`, `D_P`, and
+`Description`, so we tested both training-literal retrieval and literal-to-ICD
+description retrieval.
+
+Best validation configuration:
+
+```text
+retrieval index: training literals
+representation: TF-IDF char_wb
+ngram_range: (3, 5)
+k: 1
+```
+
+Validation results:
+
+```text
+accuracy: 0.497445
+macro_f1: 0.462789
+weighted_f1: 0.496120
+```
+
+The training-literal nearest-neighbor variant worked better than direct
+literal-to-description retrieval. The description methods were weaker, likely
+because the competition literals are short, informal, abbreviated, and sometimes
+closer to hospital coding phrases than to formal ICD descriptions.
+
+The nearest-neighbor examples were very informative. Some correct predictions
+come from exact or near-exact literal matches. Some wrong predictions also have
+cosine similarity 1.0, which reveals an important risk: identical or nearly
+identical literals can map to different categories when the original code
+differs. This supports the decision to keep retrieval as an ablation and move on
+to stronger learned models.

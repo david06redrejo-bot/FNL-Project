@@ -1,0 +1,41 @@
+method,query_literal,true_y_category,predicted_y_category,nearest_text,nearest_code,nearest_y_category,cosine_similarity,is_correct
+train_literal_char_wb_3-5_k1,Sjögren,7,M,Sjogren,M3500,M,1.0,False
+train_literal_char_wb_3-5_k1,rectocele,6,N,Rectocele,N816,N,1.0,False
+train_literal_char_wb_3-5_k1,Conización,6,0,Conización,0UBC8ZZ,0,1.0,False
+train_literal_char_wb_3-5_k1,historia ca MAMA,V,Z,Historia ca mama,Z853,Z,1.0,False
+train_literal_char_wb_3-5_k1,Eventración,5,K,eventración,K432,K,1.0,False
+train_literal_char_wb_3-5_k1,Artrosi,7,M,Artrosi,M1990,M,1.0,False
+train_literal_char_wb_3-5_k1,Ecografia toràcica,8,B,Ecografia torácica,BH4BZZZ,B,1.0,False
+train_literal_char_wb_3-5_k1,VIH A3,0,Z,VIH+,Z21,Z,1.0,False
+train_literal_char_wb_3-5_k1,extracción de diu,9,Z,EXTRACCIÓN DE DIU,Z30432,Z,1.0,False
+train_literal_char_wb_3-5_k1,CDI,1,8,cdi,85003,8,1.0,False
+train_literal_char_wb_3-5_k1,vulvectomía parcial,7,0,Vulvectomía parcial,0UBM0ZZ,0,1.0,False
+train_literal_char_wb_3-5_k1,Mamoplastia de aumento,V,Z,mamoplastia de aumento,Z9882,Z,1.0,False
+train_literal_char_wb_3-5_k1,desgarro grado IIIA,0,O,desgarro grado IIIA,O7021,O,1.0,False
+train_literal_char_wb_3-5_k1,Ooforectomía izquierda,0,Z,OOFORECTOMÍA IZQUIERDA,Z90721,Z,1.0,False
+train_literal_char_wb_3-5_k1,ecografía,B,8,ecografía,8876,8,1.0,False
+train_literal_char_wb_3-5_k1,foramen oval permeable,7,Q,Foramen oval permeable,Q211,Q,1.0,False
+train_literal_char_wb_3-5_k1,Piernas inquietas,G,3,piernas inquietas,33394,3,1.0,False
+train_literal_char_wb_3-5_k1,osea,1,C,ÓSEA,C7951,C,1.0,False
+train_literal_char_wb_3-5_k1,drenaje pleural,0,3,Drenaje pleural,3404,3,1.0,False
+train_literal_char_wb_3-5_k1,Déficit de ácido fólico,2,E,Déficit de ácido fólico,E538,E,1.0,False
+train_literal_char_wb_3-5_k1,rge,5,K,rge,K219,K,1.0,False
+train_literal_char_wb_3-5_k1,crohn part,K,O,crohn part,O9962,O,1.0,False
+train_literal_char_wb_3-5_k1,peg,0,B,PEG,BW25ZZZ,B,1.0,False
+train_literal_char_wb_3-5_k1,FIBROMIALGIA,M,7,Fibromialgia,7291,7,1.0,False
+train_literal_char_wb_3-5_k1,leiomiomas,D,8,LEIOMIOMAS,88900,8,1.0,False
+train_literal_char_wb_3-5_k1,enol,F,3,Enol,30501,3,1.0,False
+train_literal_char_wb_3-5_k1,fIV,O,V,FIV,V2385,V,1.0,False
+train_literal_char_wb_3-5_k1,bronconeumonia,4,J,bronconeumonía,J180,J,1.0,False
+train_literal_char_wb_3-5_k1,HPV parto,O,B,HPV PARTO,B977,B,1.0,False
+train_literal_char_wb_3-5_k1,hiperfosforemia,2,E,hiperfosforemia,E8339,E,1.0,False
+train_literal_char_wb_3-5_k1,fístula rectovaginal,6,N,FÍSTULA RECTOVAGINAL,N823,N,1.0,False
+train_literal_char_wb_3-5_k1,desgarro periuretral,O,0,Desgarro periuretral,0TQD7ZZ,0,1.0,False
+train_literal_char_wb_3-5_k1,Rasgo talasémico part,O,D,Rasgo talasémico part,D563,D,1.0,False
+train_literal_char_wb_3-5_k1,Alergia a codeina,Z,V,Alergia a CODEÍNA,V146,V,1.0,False
+train_literal_char_wb_3-5_k1,Desgarro I grado,6,O,desgarro I grado,O700,O,1.0,False
+train_literal_char_wb_3-5_k1,dialisis,Z,5,dialisis,5A1D70Z,5,1.0,False
+train_literal_char_wb_3-5_k1,BRDHH,4,I,BRDHH,I4510,I,1.0,False
+train_literal_char_wb_3-5_k1,Saos,G,3,saos,32723,3,1.0,False
+train_literal_char_wb_3-5_k1,Hematúria,R,5,hematuria,59970,5,1.0,False
+train_literal_char_wb_3-5_k1,vía central,0,3,via central,3893,3,1.0,False

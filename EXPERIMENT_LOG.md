@@ -163,3 +163,33 @@ Metrics:
 - `weighted_f1`: 0.045455
 
 Run summary: `/home/iadlG010/FNL-Project/outputs/logs/v07_ensemble_debug_run.md`
+
+## Run v03_similarity_retrieval_baseline
+
+**Version:** `v03_similarity_retrieval_baseline`
+
+Metrics:
+- `accuracy`: 0.497445
+- `macro_f1`: 0.462789
+- `weighted_f1`: 0.496120
+
+Run summary: `/home/iadlG010/FNL-Project/outputs/logs/v03_similarity_retrieval_baseline_run.md`
+
+Best validation configuration:
+- retrieval index: training literals
+- representation: TF-IDF `char_wb`
+- n-gram range: `(3, 5)`
+- k: 1
+
+Grid results were saved to `reports/tables/v03_similarity_retrieval_grid.csv`.
+Correct and wrong nearest-neighbor examples were saved to
+`reports/tables/v03_similarity_correct_neighbors.csv` and
+`reports/tables/v03_similarity_wrong_neighbors.csv`.
+
+Interpretation:
+The retrieval baseline is useful but not the strongest classical method. It is
+below `v01_tfidf_char_logreg` in accuracy and below `v02_tfidf_word_svm` in macro
+F1. The ICD-description retrieval variants performed worse than training-literal
+retrieval, probably because the short clinical literals do not always match the
+formal ICD description wording. We keep this method as a survey-inspired
+ablation, not as the main modeling direction.

@@ -1,0 +1,41 @@
+method,query_literal,true_y_category,predicted_y_category,nearest_text,nearest_code,nearest_y_category,cosine_similarity,is_correct
+train_literal_char_wb_3-5_k1,mastopatia fibroquistica,N,N,Mastopatía fibroquística,N6019,N,1.0,True
+train_literal_char_wb_3-5_k1,Carcinoma ductal infiltrante,8,8,CARCINOMA DUCTAL INFILTRANTE,85003,8,1.0,True
+train_literal_char_wb_3-5_k1,Misoprostol aborto,1,1,misoprostol aborto,10A07ZX,1,1.0,True
+train_literal_char_wb_3-5_k1,vejiga neurógena,N,N,Vejiga neurógena,N319,N,1.0,True
+train_literal_char_wb_3-5_k1,esteatosis hepatica,5,5,Esteatosis hepàtica,5718,5,1.0,True
+train_literal_char_wb_3-5_k1,Ecografia renal:,B,B,Ecografia Renal,BT4JZZZ,B,1.0,True
+train_literal_char_wb_3-5_k1,AngioTC torácico,B,B,AngioTC torácico,B32TZZZ,B,1.0,True
+train_literal_char_wb_3-5_k1,ca mam bilateral,C,C,ca mam bilateral,C50912,C,1.0,True
+train_literal_char_wb_3-5_k1,déficit factor VII,D,D,deficit factor VII,D682,D,1.0,True
+train_literal_char_wb_3-5_k1,cefalea dural posparto,O,O,Cefalea dural posparto,O745,O,1.0,True
+train_literal_char_wb_3-5_k1,ALERGIAS: AINES,Z,Z,"ALERGIAS: AINES,",Z886,Z,1.0,True
+train_literal_char_wb_3-5_k1,legrado evacuador obstétrico,1,1,LEGRADO EVACUADOR OBSTETRICO,10D17ZZ,1,1.0,True
+train_literal_char_wb_3-5_k1,insuficiencia mitral reumatica,I,I,Insuficiència mitral reumàtica,I051,I,1.0,True
+train_literal_char_wb_3-5_k1,Hemangioma Hepatico,D,D,hemangioma hepatico,D1803,D,1.0,True
+train_literal_char_wb_3-5_k1,drenaje Mama derecha,0,0,DRENAJE mama derecha,0H9T0ZZ,0,1.0,True
+train_literal_char_wb_3-5_k1,LIQUEN,L,L,Liquen,L280,L,1.0,True
+train_literal_char_wb_3-5_k1,Artritis Reumatoide,M,M,Artritis reumatoide,M069,M,1.0,True
+train_literal_char_wb_3-5_k1,tabaquismo parto,F,F,Tabaquismo parto,F17210,F,1.0,True
+train_literal_char_wb_3-5_k1,Depressió,3,3,depressió,311,3,1.0,True
+train_literal_char_wb_3-5_k1,cistectomía radical,0,0,cistectomía radical,0TTB0ZZ,0,1.0,True
+train_literal_char_wb_3-5_k1,Hemorroides pp,O,O,hemorroides pp,O872,O,1.0,True
+train_literal_char_wb_3-5_k1,Ecografía RENOVESICAL,B,B,ecografía renovesical,BT4JZZZ,B,1.0,True
+train_literal_char_wb_3-5_k1,Miocardiopatia dilatada,I,I,Miocardiopatía dilatada,I420,I,1.0,True
+train_literal_char_wb_3-5_k1,cateter DOBLE J BILATERAL,0,0,CATÉTER DOBLE J BILATERAL,0T9880Z,0,1.0,True
+train_literal_char_wb_3-5_k1,cervicalgia,7,7,Cervicalgia,7231,7,1.0,True
+train_literal_char_wb_3-5_k1,"Déficit de vitamina D,",E,E,Déficit de vitamina D,E559,E,1.0,True
+train_literal_char_wb_3-5_k1,Absces de pulmo,5,5,Abscés de pulmó,5130,5,1.0,True
+train_literal_char_wb_3-5_k1,ÚTERO MIOMATOSO,D,D,Utero miomatoso,D259,D,1.0,True
+train_literal_char_wb_3-5_k1,leiomioma uterino,D,D,LEIOMIOMA UTERINO,D259,D,1.0,True
+train_literal_char_wb_3-5_k1,Grupo A+,Z,Z,Grupo A,Z6710,Z,1.0,True
+train_literal_char_wb_3-5_k1,Historia de Radioterapia,Z,Z,Historia de RADIOTERAPIA,Z923,Z,1.0,True
+train_literal_char_wb_3-5_k1,Escherichia Coli,B,B,Escherichia coli,B9620,B,1.0,True
+train_literal_char_wb_3-5_k1,Depresion parto,F,F,Depresión parto,F329,F,1.0,True
+train_literal_char_wb_3-5_k1,Ecocardiografía rn,B,B,Ecocardiografia rn,B24DZZZ,B,1.0,True
+train_literal_char_wb_3-5_k1,sop parto,E,E,Sop parto,E282,E,1.0,True
+train_literal_char_wb_3-5_k1,Diabetes Mellitus tipo II,E,E,Diabetes mellitus tipo II,E119,E,1.0,True
+train_literal_char_wb_3-5_k1,Vasculitis leucocitoclástica,M,M,vasculitis leucocitoclástica,M310,M,1.0,True
+train_literal_char_wb_3-5_k1,HEMORRAGIA POST PARTO. -,O,O,Hemorragia post parto,O721,O,1.0,True
+train_literal_char_wb_3-5_k1,ECOGRAFIA RENO-VESICAL,B,B,Ecografía reno-vesical,BT4JZZZ,B,1.0,True
+train_literal_char_wb_3-5_k1,gemelar monocorial-biamniótica,O,O,gemelar monocorial biamniotica,O30033,O,1.0,True

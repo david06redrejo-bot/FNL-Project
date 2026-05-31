@@ -109,6 +109,7 @@ After placing data in `data/raw/`, run:
 python models/v00_majority_baseline.py
 python models/v01_tfidf_char_logreg.py
 python models/v02_tfidf_word_svm.py
+python models/v03_similarity_retrieval_baseline.py
 ```
 
 `v01_tfidf_char_logreg.py` runs the internal character n-gram grid and writes:
@@ -125,6 +126,15 @@ python models/v02_tfidf_word_svm.py
 - `reports/figures/fig_10_classical_baseline_comparison.png`
 - `outputs/checkpoints/v02_tfidf_word_svm.joblib`
 - `submissions/v02_tfidf_word_svm_submission.csv`
+
+`v03_similarity_retrieval_baseline.py` runs the optional survey-inspired
+retrieval baseline and writes:
+
+- `reports/tables/v03_similarity_retrieval_grid.csv`
+- `reports/tables/v03_similarity_correct_neighbors.csv`
+- `reports/tables/v03_similarity_wrong_neighbors.csv`
+- `outputs/checkpoints/v03_similarity_retrieval_baseline.joblib`
+- `submissions/v03_similarity_retrieval_baseline_submission.csv`
 
 Before expensive model work, smoke-test the model-version interface:
 

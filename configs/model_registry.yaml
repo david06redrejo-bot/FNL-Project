@@ -46,6 +46,12 @@ models:
     purpose: survey-inspired TF-IDF linear SVM baseline
     expensive: false
     status: interface_ready
+  v03_similarity_retrieval_baseline:
+    script: models/v03_similarity_retrieval_baseline.py
+    family: classical_retrieval
+    purpose: survey-inspired nearest-neighbor and ICD-description retrieval baseline
+    expensive: false
+    status: implemented
   v03_roberta_cls:
     script: models/v03_roberta_cls.py
     family: transformer
