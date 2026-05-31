@@ -347,3 +347,41 @@ The smoke test used only 16 training examples and 8 validation examples with a
 tiny classifier. It did not train the full RoBERTa model. Its purpose was to
 verify that the tokenizer, datasets, dataloaders, metrics, checkpointing, and
 submission contract work together before the expensive Transformer experiments.
+
+## RoBERTa CLS-Pooling Baseline
+
+We implemented `v04_roberta_cls` as the required deep learning baseline. The
+model uses `PlanTL-GOB-ES/roberta-base-biomedical-clinical-es` as the backbone,
+takes the first token representation (`hidden_states[:, 0, :]`) as the CLS
+feature, applies dropout 0.1, and predicts the 36 ICD categories with a linear
+classification layer.
+
+Training configuration:
+
+```text
+learning_rate: 2e-5
+weight_decay: 0.01
+batch_size: 128
+max_epochs: 50
+patience: 10
+best_epoch: 10
+device: cuda
+```
+
+Validation results from the best checkpoint:
+
+```text
+accuracy: 0.569343
+macro_f1: 0.494329
+weighted_f1: 0.554347
+```
+
+The public/reference CLS accuracy mentioned for orientation is 0.565, but we do
+not treat that as our reproduced Kaggle public score. Our number above is the
+internal validation result on the project's stratified 80/20 split.
+
+This result is an important milestone because it beats the classical baselines
+in accuracy and weighted F1. However, macro F1 remains close to the best
+traditional methods, so the next Transformer experiments should focus on
+minority-category robustness, pooling choices, class weighting, and error
+analysis rather than only improving overall accuracy.

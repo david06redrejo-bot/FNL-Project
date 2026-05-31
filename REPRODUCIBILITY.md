@@ -157,6 +157,40 @@ Run the infrastructure tests with:
 pytest -q tests/test_deep_learning_infrastructure.py tests/test_preprocessing.py
 ```
 
+## 4.2 RoBERTa CLS Baseline
+
+Run a tiny debug job first:
+
+```bash
+python models/v04_roberta_cls.py --debug
+```
+
+Run the full CLS-pooling baseline:
+
+```bash
+python models/v04_roberta_cls.py
+```
+
+Default full-training configuration:
+
+- backbone: `PlanTL-GOB-ES/roberta-base-biomedical-clinical-es`
+- pooling: CLS token, `hidden_states[:, 0, :]`
+- learning rate: `2e-5`
+- weight decay: `0.01`
+- batch size: `128`
+- max epochs: `50`
+- patience: `10`
+- default max length: `32`
+
+The run writes:
+
+- `outputs/checkpoints/v04_roberta_cls.pt`
+- `outputs/metrics/v04_roberta_cls_metrics.json`
+- `outputs/logs/v04_roberta_cls_history.csv`
+- `outputs/predictions/v04_roberta_cls_val_predictions.csv`
+- `outputs/predictions/v04_roberta_cls_leaderboard_detailed.csv`
+- `submissions/v04_roberta_cls_submission.csv`
+
 Before expensive model work, smoke-test the model-version interface:
 
 ```bash

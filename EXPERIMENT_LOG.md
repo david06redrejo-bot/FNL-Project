@@ -193,3 +193,40 @@ F1. The ICD-description retrieval variants performed worse than training-literal
 retrieval, probably because the short clinical literals do not always match the
 formal ICD description wording. We keep this method as a survey-inspired
 ablation, not as the main modeling direction.
+
+## Run v04_roberta_cls
+
+**Version:** `v04_roberta_cls`
+
+Metrics:
+- `accuracy`: 0.569343
+- `macro_f1`: 0.494329
+- `weighted_f1`: 0.554347
+
+Run summary: `/home/iadlG010/FNL-Project/outputs/logs/v04_roberta_cls_run.md`
+
+Configuration:
+- backbone: `PlanTL-GOB-ES/roberta-base-biomedical-clinical-es`
+- pooling: CLS token, `hidden_states[:, 0, :]`
+- hidden size: 768
+- number of classes: 36
+- dropout: 0.1
+- optimizer: AdamW
+- learning rate: 2e-5
+- weight decay: 0.01
+- batch size: 128
+- max epochs: 50
+- patience: 10
+- best epoch: 10
+
+Artifacts:
+- history: `outputs/logs/v04_roberta_cls_history.csv`
+- training curves: `reports/figures/fig_11_roberta_cls_training_curves.png`
+- submission: `submissions/v04_roberta_cls_submission.csv`
+
+Interpretation:
+This is the first full Transformer baseline. It improves validation accuracy
+over the strongest classical baseline (`0.5693` vs `0.5226`) and improves
+weighted F1 over the word TF-IDF SVM (`0.5543` vs `0.5140`). Macro F1 is similar
+to the best classical baselines, which means minority-category behavior remains
+an important target for the next models.

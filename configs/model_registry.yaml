@@ -52,6 +52,12 @@ models:
     purpose: survey-inspired nearest-neighbor and ICD-description retrieval baseline
     expensive: false
     status: implemented
+  v04_roberta_cls:
+    script: models/v04_roberta_cls.py
+    family: transformer
+    purpose: Spanish biomedical RoBERTa CLS pooling baseline
+    expensive: true
+    status: implemented
   v03_roberta_cls:
     script: models/v03_roberta_cls.py
     family: transformer
