@@ -290,6 +290,10 @@ This work builds on:
 
 - the Kaggle competition **UAB-ASHO AI Codification**;
 - Yan et al. (2022), survey on automated ICD coding methods and challenges;
+- CodiEsp / CLEF eHealth work on Spanish clinical coding as related
+  non-English clinical NLP context;
+- Carrino et al. (2022), which documents Spanish biomedical pretrained
+  language models for clinical NLP;
 - the Hugging Face model
   [`PlanTL-GOB-ES/roberta-base-biomedical-clinical-es`](https://huggingface.co/PlanTL-GOB-ES/roberta-base-biomedical-clinical-es);
 - course material on corpora, basic text processing, vector-space models,

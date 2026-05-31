@@ -172,6 +172,8 @@ Figure~\ref{fig:patterns} shows that the train and leaderboard sets share simila
 
 Yan et al.~\cite{yan2022survey} describe the evolution of automated ICD coding from rule-based systems to traditional machine learning, neural models, knowledge-based methods, and pretrained language models. They also emphasize challenges that appeared in our own project: large label spaces, unbalanced labels, long clinical documents, and interpretability. Our assignment differs because the target is a single first-character category and the input is a literal rather than a full discharge summary, but the same core tensions remain: medical terminology, imbalance, ambiguity, and trust.
 
+We also used Spanish clinical-coding context from CodiEsp~\cite{miranda2020codiesp}. This helped us place the assignment in a broader line of non-English clinical NLP work: even though our Kaggle task is smaller than full ICD coding, it still sits inside the same practical problem of turning clinical language into standardized codes.
+
 The project connected directly to several course topics. The EDA phase relates to corpora and linguistic datasets. Preprocessing used Basic Text Processing ideas: regular expressions, whitespace normalization, tokenization, and the danger of losing linguistic information. TF--IDF baselines connect to vector-space models and feature engineering from Fundamentals of Machine Learning. RoBERTa connects to Transformers, self-attention, pretrained language models, and fine-tuning from NLP and Neural Networks and Deep Learning~\cite{vaswani2017attention,devlin2019bert,liu2019roberta}. The final ensemble connects to the Machine Learning idea that different models may make partially uncorrelated errors.
 
 Figure~\ref{fig:survey} summarizes how the survey's method evolution influenced our project decisions.
@@ -241,7 +243,7 @@ Mean pooling may help short literals because every token can contribute directly
 
 \section{Training and Experimental Setup}
 
-All experiments used a stratified 80/20 train/validation split by \texttt{label\_id}. Seeds were configurable and fixed in Python, NumPy, and PyTorch where applicable. Classical models were trained with scikit-learn~\cite{pedregosa2011scikit}. RoBERTa models used the Hugging Face Transformers ecosystem~\cite{wolf2020transformers} and the Spanish biomedical-clinical checkpoint from PlanTL-GOB-ES~\cite{plantlroberta}.
+All experiments used a stratified 80/20 train/validation split by \texttt{label\_id}. Seeds were configurable and fixed in Python, NumPy, and PyTorch where applicable. Classical models were trained with scikit-learn~\cite{pedregosa2011scikit}. RoBERTa models used the Hugging Face Transformers ecosystem~\cite{wolf2020transformers} and the Spanish biomedical-clinical checkpoint from PlanTL-GOB-ES~\cite{carrino2022pretrained,plantlroberta}.
 
 Before filling the final report, we inspected \texttt{outputs/metrics}, \texttt{outputs/logs}, \texttt{EXPERIMENT\_LOG.md}, \texttt{REPORT\_NOTES.md}, \texttt{DECISIONS.md}, and \texttt{submissions}. Files containing \texttt{debug}, \texttt{dry\_run}, or \texttt{smoke} were treated as infrastructure checks only and are not reported as final metrics. The results in Table~\ref{tab:results} come from full runs or from the consolidated final evaluation tables.
 
