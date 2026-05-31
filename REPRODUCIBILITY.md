@@ -111,6 +111,13 @@ python models/v01_tfidf_char_logreg.py
 python models/v02_tfidf_word_svm.py
 ```
 
+`v01_tfidf_char_logreg.py` runs the internal character n-gram grid and writes:
+
+- `reports/tables/v01_tfidf_char_grid.csv`
+- `reports/tables/v01_tfidf_char_top_ngrams.csv`
+- `outputs/checkpoints/v01_tfidf_char_logreg.joblib`
+- `submissions/v01_tfidf_char_logreg_submission.csv`
+
 Before expensive model work, smoke-test the model-version interface:
 
 ```bash
@@ -159,6 +166,6 @@ generated artifacts unless the team decides to commit the final version.
 
 ## 7. Current Limitation
 
-At takeover time, the raw data files were not present in this checkout. Model
-metrics from older notebooks must therefore be rerun before they are reported as
-final results.
+Raw data is expected under `data/raw/` and is intentionally ignored by git. The
+metrics reported in the current notebooks should always come from rerunning the
+scripts in this document, not from older exploratory notebooks.

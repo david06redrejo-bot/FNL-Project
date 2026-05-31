@@ -70,16 +70,33 @@ category `Z`, so the 12.5% validation accuracy comes from the label prior rather
 than from clinical text understanding. All later models must beat this result,
 especially in macro F1.
 
-## Run v01_tfidf_char_logreg_debug
+## Run v01_tfidf_char_logreg
 
-**Version:** `v01_tfidf_char_logreg_debug`
+**Version:** `v01_tfidf_char_logreg`
 
 Metrics:
-- `accuracy`: 0.045455
-- `macro_f1`: 0.033333
-- `weighted_f1`: 0.045455
+- `accuracy`: 0.522628
+- `macro_f1`: 0.402554
+- `weighted_f1`: 0.494943
 
-Run summary: `/home/iadlG010/FNL-Project/outputs/logs/v01_tfidf_char_logreg_debug_run.md`
+Run summary: `/home/iadlG010/FNL-Project/outputs/logs/v01_tfidf_char_logreg_run.md`
+
+Best validation configuration:
+- preprocessing: required-clean
+- TF-IDF analyzer: `char_wb`
+- n-gram range: `(3, 5)`
+- classifier: LogisticRegression
+- class weight: none
+
+Grid results were saved to `reports/tables/v01_tfidf_char_grid.csv`.
+Feature interpretation was saved to
+`reports/tables/v01_tfidf_char_top_ngrams.csv`.
+
+Interpretation:
+This is the first model that clearly learns from the literal text instead of
+only from the label prior. It improves accuracy from 0.1252 to 0.5226 and macro
+F1 from 0.0062 to 0.4026. Lowercasing tied the required-clean variant but did
+not improve it, so the conservative preprocessing decision remains unchanged.
 
 ## Run v02_tfidf_word_svm_debug
 

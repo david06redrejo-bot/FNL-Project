@@ -221,3 +221,39 @@ imbalanced, but the macro F1 is almost zero because the model never predicts the
 minority categories. In the report, we will use this as the minimum modeling
 threshold: every serious baseline must beat it and must predict a broader set
 of categories.
+
+## Character TF-IDF Logistic Regression Baseline
+
+We implemented `v01_tfidf_char_logreg` as the first traditional machine
+learning model. The motivation came from Basic Text Processing and from the ICD
+coding survey's historical stage of traditional ML methods: before using
+Transformers, a strong vector-space baseline can already capture many surface
+patterns.
+
+Character n-grams are especially appropriate for these clinical literals
+because the text is short and often compact. They can capture Spanish
+morphology, abbreviations, punctuation, digits, laterality fragments, and pieces
+of medical terms even when whitespace tokenization is unreliable.
+
+The internal grid compared:
+
+- n-gram ranges `(2,4)`, `(3,5)`, and `(2,6)`;
+- `class_weight=None` and `class_weight="balanced"`;
+- required-clean text versus a lowercase ablation.
+
+The best validation configuration was required-clean text, `char_wb` TF-IDF
+with n-grams `(3,5)`, LogisticRegression, and no class weighting.
+
+Validation results:
+
+```text
+accuracy: 0.522628
+macro_f1: 0.402554
+weighted_f1: 0.494943
+```
+
+Lowercasing tied the required-clean setting in accuracy but did not improve it,
+so we keep the conservative preprocessing decision. The model is much stronger
+than the majority baseline, but it still has clear limitations: it uses surface
+form evidence only, cannot understand clinical context, and may fail on
+synonyms, ambiguity, negation, and categories that require semantic knowledge.
