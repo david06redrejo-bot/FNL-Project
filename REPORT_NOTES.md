@@ -571,3 +571,44 @@ it. Weighted sampling improved macro F1, which means it helped the long-tail
 view of the task, but the accuracy drop is too large for the competition
 objective. Our responsible-AI conclusion is that safe data strategies are useful
 for analysis, but they should not be oversold as clinical augmentation.
+
+## Ensemble After Individual Models
+
+After several individual models existed, we implemented `v09_ensemble` as a
+validation-only ensemble. This was intentionally delayed until we had different
+families of evidence: RoBERTa CLS, RoBERTa mean pooling, safe-data mean pooling,
+weighted-sampling mean pooling, imbalance-aware variants, and TF-IDF character
+logistic regression.
+
+The ensemble did not use leaderboard labels or public leaderboard feedback. It
+only collected saved validation and leaderboard predictions from completed
+model runs, checked that the validation rows and label probability columns were
+aligned, and compared predefined recipes:
+
+- unweighted probability averaging over neural models;
+- weighted probability averaging over neural models;
+- neural averaging with the weighted-sampler model;
+- probability averaging with TF-IDF;
+- majority vote over selected complementary models;
+- a low-confidence neural / high-confidence TF-IDF fallback rule.
+
+Validation results:
+
+```text
+v04 RoBERTa CLS                  accuracy 0.569343  macro_f1 0.494329
+v09 weighted neural average      accuracy 0.571898  macro_f1 0.498788
+v09 TF-IDF fallback              accuracy 0.572628  macro_f1 0.499071
+v09 majority vote                accuracy 0.576642  macro_f1 0.506277
+```
+
+The selected ensemble is majority vote over `v04_roberta_cls`,
+`v05_roberta_mean`, `v08_roberta_mean_dedupe`,
+`v08_roberta_mean_weighted_sampler`, and `v01_tfidf_char_logreg`, with
+average-probability tie-breaking. This became the new best validation result.
+
+The Machine Learning lesson is that ensembling can reduce variance when models
+make partially different errors. The limitation is that it can fail when errors
+are highly correlated, which is why not all probability averages beat the best
+single model by a large margin. Future work should compare our approach with
+other podium teams' models and test a podium ensemble only if competition rules
+and academic reporting allow it.

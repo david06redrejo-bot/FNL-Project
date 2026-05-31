@@ -295,6 +295,29 @@ The script writes:
 - `outputs/metrics/v08_roberta_mean_augmented_metrics.json`
 - `submissions/v08_roberta_mean_augmented_submission.csv`
 
+## 4.7 Ensemble
+
+Run the final validation-driven ensemble over completed model predictions:
+
+```bash
+python models/v09_ensemble.py
+```
+
+Validate that all ensemble inputs are aligned without writing final artifacts:
+
+```bash
+python models/v09_ensemble.py --dry-run
+```
+
+The script writes:
+
+- `reports/tables/v09_ensemble_comparison.csv`
+- `outputs/logs/v09_ensemble_recipe.md`
+- `outputs/metrics/v09_ensemble_metrics.json`
+- `outputs/predictions/v09_ensemble_val_predictions.csv`
+- `outputs/predictions/v09_ensemble_leaderboard_detailed.csv`
+- `submissions/v09_ensemble_submission.csv`
+
 Before expensive model work, smoke-test the model-version interface:
 
 ```bash

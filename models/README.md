@@ -81,6 +81,7 @@ defaulting to `42`.
 | `v06_roberta_mean_imbalance_aware.py` | RoBERTa mean pooling with weighted/focal losses |
 | `v07_roberta_mean_tuning.py` | Controlled mean-pooling hyperparameter tuning |
 | `v08_roberta_mean_augmented.py` | Safe data-strategy ablations: conservative deduplication and weighted sampling |
+| `v09_ensemble.py` | Validation-driven ensemble over completed model predictions |
 
 Legacy skeleton scripts are still present where useful for continuity, but the
 validated model sequence is `v00` through `v08` as listed above.

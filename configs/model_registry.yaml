@@ -82,6 +82,12 @@ models:
     purpose: safe data-strategy ablations for clinical literals
     expensive: true
     status: implemented
+  v09_ensemble:
+    script: models/v09_ensemble.py
+    family: ensemble
+    purpose: validation-driven ensemble over completed model predictions
+    expensive: false
+    status: implemented
   v03_roberta_cls:
     script: models/v03_roberta_cls.py
     family: transformer

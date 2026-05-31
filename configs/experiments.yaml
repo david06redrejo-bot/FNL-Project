@@ -94,6 +94,15 @@ completed_experiments:
     best_candidate: dedupe_non_conflicting_literals
     best_epoch: 7
     lesson: conservative deduplication nearly matched CLS accuracy; weighted sampling improved macro F1 but hurt accuracy.
+  - id: v09_ensemble
+    script: models/v09_ensemble.py
+    family: ensemble
+    status: completed
+    validation_accuracy: 0.576642
+    macro_f1: 0.506277
+    weighted_f1: 0.561544
+    best_candidate: majority_vote
+    lesson: majority voting over complementary RoBERTa and TF-IDF models improved validation accuracy over the best single model.
 
 advanced_experiment_roadmap:
   - id: exp_class_weighted_loss
@@ -192,7 +201,7 @@ advanced_experiment_roadmap:
     expected_benefit: improved accuracy and robustness.
     risk: calibration differences and more complex submission pipeline.
     implementation_cost: medium
-    decision: implement
+    decision: completed
   - id: exp_calibration_analysis
     candidate: calibration and confidence analysis
     hypothesis: confidence patterns can guide thresholding, ensembling, and error analysis.

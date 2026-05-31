@@ -532,3 +532,14 @@ Conclusion: conservative deduplication is the best v08 candidate by accuracy
 (`0.568613`), but CLS (`v04`, `0.569343`) remains slightly ahead. Weighted
 sampling improves macro F1 (`0.522584`) but loses too much validation accuracy
 for the competition objective.
+
+## Run v09_ensemble
+
+**Version:** `v09_ensemble`
+
+Metrics:
+- `accuracy`: 0.576642
+- `macro_f1`: 0.506277
+- `weighted_f1`: 0.561544
+
+Run summary: `/home/iadlG010/FNL-Project/outputs/logs/v09_ensemble_run.md`

@@ -121,3 +121,28 @@ Result: conservative deduplication improved mean-pooling accuracy to `0.568613`
 but did not beat the CLS model (`0.569343`). Weighted sampling improved macro F1
 to `0.522584`, but reduced accuracy to `0.542336`, so it remains an ablation
 rather than the final accuracy candidate.
+
+## Ensemble Decision
+
+Decision: implement ensembling only after individual model versions were
+available and validated. `v09_ensemble` uses saved predictions from completed
+runs and selects among predefined recipes by validation accuracy.
+
+Reasoning: ensembling is a legitimate Machine Learning strategy when base
+models make partially different errors, but it can also hide weak methodology if
+it is used before understanding the models. The project story should show EDA,
+preprocessing, baselines, RoBERTa variants, and then ensemble as a final
+combination step.
+
+Constraints:
+
+- no leaderboard labels are used;
+- no public leaderboard feedback is used for recipe selection;
+- the selected recipe must beat individual models on the internal validation
+  split;
+- if validation contradicts leaderboard intuition, validation wins.
+
+Result: the selected recipe is majority vote over CLS, mean pooling,
+safe-deduplicated mean pooling, weighted-sampler mean pooling, and TF-IDF
+character logistic regression, with average-probability tie-breaking. It reached
+validation accuracy `0.576642`, macro F1 `0.506277`, and weighted F1 `0.561544`.
