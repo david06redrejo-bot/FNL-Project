@@ -318,6 +318,26 @@ The script writes:
 - `outputs/predictions/v09_ensemble_leaderboard_detailed.csv`
 - `submissions/v09_ensemble_submission.csv`
 
+## 4.8 Final Evaluation and Error Analysis
+
+Generate final comparison tables and figures:
+
+```bash
+python -m src.evaluation
+```
+
+This command writes:
+
+- `reports/tables/final_experiment_comparison.csv`
+- `reports/tables/final_per_class_metrics.csv`
+- `reports/tables/final_error_examples.csv`
+- `reports/tables/final_top_confusions.csv`
+- `reports/figures/fig_10_model_comparison.png`
+- `reports/figures/fig_11_final_confusion_matrix.png`
+- `reports/figures/fig_12_per_class_recall.png`
+- `reports/figures/fig_13_confidence_correct_vs_wrong.png`
+- `reports/figures/fig_14_training_curves.png`
+
 Before expensive model work, smoke-test the model-version interface:
 
 ```bash

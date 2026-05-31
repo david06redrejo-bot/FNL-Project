@@ -612,3 +612,36 @@ are highly correlated, which is why not all probability averages beat the best
 single model by a large margin. Future work should compare our approach with
 other podium teams' models and test a podium ensemble only if competition rules
 and academic reporting allow it.
+
+## Final Evaluation and Error Analysis
+
+Notebook 07 asks: “Which model should we trust as our final submission?” The
+answer from the shared validation split is `v09_ensemble`.
+
+The final comparison table is saved at
+`reports/tables/final_experiment_comparison.csv`. The key result is:
+
+```text
+v09_ensemble accuracy 0.576642 macro_f1 0.506277 weighted_f1 0.561544
+```
+
+This improves over the best single model, `v04_roberta_cls`, which reached
+accuracy `0.569343`, macro F1 `0.494329`, and weighted F1 `0.554347`.
+
+The error analysis uses real validation literals and saves:
+
+- `reports/tables/final_per_class_metrics.csv`;
+- `reports/tables/final_error_examples.csv`;
+- `reports/tables/final_top_confusions.csv`;
+- final figures `fig_10` through `fig_14`.
+
+The examples show all four confidence/error groups: correct high-confidence,
+correct low-confidence, wrong high-confidence, and wrong low-confidence. The
+main causes we identified are ambiguous literals, insufficient context,
+abbreviations, class imbalance, similar ICD categories, and the broad nature of
+first-character ICD prefixes.
+
+Interpretability is treated carefully. We use confusion matrices, confidence
+analysis, margins, and representative examples. We do not claim that
+probabilities or future attention/token attributions are faithful clinical
+explanations; they are diagnostics that help us understand model behavior.

@@ -146,3 +146,27 @@ Result: the selected recipe is majority vote over CLS, mean pooling,
 safe-deduplicated mean pooling, weighted-sampler mean pooling, and TF-IDF
 character logistic regression, with average-probability tie-breaking. It reached
 validation accuracy `0.576642`, macro F1 `0.506277`, and weighted F1 `0.561544`.
+
+## Final Model Candidate Decision
+
+Decision: use `v09_ensemble` as the current final submission candidate.
+
+Reasoning: the final evaluation notebook compares all completed model versions
+on the same validation split. `v09_ensemble` improves over the best individual
+model (`v04_roberta_cls`) on accuracy, macro F1, and weighted F1:
+
+```text
+v04_roberta_cls  accuracy 0.569343  macro_f1 0.494329  weighted_f1 0.554347
+v09_ensemble     accuracy 0.576642  macro_f1 0.506277  weighted_f1 0.561544
+```
+
+Implications:
+
+- the final report should present `v09_ensemble` as the validation-selected
+  final candidate;
+- individual RoBERTa and TF-IDF models remain important for ablation and
+  explanation;
+- the project should state that no leaderboard labels or public leaderboard
+  feedback were used to choose the ensemble;
+- remaining limitations are short-literal ambiguity, rare categories,
+  abbreviations, and broad ICD-prefix confusions.

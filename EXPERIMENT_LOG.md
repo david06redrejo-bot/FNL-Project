@@ -543,3 +543,23 @@ Metrics:
 - `weighted_f1`: 0.561544
 
 Run summary: `/home/iadlG010/FNL-Project/outputs/logs/v09_ensemble_run.md`
+
+## Final Evaluation Notebook
+
+**Artifact:** `notebooks/07_evaluation_error_analysis_and_interpretability.ipynb`
+
+Generated final evaluation artifacts:
+
+- `reports/tables/final_experiment_comparison.csv`
+- `reports/tables/final_per_class_metrics.csv`
+- `reports/tables/final_error_examples.csv`
+- `reports/tables/final_top_confusions.csv`
+- `reports/figures/fig_10_model_comparison.png`
+- `reports/figures/fig_11_final_confusion_matrix.png`
+- `reports/figures/fig_12_per_class_recall.png`
+- `reports/figures/fig_13_confidence_correct_vs_wrong.png`
+- `reports/figures/fig_14_training_curves.png`
+
+Conclusion: `v09_ensemble` is the current final candidate because it improves
+over the best individual model on validation accuracy, macro F1, and weighted
+F1.

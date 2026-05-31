@@ -1,0 +1,21 @@
+y_true,y_pred,count,example_literals
+V,Z,48,prótesis mamarias || hemicolectomía derecha || alergia Àcars || Protesis mamarias
+6,O,38,patología fetal parto || registro patológico fetal parto || corioamnionitis || Preclampsia
+2,E,35,Hiperparatiroidismo || DBT || DIABETES || Déficit de ácido fólico
+5,K,26,esteatosis hepatica || rge || Hèrnia de hiatus || fecaloma
+6,N,26,Endometriosis || prolapso uteri || abscés tubo-ovàric || endometriosis intestino
+Z,V,25,IMC 58 || problemas sociofamiliar || Alérgica a la penicilina || stent
+8,B,21,TC cráneo || TC de abdomen || ECOABD || AngioTC torácica
+O,E,19,obesidad mórbida parto || Hipotiroidismo postoperatorio part || hipotiroidisme parto || SOP part
+4,I,19,Raynaud || EAP || Insuficiencia cardiaca izquierda || BRIHH
+7,R,19,edemas || Febricula || Síndrome diarreico || Hipertransaminasemia
+9,3,17,Corticoides || Nutrición Parenteral || oxigeno || hemoderivats
+Z,0,16,Anexectomía izquierda || nefrostomías || RECONVERSIÓN A LAPAROTOMÍA || HITERECTOMIA
+3,9,14,Oxigenoterapia || Cataracta senil || antibioterápico || antibióticos
+3,F,14,alzheimer || Enol ocasional || alteracion conductual || ansiedad
+7,M,14,Dolor lumbar || Lumbago || Discopatia cervical || Canal estrecho lumbar
+0,Z,12,Ooforectomía izquierda || PTR dcha cementada || doble anexectomía || Nefrectomía radical derecha
+7,Q,12,foramen oval permeable || Escafocefalia || Macroglosia congenita || útero septo
+E,2,12,Diabetis mellitus || DMNID || Síndrome hipoventilación; Obesidad || Masa suprarrenal izquierda
+4,J,12,Asma extrínseca || neumonia || Rinitis alérgica || Polipo fosa nasal
+O,G,11,Esclerosis Multiple parto || Epilepsia generalizada parto || Migraña con aura part || esclerosis multiple parto
