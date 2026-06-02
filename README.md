@@ -104,29 +104,60 @@ The off-diagonal blocks are where short literals, numeric procedure families, an
 ## Repository layout
 
 ```text
-notebooks/
-  01_eda.ipynb
-  02_baseline_models.ipynb
-  03_improved_training_accuracy.ipynb
-  04_dl_baseline_roberta.ipynb
+configs/
+  base.yaml
+  experiments.yaml
+  model_registry.yaml
 
-src/
-  data_processing.py
-  evaluation.py
-
-submissions/
-  svm_baseline.csv
-  svm_improved_training_accuracy.csv
-
-Report/
-  Report.pdf
-  Report.tex
-  eda_*.png
-  improved_*.png
+data/
+  raw/
+  interim/
+  processed/
 
 docs/
   info/
   plots/
+  presentation/
+
+models/
+  v00_majority_baseline.py
+  ...
+  v10_diverse_ensemble_search.py
+
+notebooks/
+  00_task_formulation_and_eda.ipynb
+  01_data_preprocessing_and_annotation_design.ipynb
+  02_baseline_models.ipynb
+  02_reference_methods_from_survey.ipynb
+  03_improved_training_accuracy.ipynb
+  04_roberta_backbone_baseline.ipynb
+  05_advanced_model_experiments.ipynb
+  06_hyperparameter_and_ablation_studies.ipynb
+  07_evaluation_error_analysis_and_interpretability.ipynb
+  08_submission_and_final_story.ipynb
+
+presentations/
+  final_presentation/
+  short_presentation/
+
+results/
+  compiled/
+  figures/
+  tables/
+  final_report.tex
+  references.bib
+  safe_augmentation_note.md
+
+submissions/
+  final_submission.csv
+  svm_baseline.csv
+  svm_improved_training_accuracy.csv
+  v00_majority_baseline_submission.csv
+  ...
+  v10_vote_validation_top_plus_tfidf_val_weighted_kaggle.csv
+
+group_10_report_fnl_project.pdf
+requirements.txt
 ```
 
 ---
