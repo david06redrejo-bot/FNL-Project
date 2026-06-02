@@ -1,0 +1,30 @@
+<svg width="1200" height="520" viewBox="0 0 1200 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="520" rx="28" fill="#0B1020"/>
+  <rect x="28" y="28" width="1144" height="464" rx="24" fill="#111827" stroke="#2DD4BF" stroke-width="2"/>
+  <text x="70" y="92" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="42" font-weight="800">ICD-10 Coding Results Snapshot</text>
+  <text x="70" y="130" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="20">Short clinical literals -> ICD category predictions</text>
+
+  <rect x="70" y="175" width="250" height="180" rx="18" fill="#172554" stroke="#60A5FA" stroke-width="1.5"/>
+  <text x="95" y="225" fill="#DBEAFE" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700">Baseline SVM</text>
+  <text x="95" y="285" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="52" font-weight="900">56.9%</text>
+  <text x="95" y="322" fill="#BFDBFE" font-family="Segoe UI, Arial, sans-serif" font-size="18">validation accuracy</text>
+
+  <rect x="350" y="175" width="250" height="180" rx="18" fill="#064E3B" stroke="#34D399" stroke-width="1.5"/>
+  <text x="375" y="225" fill="#D1FAE5" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700">Tuned char SVM</text>
+  <text x="375" y="285" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="52" font-weight="900">60.3%</text>
+  <text x="375" y="322" fill="#A7F3D0" font-family="Segoe UI, Arial, sans-serif" font-size="18">best validated model</text>
+
+  <rect x="630" y="175" width="250" height="180" rx="18" fill="#3B0764" stroke="#C084FC" stroke-width="1.5"/>
+  <text x="655" y="225" fill="#F3E8FF" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700">ICD augmentation</text>
+  <text x="655" y="285" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="52" font-weight="900">~61.9%</text>
+  <text x="655" y="322" fill="#E9D5FF" font-family="Segoe UI, Arial, sans-serif" font-size="18">promising experiment</text>
+
+  <rect x="910" y="175" width="220" height="180" rx="18" fill="#451A03" stroke="#FDBA74" stroke-width="1.5"/>
+  <text x="935" y="225" fill="#FFEDD5" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700">Leaderboard rows</text>
+  <text x="935" y="285" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="52" font-weight="900">6,667</text>
+  <text x="935" y="322" fill="#FED7AA" font-family="Segoe UI, Arial, sans-serif" font-size="18">predictions generated</text>
+
+  <line x1="90" y1="405" x2="1110" y2="405" stroke="#334155" stroke-width="2"/>
+  <text x="90" y="445" fill="#CBD5E1" font-family="Segoe UI, Arial, sans-serif" font-size="21">Best submitted artifact in this repo: submissions/svm_improved_training_accuracy.csv</text>
+  <text x="90" y="475" fill="#64748B" font-family="Segoe UI, Arial, sans-serif" font-size="17">Interpretable character n-grams, 36 ICD categories, one Kaggle-ready row per leaderboard literal.</text>
+</svg>
