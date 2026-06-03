@@ -47,26 +47,40 @@ normalized literal
 
 ## Kaggle standing
 
-This repository contains the Kaggle-ready prediction files, but it does **not** currently contain an official Kaggle leaderboard screenshot, public score, or rank export. I therefore do not fabricate a position.
+The competition has completed and the final Kaggle leaderboard places our team in the top group of submissions.
 
-| Kaggle item | Current repository evidence |
+| Kaggle item | Final standing |
 |---|---|
 | Recommended submission | `submissions/svm_improved_training_accuracy.csv` |
 | Rows predicted | `6,667` leaderboard literals |
 | Output columns | `id`, `Literal`, `y_category` |
 | Categories covered | `36` ICD categories |
-| Official Kaggle rank | Not stored in this repository snapshot |
-| Official Kaggle score | Not stored in this repository snapshot |
+| Kaggle team | Group 10 |
+| Final leaderboard rank | `6` |
+| Final score | `0.569` |
+| Entries | `20` |
 
-When the official leaderboard position is available, update this block:
+Official leaderboard block:
 
 ```text
-Kaggle team:
-Public score:
-Private score:
-Leaderboard rank:
-Snapshot date:
+Kaggle team: Group 10
+Public score: 0.569
+Private score: 0.569
+Leaderboard rank: 6
+Snapshot date: 2026-06-03
 ```
+
+Final leaderboard excerpt:
+
+| Rank | Team | Score | Entries | Last submission |
+|---:|---|---:|---:|---|
+| 1 | Group 20 | `0.598` | 81 | 13h |
+| 2 | Team 3 | `0.588` | 18 | 5d |
+| 3 | group 4 | `0.587` | 53 | 4d |
+| 4 | Group 2 | `0.577` | 7 | 21d |
+| 5 | Joan A | `0.571` | 5 | 12h |
+| 6 | Group 10 | `0.569` | 20 | 3d |
+| 7 | Team 12 | `0.563` | 14 | 2d |
 
 The model we would submit first is:
 
@@ -94,7 +108,7 @@ It is the one that improves validation while staying interpretable.
 ```
 
 <p align="center">
-  <img src="Report/improved_confusion_matrix.png" alt="Improved model confusion matrix" width="780"/>
+  <img src="results/figures/fig_11_final_confusion_matrix.png" alt="Improved model confusion matrix" width="780"/>
 </p>
 
 The off-diagonal blocks are where short literals, numeric procedure families, and ambiguous clinical phrasing still collide.
